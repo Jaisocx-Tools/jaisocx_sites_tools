@@ -1,0 +1,9 @@
+#!/bin/bash
+
+env_bundle_dest_folder="tmp/clean_start_tiny20260907"
+env_tarball_name="clean_start_tiny"
+
+# env_bundle_dest_folder="tmp/bundle20260830"
+# env_tarball_name="clean_start"
+
+
