@@ -81,25 +81,43 @@ in the folder MediaAndStyles/clean_start_tiny__styles/styles_display/
 
 ### clean_start_tiny examples
 
-**table** 
-[https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/clean_start_tiny__table.html](https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/clean_start_tiny__table.html)
+  🗓  🌾 Autumn 2026 | `09. Sep AD 2026 10:45 UTC 24h` |
 
 
-**ul li** 
-[https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/clean_start_tiny__ul_li.html](https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/clean_start_tiny__ul_li.html)
+
+  ✅  **all html tags, variables set in html**
+https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/clean_start__html_tags.html
 
 
-**all features css 18.28kb**
+
+  ❌  **all html tags, all variables set null**
 [https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/template_clean_start_linked__all_features.html](https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/template_clean_start_linked__all_features.html)
 
 
-**all features in one html file 46.33kb**
+
+  ✅  **symbols**
+https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/template_clean_start__icons.html
+
+
+
+  ✅  **table** 
+[https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/clean_start_tiny__table.html](https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/clean_start_tiny__table.html)
+
+
+
+  ✅  **ul li** 
+[https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/clean_start_tiny__ul_li.html](https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/clean_start_tiny__ul_li.html)
+
+
+
+  ✅  **all features in one html file 46.33kb**
 [https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/template_clean_start_one__all_features.html](https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/template_clean_start_one__all_features.html)
 
 
 
-**readme**
-[https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/readme__clean_start_tiny.html](https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/readme__clean_start_tiny.html)
+  ✅  **readme**
+https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/readme__clean_start_tiny.html
+
 
 
 

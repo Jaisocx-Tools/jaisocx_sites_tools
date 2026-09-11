@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="jaisocx clean_start theme_fonts_a font_override">
+<html lang="en" class="jaisocx clean_start theme_fonts_a">
 <head>
 
   <!--# FAVICON -->
@@ -31,7 +31,7 @@
       rel="stylesheet"
       type="text/css"
       charset="utf-8"
-      href="MediaAndStyles/clean_start_tiny__font_override.css"
+      href="MediaAndStyles/clean_start_tiny__fonts/clean_start_tiny__font_override.css"
   />
 
 
@@ -343,6 +343,10 @@
 
   <style name="theme_ul_li">
 
+    .clean_start ul li i {
+      font-style: normal;
+    }
+
     .clean_start.theme_fonts_a ul.tag_border {
       --clean_start--ul_li_i_o--tag_border--top:     0.583rem;
     }
@@ -443,7 +447,7 @@
 
   <h3> text font sans-serif </h3>
 
-  <layout-block class="font_sans">
+  <layout-block class="font_override font_sans">
 
     <p>
       <text> sentence line 1. </text>
@@ -485,7 +489,7 @@
 
   <h3> text font serif </h3>
 
-  <layout-block class="font_serif">
+  <layout-block class="font_override font_serif">
     <p>sentence line 1. sentence line 1. sentence line 1. sentence line 1. sentence line 1.</p>
   </layout-block>
 
@@ -496,7 +500,7 @@
   <h4> font handwrite </h4>
 
   <layout-block class="preview tag_pre">
-      <pre class="font_handwrite">
+      <pre class="font_override font_handwrite">
 🗒 💲 🍰 Shopping
     🍎 Apple
     🍌 Banana
@@ -509,7 +513,7 @@
   <h4> font like in programming </h4>
 
   <layout-block class="preview tag_pre">
-      <pre class="font_monospace">
+      <pre class="font_override font_monospace">
 let func = ( a, b ) => {
   let r = ( a + b );
   return r;
@@ -887,7 +891,7 @@ let func = ( a, b ) => {
     <h2> Scrollbars </h2>
 
     <layiut-block class="scrolls">
-      <layout-block class="font_sans">
+      <layout-block class="font_override font_sans">
         <p>
           <text> sentence line 1. </text>
           <text> sentence line 1. </text>
