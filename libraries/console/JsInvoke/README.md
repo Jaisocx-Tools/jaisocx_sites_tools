@@ -8,9 +8,14 @@
 
   | 🗓  **Updated**  | 🌼 Summer 2026 | `Satturday, the 13th of June, 21:59:51 UTC 2026` |
 
-  | 📐  **Size**     | 🗂 Folder: 33.9 KB | 📦 Tarball: 9.3 KB | 📋 .js: 5 KB |
+  | 📐  **Size**     | 🗂 Folder: 33.9 KB | 📦 Tarball: 9.3 KB | 📋 .js: 5 KB | 
 
-  | ⚡  **JS Engine** | 🌐 Browser: ❌ no | 🧭 Express: ❌ no | 🖥️ Console: ✅ yes |
+  | ⚡  **just JS Base Engine required** | ❌ no |
+
+  | ⚡  **Support by JS Engines** | 🌐 Browser: ❌ no | 🧭 Server-side Express: ❌ no | 🖥️ Command Line: ✅ yes |
+
+  | ⚡  **JS Calls** | Network(fetch): ❌ no | 🌐 Browser(DOM): ❌ no | 🧭 Server-side Express(FS | DB): ❌ no | 🖥️ Command Line: ✅ yes |
+
 
 ---
 
@@ -172,9 +177,9 @@
       "${jsInvokePath}" "$commandLineArgs" \
         --Root="${IN_DOCKER_WORKSPACE_VOLUME}" \
         --BuildData="${IN_DOCKER_WORKSPACE_VOLUME}/ts/BuildData.json" \
-        --packagePath="Jaisocx_SitesTools/console/JsInvoke" \
+        --packagePath="ts/cloned_repos/jaisocx_sitestools/console/JsInvoke" \
         --script="invokeCssImporter.js" \
-            --sitesToolPath="Jaisocx_SitesTools/libraries/sites_tools/css_tools/CssCleanStart_2" \
+            --sitesToolPath="ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/CssCleanStart_2" \
             --cssFilePath="MediaAndStyles/CssCleanStart_2_main_Webpack.css" \
             --cssTargetFilePath="MediaAndStyles/CssCleanStart_2_543_resolved.css"
     

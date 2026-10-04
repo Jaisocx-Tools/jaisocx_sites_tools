@@ -7,7 +7,8 @@
 
   | 🗓  **Updated**  | 🌷 Spring 2026 | `20. Mai AD 2026 09:02:20 UTC` |
 
-  | 📐  **Size**     | 🗂 Folder:   9.3 MB | 📦 Tarball: _ KB | 📄 styles: 1 MB |
+  | 📐  **Size**     | 🗂 Folder:   9.3 MB | 📦 Tarball: _ KB | 📄 styles: 1 MB | 
+
 
 ---
 

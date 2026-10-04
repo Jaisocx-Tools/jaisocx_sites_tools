@@ -6,8 +6,7 @@
   | 🗓  **Updated**  | Winter 2026 | `Tue Jan 20 06:28:29 CET 2026` |
   
   | 📐  **Size**     | 🗂 Folder: 7.8 MB | 📦 Tarball: _ KB | 📋 styles: 100 KB | fonts: 7.6 MB | node_modules: 79 KB |
-  
-  | ⚡  **JS Engine** | 🌐 Browser: ✅ yes | 🧭 Express: ✅ yes | 🖥️ Console: ❌ no |
+
 
 ---
 

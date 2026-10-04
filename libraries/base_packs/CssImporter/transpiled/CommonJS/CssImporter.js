@@ -158,6 +158,11 @@ class CssImporter {
         return filePathResolved;
     }
     async build() {
+        let toExcludeComments_true = true;
+        let r = await this.bundle(toExcludeComments_true);
+        return r;
+    }
+    async bundle(toExcludeComments) {
         let hasError = false;
         let err = {};
         let webpackAliases = this.getWebpackAliases();
@@ -174,7 +179,7 @@ class CssImporter {
         let locInOutResultDTO = new ParsedResultDTO_js_1.ParsedResultDTO();
         try {
             this.setWebpackAliases(webpackAliases, this.packagePath);
-            this.cssBundleMake(locInOutResultDTO, this.cssFilePath, counterStop);
+            this.cssBundleMake(locInOutResultDTO, this.cssFilePath, counterStop, toExcludeComments);
         }
         catch (error) {
             console.error(error);
@@ -197,7 +202,7 @@ class CssImporter {
         }
         return opened;
     }
-    cssBundleMake(inOutParsedResultDTO, inFilePath, counterStop) {
+    cssBundleMake(inOutParsedResultDTO, inFilePath, counterStop, toExcludeComments) {
         let fileContentsBuffer = this.fileReader.readFileContentsAsBitsBuf(inFilePath);
         let fileSize = fileContentsBuffer.length;
         let fileLastIx = fileSize - 1;
@@ -211,13 +216,15 @@ class CssImporter {
         let cssTokens = this.cssImporterConstants.getCssTokens();
         let commentsTokens = cssTokens["comment"];
         let importsTokens = cssTokens["import"];
-        this.tokensParser
-            .parseWithStartAndEndTokensSets(fileContentsBuffer, bitsBufRefs_ReadFile, commentsTokens, bitsBufRefs_NoComments, bitsBufRefs_Comments_Outer, bitsBufRefs_Comments_Inner, counterStop);
-        if (this.debug === true) {
-            console.log("Comments:\n");
-            this.tokensParser.contentPreviewByRange(fileContentsBuffer, bitsBufRefs_Comments_Inner);
-            console.log("\n\nCss without comments:\n");
-            this.tokensParser.contentPreviewByRange(fileContentsBuffer, bitsBufRefs_NoComments);
+        if (toExcludeComments === true) {
+            this.tokensParser
+                .parseWithStartAndEndTokensSets(fileContentsBuffer, bitsBufRefs_ReadFile, commentsTokens, bitsBufRefs_NoComments, bitsBufRefs_Comments_Outer, bitsBufRefs_Comments_Inner, counterStop);
+            if (this.debug === true) {
+                console.log("Comments:\n");
+                this.tokensParser.contentPreviewByRange(fileContentsBuffer, bitsBufRefs_Comments_Inner);
+                console.log("\n\nCss without comments:\n");
+                this.tokensParser.contentPreviewByRange(fileContentsBuffer, bitsBufRefs_NoComments);
+            }
         }
         this.tokensParser
             .parseWithStartAndEndTokensSets(fileContentsBuffer, bitsBufRefs_NoComments, importsTokens, bitsBufRefs_NoImports, bitsBufRefs_ImportURLs_Outer, bitsBufRefs_ImportURLs_Inner, counterStop);
@@ -236,7 +243,7 @@ class CssImporter {
         resultDTO.cssFilePath = inFilePath;
         resultDTO.cssFileContents = fileContentsBuffer;
         this.fileWriterQueue.namedBitsbufs[resultDTO.cssFilePath] = fileContentsBuffer;
-        let firstRange_NoImports = bitsBufRefs_NoImports[0];
+        let firstRange_NoImports = bitsBufRefs_NoImports.length ? bitsBufRefs_NoImports[0] : [0, 0];
         let firstRange_NoImports_Start = firstRange_NoImports[0];
         let firstRange_NoImports_End = firstRange_NoImports[1];
         rangeStart = firstRange_NoImports_Start;
@@ -292,7 +299,12 @@ class CssImporter {
                 continue markerA;
             }
             markerB: for (bNoImportsIx = latest_bNoImportsIx; bNoImportsIx < bNumberRanges_NoImports; bNoImportsIx++) {
-                bRange_NoImports = [...bitsBufRefs_NoImports[bNoImportsIx]];
+                let bRange_NoImports_ref = bitsBufRefs_NoImports[bNoImportsIx];
+                let isIterable = (Array.isArray(bRange_NoImports_ref) && (bRange_NoImports_ref.length !== 0));
+                if (isIterable === false) {
+                    continue markerB;
+                }
+                bRange_NoImports = [...bRange_NoImports_ref];
                 bRange_NoImports_Start = bRange_NoImports[0];
                 // bRange_NoImports_End = bRange_NoImports[1];
                 latest_bNoImportsIx = bNoImportsIx;

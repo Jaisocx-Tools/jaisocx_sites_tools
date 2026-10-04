@@ -7,8 +7,6 @@
   
   | 📐  **Size**     | 🗂 Folder: 8.7 MB | 📦 Tarball: _ KB | 📋 styles: 13 KB | images: 12 KB | node_modules: 8.6 MB | 
 
-  | ⚡  **JS Engine** | 🌐 Browser: ✅ yes | 🧭 Express: ✅ yes | 🖥️ Console: ❌ no |
-
 ---
 
 

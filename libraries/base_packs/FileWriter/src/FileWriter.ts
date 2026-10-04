@@ -56,7 +56,9 @@ export class FileWriter {
     inFilePath: string,
     mode: string
   ): Promise<number> {
-    if ( fs.existsSync( inFilePath ) === false ) {
+    let fe: boolean = fs.existsSync( inFilePath );
+
+    if ( fe === false ) {
       throw new Error( `File not found: ${inFilePath}` );
     }
 
@@ -88,8 +90,12 @@ export class FileWriter {
     this.offsetInFile = 0;
     this.filePath = inFilePath;
 
-    if ( fs.existsSync( this.filePath ) === true ) {
-      fs.unlinkSync( this.filePath );
+    let fe: boolean = fs.existsSync( inFilePath );
+
+    if ( fe === true ) {
+
+      //@ts-ignore
+      let unl: any = await fs.promises.unlink( this.filePath );
 
       if ( this.debug === true ) {
         console.log( `File deleted: ${this.filePath}` );
@@ -98,7 +104,8 @@ export class FileWriter {
 
 
     // ask create new file
-    fs.writeFileSync(
+    //@ts-ignore
+    let fw: any = fs.writeFileSync (
       this.filePath,
       ""
     );

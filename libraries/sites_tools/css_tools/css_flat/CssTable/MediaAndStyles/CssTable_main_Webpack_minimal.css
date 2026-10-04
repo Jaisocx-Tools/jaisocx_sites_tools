@@ -15,15 +15,15 @@
 
 
 
-/* -- mini images on the left side of the table -- */
+/*-- mini images on the left side of the table --*/
 /*
 @import url("@CssTable_MediaAndStyles/themes/theme_imaged/responsive_size_Imports_CssTable_theme_imaged_Webpack.css");
 
 @import url("@CssTable_MediaAndStyles/themes/theme_imaged/CssTable_theme_imaged_main.css");
 */
 
-/* -- _cdn or _dep, in this package like examples of importing installed to node_modules mini images js library. -- */
-/* @import url("@CssTable_MediaAndStyles/themes/theme_imaged_mimetypes_base_cdn/theme_imaged_mimetypes_base_cdn.css"); */
+/*-- _cdn or _dep, in this package like examples of importing installed to node_modules mini images js library. --*/
+/*@import url("@CssTable_MediaAndStyles/themes/theme_imaged_mimetypes_base_cdn/theme_imaged_mimetypes_base_cdn.css");*/
 
 /* @import url("@CssTable_MediaAndStyles/themes/theme_imaged_mimetypes_base_dep/CssTable_theme_imaged_mimetypes_base_dep_hoisted.css"); */
 /* @import url("@CssTable_MediaAndStyles/themes/theme_imaged_mimetypes_base_dep/CssTable_theme_imaged_mimetypes_base_dep_shallow.css"); */

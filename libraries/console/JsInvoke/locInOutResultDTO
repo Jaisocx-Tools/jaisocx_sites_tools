@@ -1,0 +1,210 @@
+{
+  "cssFilePath": "",
+  "cssFileContents": {},
+  "rangesOrDtoOfImport": [
+    {
+      "cssFilePath": "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/css_flat/CssTable/MediaAndStyles/columns/columns.css",
+      "cssFileContents": {},
+      "rangesOrDtoOfImport": []
+    },
+    {
+      "cssFilePath": "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/css_flat/CssTable/MediaAndStyles/themes/theme_base/responsive_size_Imports_CssTable_theme_base_Webpack.css",
+      "cssFileContents": {},
+      "rangesOrDtoOfImport": []
+    },
+    {
+      "cssFilePath": "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/css_flat/CssTable/MediaAndStyles/themes/theme_base/CssTable_theme_base_thin.css",
+      "cssFileContents": {},
+      "rangesOrDtoOfImport": []
+    },
+    {
+      "cssFilePath": "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/css_flat/CssTable/MediaAndStyles/themes/theme_base/CssTable_theme_base_bright.css",
+      "cssFileContents": {},
+      "rangesOrDtoOfImport": []
+    },
+    {
+      "cssFilePath": "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/css_flat/CssTable/MediaAndStyles/themes/theme_base/CssTable_theme_base_main.css",
+      "cssFileContents": {},
+      "rangesOrDtoOfImport": []
+    },
+    {
+      "cssFilePath": "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/css_flat/CssTable/MediaAndStyles/themes/theme_imaged/responsive_size_Imports_CssTable_theme_imaged_Webpack.css",
+      "cssFileContents": {},
+      "rangesOrDtoOfImport": []
+    },
+    {
+      "cssFilePath": "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/css_flat/CssTable/MediaAndStyles/themes/theme_imaged/CssTable_theme_imaged_main.css",
+      "cssFileContents": {},
+      "rangesOrDtoOfImport": []
+    },
+    {
+      "cssFilePath": "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/css_flat/CssTable/MediaAndStyles/themes/theme_visible_height/theme_visible_height.css",
+      "cssFileContents": {},
+      "rangesOrDtoOfImport": []
+    },
+    {
+      "cssFilePath": "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/css_flat/CssTable/MediaAndStyles/themes/theme-emailed-thin/css-table-theme-emailed-thin.css",
+      "cssFileContents": {},
+      "rangesOrDtoOfImport": []
+    },
+    {
+      "cssFilePath": "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/css_flat/CssTable/MediaAndStyles/themes/theme_lightmode/css-table-theme-lightmode.css",
+      "cssFileContents": {},
+      "rangesOrDtoOfImport": []
+    },
+    {
+      "cssFilePath": "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/css_flat/CssTable/MediaAndStyles/themes/theme_darkmode/css-table-theme-darkmode.css",
+      "cssFileContents": {},
+      "rangesOrDtoOfImport": []
+    },
+    {
+      "cssFilePath": "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/css_flat/CssTable/MediaAndStyles/CssTable_main.css",
+      "cssFileContents": {},
+      "rangesOrDtoOfImport": []
+    },
+    {
+      "cssFilePath": "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/css_flat/CssTable/MediaAndStyles/CssTable_thin.css",
+      "cssFileContents": {},
+      "rangesOrDtoOfImport": []
+    },
+    {
+      "cssFilePath": "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/css_flat/CssTable/MediaAndStyles/CssTable_bright.css",
+      "cssFileContents": {},
+      "rangesOrDtoOfImport": []
+    },
+    {
+      "cssFilePath": "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/css_flat/CssTable/MediaAndStyles/CssTable_main_Webpack.css",
+      "cssFileContents": {},
+      "rangesOrDtoOfImport": [
+        [
+          60,
+          61
+        ],
+        [
+          132,
+          135
+        ],
+        [
+          295,
+          296
+        ],
+        [
+          384,
+          385
+        ],
+        [
+          475,
+          476
+        ],
+        [
+          564,
+          566
+        ],
+        [
+          618,
+          619
+        ],
+        [
+          738,
+          739
+        ],
+        [
+          831,
+          832
+        ],
+        [
+          1069,
+          1070
+        ],
+        [
+          1481,
+          1484
+        ],
+        [
+          1578,
+          1580
+        ],
+        [
+          1691,
+          1692
+        ],
+        [
+          1792,
+          1793
+        ],
+        [
+          1887,
+          1888
+        ],
+        [
+          1980,
+          1983
+        ],
+        [
+          2042,
+          2043
+        ],
+        [
+          2200,
+          2201
+        ],
+        [
+          2262,
+          2265
+        ],
+        [
+          2262,
+          2265
+        ],
+        [
+          2262,
+          2265
+        ],
+        [
+          2262,
+          2265
+        ],
+        [
+          2262,
+          2265
+        ],
+        [
+          2262,
+          2265
+        ],
+        [
+          2262,
+          2265
+        ],
+        [
+          2262,
+          2265
+        ],
+        [
+          2262,
+          2265
+        ],
+        [
+          2262,
+          2265
+        ],
+        [
+          2262,
+          2265
+        ],
+        [
+          2262,
+          2265
+        ],
+        [
+          2262,
+          2265
+        ],
+        [
+          2262,
+          2265
+        ]
+      ]
+    }
+  ]
+}

@@ -30,10 +30,13 @@ export interface CssImporterInterface {
 
   build(): Promise<number>;
 
+  bundle( toExcludeComments: boolean ): Promise<number>;
+
   cssBundleMake (
     inParsedResultDTO: ParsedResultDTO,
     inFilePath: string,
-    counterStop: number
+    counterStop: number,
+    toExcludeComments: boolean
   ): number;
 
 }

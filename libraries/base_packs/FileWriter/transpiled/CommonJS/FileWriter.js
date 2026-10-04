@@ -24,7 +24,8 @@ class FileWriter {
         return this;
     }
     async initFileHandleToExistingFile(inFilePath, mode) {
-        if (node_fs_1.default.existsSync(inFilePath) === false) {
+        let fe = node_fs_1.default.existsSync(inFilePath);
+        if (fe === false) {
             throw new Error(`File not found: ${inFilePath}`);
         }
         this.filePath = inFilePath;
@@ -39,14 +40,17 @@ class FileWriter {
     async cleanupFileAndGetNewFileHandle(inFilePath, mode) {
         this.offsetInFile = 0;
         this.filePath = inFilePath;
-        if (node_fs_1.default.existsSync(this.filePath) === true) {
-            node_fs_1.default.unlinkSync(this.filePath);
+        let fe = node_fs_1.default.existsSync(inFilePath);
+        if (fe === true) {
+            //@ts-ignore
+            let unl = await node_fs_1.default.promises.unlink(this.filePath);
             if (this.debug === true) {
                 console.log(`File deleted: ${this.filePath}`);
             }
         }
         // ask create new file
-        node_fs_1.default.writeFileSync(this.filePath, "");
+        //@ts-ignore
+        let fw = node_fs_1.default.writeFileSync(this.filePath, "");
         if (this.debug === true) {
             console.log(`File touched: ${this.filePath}`);
         }

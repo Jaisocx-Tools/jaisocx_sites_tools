@@ -5,7 +5,7 @@
 > Just like all in this pack, to copypaste from code snippets `examples/code_snippets/*.ts|*.css`
 
 
-. **secure** shell nice try:
+. **secure** envelop nice try:
 
     . counter increments on the first line;
 

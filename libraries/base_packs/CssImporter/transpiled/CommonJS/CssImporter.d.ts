@@ -36,6 +36,7 @@ export declare class CssImporter implements CssImporterInterface {
      */
     resolveUrlBitsbufWithWebpackAlias(inBitsbuf: Uint8Array, filePathTextRefs: number[], webpackAliases: any): string;
     build(): Promise<number>;
-    cssBundleMake(inOutParsedResultDTO: ParsedResultDTO, inFilePath: string, counterStop: number): number;
+    bundle(toExcludeComments: boolean): Promise<number>;
+    cssBundleMake(inOutParsedResultDTO: ParsedResultDTO, inFilePath: string, counterStop: number, toExcludeComments: boolean): number;
 }
 //# sourceMappingURL=CssImporter.d.ts.map

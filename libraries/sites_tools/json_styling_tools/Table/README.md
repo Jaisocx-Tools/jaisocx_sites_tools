@@ -8,8 +8,13 @@
   | 🗓  **Updated**  | Winter 2026 | `Tue Jan 20 06:28:29 CET 2026` |
   
   | 📐  **Size**     | 🗂 Folder: 3.4 MB | 📦 Tarball: _ KB | 📋 .js: 10 KB | styles: 2.3 MB | 
-  
-  | ⚡  **JS Engine** | 🌐 Browser: ✅ yes | 🧭 Express: ❌ no | 🖥️ Console: ❌ no |
+
+  | ⚡  **just JS Base Engine required** | ❌ no |
+
+  | ⚡  **Support by JS Engines** | 🌐 Browser: ✅ yes | 🧭 Server-side Express: ❌ no | 🖥️ Command Line: ❌ no |
+
+  | ⚡  **JS Calls** | Network(fetch): ✅ yes | 🌐 Browser(DOM): ✅ yes | 🧭 Server-side Express(FS | DB): ❌ no | 🖥️ Command Line: ❌ no |
+
 
 ---
 

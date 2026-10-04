@@ -14,7 +14,7 @@ export async function invokeCssImporter() {
         throw new Error(`BuildData.json not available at path: ${buildDataPath}`);
     }
     // SITES TOOL like @jaisocx/css-clean-start-2, path of the sites tool's folder
-    // --sitesToolPath="Jaisocx_SitesTools/libraries/sites_tools/css_tools/CssCleanStart_2" \
+    // --sitesToolPath="ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/CssCleanStart_2" \
     let sitesToolPath = path.resolve(commandArgs.Root, commandArgs["sitesToolPath"]);
     if (false === fs.existsSync(sitesToolPath)) {
         throw new Error(`Sites Tool folder not available at path: --sitesToolPath="${sitesToolPath}"`);
@@ -43,10 +43,13 @@ export async function invokeCssImporter() {
     console.log("let cssTargetFilePath", cssTargetFilePath);
     let cssImporter = new CssImporter();
     cssImporter
+        .setDebug(true)
         .setPackagePath(sitesToolPath)
         .setCssFilePath(cssFilePath)
         .setCssTargetFilePath(cssTargetFilePath);
-    let result = await cssImporter.build();
+    // @ts-ignore
+    let toExcludeComments = (commandArgs["toExcludeComments"] === "true");
+    let result = await cssImporter.bundle(toExcludeComments);
     console.log("let result: number (\"CssImporter.build() result\")", result);
     let retVal = 2;
     return retVal;

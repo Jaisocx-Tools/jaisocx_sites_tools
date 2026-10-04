@@ -5,8 +5,13 @@
   | 🗓  **Updated**  | Spring 2026 | `29th of April 23:45:35 CET 2026` |
   
   | 📐  **Size**     | 🗂 Folder: 30 MB | 📦 Tarball: _ KB | 📋 styles: 5 KB | images: 29 MB | fonts: 693 KB | 
-  
-  | ⚡  **JS Engine** | 🌐 Browser: ✅ yes | 🧭 Express: ✅ yes | 🖥️ Console: ❌ no |
+
+  | ⚡  **just JS Base Engine required** | ❌ no |
+
+  | ⚡  **Support by JS Engines** | 🌐 Browser: ✅ yes | 🧭 Server-side Express: ❌ no | 🖥️ Command Line: ❌ no |
+
+  | ⚡  **JS Calls** | Network(fetch): ✅ yes | 🌐 Browser(DOM): ✅ yes | 🧭 Server-side Express(FS | DB): ❌ no | 🖥️ Command Line: ❌ no |
+
 
   | **install** | Git: ✅ yes | node_modules: ❌ no ( the example for git of year 2024, avoided publishing for node_modules 29 MB images for preview `example_imaged_data.html` ) | 
   

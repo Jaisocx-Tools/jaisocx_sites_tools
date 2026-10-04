@@ -6,11 +6,11 @@
   --BuildData="${IN_DOCKER_WORKSPACE_VOLUME}/ts/BuildData.json" \
 
   ## this package's 2 paths, of the folder and of the script being invoked by bash script "./cmd/base/js_invoke.sh"
-  --packagePath="Jaisocx_SitesTools/console/JsInvoke" \
+  --packagePath="ts/cloned_repos/jaisocx_sitestools/console/JsInvoke" \
   --script="invokeCssImporter.js" \
 
   // path of the sites tool to build together the entry .css with imports by the @jaisocx/css-importer
-      --sitesToolPath="Jaisocx_SitesTools/libraries/sites_tools/css_tools/CssCleanStart_2" \
+      --sitesToolPath="ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/CssCleanStart_2" \
 
   // the entry .css file of a tool produced by SitesToolAutomation is on relative path
   // MediaAndStyles/${SitesTool_Name}_main_Webpack.css
@@ -29,6 +29,7 @@ export type CommandArgsObject = {
     sitesToolPath: "";
     cssFilePath: "";
     cssTargetFilePath: "";
+    toExcludeComments: "";
 };
 export declare function invokeCssImporter(): Promise<number>;
 //# sourceMappingURL=invokeCssImporter.d.ts.map

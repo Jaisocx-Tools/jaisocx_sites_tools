@@ -14,11 +14,11 @@ import { CssImporter } from "@jaisocx/css-importer";
   --BuildData="${IN_DOCKER_WORKSPACE_VOLUME}/ts/BuildData.json" \
 
   ## this package's 2 paths, of the folder and of the script being invoked by bash script "./cmd/base/js_invoke.sh"
-  --packagePath="Jaisocx_SitesTools/console/JsInvoke" \
+  --packagePath="ts/cloned_repos/jaisocx_sitestools/console/JsInvoke" \
   --script="invokeCssImporter.js" \
 
   // path of the sites tool to build together the entry .css with imports by the @jaisocx/css-importer
-      --sitesToolPath="Jaisocx_SitesTools/libraries/sites_tools/css_tools/CssCleanStart_2" \
+      --sitesToolPath="ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/CssCleanStart_2" \
 
   // the entry .css file of a tool produced by SitesToolAutomation is on relative path
   // MediaAndStyles/${SitesTool_Name}_main_Webpack.css
@@ -37,7 +37,8 @@ export type CommandArgsObject = {
   script: "",
   sitesToolPath: "",
   cssFilePath: "",
-  cssTargetFilePath: ""
+  cssTargetFilePath: "",
+  toExcludeComments: ""
 };
 
 
@@ -65,7 +66,7 @@ export async function invokeCssImporter(): Promise<number> {
 
 
   // SITES TOOL like @jaisocx/css-clean-start-2, path of the sites tool's folder
-  // --sitesToolPath="Jaisocx_SitesTools/libraries/sites_tools/css_tools/CssCleanStart_2" \
+  // --sitesToolPath="ts/cloned_repos/jaisocx_sitestools/libraries/sites_tools/css_tools/CssCleanStart_2" \
   let sitesToolPath: any = path.resolve (
     commandArgs.Root,
     commandArgs["sitesToolPath"]
@@ -132,11 +133,16 @@ export async function invokeCssImporter(): Promise<number> {
 
   let cssImporter: CssImporter = new CssImporter();
   cssImporter
+    .setDebug( true )
     .setPackagePath( sitesToolPath )
     .setCssFilePath( cssFilePath )
     .setCssTargetFilePath( cssTargetFilePath );
 
-  let result: number = await cssImporter.build();
+
+  // @ts-ignore
+  let toExcludeComments: boolean = ( commandArgs["toExcludeComments"] === "true" );
+
+  let result: number = await cssImporter.bundle( toExcludeComments );
 
   console.log (
     "let result: number (\"CssImporter.build() result\")",

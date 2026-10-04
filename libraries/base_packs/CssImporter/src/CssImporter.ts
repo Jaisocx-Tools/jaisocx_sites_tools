@@ -4,6 +4,7 @@ import { TextDecoder } from "node:util";
 
 import { FileWriter, FileWriterQueue } from "@jaisocx/file-writer";
 import { TokensParser, FileReader } from "@jaisocx/tokens-parser";
+import { OptimizedTrimmer } from "@jaisocx/text";
 
 import { CssImporterConstants } from "./CssImporterConstants.js";
 import { CssImporterInterface } from "./CssImporterInterface.js";
@@ -18,6 +19,7 @@ export class CssImporter implements CssImporterInterface {
   cssImporterConstants: CssImporterConstants;
   fileReader: FileReader;
   tokensParser: TokensParser;
+  optimizedTrimmer: OptimizedTrimmer;
 
   packagePath: string;
 
@@ -38,6 +40,7 @@ export class CssImporter implements CssImporterInterface {
     this.cssImporterConstants = new CssImporterConstants();
     this.fileReader = new FileReader();
     this.tokensParser = new TokensParser();
+    this.optimizedTrimmer = new OptimizedTrimmer();
 
     this.packagePath = "";
     this.webpackAliases = "";
@@ -258,6 +261,16 @@ export class CssImporter implements CssImporterInterface {
 
 
   async build(): Promise<number> {
+    let toExcludeComments_true: boolean = true;
+    let r: number = await this.bundle( toExcludeComments_true );
+
+
+    return r;
+  }
+
+
+
+  async bundle( toExcludeComments: boolean ): Promise<number> {
     let hasError: boolean = false;
     let err: any = {};
 
@@ -296,7 +309,8 @@ export class CssImporter implements CssImporterInterface {
       this.cssBundleMake (
         locInOutResultDTO,
         this.cssFilePath,
-        counterStop
+        counterStop,
+        toExcludeComments
       );
     } catch (error) {
       console.error(error);
@@ -349,7 +363,8 @@ export class CssImporter implements CssImporterInterface {
   public cssBundleMake (
     inOutParsedResultDTO: ParsedResultDTO,
     inFilePath: string,
-    counterStop: number
+    counterStop: number,
+    toExcludeComments: boolean
   ): number {
     let fileContentsBuffer: Uint8Array = this.fileReader.readFileContentsAsBitsBuf ( inFilePath );
 
@@ -369,32 +384,34 @@ export class CssImporter implements CssImporterInterface {
     let commentsTokens: any = cssTokens["comment"];
     let importsTokens: any = cssTokens["import"];
 
+    if ( toExcludeComments === true ) {
+      this.tokensParser
+        .parseWithStartAndEndTokensSets (
+          fileContentsBuffer,
+          bitsBufRefs_ReadFile,
+          commentsTokens,
+          bitsBufRefs_NoComments,
+          bitsBufRefs_Comments_Outer,
+          bitsBufRefs_Comments_Inner,
+          counterStop
+        );
 
+      if ( this.debug === true ) {
+        console.log( "Comments:\n" );
+        this.tokensParser.contentPreviewByRange(
+          fileContentsBuffer,
+          bitsBufRefs_Comments_Inner
+        );
 
-    this.tokensParser
-      .parseWithStartAndEndTokensSets (
-        fileContentsBuffer,
-        bitsBufRefs_ReadFile,
-        commentsTokens,
-        bitsBufRefs_NoComments,
-        bitsBufRefs_Comments_Outer,
-        bitsBufRefs_Comments_Inner,
-        counterStop
-      );
-
-    if ( this.debug === true ) {
-      console.log( "Comments:\n" );
-      this.tokensParser.contentPreviewByRange(
-        fileContentsBuffer,
-        bitsBufRefs_Comments_Inner
-      );
-
-      console.log( "\n\nCss without comments:\n" );
-      this.tokensParser.contentPreviewByRange(
-        fileContentsBuffer,
-        bitsBufRefs_NoComments
-      );
+        console.log( "\n\nCss without comments:\n" );
+        this.tokensParser.contentPreviewByRange(
+          fileContentsBuffer,
+          bitsBufRefs_NoComments
+        );
+      }
     }
+
+
 
     this.tokensParser
       .parseWithStartAndEndTokensSets (
@@ -435,7 +452,7 @@ export class CssImporter implements CssImporterInterface {
 
     this.fileWriterQueue.namedBitsbufs[resultDTO.cssFilePath] = fileContentsBuffer;
 
-    let firstRange_NoImports: number[] = bitsBufRefs_NoImports[0];
+    let firstRange_NoImports: number[] = bitsBufRefs_NoImports.length ? bitsBufRefs_NoImports[0] : [0, 0];
     let firstRange_NoImports_Start: number = firstRange_NoImports[0];
     let firstRange_NoImports_End: number = firstRange_NoImports[1];
     rangeStart = firstRange_NoImports_Start;
@@ -511,6 +528,12 @@ export class CssImporter implements CssImporterInterface {
 
     markerA: for ( aImportsIx = 0; aImportsIx < aNumberRanges_Imports; aImportsIx++ ) {
       aRange_Imports = [...bitsBufRefs_ImportURLs_Inner[ aImportsIx ]];
+      let aRangeImportsTrimmed: number[] = this.optimizedTrimmer.trimQuotes (
+        fileContentsBuffer,
+        aRange_Imports[0],
+        aRange_Imports[1]
+      );
+
       aRange_Imports_Start = aRange_Imports[0];
 
 
@@ -540,7 +563,14 @@ export class CssImporter implements CssImporterInterface {
       }
 
       markerB: for ( bNoImportsIx = latest_bNoImportsIx; bNoImportsIx < bNumberRanges_NoImports; bNoImportsIx++ ) {
-        bRange_NoImports = [...bitsBufRefs_NoImports[ bNoImportsIx ]];
+        let bRange_NoImports_ref = bitsBufRefs_NoImports[ bNoImportsIx ];
+        let isIterable: boolean = ( Array.isArray( bRange_NoImports_ref ) && ( bRange_NoImports_ref.length !== 0 ) );
+
+        if ( isIterable === false ) {
+          continue markerB;
+        }
+
+        bRange_NoImports = [...bRange_NoImports_ref];
         bRange_NoImports_Start = bRange_NoImports[0];
 
 

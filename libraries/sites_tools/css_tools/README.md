@@ -1,5 +1,17 @@
 # CSS Tools
 
+
+| ⚡  **just JS Base Engine required** | ✅ yes |
+
+| ⚡  **Support by JS Engines** | 🌐 Browser: ✅ yes | 🧭 Server-side Express: ✅ yes | 🖥️ Command Line: ✅ yes |
+
+| ⚡  **JS Calls** | Network(fetch): ❌ no | 🌐 Browser(DOM): ❌ no | 🧭 Server-side Express(FS | DB): ❌ no | 🖥️ Command Line: ❌ no |
+
+
+---
+
+
+
 ## The aim of the setup
 
 The CSS Tools project is aimed to install via npm and yarn, or downloading a .zip package from the github,

@@ -12,7 +12,6 @@
 
   | 📐  **Size**     | 🗂 Folder: 300 kb | 📦 Tarball: 7.6 KB | 📄 .css: 20 kb | 📄 .html: 4 kb, 55 kb | 
 
-  | ⚡  **JS Engine** | 🌐 Browser: ✅ yes | 🧭 Express: ✅ yes | 🖥️ Console: ❌ no | 
 
 ---
 

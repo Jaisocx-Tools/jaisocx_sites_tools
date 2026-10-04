@@ -8,7 +8,12 @@
 
   | 📐  **Size**     | 🗂 Folder: 106 KB | 📦 Tarball: _ KB | 📋 .js: 5 KB | 
 
-  | ⚡  **JS Engine** | 🌐 Browser: ❌ no | 🧭 Express: ❌ no | 🖥️ Console: ✅ yes | 
+  | ⚡  **just JS Base Engine required** | ❌ no |
+
+  | ⚡  **Support by JS Engines** | 🌐 Browser: ❌ no | 🧭 Server-side Express: ❌ no | 🖥️ Command Line: ✅ yes |
+
+  | ⚡  **JS Calls** | Network(fetch): ❌ no | 🌐 Browser(DOM): ❌ no | 🧭 Server-side Express(FS | DB): ❌ no | 🖥️ Command Line: ✅ yes |
+
 
 ---
 
