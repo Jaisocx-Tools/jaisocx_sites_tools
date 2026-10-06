@@ -3,6 +3,7 @@ import * as path from "node:path";
 import { TextDecoder } from "node:util";
 import { FileWriter, FileWriterQueue } from "@jaisocx/file-writer";
 import { TokensParser, FileReader } from "@jaisocx/tokens-parser";
+import { OptimizedTrimmer } from "@jaisocx/text";
 import { CssImporterConstants } from "./CssImporterConstants.js";
 import { ParsedResultDTO } from "./ParsedResultDTO.js";
 export class CssImporter {
@@ -10,6 +11,7 @@ export class CssImporter {
     cssImporterConstants;
     fileReader;
     tokensParser;
+    optimizedTrimmer;
     packagePath;
     webpackAliases;
     cssFilePath;
@@ -22,6 +24,7 @@ export class CssImporter {
         this.cssImporterConstants = new CssImporterConstants();
         this.fileReader = new FileReader();
         this.tokensParser = new TokensParser();
+        this.optimizedTrimmer = new OptimizedTrimmer();
         this.packagePath = "";
         this.webpackAliases = "";
         this.cssFilePath = "";
@@ -261,6 +264,7 @@ export class CssImporter {
         let max_aNumberRanges_Imports = (aNumberRanges_Imports - 1);
         markerA: for (aImportsIx = 0; aImportsIx < aNumberRanges_Imports; aImportsIx++) {
             aRange_Imports = [...bitsBufRefs_ImportURLs_Inner[aImportsIx]];
+            let aRangeImportsTrimmed = this.optimizedTrimmer.trimQuotes(fileContentsBuffer, aRange_Imports[0], aRange_Imports[1]);
             aRange_Imports_Start = aRange_Imports[0];
             // aRange_Imports_End = aRange_Imports[1];
             bRange_NoImports = [...bitsBufRefs_NoImports[latest_bNoImportsIx]];

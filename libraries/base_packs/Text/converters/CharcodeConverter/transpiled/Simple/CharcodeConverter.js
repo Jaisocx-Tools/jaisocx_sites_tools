@@ -48,7 +48,6 @@ class CharcodeConverter {
 
 
     static getInstance() {
-
         if (!CharcodeConverter._instance) {
             CharcodeConverter._instance = new CharcodeConverter();
         }
@@ -86,7 +85,6 @@ class CharcodeConverter {
 
 
     log(key, data) {
-
         if (!this._debug) {
             return;
         }
@@ -474,7 +472,6 @@ class CharcodeConverter {
 
 
     getCharAndAutoload(charcode) {
-
         if ((charcode >= this._numToChar.length)) {
             this.loadCharsetByCharcode(charcode);
         }
@@ -584,7 +581,6 @@ class CharcodeConverter {
 
     // Load character set based on range
     loadCharset(charsetKey) {
-
         if (this._loadedRanges.has(charsetKey))
 
 

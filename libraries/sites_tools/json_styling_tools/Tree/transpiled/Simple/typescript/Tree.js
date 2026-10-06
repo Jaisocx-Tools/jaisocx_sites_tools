@@ -163,7 +163,6 @@ class Tree extends ImprovedRenderEventEmitter {
 
 
     load(url) {
-
         if (url && url.length) {
             this.url = url;
         }
@@ -184,7 +183,6 @@ class Tree extends ImprovedRenderEventEmitter {
 
 
     adaptRenderingModeSubcalls() {
-
         if (this.renderingMode === TreeConstants.RenderingMode.Conf) {
             this.adapter = new TreeAdapterModeConf();
 
@@ -222,7 +220,6 @@ class Tree extends ImprovedRenderEventEmitter {
 
 
     render(nodes) {
-
         if (nodes) {
             this.data = nodes;
         }
@@ -285,7 +282,6 @@ class Tree extends ImprovedRenderEventEmitter {
         let subtreeRenderResult;
 
         if (this.renderingMode === TreeConstants.RenderingMode.Conf) {
-
             if (isArray === 1) {
                 subtreeRenderResult = this.renderSubtree(
                     isArray,
@@ -490,7 +486,6 @@ class Tree extends ImprovedRenderEventEmitter {
         flatNodeHolderClone,
         holder
     ) {
-
         if (this.debug) {
             console.log(node);
         }
@@ -885,7 +880,6 @@ class Tree extends ImprovedRenderEventEmitter {
 
 
     unescapeHTMLFromAttribute(str) {
-
         if (!str) {
             return "";
         }
@@ -913,7 +907,6 @@ class Tree extends ImprovedRenderEventEmitter {
 
 
     getTreeHtmlNodeDatasetJson(htmlNode) {
-
         if (htmlNode === null) {
             return "";
         }

@@ -5,7 +5,7 @@ export class Countries extends DatasetBase {
     constructor() {
         super();
         this._data = this.initData();
-        this.filePath = "";
+        this._filePath = "";
     }
     static getSingletonInstance() {
         if (Countries._singletonInstance === undefined) {

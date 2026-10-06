@@ -6,7 +6,7 @@ class Countries extends cdn_datasets_base_1.DatasetBase {
     constructor() {
         super();
         this._data = this.initData();
-        this.filePath = "";
+        this._filePath = "";
     }
     static getSingletonInstance() {
         if (Countries._singletonInstance === undefined) {

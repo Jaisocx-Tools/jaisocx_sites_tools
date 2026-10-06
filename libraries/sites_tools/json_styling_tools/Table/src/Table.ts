@@ -5,7 +5,7 @@ import "@table-MediaAndStyles/table-styles-main-webpack.css";
 
 
 
-export class Table {
+export class Table implements TableInterface {
 
   MAX_WIDTH_MOBILE_LOOK_AND_FEEL: number;
 

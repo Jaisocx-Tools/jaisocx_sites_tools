@@ -1,6 +1,7 @@
 import { TextDecoder } from "node:util";
 import { FileWriter, FileWriterQueue } from "@jaisocx/file-writer";
 import { TokensParser, FileReader } from "@jaisocx/tokens-parser";
+import { OptimizedTrimmer } from "@jaisocx/text";
 import { CssImporterConstants } from "./CssImporterConstants.js";
 import { CssImporterInterface } from "./CssImporterInterface.js";
 import { ParsedResultDTO } from "./ParsedResultDTO.js";
@@ -9,6 +10,7 @@ export declare class CssImporter implements CssImporterInterface {
     cssImporterConstants: CssImporterConstants;
     fileReader: FileReader;
     tokensParser: TokensParser;
+    optimizedTrimmer: OptimizedTrimmer;
     packagePath: string;
     webpackAliases: any | false;
     cssFilePath: string;

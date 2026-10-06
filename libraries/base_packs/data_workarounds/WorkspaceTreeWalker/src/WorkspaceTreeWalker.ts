@@ -4,6 +4,7 @@ import { JPathData } from "./types/JPathData.js";
 import { JPath } from "./lib/JPath.js";
 
 
+
 export class WorkspaceTreeWalker {
 
   public static DATATYPE_OBJECT: string = "object";
@@ -44,12 +45,12 @@ export class WorkspaceTreeWalker {
 
 
   public static getNodeInfo( elem: any ): IterableInfo {
-
     let elemsNumber: number = 0;
     let keys: any[] = [];
     let datatype: string = typeof( elem );
     let isObject: boolean = ( datatype === WorkspaceTreeWalker.DATATYPE_OBJECT );
     let isArray: boolean = false;
+
 
     //@thoughts whether for simple datatype to return this object,
     //  a little more cost,
@@ -70,6 +71,7 @@ export class WorkspaceTreeWalker {
     if ( result.isArray ) {
       elemsNumber = elem.length;
       const arrayKeys = (new Array<number>(elemsNumber));
+
       for ( let i=0; i < elemsNumber; i++ ) {
         arrayKeys[i] = i;
       }
@@ -83,16 +85,18 @@ export class WorkspaceTreeWalker {
 
     result.length = elemsNumber;
 
+
     return result;
   }
 
-  public static normalizeNodes ( 
-    nodes: any, 
-    nodeInfo: IterableInfo 
-  ): any {
 
+
+  public static normalizeNodes (
+    nodes: any,
+    nodeInfo: IterableInfo
+  ): any {
     const elemsNumber: number = nodeInfo.length;
-    
+
     let result: any[] = [];
 
     if ( nodeInfo.length === 0 ) {
@@ -101,39 +105,46 @@ export class WorkspaceTreeWalker {
 
     result = [
       ...nodeInfo.keys.map (
-        function ( key: any ) { 
+        function ( key: any ) {
           let keyText: string = "";
           let result: any = {};
+
 
           //@ts-ignore
           if ( this.nodeInfo.isArray ) {
             keyText = "" + key;
+
+
             //@ts-ignore
             result = { [keyText]: this.nodes[key] };
 
           } else {
+
             //@ts-ignore
             result = { [key]: this.nodes[key] };
 
           }
 
+
           return result;
-        }.bind({ nodeInfo, 
+        }.bind({ nodeInfo,
           nodes })
       )
     ];
 
+
     return result;
   }
+
+
 
   public walkEasy (
     inOutPayload: WorkspaceTreeWalkerPayload,
     callback: CallableFunction
   ): undefined {
-
     let info: IterableInfo = WorkspaceTreeWalker.getNodeInfo ( inOutPayload.dataset );
-    let normalizedNodes: any = WorkspaceTreeWalker.normalizeNodes ( 
-      inOutPayload.dataset, 
+    let normalizedNodes: any = WorkspaceTreeWalker.normalizeNodes (
+      inOutPayload.dataset,
       info );
 
     callback( inOutPayload );
@@ -145,7 +156,6 @@ export class WorkspaceTreeWalker {
     let branchNodeNormalizedNodes: any = null;
 
     loop: for ( node of normalizedNodes ) {
-
       nodeInfo = WorkspaceTreeWalker.getNodeInfo ( node );
       keyNode = Object.keys( node )[0];
       nodeValue = node[keyNode];
@@ -154,11 +164,13 @@ export class WorkspaceTreeWalker {
         callback( inOutPayload );
 
         continue loop;
-      } 
+      }
 
 
-      branchNodeNormalizedNodes = WorkspaceTreeWalker.normalizeNodes ( 
+      branchNodeNormalizedNodes = WorkspaceTreeWalker.normalizeNodes (
         nodeValue,
+
+
         //@ts-ignore
         nodeInfo
       );
@@ -173,25 +185,29 @@ export class WorkspaceTreeWalker {
 
   }
 
+
+
   public walkWhenSubtreePropName (
     inOutPayload: WorkspaceTreeWalkerPayload,
     callback: CallableFunction
   ): undefined {
-
     let info: IterableInfo = WorkspaceTreeWalker.getNodeInfo ( inOutPayload.dataset );
-    let normalizedNodes: any[] = WorkspaceTreeWalker.normalizeNodes( 
-      inOutPayload.dataset, 
+    let normalizedNodes: any[] = WorkspaceTreeWalker.normalizeNodes(
+      inOutPayload.dataset,
       info );
 
     callback( inOutPayload );
 
     let branchIndex: number = 0;
-    let keyFound = info.keys.find( 
+    let keyFound = info.keys.find(
       (k: any, i: number) => {
         let matches: boolean = ( k === inOutPayload.branchName );
+
         if ( matches === true ) branchIndex = i;
+
+
         return matches;
-      } 
+      }
     );
 
     let node: any  = null;
@@ -200,9 +216,7 @@ export class WorkspaceTreeWalker {
     let nodeInfo: IterableInfo|Object = {};
     let branchNodeNormalizedNodes: any = null;
 
-
     loop: for ( node of normalizedNodes ) {
-
       keyNode = Object.keys( node )[0];
       nodeValue = node[keyNode];
       nodeInfo = WorkspaceTreeWalker.getNodeInfo ( nodeValue );
@@ -211,8 +225,10 @@ export class WorkspaceTreeWalker {
         branchNodeNormalizedNodes = null;
 
       } else {
-        branchNodeNormalizedNodes = WorkspaceTreeWalker.normalizeNodes ( 
+        branchNodeNormalizedNodes = WorkspaceTreeWalker.normalizeNodes (
           nodeValue,
+
+
           //@ts-ignore
           nodeInfo
         );
@@ -237,15 +253,16 @@ export class WorkspaceTreeWalker {
 
   }
 
+
+
   public walkFlat (
     inOutPayload: WorkspaceTreeWalkerPayload,
     callback: CallableFunction
   ): undefined {
-
     let info: IterableInfo = WorkspaceTreeWalker.getNodeInfo ( inOutPayload.dataset );
-    let normalizedRootData: any[] = WorkspaceTreeWalker.normalizeNodes( 
-      inOutPayload.dataset, 
-      info 
+    let normalizedRootData: any[] = WorkspaceTreeWalker.normalizeNodes(
+      inOutPayload.dataset,
+      info
     );
 
     inOutPayload.jpathData.getJPath().push( inOutPayload.id );
@@ -260,11 +277,11 @@ export class WorkspaceTreeWalker {
   }
 
 
+
   public walkFlatSubcall (
     inOutPayload: WorkspaceTreeWalkerPayload,
     callback: CallableFunction
   ): undefined {
-
     inOutPayload.currentDatasetNormalized = [
       ...inOutPayload.datasetNormalized
         .filter(
@@ -272,8 +289,10 @@ export class WorkspaceTreeWalker {
             const branchKey = Object.keys( node )[0];
             const flatRecursionDataRecord: any = node[branchKey];
 
+
             //@ts-ignore
             const matchesHolderId: boolean = ( flatRecursionDataRecord[inOutPayload.nameHolderId] === inOutPayload.id );
+
 
             return matchesHolderId;
           }
@@ -291,9 +310,10 @@ export class WorkspaceTreeWalker {
     let dataInfo: IterableInfo|Object = {};
 
     for ( data of filteredRootNodes ) {
-
       let payloadLocal: WorkspaceTreeWalkerPayload = new WorkspaceTreeWalkerPayload();
+
       for ( let propName in inOutPayload ) {
+
         //@ts-ignore
         payloadLocal[propName] = inOutPayload[propName];
       }
@@ -306,7 +326,7 @@ export class WorkspaceTreeWalker {
       const jpathData: JPathData = payloadLocal.jpathData;
       const path: any[] = jpathData.getJPath();
 
-      let newJpath = path.reduce ( 
+      let newJpath = path.reduce (
         ( jpathCurrent: any, key: any, ix: number, reducedPath: any[] ): any => {
           const _jpathLen: number = jpathCurrent.length;
           const _jpathLastIx: number = _jpathLen - 1;
@@ -331,8 +351,9 @@ export class WorkspaceTreeWalker {
 
           }
 
+
           return [...jpathCurrent];
-        }, 
+        },
         []
       );
 
@@ -346,14 +367,14 @@ export class WorkspaceTreeWalker {
       let iterationsNumber: number = 1;
       let iteration = 0;
       let isMultipleDataApplied: boolean = false;
+
+
       //@ts-ignore
       let multipleDataInfo: IterableInfo = {};
 
 
-
       // when a iterationsDataset variable can be an object.
       if ( payloadLocal.iterationsDataset ) {
-
         multipleDataInfo = WorkspaceTreeWalker.getNodeInfo( payloadLocal.iterationsDataset );
 
         payloadLocal.iterationsDatasetNormalized = WorkspaceTreeWalker.normalizeNodes (
@@ -363,6 +384,7 @@ export class WorkspaceTreeWalker {
 
         payloadLocal.iterationsNumber = payloadLocal.iterationsDatasetNormalized.length;
         isMultipleDataApplied = ( payloadLocal.iterationsNumber !== 0 );
+
         if ( isMultipleDataApplied ) {
 
           // reassignment, default 1.
@@ -371,17 +393,17 @@ export class WorkspaceTreeWalker {
 
       }
 
-
       for ( iteration = 0; iteration < iterationsNumber; iteration++ ) {
-
         let branchInoutPayload: WorkspaceTreeWalkerPayload = new WorkspaceTreeWalkerPayload();
-        
+
         if ( isMultipleDataApplied === true ) {
 
           for ( let key in payloadLocal ) {
+
             //@ts-ignore
             branchInoutPayload[key] = payloadLocal[key];
           }
+
 
           //@ts-ignore
           branchInoutPayload.iterationsData = payloadLocal.iterationsDatasetNormalized[iteration];
@@ -424,10 +446,10 @@ export class WorkspaceTreeWalker {
   }
 
 
+
   public static callbackWalkFlatTransformToMultilevel (
     inOutPayload: WorkspaceTreeWalkerPayload
   ) {
-
     JPath.setByJPathWalkFlatRebuild (
       inOutPayload.transformedDataset,
       inOutPayload.jpathData.getJPath(),

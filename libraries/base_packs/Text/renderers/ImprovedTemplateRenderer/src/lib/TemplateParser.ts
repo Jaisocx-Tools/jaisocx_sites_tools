@@ -2,6 +2,7 @@ import { CharcodeConverter } from "@jaisocx/charcode-converter";
 import { JPath, JPathData } from "@jaisocx/workspace-tree-walker";
 
 
+
 export class TemplateParser {
 
   public static CONSTANTS = class {
@@ -15,23 +16,29 @@ export class TemplateParser {
 
   public converter: CharcodeConverter;
 
+
+
   constructor() {
     this.converter = CharcodeConverter.getInstance();
   }
+
+
 
   public static getInstance(): TemplateParser {
     if ( !TemplateParser.instance ) {
       TemplateParser.instance = new TemplateParser();
     }
 
+
     return TemplateParser.instance;
   }
 
-  public parse ( 
-    template: string, 
-    placeholderName: string 
-  ): (Uint16Array|JPathData)[] {
 
+
+  public parse (
+    template: string,
+    placeholderName: string
+  ): (Uint16Array|JPathData)[] {
     const parser: TemplateParser = TemplateParser.instance;
 
 
@@ -55,18 +62,18 @@ export class TemplateParser {
     let range: {bracesStart: number, bracesEnd: number, placeholderStart: number, placeholderEnd: number};
 
     while( matchedPosition > noMatch ) {
-
       range = {
-        bracesStart: 0, 
-        bracesEnd: 0, 
-        placeholderStart: 0, 
+        bracesStart: 0,
+        bracesEnd: 0,
+        placeholderStart: 0,
         placeholderEnd: 0
       };
 
 
-      matchedPosition = template.indexOf( 
-        braceOpen, 
+      matchedPosition = template.indexOf(
+        braceOpen,
         lookupOffset );
+
       if ( matchedPosition === noMatch ) {
         break;
       }
@@ -74,11 +81,12 @@ export class TemplateParser {
       range.bracesStart = matchedPosition;
       range.placeholderStart = ( matchedPosition + braceLen );
 
-      
+
       lookupOffset = ( range.placeholderStart + 1 );
-      matchedPosition = template.indexOf( 
-        braceClose, 
+      matchedPosition = template.indexOf(
+        braceClose,
         lookupOffset );
+
       if ( matchedPosition === noMatch ) {
         throw new Error("Placeholders");
         break;
@@ -86,7 +94,7 @@ export class TemplateParser {
 
       range.placeholderEnd = ( matchedPosition );
       range.bracesEnd = ( matchedPosition + braceLen );
-      
+
 
       placeholdersPositions.push({...range});
       lookupOffset = ( range.bracesEnd + 1 );
@@ -102,16 +110,17 @@ export class TemplateParser {
     let staticTemplateToBitsBuffer: Uint16Array;
     let placeholder: string = "";
     let jpathData: JPathData;
+
     for ( range of placeholdersPositions ) {
       if ( range.bracesStart > offset ) {
-        staticTemplate = template.substring( 
-          offset, ( 
+        staticTemplate = template.substring(
+          offset, (
             range.bracesStart ) );
 
         if ( staticTemplate && staticTemplate.length > 0 ) {
           preparedTemplates.push(
-            parser.converter.stringToArray( 
-              staticTemplate, 
+            parser.converter.stringToArray(
+              staticTemplate,
               0 )
           );
         }
@@ -119,17 +128,18 @@ export class TemplateParser {
         offset = range.placeholderStart;
       }
 
-      placeholder = template.substring( 
-        range.placeholderStart, 
-        range.placeholderEnd );
+      placeholder = template.substring(
+        range.placeholderStart,
+        range.placeholderEnd
+      );
 
       if ( placeholder.startsWith( placeholderName ) === true ) {
         placeholder = placeholder.substring( placeholderName.length );
       }
 
       jpathData = new JPathData();
+
       if ( placeholder && placeholder.length > 0 ) {
-        
         jpathData.setJPathExpression( placeholder );
         jpathData.setJPath(
           JPath.parse( placeholder )
@@ -155,11 +165,12 @@ export class TemplateParser {
 
     if ( staticTemplate && staticTemplate.length > 0 ) {
       preparedTemplates.push (
-        parser.converter.stringToArray( 
-          staticTemplate, 
+        parser.converter.stringToArray(
+          staticTemplate,
           0 )
       );
     }
+
 
     return preparedTemplates;
   }

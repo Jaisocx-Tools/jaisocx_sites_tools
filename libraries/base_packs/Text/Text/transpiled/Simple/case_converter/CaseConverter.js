@@ -41,7 +41,6 @@ class CaseConverter {
 
 
     static getInstance() {
-
         if (CaseConverter.clsInstance === false) {
             CaseConverter.clsInstance = new CaseConverter();
         }
@@ -395,7 +394,6 @@ class CaseConverter {
             locCurrentCharsGroupType = locTmpGroupRanges[2];
 
             if (locCurrentCharsGroupType === CaseConverterConstants.CharTypeEnum.delimiter) {
-
                 if ((locIsDelimiter === true) && (groupOfChars_Id !== 0)) {
                     retVal_transformed.push(delimiter);
                 }
@@ -561,19 +559,16 @@ class CaseConverter {
                 transformedGroupsMultidimPosArray.push(locTmp_ofTypeDelimiter_TransformedGroupRanges);
             }
             else if (joinDelimiterVariant === CaseConverterConstants.JoinDelimiterVariants.beforeNumbersNoDelimiter) {
-
                 if (locCurrentCharsGroupType !== CaseConverterConstants.CharTypeEnum.num) {
                     transformedGroupsMultidimPosArray.push(locTmp_ofTypeDelimiter_TransformedGroupRanges);
                 }
             }
             else if (joinDelimiterVariant === CaseConverterConstants.JoinDelimiterVariants.afterNumbersNoDelimiter) {
-
                 if ((locPreviousCharsGroupType !== CaseConverterConstants.CharTypeEnum.num)) {
                     transformedGroupsMultidimPosArray.push(locTmp_ofTypeDelimiter_TransformedGroupRanges);
                 }
             }
             else if (joinDelimiterVariant === CaseConverterConstants.JoinDelimiterVariants.neverNumbersDelimiter) {
-
                 if ((locPreviousCharsGroupType !== CaseConverterConstants.CharTypeEnum.num) && (locCurrentCharsGroupType !== CaseConverterConstants.CharTypeEnum.num)) {
                     transformedGroupsMultidimPosArray.push(locTmp_ofTypeDelimiter_TransformedGroupRanges);
                 }

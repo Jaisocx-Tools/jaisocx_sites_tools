@@ -1,0 +1,55 @@
+
+/* @start clean_start_tiny Mobile friendly */
+
+    /* portrait, xxxs til mobile xxs */
+    /* filters by widths */
+    @media only screen and (min-width: 5px) and (max-width: 280px) and (min-height: 5px) and (max-height: 1240px) and (orientation: portrait) {
+      .page_ex404.clean_start {
+        /* variables for @jaisocx/responsive_sizes helper library */
+        --theme_name: clean_start_tiny__theme_base;
+        --responsive_size: responsive_size__mobile_friendly__xxxs_til_d05_very_small_xxs_portrait;
+
+        /* styles */
+        --clean_start--site--padding: 0 0 0 0;
+        --clean_start--site--width: 100%;
+
+        --clean_start--rem: 10px;
+      }
+
+      .page_ex404.clean_start main layout-block.layout_2 {
+        padding: 1.4rem 1rem 1.4rem 1rem;
+      }
+    }
+
+    /* portrait, mobile xs til mobile md */
+    /* filters both by by widths and heights */
+    @media only screen and (min-width: 281px) and (max-width: 480px) and (min-height: 431px) and (max-height: 1240px) and (orientation: portrait) {
+      .page_ex404.clean_start {
+        /* variables for @jaisocx/responsive_sizes helper library */
+        --theme_name: clean_start_tiny__theme_base;
+        --responsive_size: responsive_size__mobile_friendly__d05_e08_very_small_xxs__til__midsize_md_portrait;
+
+        /* styles */
+        --clean_start--site--padding: 0 0 0 0;
+        --clean_start--site--width: 100%;
+
+        --clean_start--rem: 12px;
+      }
+    }
+
+    /* landscape, xxxs height til mobile md */
+    /* filters both by by widths and heights */
+    @media only screen and (min-width: 281px) and (max-width: 1024px) and (min-height: 5px) and (max-height: 480px) and (orientation: landscape) {
+      .page_ex404.clean_start {
+        /* variables for @jaisocx/responsive_sizes helper library */
+        --theme_name: clean_start_tiny__theme_base;
+        --responsive_size: responsive_size__mobile_friendly__d05_e08_very_small_xxs__til__midsize_md_landscape;
+
+        /* styles */
+        --clean_start--site--padding: 0 0 0 0;
+        --clean_start--site--width: 100%;
+      }
+    }
+/* @finish clean_start_tiny Mobile friendly */
+
+

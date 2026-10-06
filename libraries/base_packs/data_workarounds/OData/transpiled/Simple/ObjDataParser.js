@@ -24,7 +24,6 @@ class ObjDataParser {
 
         if ((dataHelper.datatype === ObjDataConstants.DATA_TYPES.ARRAY)
             || (dataHelper.datatype === ObjDataConstants.DATA_TYPES.OBJECT)) {
-
             if (dataHelper.datatype === ObjDataConstants.DATA_TYPES.ARRAY) {
                 retValue = [];
             }

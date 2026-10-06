@@ -42,7 +42,6 @@ class Api {
 
         //@ts-ignore
         requestHeaders) {
-
         if (this._debug) {
             this._timestamps["1Request"] = new Object();
             this._timestamps["1Request"]["start"] = this.getNsTimestamp();
@@ -51,7 +50,6 @@ class Api {
 
         return fetch(url)
             .then((response) => {
-
             if (this._debug) {
                     this._timestamps["1Request"]["end"] = this.getNsTimestamp();
                 }
@@ -69,7 +67,6 @@ class Api {
                 return response.arrayBuffer();
             })
             .then((buf) => {
-
             if (this._debug) {
                     this._timestamps["2ObtainedArrayBuffer"]["end"] = this.getNsTimestamp();
                 }
@@ -127,7 +124,6 @@ class Api {
 
 
     consoleLogTimestamps() {
-
         if (this._debug === false) {
             return;
         }

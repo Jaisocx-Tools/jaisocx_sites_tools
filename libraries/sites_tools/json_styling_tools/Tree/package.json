@@ -30,8 +30,8 @@
   ],
   "dependencies": {
     "@jaisocx/event-emitter": "~1.4.3",
-    "@jaisocx/jpath": "~1.2.3",
-    "@jaisocx/template-renderer": "~1.6.2"
+    "@jaisocx/jpath": "~2.0.6",
+    "@jaisocx/template-renderer": "~1.6.3"
   },
   "optionalDependencies": {
     "@jaisocx/css_clean_start_lite": "^1.0.3",

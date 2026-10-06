@@ -100,7 +100,6 @@ class CssHtml {
 
 
     remToPxAllValues(cssPropertyValue) {
-
         if (cssPropertyValue.includes(this.KEYWORD_REM) === false) {
             return false;
         }
@@ -139,7 +138,6 @@ class CssHtml {
 
 
     resolveCssValueIfVariable(element, cssValue) {
-
         if (cssValue.startsWith(this.KEYWORD_CSS_VARIABLE_START) === false) {
             return false;
         }

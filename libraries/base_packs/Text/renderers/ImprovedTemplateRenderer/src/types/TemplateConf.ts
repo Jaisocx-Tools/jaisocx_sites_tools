@@ -23,8 +23,8 @@
 "colLabelClose":                {
                 "tag": "columnLabels"
               },
-"colsLabelsHolderClose":      { 
-              "tag": "main" 
+"colsLabelsHolderClose":      {
+              "tag": "main"
             },
 "recordsHolderOpen":          {
               "tag": "main"
@@ -47,14 +47,15 @@
 "recordClose":                  {
                 "tag": "record"
               },
-"recordsHolderClose":         { 
+"recordsHolderClose":         {
               "tag": "main"
             },
-"tableClose":               { 
+"tableClose":               {
             "tag": "main"
           }
 };
 */
+
 
 //
 // "dataType": "WellKnownCompany_RestApi_ResponseJsonDataInterface",
@@ -65,16 +66,16 @@ export class TemplateConf {
   //
   templateName: string;
 
-  //@purpose 
-  // name of the templates group 
+
+  //@purpose
+  // name of the templates group
   tag: string;
 
 
-
-  //@purpose 
+  //@purpose
   // the name to the variable in the placeholder.
   // this variable value is equal with the prop "data" in the instance of this class.
-  // then the placeholder "tableRecord" in the template e.g. like this: 
+  // then the placeholder "tableRecord" in the template e.g. like this:
   // <any-html>{{ tableRecord.name }} {{ tableRecord.family_name }}</any-html>
   placeholder: string|undefined|null;
 
@@ -89,7 +90,6 @@ export class TemplateConf {
 
 
   branchRepeatTag: string|undefined|null;
- 
 
 
   //@purpose
@@ -100,23 +100,20 @@ export class TemplateConf {
   hasPlaceholders: boolean;
 
 
-
-  //@requiredWhen .hasPlaceholders = true; 
+  //@requiredWhen .hasPlaceholders = true;
   //@purpose
   // the placeholder's data placed into template when being rendered
   data: any|object|undefined|null;
-
 
 
   //@preparedResult
   info: any;
 
 
-
   //@calculated
   //@preprocessing
   //@info mark whether a placeholder's jpath expression was parsed,
-  //          and the template is now array of datatype any[], 
+  //          and the template is now array of datatype any[],
   //          string html and JPath class instance where was placeholder.
   placeholdersPrepared: boolean;
 
@@ -124,15 +121,14 @@ export class TemplateConf {
   //@calculated
   //@preprocessing
   //@purpose
-  // to know the number of placeholders, 
+  // to know the number of placeholders,
   // this is the .replace() or similar calls number
   // when rendering templates in a loop with very many elems.
   placeholdersNumber: number;
 
-  
+
 
   constructor() {
-
     this.templateName = "";
     this.tag = "";
     this.placeholder = null;
@@ -143,7 +139,7 @@ export class TemplateConf {
     this.repeatDataCallback = null;
 
     this.branchRepeatTag = null;
-    
+
 
     this.hasPlaceholders = false;
 

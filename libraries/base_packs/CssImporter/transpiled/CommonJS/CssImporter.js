@@ -39,6 +39,7 @@ const path = __importStar(require("node:path"));
 const node_util_1 = require("node:util");
 const file_writer_1 = require("@jaisocx/file-writer");
 const tokens_parser_1 = require("@jaisocx/tokens-parser");
+const text_1 = require("@jaisocx/text");
 const CssImporterConstants_js_1 = require("./CssImporterConstants.js");
 const ParsedResultDTO_js_1 = require("./ParsedResultDTO.js");
 class CssImporter {
@@ -47,6 +48,7 @@ class CssImporter {
         this.cssImporterConstants = new CssImporterConstants_js_1.CssImporterConstants();
         this.fileReader = new tokens_parser_1.FileReader();
         this.tokensParser = new tokens_parser_1.TokensParser();
+        this.optimizedTrimmer = new text_1.OptimizedTrimmer();
         this.packagePath = "";
         this.webpackAliases = "";
         this.cssFilePath = "";
@@ -286,6 +288,7 @@ class CssImporter {
         let max_aNumberRanges_Imports = (aNumberRanges_Imports - 1);
         markerA: for (aImportsIx = 0; aImportsIx < aNumberRanges_Imports; aImportsIx++) {
             aRange_Imports = [...bitsBufRefs_ImportURLs_Inner[aImportsIx]];
+            let aRangeImportsTrimmed = this.optimizedTrimmer.trimQuotes(fileContentsBuffer, aRange_Imports[0], aRange_Imports[1]);
             aRange_Imports_Start = aRange_Imports[0];
             // aRange_Imports_End = aRange_Imports[1];
             bRange_NoImports = [...bitsBufRefs_NoImports[latest_bNoImportsIx]];

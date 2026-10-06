@@ -39,8 +39,8 @@ class ImprovedTemplateRenderer extends event_emitter_1.EventEmitter {
     }
     render(inoutobj, mainTemplateConfigTag) {
         //@ready
-        //@info   1. prepares placeolders to JPath objects 
-        //        for fast handling placeholders 
+        //@info   1. prepares placeolders to JPath objects
+        //        for fast handling placeholders
         //        like {{ obj.prop1[2].someProp }}
         //        2. converts to Uint16Array
         this.prepareTemplates();
@@ -63,7 +63,7 @@ class ImprovedTemplateRenderer extends event_emitter_1.EventEmitter {
         ];
     }
     //@ready
-    //@info 
+    //@info
     //        1. if no placeholder, templatesObject[templateName] = CharcodeConverter.toArray()
     //        2. split templates with placeholders.
     prepareTemplates() {
@@ -112,13 +112,13 @@ class ImprovedTemplateRenderer extends event_emitter_1.EventEmitter {
             //       this._renderedHtmlArray.push( this.charcodeConverter.arrayToString( template, 0 ) );
             //     } else if ( template instanceof JPathData ) {
             //       const jpathObj: JPathData = ( template as JPathData );
-            //       const placeholderDataByJpath: any = JPath.getByJPath ( 
-            //         jpathObj.getJPath(), 
+            //       const placeholderDataByJpath: any = JPath.getByJPath (
+            //         jpathObj.getJPath(),
             //         placeholderData );
-            //       //@advanced const placeholderDataBitsbuf: Uint16Array = this.charcodeConverter.stringToArray( 
-            //       //   placeholderDataByJpath, 
+            //       //@advanced const placeholderDataBitsbuf: Uint16Array = this.charcodeConverter.stringToArray(
+            //       //   placeholderDataByJpath,
             //       //   0 );
-            //       // this._renderedTemplatesTemporaryArray.push( placeholderDataBitsbuf ); 
+            //       // this._renderedTemplatesTemporaryArray.push( placeholderDataBitsbuf );
             //       this._renderedHtmlArray.push( this.charcodeConverter.arrayToString( placeholderDataByJpath, 0 ) );
             //     }
             //   }
@@ -186,10 +186,10 @@ class ImprovedTemplateRenderer extends event_emitter_1.EventEmitter {
                         if (placeholderInfo.datatype === workspace_tree_walker_1.WorkspaceTreeWalker.DATATYPE_OBJECT) {
                             placeholderDataByJpath = JSON.stringify(placeholderDataByJpath);
                         }
-                        //@advanced const placeholderDataBitsbuf: Uint16Array = this.charcodeConverter.stringToArray( 
-                        //   placeholderDataByJpath, 
+                        //@advanced const placeholderDataBitsbuf: Uint16Array = this.charcodeConverter.stringToArray(
+                        //   placeholderDataByJpath,
                         //   0 );
-                        // this._renderedTemplatesTemporaryArray.push( placeholderDataBitsbuf ); 
+                        // this._renderedTemplatesTemporaryArray.push( placeholderDataBitsbuf );
                         this._renderedHtmlArray.push(placeholderDataByJpath);
                     }
                 }

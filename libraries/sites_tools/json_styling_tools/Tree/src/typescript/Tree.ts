@@ -799,7 +799,7 @@ export class Tree extends ImprovedRenderEventEmitter implements TreeInterface {
     const startingIndexValidJPath: number = ( this.renderingMode === TreeConstants.RenderingMode.Conf ) ? 1 : 2;
 
     let retVal: any = new Object();
-    retVal = JPath.getByJPath(
+    retVal = JPath.getByJPath (
       jPathArray.slice( startingIndexValidJPath ),
       this.data
     );

@@ -58,7 +58,6 @@ class ScriptsChainedLoader {
 
 
     onload() {
-
         if (this._debug === true) {
             console.info("ScriptsChainedLoader onload() event handler was not set.");
         }
@@ -230,7 +229,6 @@ class ScriptsChainedLoader {
         };
         tagScript.onload = locOnloadFunc.bind(tagScript);
         try {
-
             if (isInNodeModules && isFallback) {
                 tagScript.setAttribute(
                     this.#scriptAttr_src,

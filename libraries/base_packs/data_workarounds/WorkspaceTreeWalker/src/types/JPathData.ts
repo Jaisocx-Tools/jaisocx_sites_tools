@@ -1,9 +1,4 @@
 
-
-import { JPath } from "../lib/JPath";
-
-
-
 export class JPathData {
 
   protected _jpath: (string|number)[];
@@ -18,19 +13,28 @@ export class JPathData {
     this._isPlaceholderValue = 0;
   }
 
+
+
   public isPlaceholderValue(): number {
     return this._isPlaceholderValue;
   }
 
+
+
   public setIsPlaceholderValue( isPlaceholder: number ): JPathData {
     this._isPlaceholderValue = isPlaceholder;
+
 
     return this;
   }
 
+
+
   public getJPath(): (string|number)[] {
     return this._jpath;
   }
+
+
 
   public setJPath( jpath: (string|number)[] ): JPathData {
     this._jpath = jpath;
@@ -43,15 +47,21 @@ export class JPathData {
 
     }
 
+
     return this;
   }
+
+
 
   public getJPathExpression(): string {
     return this._jpathExpression;
   }
 
+
+
   public setJPathExpression( jpathExpression: string ): JPathData {
     this._jpathExpression = jpathExpression;
+
 
     return this;
   }

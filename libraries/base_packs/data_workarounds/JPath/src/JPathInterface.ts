@@ -1,9 +1,14 @@
 // ${package}/src/JPathInterface.ts
-
 /** @class JPath:
  * 💡JPath accepts queries of datatype (string|number)[] and performs lookup in js objects and arrays
 */
 export interface JPathInterface {
+
+  _jpathExpressionMaxSize: number;
+
+
+  setExpressionMaxSize ( expressionMaxSize: number ): JPathInterface;
+
 
   // jpath string exression as "subtree[1].opened" => [ "subtree", 1, "opened" ]
   // with this art of array of properties names of javascript object tree

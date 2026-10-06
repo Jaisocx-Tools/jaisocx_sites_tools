@@ -87,7 +87,6 @@ class ThemeTurnOn {
     // this function is invoked when the site loads in the browser,
     // in the event handler for the event DOMContentLoaded
     addThemeButtonsEventHandlers(inButtonsQuerySelectors) {
-
         for (let querySelector of inButtonsQuerySelectors) {
             let buttonNodes = document.body.querySelectorAll(querySelector);
             buttonNodes.forEach((btn) => {

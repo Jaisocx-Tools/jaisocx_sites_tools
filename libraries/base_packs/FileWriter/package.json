@@ -1,7 +1,7 @@
 {
   "author": "ILLIA POLIANSKYI, Jaisocx Company",
   "name": "@jaisocx/file-writer",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "",
   "keywords": [
     "fs",
@@ -12,7 +12,7 @@
     "transpiled/ESNext"
   ],
   "optionalDependencies": {
-    "@jaisocx/event-emitter": "^1.4.2"
+    "@jaisocx/event-emitter": "~1.4.3"
   },
   "type": "module",
   "main": "./transpiled/CommonJS/index.js",

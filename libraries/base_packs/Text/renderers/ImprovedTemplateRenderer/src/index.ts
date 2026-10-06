@@ -22,8 +22,8 @@ export { ImprovedTemplateRenderer } from "./ImprovedTemplateRenderer.js";
 import { ImprovedTemplateRendererConstants } from "./ImprovedTemplateRendererConstants.js";
 export { ImprovedTemplateRendererConstants } from "./ImprovedTemplateRendererConstants.js";
 
-import { ImprovedTemplateRendererInterface } from "./ImprovedTemplateRendererInterface.js";          
-export { ImprovedTemplateRendererInterface } from "./ImprovedTemplateRendererInterface.js";          
+import { ImprovedTemplateRendererInterface } from "./ImprovedTemplateRendererInterface.js";
+export { ImprovedTemplateRendererInterface } from "./ImprovedTemplateRendererInterface.js";
 
 
 

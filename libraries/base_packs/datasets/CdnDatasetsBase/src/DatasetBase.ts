@@ -21,6 +21,7 @@ export class DatasetBase extends JsonWriter {
     this._dataAsObject = new Object();
 
     this._filePath = "";
+
   }
 
 

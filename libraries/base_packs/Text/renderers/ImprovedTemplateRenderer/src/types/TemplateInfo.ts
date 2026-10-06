@@ -4,10 +4,11 @@ export class TemplateInfo {
 
   protected _jpathExpression: string;
 
+
+
   constructor() {
     this._jpathExpression = "";
   }
-
 
 
   /*

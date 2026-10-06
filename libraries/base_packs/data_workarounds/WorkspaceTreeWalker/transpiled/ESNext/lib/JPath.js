@@ -113,15 +113,15 @@ export class JPath {
             let jpathKey = "";
             let jpathKeyNumeric = 0;
             while (leftBracePosition !== (-1)) {
-                // in this while loop, 
-                // when the next step is done, 
+                // in this while loop,
+                // when the next step is done,
                 // .indexOf searches from the rightBracePosition,
                 // matched in the previous while iteration.
                 leftBracePosition = jpathSplitted.indexOf("[", rightBracePosition);
                 // if an opening brace was not matched,
                 //        means, this jpath expression does not contain [] expression,
-                //        and this key item 
-                //        from the splitted by dots jpath 
+                //        and this key item
+                //        from the splitted by dots jpath
                 //        is pushed to the target value array,
                 //        and continues to check the next jpath key item.
                 if (leftBracePosition === (-1)) {
@@ -129,9 +129,9 @@ export class JPath {
                     continue loopSplittedByPoints;
                 }
                 rightBracePosition = jpathSplitted.indexOf("]", leftBracePosition);
-                // here means, 
-                //  when square braced key opened, 
-                //  but the closing square brace not matched, 
+                // here means,
+                //  when square braced key opened,
+                //  but the closing square brace not matched,
                 //  the JPath expression is wrong.
                 if (rightBracePosition === (-1)) {
                     throw new Error("JPathExpression synthax");

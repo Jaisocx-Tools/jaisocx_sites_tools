@@ -117,7 +117,6 @@ class EngineDataRecordsBase {
 
 
     setActiveRecordIx(ix) {
-
         if (ix >= this._dataRecordsAmount) {
             throw new Error("Data Record Not Found");
         }

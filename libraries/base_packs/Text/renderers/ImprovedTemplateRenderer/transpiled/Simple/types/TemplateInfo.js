@@ -1,9 +1,11 @@
 class TemplateInfo {
-  _jpathExpression;
+    _jpathExpression;
 
-  constructor() {
-    this._jpathExpression = "";
-  }
-} 
+
+
+    constructor() {
+        this._jpathExpression = "";
+    }
+}
 
 

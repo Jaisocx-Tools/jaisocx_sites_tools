@@ -369,7 +369,6 @@ class Tooltip extends EventEmitter {
     // however doesn't show the tooltip.
     // to show the tooltip, the event target html node has to be clicked.
     render() {
-
         if (this.debug) {
             console.info(
                 "JS class Tooltip emits Events:",
@@ -378,7 +377,6 @@ class Tooltip extends EventEmitter {
         }
 
         if (!this.eventTargetHtmlNode) {
-
             if (this.eventTargetHtmlNodeId) {
                 this.eventTargetHtmlNode = document.getElementById(this.eventTargetHtmlNodeId);
             }
@@ -645,7 +643,6 @@ class Tooltip extends EventEmitter {
         this.eventTargetHtmlNode.addEventListener(
             this.eventName,
             (evt) => {
-
             if (this.debug) {
                     console.log(evt);
                 }
@@ -669,7 +666,6 @@ class Tooltip extends EventEmitter {
         window.addEventListener(
             TooltipConstants.EventsNames.RESIZE,
             (evt) => {
-
             if (this.debug) {
                     console.log(evt);
                 }
@@ -701,7 +697,6 @@ class Tooltip extends EventEmitter {
             scrollableHolderNode.node.addEventListener(
                 TooltipConstants.EventsNames.SCROLL,
                 (evt) => {
-
                 if (this.debug) {
                         console.log(
                             `${TooltipConstants.EventsNames.SCROLL} event emitted`,
@@ -723,7 +718,6 @@ class Tooltip extends EventEmitter {
         window.addEventListener(
             TooltipConstants.EventsNames.RESIZE,
             (evt) => {
-
             if (this.debug) {
                     console.log(evt);
                 }
@@ -931,7 +925,6 @@ class Tooltip extends EventEmitter {
         let hideBehaviourFound = "";
 
         for (tooltipShownSettings of registeredShownTooltips) {
-
             for (let hideBehaviuorTimeoutVal of hideBehaviourTooltipConstantsRelevantToTimeout) {
 
                 // finds match in input arg array of hideBehabiourTooltipConstants to hide in this method call,
@@ -974,7 +967,6 @@ class Tooltip extends EventEmitter {
                 this._hide(document.getElementById(tooltipShownSettings.tooltipHtmlNodeId));
             }
             catch (e) {
-
                 if (this.debug) {
                     console.log(`No such Tooltip with this id, click event tried to hide JaisocxTooltip id="${tooltipShownSettings.tooltipHtmlNodeId}"`);
                 }

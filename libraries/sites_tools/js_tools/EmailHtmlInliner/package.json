@@ -19,7 +19,7 @@
     "transpiled/Simple/"
   ],
   "optionalDependencies": {
-    "@jaisocx/css-html": "~1.3.5",
+    "@jaisocx/css-html": "~1.3.6",
     "@jaisocx/text": "~1.2.2"
   },
   "private": false,

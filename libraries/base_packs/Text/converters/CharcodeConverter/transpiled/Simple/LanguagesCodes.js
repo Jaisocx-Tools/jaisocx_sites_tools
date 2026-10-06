@@ -11,7 +11,6 @@ class LanguagesCodes extends DatasetBase {
 
 
     static getSingletonInstance() {
-
         if (LanguagesCodes._singletonInstance === undefined) {
             LanguagesCodes._singletonInstance = new LanguagesCodes();
         }
@@ -3721,7 +3720,6 @@ class LanguagesCodes extends DatasetBase {
             }
         ];
         let orderedByLanguageCodeRewrittenData = locData.sort((a, b) => {
-
             if (a.language_code === b.language_code) {
                 return 0;
             }

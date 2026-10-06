@@ -13,7 +13,7 @@ export class Countries extends DatasetBase {
     super();
 
     this._data = this.initData();
-    this.filePath = "";
+    this._filePath = "";
   }
 
 

@@ -274,7 +274,6 @@ class EmailHtmlInliner {
                 continue;
             }
             else if (node.nodeType === 3) {
-
                 if (!node.nodeValue || node.nodeValue.trim().length === 0) {
                     continue;
                 }
@@ -338,7 +337,6 @@ class EmailHtmlInliner {
                 continue;
             }
             else if (node.nodeType === 3) {
-
                 if (node.nodeValue && node.nodeValue.trim().length !== 0) {
                     newNodeNumber++;
                 }
@@ -702,9 +700,7 @@ class EmailHtmlInliner {
                 continue;
             }
             else if (rule instanceof CSSMediaRule) {
-
                 if (window.matchMedia(rule.conditionText).matches === false) {
-
                     if (this.debug === true) {
                         console.warn(
                             "Did not match @media query:",
@@ -725,7 +721,6 @@ class EmailHtmlInliner {
                 continue;
             }
             else if (rule instanceof CSSImportRule) {
-
                 if (this.debug === true) {
                     console.info("Imported rule:", rule);
                 }
@@ -743,7 +738,6 @@ class EmailHtmlInliner {
                 continue;
             }
             else {
-
                 if (this.debug === true) {
                     console.warn(
                         "Unprocessed, other rule type",
@@ -850,7 +844,6 @@ class EmailHtmlInliner {
         valueByBrowser,
         valueByInliner
     ) {
-
         if (valueByBrowser.includes("px") === true) {
             let vals = valueByBrowser.split(" ");
             let rounded = vals.map((v) => {
@@ -884,7 +877,6 @@ class EmailHtmlInliner {
         };
 
         if ((valueByInliner.length !== 0) && (valueByInliner !== valueByBrowser)) {
-
             if (!((valueByInliner === "inherit") ||
                 (valueByBrowser === "auto" && valueByInliner === "unset") ||
                 (valueByBrowser === "none" && valueByInliner === "unset") ||

@@ -60,7 +60,6 @@ class Preloader {
         inTimeoutMillis,
         isWithStopOnLoadTimeout
     ) {
-
         if (document.readyState !== "loading") {
 
             // If already loaded, invokes immediately

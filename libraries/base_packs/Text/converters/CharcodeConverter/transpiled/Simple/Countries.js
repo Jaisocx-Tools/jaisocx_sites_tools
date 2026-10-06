@@ -7,13 +7,12 @@ class Countries extends DatasetBase {
     constructor() {
         super();
         this._data = this.initData();
-        this.filePath = "";
+        this._filePath = "";
     }
 
 
 
     static getSingletonInstance() {
-
         if (Countries._singletonInstance === undefined) {
             Countries._singletonInstance = new Countries();
         }
@@ -235,7 +234,6 @@ class Countries extends DatasetBase {
             "Zimbabwe"
         ];
         let orderedAlphabeticData = locData.sort((a, b) => {
-
             if (a === b) {
                 return 0;
             }

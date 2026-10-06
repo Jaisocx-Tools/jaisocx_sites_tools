@@ -1,6 +1,7 @@
 import { JPathData } from "./JPathData.js";
 
 
+
 export class WorkspaceTreeWalkerPayload {
 
   static BRANCH_NAME: string = "branch";
@@ -26,7 +27,7 @@ export class WorkspaceTreeWalkerPayload {
   public iterationsData: any;
   public iterationsDataNormalized: any;
   public iterationsDataName: string;
-  
+
 
   public holderId: string;
   public id: string;
@@ -39,8 +40,8 @@ export class WorkspaceTreeWalkerPayload {
   public jpathData: JPathData;
 
 
-  constructor() {
 
+  constructor() {
     this.dataset = null;
     this.datasetNormalized = [];
     this.currentDatasetNormalized = [];

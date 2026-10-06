@@ -11,7 +11,6 @@ class CountriesCodes extends DatasetBase {
 
 
     static getSingletonInstance() {
-
         if (CountriesCodes._singletonInstance === undefined) {
             CountriesCodes._singletonInstance = new CountriesCodes();
         }
@@ -3193,7 +3192,6 @@ class CountriesCodes extends DatasetBase {
             }
         ];
         let orderedByCountryNameRewrittenData = locData.sort((a, b) => {
-
             if (a.country_name === b.country_name) {
                 return 0;
             }

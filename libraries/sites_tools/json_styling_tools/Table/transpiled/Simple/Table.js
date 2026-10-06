@@ -375,7 +375,6 @@ class Table {
 
 
     sortBy(field, order) {
-
         if (!field) {
             return;
         }

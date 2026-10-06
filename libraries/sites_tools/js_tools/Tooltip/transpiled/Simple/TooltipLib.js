@@ -9,7 +9,6 @@ class TooltipLib {
 
 
     static getInstance() {
-
         if (!TooltipLib.instance) {
             TooltipLib.instance = new TooltipLib();
         }
@@ -24,7 +23,6 @@ class TooltipLib {
         tooltipHtmlNode,
         tooltipHtmlNodeDimensions
     ) {
-
         if (!tooltipHtmlNode) {
             throw new Error("the first input arg tooltipHtmlNode has null value");
         }
@@ -106,10 +104,8 @@ class TooltipLib {
         tooltipPaddingAlignDimensionTwo,
         _arrowPixelSize
     ) {
-
         if ((browserTabBorderSide === TooltipConstants.AlignDimensionOne.BROWSER_TAB_BORDER_TOP) ||
             (browserTabBorderSide === TooltipConstants.AlignDimensionOne.BROWSER_TAB_BORDER_BOTTOM)) {
-
             if (tooltipAlignDimensionTwo === TooltipConstants.AlignDimensionTwo.EVENT_TARGET_START) {
                 tooltipHtmlNodeDimensions.left = eventTargetHtmlNodeDimensions.left
                     - tooltipPaddingAlignDimensionTwo;
@@ -130,7 +126,6 @@ class TooltipLib {
         }
         else if ((browserTabBorderSide === TooltipConstants.AlignDimensionOne.BROWSER_TAB_BORDER_RIGHT) ||
             (browserTabBorderSide === TooltipConstants.AlignDimensionOne.BROWSER_TAB_BORDER_LEFT)) {
-
             if (tooltipAlignDimensionTwo === TooltipConstants.AlignDimensionTwo.EVENT_TARGET_START) {
                 tooltipHtmlNodeDimensions.top = eventTargetHtmlNodeDimensions.top
                     - tooltipPaddingAlignDimensionTwo;
@@ -166,7 +161,6 @@ class TooltipLib {
         let retVal = 0;
 
         if (browserTabBorderSide === TooltipConstants.AlignDimensionOne.BROWSER_TAB_BORDER_TOP) {
-
             if ((browserTabDimensions.top < tooltipHtmlNodeDimensions.top) &&
                 (browserTabDimensions.left < tooltipHtmlNodeDimensions.left) &&
                 (tooltipHtmlNodeDimensions.right < browserTabDimensions.right)) {
@@ -174,19 +168,16 @@ class TooltipLib {
             }
         }
         else if (browserTabBorderSide === TooltipConstants.AlignDimensionOne.BROWSER_TAB_BORDER_RIGHT) {
-
             if ((tooltipHtmlNodeDimensions.right < browserTabDimensions.right)) {
                 retVal = 1;
             }
         }
         else if (browserTabBorderSide === TooltipConstants.AlignDimensionOne.BROWSER_TAB_BORDER_LEFT) {
-
             if ((browserTabDimensions.left < tooltipHtmlNodeDimensions.left)) {
                 retVal = 1;
             }
         }
         else if (browserTabBorderSide === TooltipConstants.AlignDimensionOne.BROWSER_TAB_BORDER_BOTTOM) {
-
             if ((tooltipHtmlNodeDimensions.bottom < browserTabDimensions.bottom) &&
                 (browserTabDimensions.left < tooltipHtmlNodeDimensions.left) &&
                 (tooltipHtmlNodeDimensions.right < browserTabDimensions.right)) {
@@ -204,7 +195,6 @@ class TooltipLib {
         arrowHtmlNode,
         arrowDimensions
     ) {
-
         if (!arrowHtmlNode) {
             throw new Error("arrowHtmlNode is null or undefined");
         }
@@ -325,7 +315,6 @@ class TooltipLib {
         _cssVaraibleNameHeight,
         cssVaraibleNameOverflowY
     ) {
-
         if (!htmlNode) {
             throw new Error("Html node has no value");
         }
@@ -381,7 +370,6 @@ class TooltipLib {
         jsPropNameSize,
         jsPropNameDim
     ) {
-
         if (!htmlNode) {
             throw new Error("the first input arg htmlNode has no HTMLElement value");
         }
@@ -526,7 +514,6 @@ class TooltipLib {
 
 
     getCssVariableForNode(htmlNode, cssVariableName) {
-
         if (!htmlNode) {
             throw new Error("htmlNode is null or undefined");
         }
@@ -551,7 +538,6 @@ class TooltipLib {
         let overflowValue = "";
 
         while (node) {
-
             for (cssPropOverflow of cssPropsOverflowArray) {
 
                 //@ts-ignore

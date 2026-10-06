@@ -1,4 +1,9 @@
+/** @class JPath:
+ * 💡JPath accepts queries of datatype (string|number)[] and performs lookup in js objects and arrays
+*/
 export interface JPathInterface {
+    _jpathExpressionMaxSize: number;
+    setExpressionMaxSize(expressionMaxSize: number): JPathInterface;
     parse(jpathExpression: string): (string | number)[];
     parseDotted(jpathExpressionDotted: string, jpathArray: (string | number)[]): number;
     serialize(jpath: (string | number)[], delimiter: string, start: string, finish: string): string;

@@ -1,5 +1,3 @@
-import { WorkspaceTreeWalker } from "../WorkspaceTreeWalker";
-
 
 export class JPath {
 
@@ -9,11 +7,14 @@ export class JPath {
   protected _jpathExpression: string;
   protected _jpathExpressionMaxSize: number;
 
+
+
   constructor() {
     this._jpath = [];
     this._jpathExpression = "";
     this._jpathExpressionMaxSize = JPath.JPATH_EXPRESSION_MAX_SIZE;
   }
+
 
 
   public static setByJPath (
@@ -27,7 +28,6 @@ export class JPath {
     let key: any = null;
 
     for ( key of jpath ) {
-
       datatypeNode = typeof key;
 
       if ( !obj[key] ) {
@@ -42,10 +42,12 @@ export class JPath {
 
     }
 
+
     //@ts-ignore
     obj[jpathLastIx] = value;
 
   }
+
 
 
   public static setByJPathWalkFlatRebuild (
@@ -56,7 +58,6 @@ export class JPath {
     nameId: string,
     branchName: string
   ) {
-
     const jpathLen: number = jpath.length;
     let jpathIx: number;
     let jpathLastIx: number = jpathLen - 1;
@@ -69,11 +70,10 @@ export class JPath {
     obj[nameId] = id;
 
     for ( jpathIx = 1; jpathIx < jpathLen; jpathIx++ ) {
-
       id = jpath[jpathIx];
 
       foundNode = false;
-        
+
       let toGetById: any[] = [];
 
       if ( Array.isArray( obj ) ) {
@@ -91,6 +91,8 @@ export class JPath {
       foundNode = toGetById.find (
         ( node: any ) => {
           const matches: boolean = ( node[nameId] === id );
+
+
           return matches;
         }
       );
@@ -109,7 +111,7 @@ export class JPath {
             [nameHolderId]: holderId
           };
         }
-    
+
         toGetById.push( newItem );
         obj[nameId] = holderId;
 
@@ -126,11 +128,12 @@ export class JPath {
   }
 
 
-  public static getByJPath( 
+
+  public static getByJPath(
     jpath: (string|number)[],
     value: any
   ): any {
-    
+
     if ( !value ) {
       return null;
     }
@@ -143,9 +146,10 @@ export class JPath {
 
     let jpathPropertyKey: (string|number) = "";
     let jpathPropLevel: number = 0;
-    let jpathLevelMax: number = Math.min( 
-      jpath.length, 
-      JPath.JPATH_EXPRESSION_MAX_SIZE );
+    let jpathLevelMax: number = Math.min(
+      jpath.length,
+      JPath.JPATH_EXPRESSION_MAX_SIZE
+    );
 
     for ( jpathPropLevel = 0; jpathPropLevel < jpathLevelMax; jpathPropLevel++ ) {
       if ( !targetValue ) {
@@ -157,9 +161,12 @@ export class JPath {
 
     }
 
+
     return targetValue;
 
   }
+
+
 
   public static parse( jpathExpression: string ): (string|number)[] {
     const jpath: (string|number)[] = [];
@@ -167,11 +174,10 @@ export class JPath {
     const jpathSplittedByPoints: string[] = jpathExpression.split(".");
     let jpathSplitted: string = "";
 
-    loopSplittedByPoints: for ( 
-      jpathSplitted 
-      of jpathSplittedByPoints 
+    loopSplittedByPoints: for (
+      jpathSplitted
+      of jpathSplittedByPoints
     ) {
-
       const jpathSplittedLenth: number = jpathSplitted ? jpathSplitted.length : 0;
 
       if ( jpathSplittedLenth === 0 ) {
@@ -183,21 +189,21 @@ export class JPath {
       let jpathKey: string = "";
       let jpathKeyNumeric: number = 0;
 
-
       while ( leftBracePosition !== (-1) ) {
 
-        // in this while loop, 
-        // when the next step is done, 
+        // in this while loop,
+        // when the next step is done,
         // .indexOf searches from the rightBracePosition,
         // matched in the previous while iteration.
         leftBracePosition = jpathSplitted.indexOf(
-          "[", 
+          "[",
           rightBracePosition);
+
 
         // if an opening brace was not matched,
         //        means, this jpath expression does not contain [] expression,
-        //        and this key item 
-        //        from the splitted by dots jpath 
+        //        and this key item
+        //        from the splitted by dots jpath
         //        is pushed to the target value array,
         //        and continues to check the next jpath key item.
         if ( leftBracePosition === (-1) ) {
@@ -206,12 +212,13 @@ export class JPath {
         }
 
         rightBracePosition = jpathSplitted.indexOf(
-          "]", 
+          "]",
           leftBracePosition);
 
-        // here means, 
-        //  when square braced key opened, 
-        //  but the closing square brace not matched, 
+
+        // here means,
+        //  when square braced key opened,
+        //  but the closing square brace not matched,
         //  the JPath expression is wrong.
         if ( rightBracePosition === (-1) ) {
           throw new Error("JPathExpression synthax");
@@ -221,7 +228,8 @@ export class JPath {
 
         jpathKey = jpathSplitted.slice( (
           leftBracePosition + 1), (
-          rightBracePosition - 1) );
+          rightBracePosition - 1
+        ) );
         jpathKeyNumeric = +jpathKey;
 
         if ( Number.isInteger( jpathKeyNumeric ) === true ) {
@@ -231,6 +239,7 @@ export class JPath {
         }
 
         rightBracePosition++;
+
         if ( rightBracePosition === jpathSplittedLenth ) {
           continue loopSplittedByPoints;
         }
@@ -239,33 +248,45 @@ export class JPath {
 
     }
 
+
     return jpath;
   }
+
+
 
   public setJPathExpression( jpathExpression: string ): JPath {
     this._jpathExpression = jpathExpression;
 
+
     return this;
   }
+
+
 
   public setJPathExpressionMaxSize( maxSize: number ): JPath {
     this._jpathExpressionMaxSize = maxSize;
 
+
     return this;
   }
+
+
 
   public getJPath(): (string|number)[] {
     return this._jpath;
   }
 
-  public static getByJPathExpression( 
+
+
+  public static getByJPathExpression(
     jpathExpression: string,
     value: any
   ): any {
     const jpath: (string|number)[] = [];
 
-    return JPath.getByJPath( 
-      jpath, 
+
+    return JPath.getByJPath(
+      jpath,
       value );
   }
 
