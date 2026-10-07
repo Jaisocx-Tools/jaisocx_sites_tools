@@ -118,3 +118,6 @@ the well known development patterns.
 
 
 
+Jaisocx &#8482; &#169;
+
+

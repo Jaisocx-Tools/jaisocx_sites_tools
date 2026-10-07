@@ -74,7 +74,10 @@
   ✅  [TokensParser](./TokensParser/README.md) 📚  `@jaisocx/tokens-parser`
 
   ⛔  [WorkspaceTreeWalker](./WorkspaceTreeWalker/README.md) 📚  `@jaisocx/workspace-tree-walker`
-  
 
+
+
+
+Jaisocx &#8482; &#169;
 
 

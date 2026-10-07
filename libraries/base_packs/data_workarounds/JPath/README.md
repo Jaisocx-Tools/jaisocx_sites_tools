@@ -2,7 +2,7 @@
 # JPath
   > 💡 The JPath class gets or sets values of an object or array, without eval js func invoked.
 
-  | 🗂 **️Library**  | `@jaisocx/jpath` | 🏷 **️ver.**: `2.0.5` | 
+  | 🗂 **️Library**  | `@jaisocx/jpath` | 🏷 **️ver.**: `2.1.0` | 
 
   | 🗓 **Updated**  | 🌷 Spring 2026 | `07. Mai AD 2026 07:23:20 UTC` | 
 
@@ -20,6 +20,90 @@
 
 ## The aim of the setup
   > 💡 The JPath class gets or sets values of an object or array.
+
+
+
+
+
+## Structure
+
+```ls
+📚 JPath
+    🗂 src/
+      📄 index.ts
+      📄 JPath.ts
+      📄 JPathData.ts
+      📄 JPathDataInterface.ts
+      📄 JPathImpl.ts
+      📄 JPathInterface.ts
+    📊 test/
+      📄 JPath_Test.js
+      📄 Split_Test.js
+    🗂 transpiled/
+      🗂 CommonJS/
+      🗂 ESNext/
+      🗂 Simple/
+        📄 JPath.js
+        📄 JPathData.js
+        📄 JPathImpl.ts
+    📦 jaisocx-jpath-2.0.6.tgz
+    📄 package.json
+    📄 package-lock.json
+    📒 README.md
+```
+
+
+
+## Interfaces
+
+**JPathInterface**
+
+  ```typescript
+    // $ _ ${package}/src/JPathInterface.ts
+    
+    // @class JPath. 💡 To lookup in js objects and arrays, without eval js func invoked.
+    export interface JPathInterface {
+    
+      setExpressionMaxSize ( expressionMaxSize: number ): JPathInterface;
+
+      // jpath string exression as "subtree[1].opened" => [ "subtree", 1, "opened" ]
+      parse ( jpathExpression: string ): (string|number)[];
+        
+      // @invokedBy method parse(), splits with symbol point, adds to jpathArray, numeric array elem id or textual field name.
+      parseDotted ( jpathExpressionDotted: string, jpathArray: ( string|number )[] ): number;
+    
+      serialize ( jpath: (string|number)[], delimiter: string, start: string, finish: string ): string;
+    
+      getByJPathExpression ( obj: any, jpathExpression: string ): any;
+        
+      // faster than JPath.getByJPathExpression( jpathExpression: string, value: any );
+      getByJPath ( obj: any, jpath: (string|number)[] ): any;
+    
+      setByJPathExpression ( obj: any, jpathExpression: string, value: any ): JPathInterface;
+      setByJPath ( obj: any, jpath: (string|number)[], value: any ): JPathInterface;
+    
+      setByJPathWalkFlatRebuild ( obj: any, jpath: (string|number)[], value: any, nameHolderId: string, nameId: string, branchName: string ): JPathInterface;
+    }
+  ```
+
+
+
+**JPathDataInterface**
+
+  ```typescript
+    // $ _ ${package}/src/JPathDataInterface.ts
+    
+    // @class JPathData. 💡 The data record for 2 fields: jpathExpression and jpathArray.
+    export interface JPathDataInterface {    
+      getJPathExpression(): string;
+      getJPath(): ( string | number )[];
+    
+      setJPathExpression( jpathExpression: string ): JPathDataInterface;
+      setJPath( jpath: ( string | number )[] ): JPathDataInterface;    
+    }
+  ```
+
+
 
 ## Examples
 
@@ -72,79 +156,26 @@
 
 
 
-## Structure
+## Test
 
-```ls
-📚 JPath
-    🗂 src/
-      📄 index.ts
-      📄 JPath.ts
-      📄 JPathData.ts
-      📄 JPathDataInterface.ts
-      📄 JPathInterface.ts
-    📊 test/
-      📄 JPath_Test.js
-      📄 Split_Test.js
-    🗂 transpiled/
-      🗂 CommonJS/
-      🗂 ESNext/
-      🗂 Simple/
-        📄 JPath.js
-        📄 JPathData.js
-    📦 jaisocx-jpath-2.0.4.tgz
-    📄 package.json
-    📄 package-lock.json
-    📒 README.md
+```bash
+  node "./test/JPath_Test.js"
 ```
 
 
+### Docker
 
-## Interfaces
-
-  **JPathInterface**
-    
-  ```typescript
-    // $ _ ${package}/src/JPathInterface.ts
-    
-    // @class JPath. 💡 To lookup in js objects and arrays, without eval js func invoked.
-    export interface JPathInterface {
-    
-      // jpath string exression as "subtree[1].opened" => [ "subtree", 1, "opened" ]
-      parse ( jpathExpression: string ): (string|number)[];
-        
-      // @invokedBy method parse(), splits with symbol point, adds to jpathArray, numeric array elem id or textual field name.
-      parseDotted ( jpathExpressionDotted: string, jpathArray: ( string|number )[] ): number;
-    
-      serialize ( jpath: (string|number)[], delimiter: string, start: string, finish: string ): string;
-    
-      getByJPathExpression ( obj: any, jpathExpression: string ): any;
-        
-      // faster than JPath.getByJPathExpression( jpathExpression: string, value: any );
-      getByJPath ( obj: any, jpath: (string|number)[] ): any;
-    
-      setByJPathExpression ( obj: any, jpathExpression: string, value: any ): JPathInterface;
-      setByJPath ( obj: any, jpath: (string|number)[], value: any ): JPathInterface;
-    
-      setByJPathWalkFlatRebuild ( obj: any, jpath: (string|number)[], value: any, nameHolderId: string, nameId: string, branchName: string ): JPathInterface;
-    }
-  ```
+```bash
+  docker compose exec ts bash
+  
+  # cd "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sites_tools/libraries/base_packs/data_workarounds/JPath"
+  # cd "./cloned_repos/jaisocx_sites_tools/libraries/base_packs/data_workarounds/JPath"
+  # cd libraries/base_packs/data_workarounds/JPath
+  
+  node "./test/JPath_Test.js"
+```
 
 
-
-  **JPathDataInterface**
-
-  ```typescript
-    // $ _ ${package}/src/JPathDataInterface.ts
-    
-    // @class JPathData. 💡 The data record for 2 fields: jpathExpression and jpathArray.
-    export interface JPathDataInterface {    
-      getJPathExpression(): string;
-      getJPath(): ( string | number )[];
-    
-      setJPathExpression( jpathExpression: string ): JPathDataInterface;
-      setJPath( jpath: ( string | number )[] ): JPathDataInterface;    
-    }
-  ```
 
 ---
 

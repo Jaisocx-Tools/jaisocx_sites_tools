@@ -171,6 +171,14 @@
       padding: var(--code-snippet--padding);
     }
 
+    .jsx#readme_jpath .CodeSnippetHolder#code_snippet_jpath_test {
+      --lines-number: 1;
+    }
+
+    .jsx#readme_jpath .CodeSnippetHolder#code_snippet_jpath_docker_test {
+      --lines-number: 8;
+    }
+
     .jsx#readme_jpath .CodeSnippetHolder#code_snippet_jpath_expression {
       --lines-number: 3;
     }
@@ -202,7 +210,7 @@
     <aim_of_the_setup> 💡 The JPath class gets or sets values of an object or array, without eval js func invoked. </aim_of_the_setup>
 
 <pre>
-| 🗂 Library  | <label class="bib"> @jaisocx/jpath </label> | 🏷 ver. 2.0.5 |
+| 🗂 Library  | <label class="bib"> @jaisocx/jpath </label> | 🏷 ver. 2.1.0 |
 
 | 🗓 Updated  | 🌷 Spring 2026 | 07. Mai AD 2026 07:23:20 UTC |
 
@@ -217,7 +225,121 @@
 
 
 
-    <h2> Examples </h2>
+
+
+  <h2> Structure </h2>
+
+  <pre>
+📚 JPath
+    🗂 src/
+      📄 index.ts
+      📄 JPath.ts
+      📄 JPathData.ts
+      📄 JPathDataInterface.ts
+      📄 JPathImpl.ts
+      📄 JPathInterface.ts
+    📊 test/
+      📄 JPath_Test.js
+      📄 Split_Test.js
+    🗂 transpiled/
+      🗂 CommonJS/
+      🗂 ESNext/
+      🗂 Simple/
+        📄 JPath.js
+        📄 JPathData.js
+        📄 JPathImpl.ts
+    📦 jaisocx-jpath-2.0.4.tgz
+    📄 package.json
+    📄 package-lock.json
+    📒 README.md
+    </pre>
+
+
+
+  <h2> Interfaces </h2>
+
+  <h3> JPathInterface </h3>
+
+  <CodeSnippetHolder id="code_snippet_jpath_interface" class="CodeSnippetHolder little salad">
+          <pre class="CodeSnippetArea">
+// $ _ ${package}/src/JPathInterface.ts
+
+// @class JPath. 💡 To lookup in js objects and arrays, without eval js func invoked.
+export interface JPathInterface {
+
+  setExpressionMaxSize ( expressionMaxSize: number ): JPathInterface;
+
+  // jpath string exression as "subtree[1].opened" => [ "subtree", 1, "opened" ]
+  parse ( jpathExpression: string ): (string|number)[];
+
+  // @invokedBy method parse(), splits with symbol point, adds to jpathArray, numeric array elem id or textual field name.
+  parseDotted ( jpathExpressionDotted: string, jpathArray: ( string|number )[] ): number;
+
+  serialize ( jpath: (string|number)[], delimiter: string, start: string, finish: string ): string;
+
+  getByJPathExpression ( obj: any, jpathExpression: string ): any;
+
+  // faster than JPath.getByJPathExpression( jpathExpression: string, value: any );
+  getByJPath ( obj: any, jpath: (string|number)[] ): any;
+
+  setByJPathExpression ( obj: any, jpathExpression: string, value: any ): JPathInterface;
+  setByJPath ( obj: any, jpath: (string|number)[], value: any ): JPathInterface;
+
+  setByJPathWalkFlatRebuild ( obj: any, jpath: (string|number)[], value: any, nameHolderId: string, nameId: string, branchName: string ): JPathInterface;
+}
+          </pre>
+  </CodeSnippetHolder>
+
+
+
+  <h3> JPathDataInterface </h3>
+
+  <CodeSnippetHolder id="code_snippet_jpathdata_interface" class="CodeSnippetHolder little salad">
+          <pre class="CodeSnippetArea">
+// $ _ ${package}/src/JPathDataInterface.ts
+
+// @class JPathData. 💡 The data record for 2 fields: jpathExpression and jpathArray.
+export interface JPathDataInterface {
+  getJPathExpression(): string;
+  getJPath(): ( string | number )[];
+
+  setJPathExpression( jpathExpression: string ): JPathDataInterface;
+  setJPath( jpath: ( string | number )[] ): JPathDataInterface;
+}
+          </pre>
+  </CodeSnippetHolder>
+
+
+
+  <h2> Tests </h2>
+
+  <CodeSnippetHolder id="code_snippet_jpath_test" class="CodeSnippetHolder little salad">
+          <pre class="CodeSnippetArea">
+  node "./test/JPath_Test.js"
+          </pre>
+  </CodeSnippetHolder>
+
+
+
+  <h3> Tests under docker </h3>
+
+  <CodeSnippetHolder id="code_snippet_jpath_docker_test" class="CodeSnippetHolder little salad">
+          <pre class="CodeSnippetArea">
+  docker compose exec ts bash
+
+  # cd "/opt/jaisocx/sites_docker_environment/workspace/ts/cloned_repos/jaisocx_sites_tools/libraries/base_packs/data_workarounds/JPath"
+  # cd "./cloned_repos/jaisocx_sites_tools/libraries/base_packs/data_workarounds/JPath"
+  # cd libraries/base_packs/data_workarounds/JPath
+
+  node "./test/JPath_Test.js"
+          </pre>
+  </CodeSnippetHolder>
+
+
+
+
+
+  <h2> Examples </h2>
 
     <h3> JPath Expression </h3>
 
@@ -268,86 +390,6 @@ let jpathExpression: string = "data.records[0][field 2]";
 let field2: any = jPath.getByJPathExpression( obj, jpathExpression );
 console.log ( field2 );
 // $ _ text line of field 2
-          </pre>
-    </CodeSnippetHolder>
-
-
-
-    <h2> Structure </h2>
-
-    <pre>
-📚 JPath
-    🗂 src/
-      📄 index.ts
-      📄 JPath.ts
-      📄 JPathData.ts
-      📄 JPathDataInterface.ts
-      📄 JPathInterface.ts
-    📊 test/
-      📄 JPath_Test.js
-      📄 Split_Test.js
-    🗂 transpiled/
-      🗂 CommonJS/
-      🗂 ESNext/
-      🗂 Simple/
-        📄 JPath.js
-        📄 JPathData.js
-    📦 jaisocx-jpath-2.0.4.tgz
-    📄 package.json
-    📄 package-lock.json
-    📒 README.md
-    </pre>
-
-
-
-    <h2> Interfaces </h2>
-
-    <h3> JPathInterface </h3>
-
-    <CodeSnippetHolder id="code_snippet_jpath_interface" class="CodeSnippetHolder little salad">
-          <pre class="CodeSnippetArea">
-// $ _ ${package}/src/JPathInterface.ts
-
-// @class JPath. 💡 To lookup in js objects and arrays, without eval js func invoked.
-export interface JPathInterface {
-
-  // jpath string exression as "subtree[1].opened" => [ "subtree", 1, "opened" ]
-  parse ( jpathExpression: string ): (string|number)[];
-
-  // @invokedBy method parse(), splits with symbol point, adds to jpathArray, numeric array elem id or textual field name.
-  parseDotted ( jpathExpressionDotted: string, jpathArray: ( string|number )[] ): number;
-
-  serialize ( jpath: (string|number)[], delimiter: string, start: string, finish: string ): string;
-
-  getByJPathExpression ( obj: any, jpathExpression: string ): any;
-
-  // faster than JPath.getByJPathExpression( jpathExpression: string, value: any );
-  getByJPath ( obj: any, jpath: (string|number)[] ): any;
-
-  setByJPathExpression ( obj: any, jpathExpression: string, value: any ): JPathInterface;
-  setByJPath ( obj: any, jpath: (string|number)[], value: any ): JPathInterface;
-
-  setByJPathWalkFlatRebuild ( obj: any, jpath: (string|number)[], value: any, nameHolderId: string, nameId: string, branchName: string ): JPathInterface;
-}
-          </pre>
-    </CodeSnippetHolder>
-
-
-
-    <h3> JPathDataInterface </h3>
-
-    <CodeSnippetHolder id="code_snippet_jpathdata_interface" class="CodeSnippetHolder little salad">
-          <pre class="CodeSnippetArea">
-// $ _ ${package}/src/JPathDataInterface.ts
-
-// @class JPathData. 💡 The data record for 2 fields: jpathExpression and jpathArray.
-export interface JPathDataInterface {
-  getJPathExpression(): string;
-  getJPath(): ( string | number )[];
-
-  setJPathExpression( jpathExpression: string ): JPathDataInterface;
-  setJPath( jpath: ( string | number )[] ): JPathDataInterface;
-}
           </pre>
     </CodeSnippetHolder>
 

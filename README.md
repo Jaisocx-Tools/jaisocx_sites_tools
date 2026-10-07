@@ -172,3 +172,7 @@ and published in `@jaisocx` namespace
 
 
 
+Jaisocx &#8482; &#169;
+
+
+

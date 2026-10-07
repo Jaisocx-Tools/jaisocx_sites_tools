@@ -1,7 +1,7 @@
 {
   "author": "ILLIA POLIANSKYI, Jaisocx Inc.",
   "name": "@jaisocx/jpath",
-  "version": "2.0.6",
+  "version": "2.1.0",
   "description": "JPath accepts queries of datatype (string|number)[] and performs lookup in js objects and arrays",
   "update_info": "improved README.md",
   "keywords": [

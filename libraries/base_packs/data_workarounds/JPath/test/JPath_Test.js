@@ -18,7 +18,7 @@ class JPath_Test {
   constructor() {
 
     this.jPathData = new JPathData();
-    this.jPathEngine = new JPath();
+    // this.jPathEngine = new JPathImpl();
 
     this.#testsResults = {
       "ok": 0,
@@ -143,8 +143,8 @@ class JPath_Test {
       jpathExpression = assertion[ "jpath_expression" ];
       equals = assertion[ "equals" ];
 
-      jpathArray = this.jPathEngine.parse ( jpathExpression );
-      found = this.jPathEngine.getByJPath ( json, jpathArray );
+      jpathArray = JPath.parse ( jpathExpression );
+      found = JPath.getByJPath ( json, jpathArray );
 
       console.info( "\n\n" );
 
@@ -227,13 +227,13 @@ testingCls.test (
 
 
 
-testingCls.jPathEngine.setByJPathExpression (
+JPath.setByJPathExpression (
   testingCls.json,
   testingCls.testAssertionsAfter[0][ "jpath_expression" ],
   testingCls.testAssertionsAfter[0][ "equals" ]
 );
 
-testingCls.jPathEngine.setByJPathExpression (
+JPath.setByJPathExpression (
   testingCls.json,
   testingCls.testAssertionsAfter[1][ "jpath_expression" ],
   testingCls.testAssertionsAfter[1][ "equals" ]
