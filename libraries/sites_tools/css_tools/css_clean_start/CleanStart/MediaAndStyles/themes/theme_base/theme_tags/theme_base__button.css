@@ -1,0 +1,32 @@
+
+/* @start base theme for clean_start_tiny html tag button */
+.clean_start {
+
+  --clean_start--button--font-family: Arial;
+  --clean_start--button--line-height: 1.2rem;
+  --clean_start--button--font-size: 0.9rem;
+
+  --clean_start--button--padding: 0;
+  --clean_start--button--margin: 0;
+
+  --clean_start--button--min-width: unset;
+  --clean_start--button--max-width: 100%;
+  --clean_start--button--width: 10rem;
+
+  --clean_start--button--border: 0.4px solid #ddd;
+  --clean_start--button--outline: unset;
+  --clean_start--button--background: #fdfdfd;
+
+
+
+  --clean_start--button_hover--color: lime;
+  --clean_start--button_hover--text-decoration: underline;
+
+  --clean_start--button_hover--border: 1px solid lime;
+  --clean_start--button_hover--border-radius: 0;
+  --clean_start--button_hover--background: #fdfdfd;
+
+}
+/* @finish base theme for clean_start_tiny html tag button */
+
+

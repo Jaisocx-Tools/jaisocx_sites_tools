@@ -1,0 +1,68 @@
+
+/* @start base theme for clean_start_tiny site css props */
+.clean_start {
+
+  --clean_start--rem:                               16px;
+
+
+
+  --clean_start--html_tag--position:                static;
+  --clean_start--html_tag--top:                     0;
+  --clean_start--html_tag--padding:                 0 0 0 0;
+  --clean_start--html_tag--margin:                  0 0 0 0;
+  --clean_start--html_tag--box-sizing:              border-box;
+
+  --clean_start--html_tag--min-height:              100vh;
+  --clean_start--html_tag--max-height:              unset;
+  --clean_start--html_tag--height:                  auto;
+
+  --clean_start--html_tag--min-width:               100%;
+  --clean_start--html_tag--max-width:               100%;
+  --clean_start--html_tag--width:                   100%;
+
+  --clean_start--html_tag--overflow-x:               hidden;
+
+
+
+  --clean_start--body_tag--position:                relative;
+  --clean_start--body_tag--top:                     0;
+  --clean_start--body_tag--padding:                 0 0 0 0;
+  --clean_start--body_tag--margin:                  0 0 0 0;
+  --clean_start--body_tag--display:                 block;
+  --clean_start--body_tag--box-sizing:              border-box;
+
+  --clean_start--body_tag--min-height:              100vh;
+  --clean_start--body_tag--max-height:              unset;
+  --clean_start--body_tag--height:                  auto;
+
+  --clean_start--body_tag--min-width:               100%;
+  --clean_start--body_tag--max-width:               100%;
+  --clean_start--body_tag--width:                   100%;
+
+  --clean_start--body_tag--background:              #eefdf4;
+
+  --clean_start--body_tag--overflow-x:               hidden;
+  --clean_start--body_tag--overflow-y:               auto;
+
+
+
+  --clean_start--site--padding:                     0 0 0 0;
+  --clean_start--site--margin:                      0 auto 0 auto;
+
+  --clean_start--site--min-height:                  100vh;
+  --clean_start--site--max-height:                  unset;
+  --clean_start--site--height:                      auto;
+
+  --clean_start--site--min-width:                   unset;
+  --clean_start--site--max-width:                   100%;
+  --clean_start--site--width:                       auto;
+
+  --clean_start--site--background:                  #fdfdfd;
+
+  --clean_start--site--overflow-x:                   hidden;
+  --clean_start--site--overflow-y:                   visible;
+
+}
+/* @finish base theme for clean_start_tiny site css props */
+
+

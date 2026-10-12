@@ -1,0 +1,45 @@
+{
+  "thanks": "Intel site on ASM instructions",
+  "author": "Software architect ILLIA POLIANSKYI, Jaisocx AG",
+  "name": "@jaisocx/base_optimized_parser",
+  "licence": "IC",
+  "version": "1.0.1",
+  "description": "The BaseOptimizedParser class is the pack of base methods for symbol-based markup parsing\nlike splitting by text lines, text lines' columns by tabs or spaces, parsers for xml, html, json.\n\nBy the base parser, later we might lookup, parse and trim,\nbeing sure we've done coding tasks due to modern CPU's opcodes supported.\n\nLike a code snippet, or the very small bibliotheque to install and import,\nreviewed for the code transparency, quality and efficiency.",
+  "keywords": [
+    "string",
+    "text",
+    "html",
+    "email"
+  ],
+  "files": [
+    "transpiled/CommonJS",
+    "transpiled/ESNext",
+    "transpiled/Simple",
+    "test",
+    "README.md"
+  ],
+  "build": {
+    "typescript": "5.9.3",
+    "node": "24.11.0",
+    "npm": "11.6.1"
+  },
+  "type": "module",
+  "main": "./transpiled/CommonJS/index.js",
+  "types": "./transpiled/ESNext/index.d.ts",
+  "module": "./transpiled/ESNext/index.js",
+  "exports": {
+    ".": {
+      "import": "./transpiled/ESNext/index.js",
+      "require": "./transpiled/CommonJS/index.js"
+    }
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "optionalDependencies": {
+    "@jaisocx/css-code-snippet": "~1.4.3"
+  }
+}
+
+

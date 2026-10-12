@@ -1,0 +1,26 @@
+
+/* @start clean_start_tiny html tag button */
+.clean_start button {
+  font-family:  var(--clean_start--button--font-family, Arial);
+  font-size:    var(--clean_start--button--font-size, 0.9rem);
+  line-height:  var(--clean_start--button--line-height, 1.2rem);
+  padding:      var(--clean_start--button--padding, 0);
+  margin:       var(--clean_start--button--margin, 0);
+  min-width:    var(--clean_start--button--min-width, unset);
+  max-width:    var(--clean_start--button--max-width, 100%);
+  width:        var(--clean_start--button--width, 10rem);
+  border:       var(--clean_start--button--border, 0.2px solid #ddd);
+  outline:      var(--clean_start--button--outline, unset);
+  background:   var(--clean_start--button_hover--background, #fdfdfd);
+}
+
+.clean_start button:hover {
+  color:             var(--clean_start--button_hover--color, lime);
+  text-decoration:   var(--clean_start--button_hover--text-decoration, underline);
+  border:            var(--clean_start--button_hover--border, 1px solid lime);
+  border-radius:     var(--clean_start--button_hover--border-radius, 0);
+  background:        var(--clean_start--button_hover--background, #fdfdfd);
+}
+/* @finish clean_start_tiny html tag button */
+
+

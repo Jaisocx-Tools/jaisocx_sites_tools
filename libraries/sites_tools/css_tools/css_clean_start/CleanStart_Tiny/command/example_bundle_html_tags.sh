@@ -41,7 +41,8 @@ cat "${bundle_src_folder}/clean_start_tiny__scrollbar.css" >> "${bundle_dest_fol
 bundle_src_folder="./MediaAndStyles/clean_start_tiny__html_tags"
 cat "${bundle_src_folder}/clean_start_tiny__h.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
 cat "${bundle_src_folder}/clean_start_tiny__anchor.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
-# cat "${bundle_src_folder}/clean_start_tiny__code_tt.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
+cat "${bundle_src_folder}/clean_start_tiny__button.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
+cat "${bundle_src_folder}/clean_start_tiny__code_tt.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
 # cat "${bundle_src_folder}/clean_start_tiny__dl_dt_dd.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
 # cat "${bundle_src_folder}/clean_start_tiny__fieldset_legend.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
 # cat "${bundle_src_folder}/clean_start_tiny__input.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
@@ -49,12 +50,12 @@ cat "${bundle_src_folder}/clean_start_tiny__label.css" >> "${bundle_dest_folder}
 # cat "${bundle_src_folder}/clean_start_tiny__marker.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
 # cat "${bundle_src_folder}/clean_start_tiny__ol_li.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
 cat "${bundle_src_folder}/clean_start_tiny__p.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
-# cat "${bundle_src_folder}/clean_start_tiny__pre.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
+cat "${bundle_src_folder}/clean_start_tiny__pre.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
 # cat "${bundle_src_folder}/clean_start_tiny__select.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
 cat "${bundle_src_folder}/clean_start_tiny__table.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
 cat "${bundle_src_folder}/clean_start_tiny__text.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
 # cat "${bundle_src_folder}/clean_start_tiny__textarea.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
-# cat "${bundle_src_folder}/clean_start_tiny__ul_li.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
+cat "${bundle_src_folder}/clean_start_tiny__ul_li.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
 
 
 

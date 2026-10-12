@@ -1,0 +1,33 @@
+
+/* @start clean_start_tiny html tag Label */
+.clean_start label {
+
+  display:                 var(--clean_start--label--display, inline-block);
+
+  min-height:              var(--clean_start--label--min-height, unset);
+  max-height:              var(--clean_start--label--max-height, 100%);
+  height:                  var(--clean_start--label--height, auto);
+
+  min-width:               var(--clean_start--label--min-width, unset);
+  max-width:               var(--clean_start--label--max-width, 100%);
+  width:                   var(--clean_start--label--width, auto);
+
+  line-height:             var(--clean_start--label--line-height, 1.2rem);
+  font-size:               var(--clean_start--label--font-size, 0.9rem);
+
+  padding:                 var(--clean_start--label--padding, 0 0 0 0);
+  margin:                  var(--clean_start--label--margin, 0 0 0 0);
+
+  border:                  var(--clean_start--label--border, 0 solid #ddd);
+  border-radius:           var(--clean_start--label--border-radius, 0);
+
+  color:                   var(--clean_start--label--color, black);
+  background:              var(--clean_start--label--background, #fdfdfd);
+
+  overflow-x:               var(--clean_start--label--overflow-x, hidden);
+  overflow-y:               var(--clean_start--label--overflow-y, hidden);
+
+}
+/* @finish clean_start_tiny html tag Label */
+
+

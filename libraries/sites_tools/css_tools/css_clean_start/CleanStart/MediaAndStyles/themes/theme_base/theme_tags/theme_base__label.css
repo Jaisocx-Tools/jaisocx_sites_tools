@@ -1,0 +1,33 @@
+
+/* @start base theme for clean_start_tiny html tag label */
+.clean_start {
+
+  --clean_start--label--display:                    inline-block;
+
+  --clean_start--label--min-height:                 unset;
+  --clean_start--label--max-height:                 100%;
+  --clean_start--label--height:                     auto;
+
+  --clean_start--label--min-width:                  unset;
+  --clean_start--label--max-width:                  100%;
+  --clean_start--label--width:                      auto;
+
+  --clean_start--label--padding:                    0 0 0 0;
+  --clean_start--label--margin:                     0 0 0 0;
+
+  --clean_start--label--line-height:                1.2rem;
+  --clean_start--label--font-size:                  0.9rem;
+
+  --clean_start--label--color:                      black;
+  --clean_start--label--background:                 #fdfdfd;
+
+  --clean_start--label--border:                     0 solid #ddd;
+  --clean_start--label--border-radius:              0;
+
+  --clean_start--label--overflow-x:                  hidden;
+  --clean_start--label--overflow-y:                  hidden;
+
+}
+/* @finish base theme for clean_start_tiny html tag label */
+
+

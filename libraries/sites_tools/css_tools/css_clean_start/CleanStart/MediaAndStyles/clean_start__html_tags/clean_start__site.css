@@ -1,0 +1,90 @@
+
+/* @start clean_start_tiny site css props */
+/* this style sets rem size for the html page. 1rem = 16px */
+html.clean_start {
+  font-size:               var(--clean_start--rem, 16px);
+}
+
+
+
+html.clean_start {
+  position:                var(--clean_start--html_tag--position, static);
+  top:                     var(--clean_start--html_tag--top, 0);
+  padding:                 var(--clean_start--html_tag--padding, 0 0 0 0);
+  margin:                  var(--clean_start--html_tag--margin, 0 0 0 0);
+  box-sizing:              var(--clean_start--html_tag--box-sizing, border-box);
+
+  min-height:              var(--clean_start--html_tag--min-height, 100vh);
+  max-height:              var(--clean_start--html_tag--max-height, unset);
+  height:                  var(--clean_start--html_tag--height, auto);
+
+  min-width:               var(--clean_start--html_tag--min-width, 100%);
+  max-width:               var(--clean_start--html_tag--max-width, 100%);
+  width:                   var(--clean_start--html_tag--width, 100%);
+
+  overflow-x:               var(--clean_start--html_tag--overflow-x, hidden);
+}
+
+/* these html elems are invisible */
+.clean_start head,
+.clean_start head *,
+.clean_start style,
+.clean_start script {
+  display:                 block;
+  visibility:              hidden;
+  overflow-x:               hidden;
+  overflow-y:               hidden;
+  min-height:              unset;
+  max-height:              0;
+  height:                  0;
+  min-width:               unset;
+  max-width:               0;
+  width:                   0;
+}
+
+.clean_start body {
+  position:                var(--clean_start--body_tag--position, relative);
+  top:                     var(--clean_start--body_tag--top, 0);
+  padding:                 var(--clean_start--body_tag--padding, 0 0 0 0);
+  margin:                  var(--clean_start--body_tag--margin, 0 0 0 0);
+  display:                 var(--clean_start--body_tag--display, block);
+  box-sizing:              var(--clean_start--body_tag--box-sizing, border-box);
+
+  font-size:               var(--clean_start--all_tags--font-size, 0.9rem);
+
+  min-height:              var(--clean_start--body_tag--min-height, 100vh);
+  max-height:              var(--clean_start--body_tag--max-height, unset);
+  height:                  var(--clean_start--body_tag--height, auto);
+
+  min-width:               var(--clean_start--body_tag--min-width, 100%);
+  max-width:               var(--clean_start--body_tag--max-width, 100%);
+  width:                   var(--clean_start--body_tag--width, 100%);
+
+  background:              var(--clean_start--body_tag--background, #eefdf4);
+
+  overflow-x:               var(--clean_start--body_tag--overflow-x, hidden);
+  overflow-y:               var(--clean_start--body_tag--overflow-y, auto);
+}
+
+.clean_start main {
+  padding:                 var(--clean_start--site--padding, 0 0 0 0);
+  margin:                  var(--clean_start--site--margin, 0 auto 0 auto);
+
+  font-size:               var(--clean_start--all_tags--font-size, 0.9rem);
+
+  min-height:              var(--clean_start--site--min-height, 100vh );
+  max-height:              var(--clean_start--site--max-height, unset );
+  height:                  var(--clean_start--site--height, auto );
+
+  min-width:               var(--clean_start--site--min-width, unset);
+  max-width:               var(--clean_start--site--max-width, 100%);
+  width:                   var(--clean_start--site--width, auto);
+
+  background:              var(--clean_start--site--background, #fdfdfd);
+
+  overflow-x:               var(--clean_start--site--overflow-x, hidden);
+  overflow-y:               var(--clean_start--site--overflow-y, visible);
+}
+/* @finish clean_start_tiny site css props */
+
+

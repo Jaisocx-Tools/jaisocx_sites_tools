@@ -1,0 +1,38 @@
+
+/* @start base theme marker for styles and html in qa and dev_mode */
+.clean_start {
+
+  --clean_start--marker--position:                  relative;
+  --clean_start--marker--display:                   inline-block;
+
+  --clean_start--marker--padding:                   0 0 0 0;
+  --clean_start--marker--margin:                    0 0 0 0;
+
+  --clean_start--marker--font-family:               var(--clean_start--sans--font-family;
+  --clean_start--marker--line-height:               0.9rem;
+  --clean_start--marker--font-size:                 0.9rem;
+
+  --clean_start--marker--letter-spacing:            0;
+  --clean_start--marker--color:                     green;
+
+  --clean_start--marker--border-color:              #99fd55;
+  --clean_start--marker--border-style:              solid;
+  --clean_start--marker--border-width:              0.2px;
+
+  --clean_start--marker--background:                #effdea;
+
+  --clean_start--marker--min-height:                0.9rem;
+  --clean_start--marker--max-height:                0.9rem;
+  --clean_start--marker--height:                    0.9rem;
+
+  --clean_start--marker--min-width:                 0;
+  --clean_start--marker--max-width:                 100%;
+  --clean_start--marker--width:                     auto;
+
+  --clean_start--marker--overflow-x:                 visible;
+  --clean_start--marker--overflow-y:                 visible;
+
+}
+/* @finish base theme marker for styles and html in qa and dev_mode */
+
+

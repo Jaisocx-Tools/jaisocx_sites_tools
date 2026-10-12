@@ -1,0 +1,44 @@
+
+/* @start base theme for clean_start html tag text */
+.clean_start {
+
+  --clean_start--text--position:                    relative;
+  --clean_start--text--display:                     inline-block;
+  --clean_start--text--box-sizing:                  border-box;
+
+  --clean_start--text--padding:                     0 0 0 0;
+  --clean_start--text--margin:                      0 0 0 0;
+
+  --clean_start--text--font-family:                 var(--clean_start--all_tags--font-family);
+  --clean_start--text--line-height:                 1.2rem;
+  --clean_start--text--font-size:                   0.9rem;
+
+  --clean_start--text--font-style:                  normal;
+  --clean_start--text--font-variant:                normal;
+  --clean_start--text--letter-spacing:              0.005rem;
+  --clean_start--text--line-break:                  strict;
+  --clean_start--text--word-wrap:                   normal;
+  --clean_start--text--word-break:                  normal;
+
+  --clean_start--text--border-color:                lime;
+  --clean_start--text--border-style:                solid;
+  --clean_start--text--border-width:                0;
+
+  --clean_start--text--color:                       black;
+  --clean_start--text--background:                  #fdfdfd;
+
+  --clean_start--text--min-height:                  0;
+  --clean_start--text--max-height:                  unset;
+  --clean_start--text--height:                      auto;
+
+  --clean_start--text--min-width:                   0;
+  --clean_start--text--max-width:                   100%;
+  --clean_start--text--width:                       auto;
+
+  --clean_start--text--overflow-x:                   visible;
+  --clean_start--text--overflow-y:                   visible;
+
+}
+/* @finish base theme for clean_start html tag text */
+
+
