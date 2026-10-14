@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" class="jaisocx clean_start">
+<head>
+
+  <!--# FAVICON -->
+  <link
+      rel="icon"
+      type="image/x-icon"
+      href="004_sunflower.ico"
+  />
+
+  <title> Jaisocx clean_start_tiny </title>
+
+
+
+  <base href="./MediaAndStyles/n_builds/clean_start__20261014/" />
+
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+
+
+
+
+  <!--# CleanStart_Tiny Fonts -->
+  <link
+      rel="stylesheet"
+      type="text/css"
+      charset="utf-8"
+      href="a_clean_start__fonts.css"
+  />
+
+
+  <!--# CleanStart_Tiny Html tags -->
+  <link
+      rel="stylesheet"
+      type="text/css"
+      charset="utf-8"
+      href="d_clean_start__html_tags.css"
+  />
+
+
+
+  <!-- CleanStart_Tiny Overrides -->
+  <style name="overrides">
+
+    .jaisocx.clean_start {
+
+      --clean_start--site--padding: 1rem 3rem 10rem 3rem;
+      --clean_start--site--width: 55%;
+
+      --clean_start--h1--margin: 2rem 0 0.3rem 0;
+      --clean_start--h2--margin: 2rem 0 0.3rem 0;
+      --clean_start--h3--margin: 1.6rem 0 0.3rem 0;
+      --clean_start--h4--margin: 1rem 0 0.3rem 0;
+      --clean_start--h--margin:  1rem 0 0.3rem 0;
+
+      --clean_start--p_first--margin: 0 0 0 0;
+      --clean_start--p--margin: 1rem 0 0 0;
+
+
+
+      /* label */
+      --clean_start--label--display:           inline-block;
+
+      --clean_start--label--font-size:         0.79rem;
+      --clean_start--label--line-height:       var(--clean_start--label--font-size);
+
+      --clean_start--label--padding:           0.12rem 0.5rem 0.16rem 0.5rem;
+      --clean_start--label--margin:            0 0 0 0;
+
+      --clean_start--label--color:             green;
+      --clean_start--label--background-color:  #eefafd;
+
+      --clean_start--label--border:            1px solid green;
+      --clean_start--label--border-radius:     0.8rem;
+
+      --clean_start--label--overflow-x:        hidden;
+      --clean_start--label--overflow-y:        hidden;
+
+
+
+      --clean_start--table_caption--padding:  0.9rem 0 0.55rem 0;
+      --clean_start--table_caption--color:  #3ac020;
+      --clean_start--table_caption--line-height:  0.79rem;
+      --clean_start--table_caption--font-size:  0.79rem;
+
+      --clean_start--table_th--padding:  0.25rem 1rem 0.25rem 1rem;
+      --clean_start--table_td--padding:  0.25rem 1rem 0.25rem 1rem;
+      --clean_start--table_tf--padding:  0.25rem 1rem 0.25rem 1rem;
+
+      --clean_start--table--border:  1px solid lime;
+
+      --clean_start--table_th--text-align: center;
+      --clean_start--table_th--font-size:  0.8rem;
+      --clean_start--table_th--color:            #3ac020;
+      --clean_start--table_caption--background:  #fefffd;
+      --clean_start--table_th--background:       #fefffd;
+      --clean_start--table_td--background:       #f9fdf2;
+
+      --clean_start--table_tf--background:       #eefdc9;
+
+    }
+
+
+
+    .jaisocx.clean_start * table.sites_tools.tb_green_a {
+
+      --clean_start--table--border:                     0.5px solid green;
+
+      --clean_start--table_caption--text-align:         right;
+      --clean_start--table_caption--color:              #333;
+      --clean_start--table_caption--background:         #fefffe;
+      --clean_start--table_caption--border:             0 solid green;
+
+      --clean_start--table_th--text-align:              center;
+      --clean_start--table_th--border:                  0.2px solid lime;
+      --clean_start--table_th--color:                   black;
+      --clean_start--table_th--background:              #eefedd;
+
+      --clean_start--table_td_odd--color:               #553322;
+      --clean_start--table_td_odd--background:          #fdfdfa;
+
+      --clean_start--table_td_even--color:              darkgreen;
+      --clean_start--table_td_even--background:         #fafdf2;
+
+      --clean_start--table_tf--color:                   black;
+      --clean_start--table_tf--background:              #fdfdfd;
+
+    }
+
+
+
+    .jaisocx.clean_start * table.sites_tools.tb_green_b {
+
+      --clean_start--table--border:                     0.5px solid green;
+
+      --clean_start--table_caption--text-align:         center;
+      --clean_start--table_caption--color:              green;
+      --clean_start--table_caption--background:         #fdfdfd;
+      --clean_start--table_caption--border:             0 solid green;
+
+      --clean_start--table_th--text-align:              center;
+      --clean_start--table_th--border:                  0.2px solid lime;
+      --clean_start--table_th--color:                   #f2f4e0;
+      --clean_start--table_th--background:              green;
+
+      --clean_start--table_td--color:                   green;
+      --clean_start--table_td--background:              #fdfdfd;
+
+      --clean_start--table_td_odd--color:               #553322;
+      --clean_start--table_td_odd--background:          #fafaf2;
+
+      --clean_start--table_td_even--color:              darkgreen;
+      --clean_start--table_td_even--background:         #f2faf2;
+
+      --clean_start--table_tf--color:                   black;
+      --clean_start--table_tf--background:              #fdfdfd;
+
+    }
+
+  </style>
+
+
+
+  <!-- CleanStart_Tiny Mobile friendly -->
+  <style name="mobile_friendly">
+
+    @media only screen and (min-width: 5px) and (max-width: 280px) and (min-height: 5px) and (max-height: 1240px) and (orientation: portrait) {
+      .jaisocx.clean_start {
+        --clean_start--site--padding: 1rem 0.3rem 2rem 0.3rem;
+        --clean_start--site--width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 281px) and (max-width: 480px) and (min-height: 431px) and (max-height: 1240px) and (orientation: portrait) {
+      .jaisocx.clean_start {
+        --clean_start--site--padding: 1.2rem 0.3rem 5rem 0.3rem;
+        --clean_start--site--width: 92%;
+      }
+    }
+
+    @media only screen and (min-width: 281px) and (max-width: 1024px) and (min-height: 5px) and (max-height: 480px) and (orientation: landscape) {
+      .jaisocx.clean_start {
+        --clean_start--site--padding: 0.3rem 0.3rem 1rem 0.3rem;
+        --clean_start--site--width: 95%;
+      }
+    }
+
+  </style>
+
+</head>
+<body>
+<main>
+
+  <h1> clean start ® </h1>
+
+
+
+  <h2> table </h2>
+
+  <block name="tb">
+
+    <table>
+      <!-- Table Caption -->
+      <caption>  🗒 💲 🍰 Shop  </caption>
+
+      <!-- Define column styles -->
+      <colgroup>
+        <col style="width: 8rem;">
+        <col style="width: 8rem;">
+        <col style="width: 8rem;">
+        <col style="width: 8rem;">
+      </colgroup>
+
+      <!-- Table Header -->
+      <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+      </thead>
+
+      <!-- Table Body -->
+      <tbody>
+      <tr>
+        <td> 🍎 Apple </td>
+        <td>$1.00</td>
+        <td>5</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍌 Banana </td>
+        <td>$0.50</td>
+        <td>10</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍊 Orange </td>
+        <td>$0.80</td>
+        <td>7</td>
+        <td>$5.60</td>
+      </tr>
+      <tr>
+        <td> 🍎 Apple </td>
+        <td>$1.00</td>
+        <td>5</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍌 Banana </td>
+        <td>$0.50</td>
+        <td>10</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍊 Orange </td>
+        <td>$0.80</td>
+        <td>7</td>
+        <td>$5.60</td>
+      </tr>
+      </tbody>
+
+      <!-- Table Footer -->
+      <tfoot>
+      <tr>
+        <td colspan="3">Sum</td>
+        <td> $31.20 </td>
+      </tr>
+      </tfoot>
+    </table>
+
+  </block>
+
+
+
+
+
+  <block name="tb">
+
+    <table class="sites_tools">
+      <!-- Table Caption -->
+      <caption>  🗒 💲 🍰 Shop  </caption>
+
+      <!-- Define column styles -->
+      <colgroup>
+        <col style="width: 8rem;">
+        <col style="width: 8rem;">
+        <col style="width: 8rem;">
+        <col style="width: 8rem;">
+      </colgroup>
+
+      <!-- Table Header -->
+      <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+      </thead>
+
+      <!-- Table Body -->
+      <tbody>
+      <tr>
+        <td> 🍎 Apple </td>
+        <td>$1.00</td>
+        <td>5</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍌 Banana </td>
+        <td>$0.50</td>
+        <td>10</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍊 Orange </td>
+        <td>$0.80</td>
+        <td>7</td>
+        <td>$5.60</td>
+      </tr>
+      <tr>
+        <td> 🍎 Apple </td>
+        <td>$1.00</td>
+        <td>5</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍌 Banana </td>
+        <td>$0.50</td>
+        <td>10</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍊 Orange </td>
+        <td>$0.80</td>
+        <td>7</td>
+        <td>$5.60</td>
+      </tr>
+      </tbody>
+
+      <!-- Table Footer -->
+      <tfoot>
+      <tr>
+        <td colspan="3">Sum</td>
+        <td> $31.20 </td>
+      </tr>
+      </tfoot>
+    </table>
+
+  </block>
+
+
+
+
+
+  <block name="tb">
+
+    <table class="sites_tools tb_green_a">
+      <!-- Table Caption -->
+      <caption>  🗒 💲 🍰 Shop  </caption>
+
+      <!-- Define column styles -->
+      <colgroup>
+        <col style="width: 8rem;">
+        <col style="width: 8rem;">
+        <col style="width: 8rem;">
+        <col style="width: 8rem;">
+      </colgroup>
+
+      <!-- Table Header -->
+      <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+      </thead>
+
+      <!-- Table Body -->
+      <tbody>
+      <tr>
+        <td> 🍎 Apple </td>
+        <td>$1.00</td>
+        <td>5</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍌 Banana </td>
+        <td>$0.50</td>
+        <td>10</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍊 Orange </td>
+        <td>$0.80</td>
+        <td>7</td>
+        <td>$5.60</td>
+      </tr>
+      <tr>
+        <td> 🍎 Apple </td>
+        <td>$1.00</td>
+        <td>5</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍌 Banana </td>
+        <td>$0.50</td>
+        <td>10</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍊 Orange </td>
+        <td>$0.80</td>
+        <td>7</td>
+        <td>$5.60</td>
+      </tr>
+      </tbody>
+
+      <!-- Table Footer -->
+      <tfoot>
+      <tr>
+        <td colspan="3">Sum</td>
+        <td> $31.20 </td>
+      </tr>
+      </tfoot>
+    </table>
+
+  </block>
+
+
+
+
+
+  <block name="tb">
+
+    <table class="sites_tools tb_green_b">
+      <!-- Table Caption -->
+      <caption>  🗒 💲 🍰 Shop  </caption>
+
+      <!-- Define column styles -->
+      <colgroup>
+        <col style="width: 8rem;">
+        <col style="width: 8rem;">
+        <col style="width: 8rem;">
+        <col style="width: 8rem;">
+      </colgroup>
+
+      <!-- Table Header -->
+      <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+      </thead>
+
+      <!-- Table Body -->
+      <tbody>
+      <tr>
+        <td> 🍎 Apple </td>
+        <td>$1.00</td>
+        <td>5</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍌 Banana </td>
+        <td>$0.50</td>
+        <td>10</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍊 Orange </td>
+        <td>$0.80</td>
+        <td>7</td>
+        <td>$5.60</td>
+      </tr>
+      <tr>
+        <td> 🍎 Apple </td>
+        <td>$1.00</td>
+        <td>5</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍌 Banana </td>
+        <td>$0.50</td>
+        <td>10</td>
+        <td>$5.00</td>
+      </tr>
+      <tr>
+        <td> 🍊 Orange </td>
+        <td>$0.80</td>
+        <td>7</td>
+        <td>$5.60</td>
+      </tr>
+      </tbody>
+
+      <!-- Table Footer -->
+      <tfoot>
+      <tr>
+        <td colspan="3">Sum</td>
+        <td> $31.20 </td>
+      </tr>
+      </tfoot>
+    </table>
+
+  </block>
+
+
+</main>
+</body>
+</html>
+
+
