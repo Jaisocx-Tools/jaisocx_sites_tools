@@ -1,0 +1,195 @@
+
+/* @start clean_start html tag table */
+  /* @start clean_start_tiny sites_tool table */
+.clean_start * table.sites_tools tr:nth-of-type(2n + 1) td {
+  color:                   var(--clean_start--table_td_odd--color, #553322);
+  background:              var(--clean_start--table_td_odd--background, #fdfdfa);
+}
+
+.clean_start * table.sites_tools tr:nth-of-type(2n + 2) td {
+  color:                   var(--clean_start--table_td_even--color, darkgreen);
+  background:              var(--clean_start--table_td_even--background, #fafdf2);
+}
+
+.clean_start * table.sites_tools tfoot tr:nth-of-type(2n + 1) td {
+  color:                   var(--clean_start--table_tf--color, #050505);
+  background:              var(--clean_start--table_tf--background, #fdfdfd);
+}
+  /* @finish clean_start_tiny sites_tool table */
+
+
+
+
+
+.clean_start * table {
+  display:                 table;
+}
+
+.clean_start table caption {
+  display: 	               table-caption;
+}
+
+.clean_start table colgroup {
+  display:                 table-column-group;
+}
+
+.clean_start table col {
+  display:                 table-column;
+}
+
+.clean_start table thead {
+  display:                 table-header-group;
+}
+
+.clean_start table th {
+  display:                 table-cell;
+}
+
+.clean_start table tbody {
+  display:                 table-row-group;
+}
+
+.clean_start table tr {
+  display:                 table-row;
+}
+
+.clean_start table td {
+  display:                 table-cell;
+}
+
+
+
+.clean_start * table {
+
+  border:                  var(--clean_start--table--border, 0 solid #fdfd40);
+  border-collapse:         var(--clean_start--table--border-collapse, collapse);
+
+  min-width:               var(--clean_start--table--min-width, unset);
+  max-width:               var(--clean_start--table--max-width, 100%);
+  width:                   var(--clean_start--table--width, auto);
+
+  overflow-x:               var(--clean_start--table--overflow-x, hidden);
+  overflow-y:               var(--clean_start--table--overflow-y, hidden);
+}
+
+
+
+.clean_start table caption {
+
+  padding:                 var(--clean_start--table_caption--padding, 0 0 0 0);
+  margin:                  var(--clean_start--table_caption--margin, 0 0 0 0);
+
+  text-align:              var(--clean_start--table_caption--text-align, left);
+  line-height:             var(--clean_start--table_caption--line-height, 1.2rem);
+  font-size:               var(--clean_start--table_caption--font-size, 0.9rem);
+  font-weight:             var(--clean_start--table_caption--font-weight, 600);
+
+  min-width:               var(--clean_start--table_caption--min-width, unset);
+  max-width:               var(--clean_start--table_caption--max-width, 100%);
+  width:                   var(--clean_start--table_caption--width, auto);
+
+  border:                  var(--clean_start--table_caption--border, 0 solid lime);
+  color:                   var(--clean_start--table_caption--color, black);
+  background:              var(--clean_start--table_caption--background, #fdfdfd);
+
+  overflow-x:               var(--clean_start--table_caption--overflow-x, hidden);
+  overflow-y:               var(--clean_start--table_caption--overflow-y, hidden);
+
+}
+
+
+
+.clean_start table thead,
+.clean_start table tbody,
+.clean_start table tr {
+  min-width:               100%;
+  max-width:               100%;
+  width:                   100%;
+}
+
+
+
+.clean_start tr th,
+.clean_start thead tr td,
+.clean_start tbody th {
+  padding:                 var(--clean_start--table_th--padding, 0 0 0 0);
+  margin:                  var(--clean_start--table_th--margin, 0 0 0 0);
+
+  text-align:              var(--clean_start--table_th--text-align, left);
+  line-height:             var(--clean_start--table_th--line-height, 1.2rem);
+  font-size:               var(--clean_start--table_th--font-size, 0.9rem);
+  font-weight:             var(--clean_start--table_th--font-weight, 600);
+
+  border:                  var(--clean_start--table_th--border, 0.2px solid lime);
+  color:                   var(--clean_start--table_th--color, black);
+  background:              var(--clean_start--table_th--background, #fdfdfd);
+}
+
+
+
+.clean_start tr td {
+
+  padding:                 var(--clean_start--table_td--padding, 0 0 0 0);
+  margin:                  var(--clean_start--table_td--margin, 0 0 0 0);
+
+  text-align:              var(--clean_start--table_td--text-align, left);
+  line-height:             var(--clean_start--table_td--line-height, 1.2rem);
+  font-size:               var(--clean_start--table_td--font-size, 0.9rem);
+  font-weight:             var(--clean_start--table_td--font-weight, 400);
+
+  border:                  var(--clean_start--table_td--border, 0.2px solid lime);
+  color:                   var(--clean_start--table_td--color, black);
+  background:              var(--clean_start--table_td--background, #fdfdfd);
+
+}
+
+
+
+.clean_start td * {
+
+  padding:                 var(--clean_start--table_td_tags--padding, 0 0 0 0);
+  margin:                  var(--clean_start--table_td_tags--margin, 0 0 0 0);
+
+  line-height:             var(--clean_start--table_td_tags--line-height, 0.9rem);
+  font-size:               var(--clean_start--table_td_tags--font-size, 0.9rem);
+
+  overflow-x:               var(--clean_start--table_td_tags--overflow-x, visible);
+  overflow-y:               var(--clean_start--table_td_tags--overflow-y, visible);
+
+}
+
+
+
+.clean_start table tfoot {
+  display:                 table-footer-group;
+}
+
+.clean_start table tf {
+  display:                 table-cell;
+}
+
+.clean_start table tfoot {
+  min-width:               100%;
+  max-width:               100%;
+  width:                   100%;
+}
+
+.clean_start tfoot td,
+.clean_start tfoot tf {
+
+  padding:                 var(--clean_start--table_tf--padding, 0 0 0 0);
+  margin:                  var(--clean_start--table_tf--margin, 0 0 0 0);
+
+  text-align:              var(--clean_start--table_tf--text-align, left);
+  line-height:             var(--clean_start--table_tf--line-height, 1.2rem);
+  font-size:               var(--clean_start--table_tf--font-size, 0.9rem);
+  font-weight:             var(--clean_start--table_tf--font-weight, 600);
+
+  border:                  var(--clean_start--table_tf--border, 0.2px solid #ddd);
+  color:                   var(--clean_start--table_tf--color, black);
+  background:              var(--clean_start--table_tf--background, #fdfdfd);
+
+}
+/* @finish clean_start html tag table */
+
+

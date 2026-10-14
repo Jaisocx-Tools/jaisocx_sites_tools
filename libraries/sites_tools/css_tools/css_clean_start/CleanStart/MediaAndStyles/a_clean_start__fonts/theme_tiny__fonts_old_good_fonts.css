@@ -1,0 +1,12 @@
+
+/* @start clean_start_tiny theme fonts_old_good_fonts */
+.clean_start {
+                                                  /* microsoft, ios, linux, android */
+  --clean_start--sans--font-family:                 "Arial";
+  --clean_start--serif--font-family:                "Times New Roman";
+  --clean_start--monospace--font-family:            "Courier";
+  --clean_start--handwrite--font-family:            "Segoe Script",   "Bradley Hand",   "Z003",   "cursive";
+}
+/* @finish clean_start_tiny theme fonts_old_good_fonts */
+
+

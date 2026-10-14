@@ -1,12 +1,51 @@
 #!/bin/bash
 
-# env_bundle_dest_folder="tmp/clean_start_tiny20261010"
-# env_tarball_name="clean_start_tiny20261010_tarball"
+env_dest_bundle_name="20261013"
+add_tiny_keyword="no"
 
-env_bundle_dest_folder="tmp/clean_start_20261012"
-env_tarball_name="clean_start_20261012_tarball"
 
-# env_bundle_dest_folder="tmp/bundle20260830"
-# env_tarball_name="clean_start"
+
+tiny_keyword="tiny"
+env_tiny_keyword="_${tiny_keyword}_"
+
+if [[ "${add_tiny_keyword}" != "yes" ]]; then
+  env_tiny_keyword="_"
+fi
+
+
+
+env_dest_foldername="tmp/clean_start${env_tiny_keyword}_${env_dest_bundle_name}"
+env_dest_tarball_foldername="clean_start${env_tiny_keyword}_tarball_${env_dest_bundle_name}"
+
+
+
+# -- Clean Start Features Folders --
+# fonts,
+# aligning styles,
+# site,
+# all html tags,
+# multi device,
+# tiny sites tools like css styling examples,
+# themes: sizes, colors.
+
+env_src__fonts__folder_name="a_clean_start__fonts"
+env_src__styles__folder_name="b_clean_start__styles"
+env_src__site__folder_name="c_clean_start__site"
+env_src__html_tags__folder_name="d_clean_start__html_tags"
+env_src__responsive__folder_name="e_clean_start__responsive"
+env_src__sites_tools__folder_name="h_clean_start__sites_tools"
+env_src__themes__folder_name="i_clean_start__themes"
+
+
+
+env_dest__fonts__filename="a_clean_start${env_tiny_keyword}_fonts.css"
+env_dest__styles__filename="b_clean_start${env_tiny_keyword}_styles.css"
+env_dest__site__filename="c_clean_start${env_tiny_keyword}_site.css"
+env_dest__html_tags__filename="d_clean_start${env_tiny_keyword}_html_tags.css"
+env_dest__responsive__filename="e_clean_start${env_tiny_keyword}_responsive.css"
+env_dest__sites_tools__filename="clean_start${env_tiny_keyword}_sites_tools.css"
+env_dest__themes__filename="i_clean_start${env_tiny_keyword}_themes.css"
+
+
 
 

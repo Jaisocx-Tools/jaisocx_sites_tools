@@ -1,0 +1,90 @@
+
+/* @start clean_start_tiny site css props */
+html.clean_start {
+  position:                static;
+  top:                     0;
+  padding:                 0 0 0 0;
+  margin:                  0 0 0 0;
+  box-sizing:              border-box;
+
+  min-height:              100vh;
+  max-height:              unset;
+  height:                  auto;
+
+  min-width:               100%;
+  max-width:               100%;
+  width:                   100%;
+
+  overflow-x:               hidden;
+}
+
+
+
+/* these html elems are invisible */
+.clean_start head,
+.clean_start head *,
+.clean_start style,
+.clean_start script {
+  display:                 block;
+  visibility:              hidden;
+  overflow-x:               hidden;
+  overflow-y:               hidden;
+  min-height:              unset;
+  max-height:              0;
+  height:                  0;
+  min-width:               unset;
+  max-width:               0;
+  width:                   0;
+}
+
+
+
+.clean_start body {
+  position:                relative;
+  top:                     0;
+  padding:                 0 0 0 0;
+  margin:                  0 0 0 0;
+  display:                 block;
+  box-sizing:              var(--clean_start--body_tag--box-sizing, border-box);
+
+  font-size:               0.9rem;
+
+  min-height:              100vh;
+  max-height:              unset;
+  height:                  auto;
+
+  min-width:               100%;
+  max-width:               100%;
+  width:                   100%;
+
+  background:              var(--clean_start--body_tag--background, #eefdf4);
+
+  overflow-x:               hidden;
+  overflow-y:               auto;
+}
+
+
+
+.clean_start main,
+.clean_start site {
+  padding:                 var(--clean_start--site--padding, 0 0 0 0);
+  margin:                  0 auto 0 auto;
+
+  font-size:               0.9rem;
+
+  min-height:              100vh;
+  max-height:              unset;
+  height:                  auto;
+
+  min-width:               unset;
+  max-width:               100%;
+  width:                   var(--clean_start--site--width, auto);
+
+  background:              var(--clean_start--site--background, #fdfdfd);
+
+  overflow-x:               hidden;
+  overflow-y:               visible;
+}
+/* @finish clean_start_tiny site css props */
+
+

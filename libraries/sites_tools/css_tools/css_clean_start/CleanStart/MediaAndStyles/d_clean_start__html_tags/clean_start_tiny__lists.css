@@ -1,0 +1,263 @@
+
+/* @start clean_start_tiny html tags ul||ol */
+  /* @start ul mark symbol */
+.clean_start ul li::after {
+  content:                 var(--clean_start--ul_li_c--content, '');
+}
+
+.clean_start ul.inline li::after {
+  content:                 var(--clean_start--ul_li_c--content, '');
+}
+
+.clean_start ul.inline.slash li::after {
+  content:                 var(--clean_start--ul_li_c--content, '|');
+}
+  /* @finish ul mark symbol */
+
+
+
+  /* @start ul mark size */
+.clean_start ol li::after {
+  line-height:             var(--clean_start--ol_li_c--line-height, 1.2rem);
+  font-size:               var(--clean_start--ol_li_c--font-size, 0.9rem);
+  color:                   var(--clean_start--ol_li_c--color, black);
+}
+
+.clean_start ul li::after {
+  line-height:             var(--clean_start--ul_li_c--line-height, 1.2rem);
+  font-size:               var(--clean_start--ul_li_c--font-size, 0.9rem);
+  color:                   var(--clean_start--ul_li_c--color, black);
+}
+  /* @finish ul mark size */
+
+
+
+  /* @start ol count */
+.clean_start ol {
+  counter-reset:           cnt1 0;
+}
+.clean_start ol ol {
+  counter-reset:           cnt2 0;
+}
+.clean_start ol ol ol {
+  counter-reset:           cnt3 0;
+}
+.clean_start ol ol ol ol {
+  counter-reset:           cnt4 0;
+}
+.clean_start ol ol ol ol ol {
+  counter-reset:           cnt5 0;
+}
+
+
+
+.clean_start ol li {
+  counter-increment:       cnt1 1;
+}
+.clean_start ol ol li {
+  counter-increment:       cnt2 1;
+}
+.clean_start ol ol ol li {
+  counter-increment:       cnt3 1;
+}
+.clean_start ol ol ol ol li {
+  counter-increment:       cnt4 1;
+}
+.clean_start ol ol ol ol ol li {
+  counter-increment:       cnt5 1;
+}
+
+
+
+.clean_start ol li::after {
+  content:                 counter(cnt1, decimal);
+}
+.clean_start ol ol li::after {
+  content:                 counter(cnt2, decimal);
+}
+.clean_start ol ol ol li::after {
+  content:                 counter(cnt3, decimal);
+}
+.clean_start ol ol ol ol li::after {
+  content:                 counter(cnt4, decimal);
+}
+.clean_start ol ol ol ol ol li::after {
+  content:                 counter(cnt5, decimal);
+}
+  /* @finish ol count */
+
+
+
+
+
+.clean_start * ol,
+.clean_start * ul,
+.clean_start ol li,
+.clean_start ul li,
+.clean_start ol li ol,
+.clean_start ul li ol,
+.clean_start ul li ul,
+.clean_start ol li ul,
+.clean_start li ol li,
+.clean_start li ul li {
+  min-height:              0;
+  max-height:              unset;
+  height:                  auto;
+
+  overflow-x:               visible;
+  overflow-y:               visible;
+}
+
+
+
+.clean_start * ol,
+.clean_start * ul {
+  padding:                 var(--clean_start--ul--padding, 0 0 0 0);
+  display:                 var(--clean_start--ul--display, block);
+  margin:                  var(--clean_start--ul--margin, 0 0 0 0);
+
+  line-height:             var(--clean_start--ul--line-height, 0.9rem);
+  font-size:               var(--clean_start--ul--font-size, 0.9rem);
+}
+
+
+
+.clean_start ol li,
+.clean_start ul li {
+  padding:                 var(--clean_start--ul_li--padding, 0 0 0 0);
+  display:                 var(--clean_start--ul_li--display, block);
+  margin:                  var(--clean_start--ul_li--margin, 0 0 0 0);
+
+  line-height:             var(--clean_start--ul_li--line-height, 1.2rem);
+  font-size:               var(--clean_start--ul_li--font-size, 0.9rem);
+}
+
+
+
+.clean_start ol li *,
+.clean_start ul li * {
+  padding:                 var(--clean_start--ul_li_tags--padding, 0 0 0 0);
+  display:                 var(--clean_start--ul_li_tags--display, inline-block);
+  margin:                  var(--clean_start--ul_li_tags--margin, 0 0 0 0);
+
+  line-height:             var(--clean_start--ul_li_tags--line-height, 0.9rem);
+  font-size:               var(--clean_start--ul_li_tags--font-size, 0.9rem);
+
+  min-height:              var(--clean_start--ul_li_tags--min-height, 0);
+  max-height:              var(--clean_start--ul_li_tags--max-height, unset);
+  height:                  var(--clean_start--ul_li_tags--height, 0.9rem);
+
+  overflow-x:               var(--clean_start--ul_li_tags--overflow-x, visible);
+  overflow-y:               var(--clean_start--ul_li_tags--overflow-y, visible);
+}
+
+
+
+  /* overrides wildcard styles before */
+.clean_start ol li ol,
+.clean_start ul li ol,
+.clean_start ul li ul,
+.clean_start ol li ul {
+  padding:                 var(--clean_start--li_ul--padding, 0 0 0 0);
+  display:                 var(--clean_start--li_ul--display, block);
+  margin:                  var(--clean_start--li_ul--margin, 0 0 0 0);
+
+  line-height:             var(--clean_start--li_ul--line-height, 0.9rem);
+  font-size:               var(--clean_start--li_ul--font-size, 0.9rem);
+}
+
+
+
+.clean_start li ol li,
+.clean_start li ul li {
+  padding:                 var(--clean_start--li_ul_li--padding, 0 0 0 0);
+  display:                 var(--clean_start--li_ul_li--display, block);
+  margin:                  var(--clean_start--li_ul_li--margin, 0 0 0 0);
+
+  line-height:             var(--clean_start--li_ul_li--line-height, 1.2rem);
+  font-size:               var(--clean_start--li_ul_li--font-size, 0.9rem);
+}
+
+
+
+.clean_start ol,
+.clean_start ul {
+  list-style-type:         none;
+}
+
+
+
+.clean_start ol li::after {
+  position:                var(--clean_start--ol_li_c--position, absolute);
+  display:                 var(--clean_start--ol_li_c--display, block);
+
+  top:                     var(--clean_start--ol_li_c--top, 0);
+  left:                    var(--clean_start--ol_li_c--left, 0);
+
+  line-height:             var(--clean_start--ol_li_c--line-height, 1.2rem);
+  font-size:               var(--clean_start--ol_li_c--font-size, 0.9rem);
+
+  min-height:              var(--clean_start--ol_li_c--min-height, 0);
+  max-height:              var(--clean_start--ol_li_c--max-height, 1.2rem);
+  height:                  var(--clean_start--ol_li_c--height, 1.2rem);
+
+  min-width:               var(--clean_start--ol_li_c--min-width, 0);
+  max-width:               var(--clean_start--ol_li_c--max-width, unset);
+  width:                   var(--clean_start--ol_li_c--width, auto);
+
+  color:                   var(--clean_start--ol_li_c--color, black);
+  background:              var(--clean_start--ol_li_c--background, #fdfdfd);
+  border:                  var(--clean_start--ol_li_c--border, 0 solid #ddd);
+  border-radius:           var(--clean_start--ol_li_c--border-radius, 0);
+
+  overflow-x:               var(--clean_start--ol_li_c--overflow-x, hidden);
+  overflow-y:               var(--clean_start--ol_li_c--overflow-y, hidden);
+}
+
+
+
+.clean_start ul li::after {
+  position:                var(--clean_start--ul_li_c--position, absolute);
+  display:                 var(--clean_start--ul_li_c--display, block);
+
+  top:                     var(--clean_start--ul_li_c--top, 0);
+  left:                    var(--clean_start--ul_li_c--left, 0);
+
+  line-height:             var(--clean_start--ul_li_c--line-height, 1.2rem);
+  font-size:               var(--clean_start--ul_li_c--font-size, 0.9rem);
+
+  min-height:              var(--clean_start--ul_li_c--min-height, 0);
+  max-height:              var(--clean_start--ul_li_c--max-height, 1.2rem);
+  height:                  var(--clean_start--ul_li_c--height, 1.2rem);
+
+  min-width:               var(--clean_start--ul_li_c--min-width, 0);
+  max-width:               var(--clean_start--ul_li_c--max-width, unset);
+  width:                   var(--clean_start--ul_li_c--width, auto);
+
+  color:                   var(--clean_start--ul_li_c--color, black);
+  background:              var(--clean_start--ul_li_c--background, #fdfdfd);
+  border:                  var(--clean_start--ul_li_c--border, 0 solid #ddd);
+  border-radius:           var(--clean_start--ul_li_c--border-radius, 0);
+
+  overflow-x:               var(--clean_start--ul_li_c--overflow-x, hidden);
+  overflow-y:               var(--clean_start--ul_li_c--overflow-y, hidden);
+}
+
+
+
+  /* @start ul inline */
+.clean_start ol.inline li,
+.clean_start ul.inline li {
+  display:                 var(--clean_start--ul_li_inline--display, inline-block);
+}
+
+.clean_start ol.inline li *,
+.clean_start ul.inline li * {
+  display:                 var(--clean_start--ul_li_tags_inline--display, inline-block);
+}
+  /* @finish ul inline */
+/* @finish clean_start_tiny html tags ul||ol */
+
+
+
+

@@ -1,0 +1,33 @@
+
+/* @start base theme for clean_start_tiny sites_tool ul_li */
+/* ul tag_border */
+.clean_start.sites_tools ul.tag_border {
+
+  --clean_start--ul_li_c--content:                      '';
+  --clean_start--ul_li_i_o--tag_border--content:        '';
+
+  --clean_start--ul_li_i_o--tag_border--display:        block;
+
+  --clean_start--ul_li_i_o--tag_border--top:            0.44rem;
+  --clean_start--ul_li_i_o--tag_border--left:          -0.7rem;
+
+
+  --clean_start--ul--margin:                            0.3rem 0 0.4rem 0.7rem;
+  --clean_start--i_ul--margin:                          0.3rem 0 0.4rem 3.0rem;
+
+  --clean_start--ul_li--padding:                        0 0 0 0.23rem;
+  --clean_start--i_ul_li--padding:                      0 0 0 0.2rem;
+
+
+  --clean_start--ul_li_i_o--tag_border--line-height:    0;
+  --clean_start--ul_li_i_o--tag_border--font-size:      0;
+
+  --clean_start--ul_li_i_o--tag_border--border:         0px solid green;
+  --clean_start--ul_li_i_o--tag_border--size:           0.4rem;
+  --clean_start--ul_li_i_o--tag_border--border-radius:  0;
+  --clean_start--ul_li_i_o--tag_border--background:     green;
+
+}
+/* @finish base theme for clean_start_tiny sites_tool ul_li */
+
+

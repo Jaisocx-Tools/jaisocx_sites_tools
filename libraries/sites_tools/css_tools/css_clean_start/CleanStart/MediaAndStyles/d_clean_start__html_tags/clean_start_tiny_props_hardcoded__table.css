@@ -1,0 +1,133 @@
+
+/* @start clean_start_tiny html tag table */
+  /* @start clean_start_tiny sites_tool table */
+.clean_start * table.sites_tools tr:nth-of-type(2n + 1) td {
+  color:                   #553322;
+  background:              #fdfdfa;
+}
+
+.clean_start * table.sites_tools tr:nth-of-type(2n + 2) td {
+  color:                   darkgreen;
+  background:              #fafdf2;
+}
+  /* @finish clean_start_tiny sites_tool table */
+
+
+
+
+
+.clean_start * table {
+  display:                 table;
+}
+
+.clean_start table caption {
+  display: 	               table-caption;
+}
+
+.clean_start table colgroup {
+  display:                 table-column-group;
+}
+
+.clean_start table col {
+  display:                 table-column;
+}
+
+.clean_start table thead {
+  display:                 table-header-group;
+}
+
+.clean_start table th {
+  display:                 table-cell;
+}
+
+.clean_start table tbody {
+  display:                 table-row-group;
+}
+
+.clean_start table tr {
+  display:                 table-row;
+}
+
+.clean_start table td {
+  display:                 table-cell;
+}
+
+
+
+.clean_start * table {
+
+  border:                  var(--clean_start--table--border, 0 solid #fdfd40);
+  border-collapse:         collapse;
+
+  min-width:               unset;
+  max-width:               100%;
+  width:                   auto;
+
+  overflow-x:               hidden;
+  overflow-y:               hidden;
+}
+
+
+
+.clean_start table thead,
+.clean_start table tbody,
+.clean_start table tr {
+  min-width:               100%;
+  max-width:               100%;
+  width:                   100%;
+}
+
+
+
+.clean_start tr th,
+.clean_start thead td,
+.clean_start tbody th {
+
+  text-align:              left;
+  font-weight:             600;
+
+  padding:                 0 0 0 0;
+  margin:                  0 0 0 0;
+
+  border:                  0.2px solid lime;
+  color:                   black;
+  background:              #fdfdfd;
+
+}
+
+
+
+.clean_start tr td {
+
+  text-align:              left;
+  font-weight:             400;
+
+  padding:                 0 0 0 0;
+  margin:                  0 0 0 0;
+
+  line-height:             1.2rem;
+  font-size:               0.9rem;
+
+  border:                  0.2px solid #ddd;
+  color:                   black;
+  background:              #fdfdfd;
+
+}
+
+
+
+.clean_start td * {
+
+  padding:                 0 0 0 0;
+  margin:                  0 0 0 0;
+
+  line-height:             0.9rem;
+  font-size:               0.9rem;
+
+  overflow-x:               visible;
+  overflow-y:               hidden;
+
+}
+/* @finish clean_start_tiny html tag table */
+
+

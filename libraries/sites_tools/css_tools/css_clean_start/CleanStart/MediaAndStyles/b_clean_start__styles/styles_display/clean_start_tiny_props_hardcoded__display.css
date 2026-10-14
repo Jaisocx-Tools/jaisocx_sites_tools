@@ -1,0 +1,55 @@
+
+/* @start clean_start_tiny display style for all html tags */
+  /** -- browsers' reserved -- */
+html.clean_start {
+  display:                 block;
+}
+
+  /* @overrides before */
+.clean_start * {
+  display:                 inline-block;
+}
+
+  /* @overrides before */
+  /** -- browsers' reserved -- */
+.clean_start body {
+  display:                 block;
+}
+
+  /* @overrides before */
+  /* -- main -- */
+.clean_start main,
+.clean_start site {
+  display:                 block;
+}
+
+
+
+  /* -- inline tags reset -- */
+.clean_start label,
+.clean_start text,
+.clean_start a,
+.clean_start b {
+  display:                 inline-block;
+}
+
+  /* -- block tags reset -- */
+.clean_start block,
+.clean_start text-lines-block,
+.clean_start canvas,
+.clean_start fieldset,
+.clean_start nav,
+.clean_start ol,
+.clean_start ul,
+.clean_start aside,
+.clean_start p,
+.clean_start pre,
+.clean_start div,
+.clean_start video {
+  display:                 block;
+}
+/* @finish clean_start_tiny display style for all html tags */
+
+
+
+

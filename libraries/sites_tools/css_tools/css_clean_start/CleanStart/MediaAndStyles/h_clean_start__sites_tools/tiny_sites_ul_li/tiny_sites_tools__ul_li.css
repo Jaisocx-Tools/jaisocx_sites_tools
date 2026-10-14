@@ -1,0 +1,44 @@
+
+/* @start clean_start_tiny sites_tool ul_li */
+  /* @start ul inline */
+.clean_start ol.inline li,
+.clean_start ul.inline li {
+  display:                 var(--clean_start--ul_li_inline--display, inline-block);
+}
+
+.clean_start ol.inline li *,
+.clean_start ul.inline li * {
+  display:                 var(--clean_start--ul_li_tags_inline--display, inline-block);
+}
+  /* @finish ul inline */
+
+
+
+  /* @start ul tag_border */
+.clean_start.sites_tools ul.tag_border li::after {
+  content:                 var(--clean_start--ul_li_i_o--tag_border--content, '');
+
+  display:                 var(--clean_start--ul_li_i_o--tag_border--display, block);
+
+  top:                     var(--clean_start--ul_li_i_o--tag_border--top, 0.44rem);
+  left:                    var(--clean_start--ul_li_i_o--tag_border--left, -0.7rem);
+
+  line-height:             var(--clean_start--ul_li_i_o--tag_border--line-height, 0);
+  font-size:               var(--clean_start--ul_li_i_o--tag_border--font-size, 0);
+
+  min-height:              var(--clean_start--ul_li_i_o--tag_border--size);
+  max-height:              var(--clean_start--ul_li_i_o--tag_border--size);
+  height:                  var(--clean_start--ul_li_i_o--tag_border--size);
+
+  min-width:               var(--clean_start--ul_li_i_o--tag_border--size);
+  max-width:               var(--clean_start--ul_li_i_o--tag_border--size);
+  width:                   var(--clean_start--ul_li_i_o--tag_border--size);
+
+  border:                  var(--clean_start--ul_li_i_o--tag_border--border, 1px solid lime);
+  border-radius:           var(--clean_start--ul_li_i_o--tag_border--border-radius, 0);
+  background:              var(--clean_start--ul_li_i_o--tag_border--background, green);
+}
+  /* @finish ul tag_border */
+/* @finish clean_start_tiny sites_tool ul_li */
+
+

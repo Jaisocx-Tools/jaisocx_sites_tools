@@ -1,0 +1,19 @@
+
+/* @start clean_start_tiny sites_tool table */
+.clean_start.sites_tools * table.sites_tools tr:nth-of-type(2n + 1) td {
+  color:                   var(--clean_start--table_td_odd--color);
+  background:              var(--clean_start--table_td_odd--background);
+}
+
+.clean_start.sites_tools * table.sites_tools tr:nth-of-type(2n + 2) td {
+  color:                   var(--clean_start--table_td_even--color);
+  background:              var(--clean_start--table_td_even--background);
+}
+
+.clean_start.sites_tools * tfoot.sites_tools tr:nth-of-type(2n + 1) td {
+  color:                   var(--clean_start--table_tf--color);
+  background:              var(--clean_start--table_tf--background);
+}
+/* @finish clean_start_tiny sites_tool table */
+
+
