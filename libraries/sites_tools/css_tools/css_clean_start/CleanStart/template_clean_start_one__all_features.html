@@ -1,840 +1,1849 @@
 <!DOCTYPE html>
-<html lang="en" class="jaisocx clean_start theme_fonts_c font_override">
+<html lang="en" class="jaisocx clean_start">
 <head>
 
-    <!--# FAVICON -->
-    <link
-        rel="icon"
-        type="image/x-icon"
-        href="data:image/ico;base64,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"
-    />
+  <!--# FAVICON -->
+  <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/ico;base64,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"
+  />
 
-    <title> Template by Jaisocx clean_start_tiny </title>
+  <title> clean_start </title>
 
 
 
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <base href="./" />
 
-  <!--# CleanStart_Tiny -->
-    <style id="clean_start_tiny" name="clean_start_preview_page_responsive">
-
-      .clean_start * {
-
-        position:        relative;
-        display:         inline-block;
-        box-sizing:      border-box;
-
-        padding:         0 0 0 0;
-        margin:          0 0 0 0;
-
-        font-family:     var(--clean_start--all_tags--font-family);
-        font-size:       var(--clean_start--all_tags--font-size);
-        line-height:     var(--clean_start--all_tags--line-height);
-
-        letter-spacing:  0.003rem;
-        line-break:      strict;
-        word-wrap:       normal;
-        word-break:      normal;
-        color:           var(--clean_start--all_tags--color);
-
-        border-color:    lime;
-        border-style:    solid;
-        border-width:    var(--clean_start--all_tags--border-width);
-
-        min-height:      0;
-        max-height:      unset;
-        height:          auto;
-
-        min-width:       0;
-        max-width:       100%;
-        width:           auto;
-
-        overflow-x:      hidden;
-        overflow-y:      visible;
-
-      }
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
 
 
 
-      /* this style sets rem size for the html page. 1rem = 16px */
-      html.clean_start {
-        font-size:    var(--clean_start--rem);
-      }
+  <style name="clean_start">
 
-      html.clean_start {
-        position: static;
-        top:           0;
-        padding: 0 0 0 0;
-        margin:  0 0 0 0;
-        box-sizing: border-box;
+    /* @start clean_start theme fonts_old_good_fonts */
 
-        width:        100%;
-        max-width:    100%;
-        min-width:    100%;
+    /** Just need time for publishing same packages after renamings and tests.
+    *
+    * Renamings in future for the few sites tools,
+    * are aimed for Software Companies' Namespaces, like Jaisocx,
+    * and, whether the alignment librarie's styles set,
+    * the class name for the CssCleanStart, clean_start.
+    *
+    * Due to the aim of the SetUp,
+    * the variables' namespace doesn't have the Companie's Name,
+    * in order to allow to other Companies, ease and free setup of this opensource library on other sites, modified.
+    */
 
-        overflow-x:   hidden;
-      }
+    /* Font Families */
+
+    /* MicroSoft fonts:
+         the browser shows texts the right way
+         on all computers with all other OS, like: iOS, Linux, Android
+    */
+
+    /* microsoft, ios, linux, android */
+    .clean_start,
+    .clean_start.theme_fonts_old_good_fonts,
+    .clean_start  .theme_fonts_old_good_fonts {
+                                                      /* microsoft, ios, linux, android */
+      --clean_start--arial--font-family:                "Arial";
+      --clean_start--times_new_roman--font-family:      "Times New Roman";
+      --clean_start--courier--font-family:              "Courier";
+      --clean_start--handwrite--font-family:            "Segoe Script",   "Bradley Hand",   "Z003",   "cursive";
+
+      --clean_start--sans--font-family:                 "Arial";
+      --clean_start--serif--font-family:                "Times New Roman";
+      --clean_start--monospace--font-family:            "Courier";
+      --clean_start--handwrite--font-family:            "Segoe Script",   "Bradley Hand",   "Z003",   "cursive";
+    }
+    /* @finish clean_start theme fonts_old_good_fonts */
+
+
+
+    /* @start clean_start_tiny theme_fonts_a */
+    .clean_start.theme_fonts_a,
+    .clean_start  .theme_fonts_a {
+                                                      /* microsoft, ios, linux, android */
+      --clean_start--sans--font-family:                 "Tahoma",      "Khmer Sangam MN",      "Nimbus Sans",      "sans-serif";
+      --clean_start--serif--font-family:                "Gautami",     "Charter",              "Nimbus Roman",     "serif";
+      --clean_start--monospace--font-family:            "Vivaldi",     "American Typewriter",  "Liberation Mono",  "monospace";
+      --clean_start--handwrite--font-family:            "Freestyle Script", "Chalkduster",          "Z003",             "cursive";
+    }
+    /* @finish clean_start_tiny theme_fonts_a */
+
+
+
+    /* @start clean_start_tiny theme_fonts_b */
+    .clean_start.theme_fonts_b,
+    .clean_start  .theme_fonts_b  {
+                                                      /* microsoft, ios, linux, android */
+      --clean_start--sans--font-family:                 "Franklin Gothic Medium",  "Hiragino Sans",  "Bitstream Vera Sans",   "sans-serif";
+      --clean_start--serif--font-family:                "Cambria",     "Iowan Old Style",  "Bitstream Vera Serif",      "serif";
+      --clean_start--monospace--font-family:            "Consolas",    "Optima",           "Bitstream Vera Sans Mono",  "monospace";
+      --clean_start--handwrite--font-family:            "Bradley Hand ITC", "Bradley Hand",     "Z003",                      "cursive";
+    }
+    /* @finish clean_start_tiny theme_fonts_b */
+
+
+
+    /* @start clean_start_tiny theme_fonts_c */
+    .clean_start.theme_fonts_c,
+    .clean_start  .theme_fonts_c  {
+                                                      /* microsoft, ios, linux, android */
+      --clean_start--sans--font-family:                 "Candara",     "Tamil Sangam MN",  "DejaVu Sans",      "sans-serif";
+      --clean_start--serif--font-family:                "Sitka",       "Charter",          "DejaVu Serif",     "serif";
+      --clean_start--monospace--font-family:            "Consolas",    "Rockwell",         "DejaVu Sans Mono", "monospace";
+      --clean_start--handwrite--font-family:            "Kristen ITC", "Snell Roundhand",  "Z003",             "cursive";
+    }
+    /* @start clean_start_tiny theme_fonts_c */
+
+
+
+    /* @start clean_start font_override */
+
+    /**
+    * @doc_start clean_start font override
+
+     <html class="clean_start theme_fonts_c">
+       ...
+       <block class="font_override">
+
+         <text-line class="font_monospace">
+            text rendered with the monospace font,
+            set by fonts theme class="theme_fonts_c" for 4 font families groups:
+            sans, serif, monospace, handwrite.
+            .clean_start.theme_fonts_c {
+              --clean_start--monospace--font-family: "Consolas", "Rockwell", "DejaVu Sans Mono", "monospace";
+            }
+         </text-line>
+
+         <text-line class="font_handwrite">
+            friendly regards, Illia
+         </text-line>
+         ...
+     </html>
+    * @doc_finish clean_start font_override
+    */
+
+
+
+    .clean_start.font_override.font_sans,
+    .clean_start.font_override.font_sans *,
+
+    .clean_start.font_override  .font_sans,
+    .clean_start.font_override  .font_sans *,
+
+    .clean_start  .font_override.font_sans,
+    .clean_start  .font_override.font_sans *,
+
+    .clean_start  .font_override  .font_sans,
+    .clean_start  .font_override  .font_sans * {
+      font-family: var(--clean_start--sans--font-family);
+    }
+
+
+
+    .clean_start.font_override.font_serif,
+    .clean_start.font_override.font_serif *,
+
+    .clean_start.font_override  .font_serif,
+    .clean_start.font_override  .font_serif *,
+
+    .clean_start  .font_override.font_serif,
+    .clean_start  .font_override.font_serif *,
+
+    .clean_start  .font_override  .font_serif,
+    .clean_start  .font_override  .font_serif * {
+      font-family: var(--clean_start--serif--font-family);
+    }
+
+
+
+    .clean_start.font_override.font_handwrite,
+    .clean_start.font_override.font_handwrite *,
+
+    .clean_start.font_override  .font_handwrite,
+    .clean_start.font_override  .font_handwrite *,
+
+    .clean_start  .font_override.font_handwrite,
+    .clean_start  .font_override.font_handwrite *,
+
+    .clean_start  .font_override  .font_handwrite,
+    .clean_start  .font_override  .font_handwrite * {
+      font-family: var(--clean_start--handwrite--font-family);
+    }
+
+
+
+    .clean_start.font_override.font_monospace,
+    .clean_start.font_override.font_monospace *,
+
+    .clean_start.font_override  .font_monospace,
+    .clean_start.font_override  .font_monospace *,
+
+    .clean_start  .font_override.font_monospace,
+    .clean_start  .font_override.font_monospace *,
+
+    .clean_start  .font_override  .font_monospace,
+    .clean_start  .font_override  .font_monospace * {
+      font-family: var(--clean_start--monospace--font-family);
+    }
+    /* @finish clean_start font_override */
+
+
+
+    /* @start clean_start_tiny for all html tags */
+
+    /* this style sets rem size for the html page. 1rem = 16px */
+    html.clean_start {
+      font-size:               var(--clean_start--rem, 16px);
+    }
+
+
+
+    .clean_start * {
+      position:                var(--clean_start--all_tags--position, relative);
+      display:                 var(--clean_start--all_tags--display, inline-block);
+      box-sizing:              var(--clean_start--all_tags--box-sizing, border-box);
+
+      padding:                 var(--clean_start--all_tags--padding, 0 0 0 0);
+      margin:                  var(--clean_start--all_tags--margin, 0 0 0 0);
+
+      font-family:             var(--clean_start--all_tags--font-family, Arial);
+      font-size:               var(--clean_start--all_tags--font-size, 0.9rem);
+      line-height:             var(--clean_start--all_tags--line-height, 1.2rem);
+
+      letter-spacing:          var(--clean_start--all_tags--letter-spacing, 0);
+      line-break:              var(--clean_start--all_tags--line-break, strict);
+      word-wrap:               var(--clean_start--all_tags--word-wrap, normal);
+      word-break:              var(--clean_start--all_tags--word-break, normal);
+      color:                   var(--clean_start--all_tags--color, black);
+
+      border-color:            var(--clean_start--all_tags--border-color, lime);
+      border-style:            var(--clean_start--all_tags--border-style, solid);
+      border-width:            var(--clean_start--all_tags--border-width, 0);
+
+      min-height:              var(--clean_start--all_tags--min-height, 0);
+      max-height:              var(--clean_start--all_tags--max-height, unset);
+      height:                  var(--clean_start--all_tags--height, auto);
+
+      min-width:               var(--clean_start--all_tags--min-width, 0);
+      max-width:               var(--clean_start--all_tags--max-width, 100%);
+      width:                   var(--clean_start--all_tags--width, auto);
+
+      overflow-x:               var(--clean_start--all_tags--overflow-x, visible);
+      overflow-y:               var(--clean_start--all_tags--overflow-y, visible);
+    }
+    /* @finish clean_start_tiny for all html tags */
+
+
+
+    /* @start clean_start display style for all html tags */
+
+    /**
+    * 1. these styles reset existing html sites for theming purposes.
+    * 2. the tiny styles are mainly for new sites front-end work,
+    *      saving up tens of K reload and rerender in browser,
+    *      very rule for watch mode
+    *      when building the bundle.js set on the timeout on few keyboard typings.
+    *      lika a code snippet, too.
+    */
+
+      /* @start browsers' reserved */
+      /** -- browsers' reserved --
+      * just for documentation,
+      * in order to know the display style for the reserved html tag.
+      */
+    html.clean_start {
+      display:                 block;
+    }
+
+      /** above, to override by the next styles.
+      *          body tag overrides the reserved style display block.
+      */
+    .clean_start * {
+      display:                 var(--clean_start--custom_tags--display, inline-block);
+    }
+
+      /** -- browsers' reserved -- */
+    .clean_start body {
+      display:                 block;
+    }
+      /* @finish browsers' reserved */
+
+
+
+
+
+      /* @start styles block the main html tag */
+      /** -- main --
+      * styled normally when the reserved tags (html, head, body) have set 100% and zero values,
+      * and the browsers' reserved styles.
+      */
+    .clean_start main,
+    .clean_start site {
+      display:                 var(--clean_start--site--display, block);
+    }
+      /* @finish styles block the main html tag
+
+
+
+
+
+      /* @start inline tags reset, the Jaisocx tags proposed */
+    .clean_start text {
+      display:                 var(--clean_start--inline_tags--display, inline-block);
+    }
+      /* @finish inline tags reset, the Jaisocx tags proposed */
+
+
+
+      /* @start block tags reset, the Jaisocx tags proposed */
+    .clean_start block,
+    .clean_start text-lines-block {
+      display:                 var(--clean_start--block_tags--display, block);
+    }
+      /* @finish block tags reset, the Jaisocx tags proposed */
+
+
+
+
+
+      /* @start just pair of inline tags reset, like an example */
+    .clean_start label,
+    .clean_start a,
+    .clean_start b {
+      display:                 var(--clean_start--inline_tags--display, inline-block);
+    }
+      /* @finish just pair of inline tags reset, like an example */
+
+
+
+      /* @start just pair of block tags reset, the tags normally in html */
+    .clean_start canvas,
+    .clean_start fieldset,
+    .clean_start nav,
+    .clean_start ol,
+    .clean_start ul,
+    .clean_start aside,
+    .clean_start p,
+    .clean_start pre,
+    .clean_start div,
+    .clean_start video {
+      display:                 var(--clean_start--block_tags--display, block);
+    }
+      /* @finish just pair of block tags reset, the tags normally in html */
+
+
+
+
+      /* @start inline tags reset */
+    .clean_start span,
+    .clean_start a,
+    .clean_start b,
+    .clean_start big,
+    .clean_start br,
+    .clean_start cite,
+    .clean_start code,
+    .clean_start del,
+    .clean_start em,
+    .clean_start i,
+    .clean_start img,
+    .clean_start ins,
+    .clean_start label,
+    .clean_start map,
+    .clean_start mark,
+    .clean_start q,
+    .clean_start s,
+    .clean_start samp,
+    .clean_start small,
+    .clean_start strong,
+    .clean_start sub,
+    .clean_start sup,
+    .clean_start time,
+    .clean_start u,
+    .clean_start var {
+      display:                 var(--clean_start--inline_tags--display, inline-block);
+    }
+      /* @finish inline tags reset */
+
+
+
+      /* @start block tags reset */
+    .clean_start address,
+    .clean_start article,
+    .clean_start aside,
+    .clean_start blockquote,
+    /* .clean_start body, */
+    .clean_start canvas,
+    .clean_start dd,
+    .clean_start div,
+    .clean_start dl,
+    .clean_start dt,
+    .clean_start fieldset,
+    .clean_start figcaption,
+    .clean_start figure,
+    .clean_start footer,
+    .clean_start form,
+    .clean_start h1,
+    .clean_start h2,
+    .clean_start h3,
+    .clean_start h4,
+    .clean_start h5,
+    .clean_start h6,
+    .clean_start header,
+    .clean_start hr,
+    /* .clean_start li, */
+    /* .clean_start main, */
+    .clean_start nav,
+    .clean_start noscript,
+    .clean_start ol,
+    .clean_start output,
+    .clean_start p,
+    .clean_start pre,
+    .clean_start section,
+    .clean_start ul,
+    .clean_start video {
+      display:                 var(--clean_start--block_tags--display, block);
+    }
+      /* @finish block tags reset */
+    /* @finish clean_start display style for all html tags */
+
+
+
+
+
+    /* @start clean_start site css props */
+    html.clean_start {
+      position:                var(--clean_start--html_tag--position, static);
+      top:                     var(--clean_start--html_tag--top, 0);
+      padding:                 var(--clean_start--html_tag--padding, 0 0 0 0);
+      margin:                  var(--clean_start--html_tag--margin, 0 0 0 0);
+      box-sizing:              var(--clean_start--html_tag--box-sizing, border-box);
+
+      min-height:              var(--clean_start--html_tag--min-height, 100vh);
+      max-height:              var(--clean_start--html_tag--max-height, unset);
+      height:                  var(--clean_start--html_tag--height, auto);
+
+      min-width:               var(--clean_start--html_tag--min-width, 100%);
+      max-width:               var(--clean_start--html_tag--max-width, 100%);
+      width:                   var(--clean_start--html_tag--width, 100%);
+
+      overflow-x:               var(--clean_start--html_tag--overflow-x, hidden);
+    }
+
+
 
       /* these html elems are invisible */
-      .clean_start head,
-      .clean_start head *,
-      .clean_start style,
-      .clean_start script {
-        visibility: hidden;
-        display: block;
-        min-height: unset;
-        max-height: 0;
-        height: 0;
-        min-width:  unset;
-        max-width:  0;
-        width:  0;
-        overflow-y: hidden;
-        overflow-x: hidden;
-      }
+    .clean_start head,
+    .clean_start head *,
+    .clean_start style,
+    .clean_start script {
+      display:                 block;
+      visibility:              hidden;
+      overflow-x:               hidden;
+      overflow-y:               hidden;
+      min-height:              unset;
+      max-height:              0;
+      height:                  0;
+      min-width:               unset;
+      max-width:               0;
+      width:                   0;
+    }
 
-      .clean_start body {
-        position: relative;
-        top:           0;
-        padding: 0 0 0 0;
-        margin:  0 0 0 0;
-        display:      block;
-        box-sizing:   border-box;
 
-        font-size:    var(--clean_start--all_tags--font-size);
 
-        height:       auto;
-        max-height:   unset;
-        min-height:   100vh;
+    .clean_start body {
+      position:                var(--clean_start--body_tag--position, relative);
+      top:                     var(--clean_start--body_tag--top, 0);
+      padding:                 var(--clean_start--body_tag--padding, 0 0 0 0);
+      margin:                  var(--clean_start--body_tag--margin, 0 0 0 0);
+      display:                 var(--clean_start--body_tag--display, block);
+      box-sizing:              var(--clean_start--body_tag--box-sizing, border-box);
 
-        width:        100%;
-        max-width:    100%;
-        min-width:    100%;
+      font-size:               var(--clean_start--all_tags--font-size, 0.9rem);
 
-        background:   var(--clean_start--body_tag--background);
+      min-height:              var(--clean_start--body_tag--min-height, 100vh);
+      max-height:              var(--clean_start--body_tag--max-height, unset);
+      height:                  var(--clean_start--body_tag--height, auto);
 
-        overflow-x:   hidden;
-        overflow-y:   auto;
-      }
+      min-width:               var(--clean_start--body_tag--min-width, 100%);
+      max-width:               var(--clean_start--body_tag--max-width, 100%);
+      width:                   var(--clean_start--body_tag--width, 100%);
 
-      .clean_start main {
-        padding:      var(--clean_start--site--padding);
-        margin:       0 auto 0 auto;
+      background:              var(--clean_start--body_tag--background, #eefdf4);
 
-        font-size:    var(--clean_start--all_tags--font-size);
+      overflow-x:               var(--clean_start--body_tag--overflow-x, hidden);
+      overflow-y:               var(--clean_start--body_tag--overflow-y, auto);
+    }
 
-        min-height:   100vh;
-        max-height:   unset;
-        height:       auto;
 
-        width:        var(--clean_start--site--width);
-        max-width:    100%;
-        min-width:    var(--clean_start--site--width);
 
-        background:   var(--clean_start--site--background);
+    .clean_start main,
+    .clean_start site {
+      padding:                 var(--clean_start--site--padding, 0 0 0 0);
+      margin:                  var(--clean_start--site--margin, 0 auto 0 auto);
 
-        overflow-x: hidden;
-        overflow-y: visible;
-      }
+      font-size:               var(--clean_start--all_tags--font-size, 0.9rem);
 
+      min-height:              var(--clean_start--site--min-height, 100vh );
+      max-height:              var(--clean_start--site--max-height, unset );
+      height:                  var(--clean_start--site--height, auto );
 
+      min-width:               var(--clean_start--site--min-width, unset);
+      max-width:               var(--clean_start--site--max-width, 100%);
+      width:                   var(--clean_start--site--width, auto);
 
+      background:              var(--clean_start--site--background, #fdfdfd);
 
-      html.clean_start {
-        display:      block;
-      }
+      overflow-x:               var(--clean_start--site--overflow-x, hidden);
+      overflow-y:               var(--clean_start--site--overflow-y, visible);
+    }
+    /* @finish clean_start site css props */
 
-      .clean_start * {
-        display:      inline-block;
-      }
 
-      .clean_start body {
-        display:      block;
-      }
 
-      .clean_start main {
-        display:      block;
-      }
-
-
-
-      /* block tags reset, the Jaisocx tags proposed */
-      .clean_start layout-block,
-      .clean_start text-lines-block {
-        display: block;
-      }
-
-      /* block tags reset, the tags normally in html */
-      .clean_start canvas,
-      .clean_start fieldset,
-      .clean_start nav,
-      .clean_start ol,
-      .clean_start ul,
-      .clean_start div,
-      .clean_start p,
-      .clean_start pre,
-      clean_start video {
-        display: block;
-      }
-
-
-
-      /* block tags reset standard docs */
-      .clean_start address,
-      .clean_start article,
-      .clean_start aside,
-      .clean_start blockquote,
-      .clean_start body,
-      .clean_start canvas,
-      .clean_start dd,
-      .clean_start div,
-      .clean_start dl,
-      .clean_start dt,
-      .clean_start fieldset,
-      .clean_start figcaption,
-      .clean_start figure,
-      .clean_start footer,
-      .clean_start form,
-      .clean_start header,
-      .clean_start hr,
-      .clean_start li,
-      .clean_start main,
-      .clean_start nav,
-      .clean_start noscript,
-      .clean_start ol,
-      .clean_start output,
-      .clean_start p,
-      .clean_start pre,
-      .clean_start section,
-      .clean_start ul,
-      .clean_start video {
-        display: block;
-      }
-
-
-
-
-      .clean_start h1, .clean_start h2, .clean_start h3, .clean_start h4,
-       .clean_start h5, .clean_start h6, .clean_start h7, .clean_start h8,
-       .clean_start h9 {
-        display:     block;
-        margin:      var(--clean_start--h--margin);
-
-        font-weight: 600;
-      }
-
-      .clean_start h1 {
-        text-align: center;
-
-        font-size:   var(--clean_start--h1--font-size);
-        line-height: var(--clean_start--h1--line-height);
-
-        color: var(--clean_start--h1--color);
-        background-color: var(--clean_start--h1--background-color);
-      }
-
-      .clean_start h2, .clean_start h3, .clean_start h4,
-       .clean_start h5, .clean_start h6, .clean_start h7, .clean_start h8,
-       .clean_start h9 {
-        color:       var(--clean_start--h--color);
-        font-size:   var(--clean_start--h--font-size);
-        line-height: var(--clean_start--h--line-height);
-      }
-
-
-
-      /* Hyperlink html tag <a> (anchor) */
-      .clean_start a,
-      .clean_start a:active,
-      .clean_start a:visited {
-        color:           var(--clean_start--anchor--color);
-        text-decoration: none;
-      }
-
-      .clean_start a:hover,
-      .clean_start a:active:hover,
-      .clean_start a:visited:hover {
-        color:           var(--clean_start--anchor_hover--color);
-        text-decoration: underline;
-      }
-
-
-      /* Paragraph html tag <p> */
-      .clean_start p {
-        line-height:  var(--clean_start--p--line-height);
-        font-size:    var(--clean_start--p--font-size);
-        margin:       var(--clean_start--p--margin);
-      }
-
-      .clean_start p:first-of-type {
-        margin-top:  0;
-      }
-
-      .clean_start p *,
-      .clean_start layout-block p * {
-        margin-top:      0;
-        margin-bottom:   0;
-
-        line-height:     var(--clean_start--p--font-size);
-        max-height:      var(--clean_start--p--line-height);
-
-        overflow-x: visible;
-        overflow-y: hidden;
-      }
-
-
-      /* new lines and spaces are rendered like typed <pre> */
-      .clean_start pre {
-        font-family: var(--clean_start--pre--font-family);
-      }
-
-      .clean_start pre,
-       .clean_start pre * {
-        font-size:   var(--clean_start--pre--font-size);
-        line-height: var(--clean_start--pre--line-height);
-      }
-
-
-      /* label */
-      .clean_start label {
-        display:    var(--clean_start--label--display);
-
-        overflow-x: hidden;
-        overflow-y: hidden;
-
-        min-height: unset;
-        max-height: 100%;
-        height: fit-content;
-
-        min-width: unset;
-        max-width: 100%;
-        width: fit-content;
-
-        font-size:           var(--clean_start--label--font-size);
-        line-height:         var(--clean_start--label--line-height);
-
-        padding:             var(--clean_start--label--padding);
-        margin:              var(--clean_start--label--margin);
-
-        color:               var(--clean_start--label--color);
-        background-color:    var(--clean_start--label--background-color);
-
-        border:              var(--clean_start--label--border);
-        border-radius:       var(--clean_start--label--border-radius);
-      }
-
-
-      .clean_start li i label,
-      .clean_start layout-block p label,
-      .clean_start text-block p label,
-      .clean_start layout-block text-block label,
-      .clean_start layout-block text-line label {
-        font-size:           var(--clean_start--label--font-size);
-        line-height:         var(--clean_start--label--line-height);
-
-        padding:             var(--clean_start--label--padding);
-        margin:              var(--clean_start--label--margin);
-
-        color:               var(--clean_start--label--color);
-        background-color:    var(--clean_start--label--background-color);
-
-        border:              var(--clean_start--label--border);
-        border-radius:       var(--clean_start--label--border-radius);
-
-        overflow-x:          var(--clean_start--label--overflow-x);
-        overflow-y:          var(--clean_start--label--overflow-y);
-      }
-
-
-      .clean_start li i label {
-        max-height:          var(--clean_start--ul_li_i--line-height);
-
-        /* margin: left and right allowed. in styles hardcoded margin-bottom: -2px; */
-        margin:              var(--clean_start--label--margin);
-
-        margin-top:          0;
-
-        /* margin: left and right allowed. in styles hardcoded margin-bottom: -2px; */
-        margin-bottom:       -2px;
-      }
-
-
-      .clean_start p label,
-      .clean_start layout-block p label {
-        max-height:          var(--clean_start--p--line-height);
-
-        /* margin: left and right allowed. in styles hardcoded margin-bottom: -2px; */
-        margin:              var(--clean_start--label--margin);
-
-        margin-top:          0;
-
-        /* margin: left and right allowed. in styles hardcoded margin-bottom: -2px; */
-        margin-bottom:       -2px;
-      }
-
-
-      /* Table */
-      .clean_start table {
-        display: table;
-        border: var(--clean_start--table--border);
-      }
-
-      .clean_start table caption {
-        display: 	table-caption;
-        overflow-x: hidden;
-        text-align: var(--clean_start--table_caption--text-align);
-
-        border: var(--clean_start--table_caption--border);
-        color: var(--clean_start--table_caption--color);
-        background-color: var(--clean_start--table_caption--background-color);
-      }
-
-      .clean_start colgroup {
-        display: table-column-group;
-      }
-
-      .clean_start col {
-        display: table-column;
-      }
-
-      .clean_start thead {
-        display: table-header-group;
-      }
-
-      .clean_start th {
-        display: table-cell;
-        text-align: var(--clean_start--table_th--text-align);
-      }
-
-      .clean_start thead tr,
-      .clean_start thead th {
-        color: var(--clean_start--table_th--color);
-        background-color: var(--clean_start--table_th--background-color);
-      }
-
-      .clean_start tbody {
-        display: table-row-group;
-      }
-
-      .clean_start tr {
-        display: table-row;
-      }
-
-      .clean_start td {
-        display: table-cell;
-        text-align: left;
-      }
-
-      .clean_start thead th,
-      .clean_start thead td,
-      .clean_start tbody th {
-        font-weight: 600;
-      }
-
-      .clean_start table td {
-        color: var(--clean_start--table_td--color);
-        background-color: var(--clean_start--table_td--background-color);
-      }
-
-      .clean_start table tr:nth-of-type(2n + 1) td {
-        color: var(--clean_start--table_td_odd--color);
-        background-color: var(--clean_start--table_td_odd--background-color);
-      }
-
-      .clean_start table tr:nth-of-type(2n + 2) td {
-        color: var(--clean_start--table_td_even--color);
-        background-color: var(--clean_start--table_td_even--background-color);
-      }
-
-      .clean_start tfoot {
-        display: table-footer-group;
-      }
-
-      .clean_start tfoot td {
-        font-weight: 600;
-      }
-
-      .clean_start tfoot tr:nth-of-type(2n + 1) td {
-        color: var(--clean_start--table_tfoot--color);
-        background-color: var(--clean_start--table_tfoot--background-color);
-      }
-
-
-
-
-      .clean_start ul,
-      .clean_start ul li,
-      .clean_start li i {
-        display:         block;
-
-        font-size:       var(--clean_start--ul_li_i--font-size);
-        line-height:     var(--clean_start--ul_li_i--line-height);
-      }
-
-      .clean_start ul {
-        margin:          var(--clean_start--ul--margin, 1rem);
-      }
-
-      .clean_start ul li,
-      .clean_start li i {
-        margin:          0 0 0 0;
-      }
-
-      .clean_start ul,
-      .clean_start ul li {
-        padding:         0 0 0 0;
-      }
-
-      .clean_start li i {
-        padding:         var(--clean_start--ul_li_i--padding);
-        font-style:      normal;
-      }
-
-      .clean_start i ul i {
-        padding:         var(--clean_start--ul_li_i--padding);
-      }
-
-      .clean_start ul,
-      .clean_start ul li,
-      .clean_start li i {
-        overflow-x:      visible;
-        overflow-y:      visible;
-      }
-
-      .clean_start ul {
-        list-style-type: none;
-      }
-
-      .clean_start li i * {
-        display:     inline-block;
-        padding:     0 0.3rem 0 0;
-        overflow-x:  visible;
-        overflow-y:  visible;
-
-        line-height: var(--clean_start--ul_li_i--line-height);
-        font-size:   var(--clean_start--ul_li_i--font-size);
-      }
-
-      .clean_start li i::after {
-        /*  🟢  🔴  🔵  🔶  🔷  🔸  🔹  🔺  🔻  🟠  🟡  🟢  🟣  🟤  🟥  🟦  */
-
-        content:       var(--clean_start--ul_li_i_c--content, '-');
-
-        position:      absolute;
-        display:       block;
-
-        top:           var(--clean_start--ul_li_i_c--top);
-        left:          var(--clean_start--ul_li_i_c--left);
-
-        height:        var(--clean_start--ul_li_i--line-height);
-        line-height:   var(--clean_start--ul_li_i--line-height);
-        font-size:     var(--clean_start--ul_li_i_c--font-size);
-
-        color:         var(--clean_start--ul_li_i_c--color);
-
-        overflow-x:    hidden;
-        overflow-y:    hidden;
-      }
-
-
-
-      /* overrides wildcard style above */
-      .clean_start i ul,
-      .clean_start i ul li {
-        display:   block;
-      }
-
-      .clean_start i ul {
-        margin: var(--clean_start--i_ul--margin);
-      }
-
-
-
-      /* inline */
-      .clean_start ul.inline {
-        display:          inline-block;
-      }
-
-      .clean_start ul.inline li {
-        display:          inline-block;
-      }
-
-      .clean_start ul.inline li i {
-        display:          inline-block;
-      }
-
-      .clean_start ul.inline li i * {
-        display:          inline-block;
-      }
-
-      .clean_start ul.inline li i::after {
-        display:          inline-block;
-      }
-
-      .clean_start ul.inline li ul {
-        margin:           0 0 0 0;
-      }
-
-
-      .clean_start ul.tag_border li i::after {
-        content:       '';
-
-        display:       var(--clean_start--ul_li_i_o--tag_border--display);
-
-        top:           var(--clean_start--ul_li_i_o--tag_border--top);
-        left:          var(--clean_start--ul_li_i_o--tag_border--left);
-
-        font-size:     0;
-        line-height:   0;
-
-        min-height: var(--clean_start--ul_li_i_o--tag_border--size);
-        max-height: var(--clean_start--ul_li_i_o--tag_border--size);
-        height: var(--clean_start--ul_li_i_o--tag_border--size);
-
-        min-width: var(--clean_start--ul_li_i_o--tag_border--size);
-        max-width: var(--clean_start--ul_li_i_o--tag_border--size);
-        width: var(--clean_start--ul_li_i_o--tag_border--size);
-
-        border: var(--clean_start--ul_li_i_o--tag_border--border);
-        border-radius: var(--clean_start--ul_li_i_o--tag_border--border-radius);
-        background: var(--clean_start--ul_li_i_o--tag_border--background);
-      }
-
-
-
-      .clean_start {
-        --clean_start--scrollbar--color: var(--clean_start--scrollbar-thumb--background-color)  var(--clean_start--scrollbar-track--background-color);
-      }
-
-      @supports selector(::-webkit-scrollbar) {
-
-        .clean_start *::-webkit-scrollbar {
-          width:  var(--clean_start--scrollbar--size);
-          height: var(--clean_start--scrollbar--size);
-        }
-
-        .clean_start *::-webkit-scrollbar-thumb {
-          background-color: var(--clean_start--scrollbar-thumb--background-color);
-        }
-        .clean_start *::-webkit-scrollbar-track {
-          background-color: var(--clean_start--scrollbar-track--background-color);
-        }
-      }
-
-      @supports (scrollbar-color: auto) {
-        .clean_start * {
-          scrollbar-width: var(--clean_start--scrollbar--width);
-        }
-
-        .clean_start * {
-          scrollbar-color: var(--clean_start--scrollbar--color);
-        }
-
-      }
-
-
-      /* Css Clean Start Lite font families new styles */
-
-      /** Just need time for publishing same packages after renamings and tests.
-      *
-      * Renamings in future for the few sites tools,
-      * are aimed for Software Companies' Namespaces, like Jaisocx,
-      * and, whether the alignment librarie's styles set,
-      * the class name for the CssCleanStart, clean_start.
-      *
-      * Due to the aim of the SetUp,
-      * the variables' namespace doesn't have the Companie's Name,
-      * in order to allow to other Companies, ease and free setup of this opensource library on other sites, modified.
-      */
-
-      /* Font Families */
-
-      /* microsoft, ios, android, linux */
-      .clean_start,
-      .clean_start.theme_fonts_old_good_fonts,
-      .clean_start  .theme_fonts_old_good_fonts {
-                                                    /* microsoft fonts: The browser shows texts the right way on all computers with all other OS, like: ios, linux, android */
-
-                                                    /* microsoft, ios, linux, android */
-        --clean_start--arial--font-family:            "Arial";
-        --clean_start--times_new_roman--font-family:  "Times New Roman";
-        --clean_start--courier--font-family:          "Courier";
-        --clean_start--handwrite--font-family:        "Segoe Script",   "Bradley Hand",   "Z003",   "cursive";
-
-        --clean_start--sans--font-family:             "Arial";
-        --clean_start--serif--font-family:            "Times New Roman";
-        --clean_start--monospace--font-family:        "Courier";
-        --clean_start--handwrite--font-family:        "Segoe Script",   "Bradley Hand",   "Z003",   "cursive";
-      }
-
-
-
-      /**
-      On every OS install Microsoft fonts:
-      Times New Roman, Arial, Courier, Courier New.
-      However, on other OS these fonts show not the same way.
-
-      3 themes, all same fonts for:
-      . Android: sans-serif, serif, monospace, cursive.
-      . Linux handwrite font: Z003.
-      */
-
-      .clean_start.theme_fonts_a,
-      .clean_start  .theme_fonts_a {
-                                             /* microsoft, ios, linux, android */
-        --clean_start--sans--font-family:      "Tahoma",      "Khmer Sangam MN",      "Nimbus Sans",      "sans-serif";
-        --clean_start--serif--font-family:     "Gautami",     "Charter",              "Nimbus Roman",     "serif";
-        --clean_start--monospace--font-family: "Vivaldi",     "American Typewriter",  "Liberation Mono",  "monospace";
-        --clean_start--handwrite--font-family: "Freestyle Script", "Chalkduster",          "Z003",             "cursive";
-      }
-
-      .clean_start.theme_fonts_b,
-      .clean_start  .theme_fonts_b  {
-                                             /* microsoft, ios, linux, android */
-        --clean_start--sans--font-family:      "Franklin Gothic Medium",  "Hiragino Sans",  "Bitstream Vera Sans",   "sans-serif";
-        --clean_start--serif--font-family:     "Cambria",     "Iowan Old Style",  "Bitstream Vera Serif",      "serif";
-        --clean_start--monospace--font-family: "Consolas",    "Optima",           "Bitstream Vera Sans Mono",  "monospace";
-        --clean_start--handwrite--font-family: "Bradley Hand ITC", "Bradley Hand",     "Z003",                      "cursive";
-      }
-
-      .clean_start.theme_fonts_c,
-      .clean_start  .theme_fonts_c  {
-                                             /* microsoft, ios, linux, android */
-        --clean_start--sans--font-family:      "Candara",     "Tamil Sangam MN",  "DejaVu Sans",      "sans-serif";
-        --clean_start--serif--font-family:     "Sitka",       "Charter",          "DejaVu Serif",     "serif";
-        --clean_start--monospace--font-family: "Consolas",    "Rockwell",         "DejaVu Sans Mono", "monospace";
-        --clean_start--handwrite--font-family: "Kristen ITC", "Snell Roundhand",  "Z003",             "cursive";
-      }
-
-
-
-
-
-      .clean_start.font_override.font_handwrite,
-      .clean_start.font_override.font_handwrite *,
-
-      .clean_start.font_override  .font_handwrite,
-      .clean_start.font_override  .font_handwrite *,
-
-      .clean_start  .font_override.font_handwrite,
-      .clean_start  .font_override.font_handwrite *,
-
-      .clean_start  .font_override  .font_handwrite,
-      .clean_start  .font_override  .font_handwrite * {
-        font-family: var(--clean_start--handwrite--font-family);
-      }
-
-
-
-      .clean_start.font_override.font_sans,
-      .clean_start.font_override.font_sans *,
-
-      .clean_start.font_override  .font_sans,
-      .clean_start.font_override  .font_sans *,
-
-      .clean_start  .font_override.font_sans,
-      .clean_start  .font_override.font_sans *,
-
-      .clean_start  .font_override  .font_sans,
-      .clean_start  .font_override  .font_sans * {
-        font-family: var(--clean_start--sans--font-family);
-      }
-
-
-
-      .clean_start.font_override.font_serif,
-      .clean_start.font_override.font_serif *,
-
-      .clean_start.font_override  .font_serif,
-      .clean_start.font_override  .font_serif *,
-
-      .clean_start  .font_override.font_serif,
-      .clean_start  .font_override.font_serif *,
-
-      .clean_start  .font_override  .font_serif,
-      .clean_start  .font_override  .font_serif * {
-        font-family: var(--clean_start--serif--font-family);
-      }
-
-
-
-      .clean_start.font_override.font_monospace,
-      .clean_start.font_override.font_monospace *,
-
-      .clean_start.font_override  .font_monospace,
-      .clean_start.font_override  .font_monospace *,
-
-      .clean_start  .font_override.font_monospace,
-      .clean_start  .font_override.font_monospace *,
-
-      .clean_start  .font_override  .font_monospace,
-      .clean_start  .font_override  .font_monospace * {
-        font-family: var(--clean_start--monospace--font-family);
-      }
-
-    </style>
-
-
-    <!--# CleanStart_Tiny Theme_Base -->
-    <style id="theme_base_clean_start" name="clean_start_preview_page_responsive">
-
+    /* @start clean_start scrollbar styles for all html tags */
     .clean_start {
+      --clean_start--scrollbar--color:    var(--clean_start--scrollbar-thumb--background-color, lime)  var(--clean_start--scrollbar-track--background-color, #eafdfa);
+    }
 
-      --clean_start--rem:  16px;
+    @supports selector(::-webkit-scrollbar) {
 
-      --clean_start--all_tags--font-family:   var(--clean_start--sans--font-family);
-      --clean_start--all_tags--font-size:     0.95rem;
-      --clean_start--all_tags--line-height:   1.49rem;
-      --clean_start--all_tags--color:         black;
-      --clean_start--all_tags--border-width:  0;
+      .clean_start::-webkit-scrollbar,
+      .clean_start *::-webkit-scrollbar {
+        width:                 var(--clean_start--scrollbar--size, 0.3rem);
+        height:                var(--clean_start--scrollbar--size, 0.3rem);
+      }
 
-      --clean_start--anchor--color:           navy;
-      --clean_start--anchor_hover--color:     #2292e5;
+      .clean_start::-webkit-scrollbar-thumb,
+      .clean_start *::-webkit-scrollbar-thumb {
+        background-color:      var(--clean_start--scrollbar-thumb--background-color, lime);
+      }
 
-      --clean_start--h1--font-size:           1.25rem;
-      --clean_start--h1--line-height:         1.7rem;
+      .clean_start::-webkit-scrollbar-track,
+      .clean_start *::-webkit-scrollbar-track {
+        background-color:      var(--clean_start--scrollbar-track--background-color, #eafdfa);
+      }
 
-      --clean_start--h--font-size:            0.9rem;
-      --clean_start--h--line-height:          1.4rem;
-      --clean_start--h--margin:               1.4rem 0 0.4rem 0;
-      --clean_start--h--color:                black;
+    }
 
-      --clean_start--p--margin:               1.4rem 0 0 0;
-      --clean_start--p--font-size:            var(--clean_start--all_tags--font-size);
-      --clean_start--p--line-height:          var(--clean_start--all_tags--line-height);
 
-      /* ul li i */
-      --clean_start--ul--margin:              0.3rem 0 0.4rem 0.5rem;
-      --clean_start--i_ul--margin:            0.3rem 0 0.4rem 3.0rem;
 
-      --clean_start--ul_li_i--padding:        0 0 0 0.5rem;
-      --clean_start--i_ul_li_i--padding:      0 0 0 0.2rem;
+    @supports (scrollbar-color: auto) {
+      .clean_start,
+      .clean_start * {
+        scrollbar-width:       var(--clean_start--scrollbar--width, thin);
+      }
 
-      --clean_start--ul_li_i--font-size:      var(--clean_start--all_tags--font-size);
-      --clean_start--ul_li_i--line-height:    var(--clean_start--all_tags--line-height);
+      .clean_start,
+      .clean_start * {
+        scrollbar-color:       var(--clean_start--scrollbar--color);
+      }
 
-      /* .tag_content */
-      --clean_start--ul_li_i_c--content: '-';
-      --clean_start--ul_li_i_c--top:          0;
-      --clean_start--ul_li_i_c--left:         -0.5rem;
-      --clean_start--ul_li_i_c--font-size:    var(--clean_start--ul_li_i--font-size);
-      /* --clean_start--ul_li_i_c--line-height: var(--clean_start--ul_li_i--line-height); */
-      --clean_start--ul_li_i_c--color:        #33ab55;
+    }
+    /* @finish clean_start scrollbar styles for all html tags */
 
-      /* ul.tag_border */
-      --clean_start--ul_li_i_o--tag_border--content: '';
-      --clean_start--ul_li_i_o--tag_border--top:            0.44rem;
-      --clean_start--ul_li_i_o--tag_border--left:           0;
-      --clean_start--ul_li_i_o--tag_border--font-size:      0;
-      --clean_start--ul_li_i_o--tag_border--size:           0.32rem;
-      --clean_start--ul_li_i_o--tag_border--border-radius:  0;
-      --clean_start--ul_li_i_o--tag_border--border:         1px solid yellow;
-      --clean_start--ul_li_i_o--tag_border--background:     #fdfda0;
+
+
+    /* @start clean_start h1 til h12 */
+    .clean_start h1, .clean_start h2, .clean_start h3,
+    .clean_start h4, .clean_start h5, .clean_start h6,
+    .clean_start h7, .clean_start h8, .clean_start h9,
+    .clean_start h10, .clean_start h11, .clean_start h12 {
+
+      text-align:              var(--clean_start--h--text-align, left);
+
+      line-height:             var(--clean_start--h--line-height, 1.24rem);
+      font-size:               var(--clean_start--h--font-size, 0.92rem);
+      font-weight:             var(--clean_start--h--font-weight, 900);
+
+      font-style:              var(--clean_start--h--font-style, normal);
+      font-variant:            var(--clean_start--h--font-variant, normal);
+      letter-spacing:          var(--clean_start--h--letter-spacing, 0.005rem);
+      line-break:              var(--clean_start--h--line-break, strict);
+      word-wrap:               var(--clean_start--h--word-wrap, normal);
+      word-break:              var(--clean_start--h--word-break, normal);
+
+      display:                 var(--clean_start--h--display, block);
+      padding:                 var(--clean_start--h--padding, 0 0 0 0);
+      margin:                  var(--clean_start--h--margin, 0 0 0 0);
+
+      color:                   var(--clean_start--h--color, black);
+      background:              var(--clean_start--h--background, #fdfdfd);
+
+    }
+
+
+
+    .clean_start h1 {
+
+      text-align:              var(--clean_start--h1--text-align, center);
+
+      padding:                 var(--clean_start--h1--padding, 0 0 0 0);
+      margin:                  var(--clean_start--h1--margin, 0 0 0 0);
+
+      font-family:             var(--clean_start--h1--font-family, "Arial");
+
+      line-height:             var(--clean_start--h1--line-height, 2.5rem);
+      font-size:               var(--clean_start--h1--font-size, 1.9rem);
+      font-weight:             var(--clean_start--h1--font-weight, 600);
+
+      font-style:              var(--clean_start--h1--font-style, normal);
+      font-variant:            var(--clean_start--h1--font-variant, normal);
+      letter-spacing:          var(--clean_start--h1--letter-spacing, 0.005rem);
+      line-break:              var(--clean_start--h1--line-break, strict);
+      word-wrap:               var(--clean_start--h1--word-wrap, normal);
+      word-break:              var(--clean_start--h1--word-break, normal);
+
+      color:                   var(--clean_start--h1--color, black);
+      background:              var(--clean_start--h1--background, #fdfdfd);
+
+    }
+
+
+
+    .clean_start h2 {
+
+      text-align:              var(--clean_start--h2--text-align, left);
+
+      padding:                 var(--clean_start--h2--padding, 0 0 0 0);
+      margin:                  var(--clean_start--h2--margin, 0 0 0 0);
+
+      font-family:             var(--clean_start--h2--font-family, "Arial");
+
+      line-height:             var(--clean_start--h2--line-height, 2.0rem);
+      font-size:               var(--clean_start--h2--font-size, 1.282rem);
+      font-weight:             var(--clean_start--h2--font-weight, 600);
+
+      font-style:              var(--clean_start--h2--font-style, normal);
+      font-variant:            var(--clean_start--h2--font-variant, normal);
+      letter-spacing:          var(--clean_start--h2--letter-spacing, 0.005rem);
+      line-break:              var(--clean_start--h2--line-break, strict);
+      word-wrap:               var(--clean_start--h2--word-wrap, normal);
+      word-break:              var(--clean_start--h2--word-break, normal);
+
+      color:                   var(--clean_start--h2--color, black);
+      background:              var(--clean_start--h2--background, #fdfdfd);
+
+    }
+
+
+
+    .clean_start h3 {
+
+      text-align:              var(--clean_start--h3--text-align, left);
+
+      padding:                 var(--clean_start--h3--padding, 0 0 0 0);
+      margin:                  var(--clean_start--h3--margin, 0 0 0 0);
+
+      font-family:             var(--clean_start--h3--font-family, "Arial");
+
+      line-height:             var(--clean_start--h3--line-height, 1.49rem);
+      font-size:               var(--clean_start--h3--font-size, 1.18rem);
+      font-weight:             var(--clean_start--h3--font-weight, 500);
+
+      font-style:              var(--clean_start--h3--font-style, normal);
+      font-variant:            var(--clean_start--h3--font-variant, normal);
+      letter-spacing:          var(--clean_start--h3--letter-spacing, 0.005rem);
+      line-break:              var(--clean_start--h3--line-break, strict);
+      word-wrap:               var(--clean_start--h3--word-wrap, normal);
+      word-break:              var(--clean_start--h3--word-break, normal);
+
+      color:                   var(--clean_start--h3--color, #054505);
+      background:              var(--clean_start--h3--background, #fdfdfd);
+
+    }
+
+
+
+    .clean_start h4 {
+
+      text-align:              var(--clean_start--h4--text-align, left);
+
+      padding:                 var(--clean_start--h4--padding, 0 0 0 0);
+      margin:                  var(--clean_start--h4--margin, 0 0 0 0);
+
+      font-family:             var(--clean_start--h4--font-family, "Arial");
+
+      line-height:             var(--clean_start--h4--line-height, 1.49rem);
+      font-size:               var(--clean_start--h4--font-size, 1.09rem);
+      font-weight:             var(--clean_start--h4--font-weight, 600);
+
+      font-style:              var(--clean_start--h4--font-style, normal);
+      font-variant:            var(--clean_start--h4--font-variant, normal);
+      letter-spacing:          var(--clean_start--h4--letter-spacing, 0.005rem);
+      line-break:              var(--clean_start--h4--line-break, strict);
+      word-wrap:               var(--clean_start--h4--word-wrap, normal);
+      word-break:              var(--clean_start--h4--word-break, normal);
+
+      color:                   var(--clean_start--h4--color, black);
+      background:              var(--clean_start--h4--background, #fdfdfd);
+
+    }
+    /* @finish clean_start h1 til h12 */
+
+
+
+    /* @start clean_start_tiny for all html tags */
+    .clean_start text {
+
+      position:                var(--clean_start--text--position, relative);
+      display:                 var(--clean_start--text--display, inline-block);
+      box-sizing:              var(--clean_start--text--box-sizing, border-box);
+
+      padding:                 var(--clean_start--text--padding, 0 0 0 0);
+      margin:                  var(--clean_start--text--margin, 0 0 0 0);
+
+      font-family:             var(--clean_start--text--font-family, Arial);
+      line-height:             var(--clean_start--text--line-height, 1.2rem);
+      font-size:               var(--clean_start--text--font-size, 0.9rem);
+
+      font-style:              var(--clean_start--text--font-style, normal);
+      font-variant:            var(--clean_start--text--font-variant, normal);
+      letter-spacing:          var(--clean_start--text--letter-spacing, 0.005rem);
+      line-break:              var(--clean_start--text--line-break, strict);
+      word-wrap:               var(--clean_start--text--word-wrap, normal);
+      word-break:              var(--clean_start--text--word-break, normal);
+
+      border-color:            var(--clean_start--text--border-color, lime);
+      border-style:            var(--clean_start--text--border-style, solid);
+      border-width:            var(--clean_start--text--border-width, 0);
+
+      color:                   var(--clean_start--text--color, black);
+      background:              var(--clean_start--text--background, #fdfdfd);
+
+      min-height:              var(--clean_start--text--min-height, 0);
+      max-height:              var(--clean_start--text--max-height, unset);
+      height:                  var(--clean_start--text--height, auto);
+
+      min-width:               var(--clean_start--text--min-width, 0);
+      max-width:               var(--clean_start--text--max-width, 100%);
+      width:                   var(--clean_start--text--width, auto);
+
+      overflow-x:               var(--clean_start--text--overflow-x, visible);
+      overflow-y:               var(--clean_start--text--overflow-y, visible);
+
+    }
+    /* @finish clean_start_tiny for all html tags */
+
+
+
+    /* @start clean_start_tiny marker for styles and html in qa and dev_mode */
+    .clean_start marker {
+
+      position:                var(--clean_start--marker--position, relative);
+      display:                 var(--clean_start--marker--display, inline-block);
+
+      padding:                 var(--clean_start--marker--padding, 0 0 0 0);
+      margin:                  var(--clean_start--marker--margin, 0 0 0 0);
+
+      font-family:             var(--clean_start--marker--font-family, Arial);
+      line-height:             var(--clean_start--marker--line-height, 0.9rem);
+      font-size:               var(--clean_start--marker--font-size, 0.9rem);
+
+      letter-spacing:          var(--clean_start--marker--letter-spacing, 0);
+      color:                   var(--clean_start--marker--color, green);
+
+      border-color:            var(--clean_start--marker--border-color, #99fd55);
+      border-style:            var(--clean_start--marker--border-style, solid);
+      border-width:            var(--clean_start--marker--border-width, 0.2px);
+
+      background:              var(--clean_start--marker--background, #effdea);
+
+      min-height:              var(--clean_start--marker--min-height, 0.9rem);
+      max-height:              var(--clean_start--marker--max-height, 0.9rem);
+      height:                  var(--clean_start--marker--height, 0.9rem);
+
+      min-width:               var(--clean_start--marker--min-width, 0);
+      max-width:               var(--clean_start--marker--max-width, 100%);
+      width:                   var(--clean_start--marker--width, auto);
+
+      overflow-x:               var(--clean_start--marker--overflow-x, visible);
+      overflow-y:               var(--clean_start--marker--overflow-y, visible);
+
+    }
+    /* @start clean_start_tiny marker for styles and html in qa and dev_mode */
+
+
+
+    /* @start clean_start_tiny html tag Label */
+    .clean_start label {
+
+      display:                 var(--clean_start--label--display, inline-block);
+
+      min-height:              var(--clean_start--label--min-height, unset);
+      max-height:              var(--clean_start--label--max-height, 100%);
+      height:                  var(--clean_start--label--height, auto);
+
+      min-width:               var(--clean_start--label--min-width, unset);
+      max-width:               var(--clean_start--label--max-width, 100%);
+      width:                   var(--clean_start--label--width, auto);
+
+      line-height:             var(--clean_start--label--line-height, 1.2rem);
+      font-size:               var(--clean_start--label--font-size, 0.9rem);
+
+      padding:                 var(--clean_start--label--padding, 0 0 0 0);
+      margin:                  var(--clean_start--label--margin, 0 0 0 0);
+
+      border:                  var(--clean_start--label--border, 0 solid #ddd);
+      border-radius:           var(--clean_start--label--border-radius, 0);
+
+      color:                   var(--clean_start--label--color, black);
+      background:              var(--clean_start--label--background, #fdfdfd);
+
+      overflow-x:               var(--clean_start--label--overflow-x, hidden);
+      overflow-y:               var(--clean_start--label--overflow-y, hidden);
+
+    }
+    /* @finish clean_start_tiny html tag Label */
+
+
+
+    /* @start clean_start_tiny html tag a */
+    /* Hyperlink html tag <a> (anchor) */
+    .clean_start a,
+    .clean_start a:active,
+    .clean_start a:visited {
+      color:                   var(--clean_start--anchor--color, navy);
+      text-decoration:         var(--clean_start--anchor--text-decoration, none);
+    }
+
+    .clean_start a:hover,
+    .clean_start a:active:hover,
+    .clean_start a:visited:hover {
+      color:                   var(--clean_start--anchor_hover--color, #2255ab);
+      text-decoration:         var(--clean_start--anchor_hover--text-decoration, underline);
+    }
+    /* @finish clean_start_tiny html tag a */
+
+
+
+    /* @start clean_start_tiny html tag p */
+    /* Paragraph html tag <p> */
+    .clean_start p {
+      line-height:             var(--clean_start--p--line-height, 1.2rem);
+      font-size:               var(--clean_start--p--font-size, 0.9rem);
+      margin:                  var(--clean_start--p--margin, 0 0 0 0);
+    }
+
+    .clean_start p:first-of-type {
+      margin:                  var(--clean_start--p_first--margin, 0 0 0 0);
+    }
+
+    .clean_start p *,
+    .clean_start block p * {
+      padding:                 var(--clean_start--p_tags--padding, 0 0 0 0);
+      margin:                  var(--clean_start--p_tags--margin, 0 0 0 0);
+
+      font-size:               var(--clean_start--p_tags--font-size, 0.9rem);
+      line-height:             var(--clean_start--p_tags--line-height, 0.9rem);
+
+      min-height:              var(--clean_start--p_tags--min-height, 0);
+      max-height:              var(--clean_start--p_tags--max-height, 0.9rem);
+      height:                  var(--clean_start--p_tags--height, 0.9rem);
+
+      overflow-x:               var(--clean_start--p_tags--overflow-x, visible);
+      overflow-y:               var(--clean_start--p_tags--overflow-y, hidden);
+    }
+    /* @finish clean_start_tiny html tag p */
+
+
+
+    /* @start clean_start_tiny html tag pre */
+    /* new lines and spaces are rendered like typed <pre> */
+    .clean_start pre {
+      font-family:             var(--clean_start--pre--font-family, Courier);
+    }
+
+    .clean_start pre {
+      font-size:               var(--clean_start--pre--font-size, 0.9rem);
+      line-height:             var(--clean_start--pre--line-height, 1.2rem);
+    }
+
+    .clean_start pre * {
+      font-size:               var(--clean_start--pre_tags--font-size, 0.9rem);
+      line-height:             var(--clean_start--pre_tags--line-height, 0.9rem);
+    }
+    /* @finish clean_start_tiny html tag pre */
+
+
+
+    /* @start clean_start html tags ul||ol */
+      /* @start ul mark symbol */
+    .clean_start ul li::after {
+      content:                 var(--clean_start--ul_li_c--content, '');
+    }
+
+    .clean_start ul.inline li::after {
+      content:                 var(--clean_start--ul_li_c--content, '');
+    }
+
+    .clean_start ul.inline.slash li::after {
+      content:                 var(--clean_start--ul_li_c--content, '|');
+    }
+      /* @finish ul mark symbol */
+
+
+
+      /* @start ul mark size */
+    .clean_start ol li::after {
+      line-height:             var(--clean_start--ol_li_c--line-height, 1.2rem);
+      font-family:             var(--clean_start--ol_li_c--font-family, "Arial");
+      font-size:               var(--clean_start--ol_li_c--font-size, 0.9rem);
+      color:                   var(--clean_start--ol_li_c--color, black);
+    }
+
+    .clean_start ul li::after {
+      line-height:             var(--clean_start--ul_li_c--line-height, 1.2rem);
+      font-family:             var(--clean_start--ul_li_c--font-family, "Arial");
+      font-size:               var(--clean_start--ul_li_c--font-size, 0.9rem);
+      color:                   var(--clean_start--ul_li_c--color, black);
+    }
+      /* @finish ul mark size */
+
+
+
+      /* @start ul tag_border */
+    .clean_start ul.tag_border li::after {
+
+      content:                 var(--clean_start--ul_li_c--content, '');
+
+      top:                     var(--clean_start--ul_li_c--top, 0.4rem);
+      left:                    var(--clean_start--ul_li_c--left, 0);
+
+      line-height:             var(--clean_start--ul_li_c--line-height, 0);
+      font-size:               var(--clean_start--ul_li_c--font-size, 0);
+
+      max-height:              var(--clean_start--ul_li_c--max-height, 0.3rem);
+      height:                  var(--clean_start--ul_li_c--height, 0.3rem);
+      max-width:               var(--clean_start--ul_li_c--max-width, 0.3rem);
+      width:                   var(--clean_start--ul_li_c--width, 0.3rem);
+
+      background:              var(--clean_start--ul_li_c--background, green);
+      border:                  var(--clean_start--ul_li_c--border, 1px solid lime);
+      border-radius:           var(--clean_start--ul_li_c--border-radius, 0);
+
+    }
+      /* @finish ul tag_border */
+
+
+
+      /* @start ol count */
+    .clean_start ol {
+      counter-reset:           cnt1 0;
+    }
+    .clean_start ol li ol {
+      counter-reset:           cnt2 0;
+    }
+    .clean_start ol li ol li ol {
+      counter-reset:           cnt3 0;
+    }
+    .clean_start ol li ol li ol li ol {
+      counter-reset:           cnt4 0;
+    }
+    .clean_start ol li ol li ol li ol li ol {
+      counter-reset:           cnt5 0;
+    }
+
+
+
+    .clean_start ol li {
+      counter-increment:       cnt1 1;
+    }
+    .clean_start ol li ol li {
+      counter-increment:       cnt2 1;
+    }
+    .clean_start ol li ol li ol li {
+      counter-increment:       cnt3 1;
+    }
+    .clean_start ol li ol li ol li ol li {
+      counter-increment:       cnt4 1;
+    }
+    .clean_start ol li ol li ol li ol li ol li {
+      counter-increment:       cnt5 1;
+    }
+
+
+
+    .clean_start ol li::after {
+      content:                 counter(cnt1, decimal);
+    }
+    .clean_start ol ol li::after {
+      content:                 counter(cnt2, decimal);
+    }
+    .clean_start ol ol ol li::after {
+      content:                 counter(cnt3, decimal);
+    }
+    .clean_start ol ol ol ol li::after {
+      content:                 counter(cnt4, decimal);
+    }
+    .clean_start ol ol ol ol ol li::after {
+      content:                 counter(cnt5, decimal);
+    }
+      /* @finish ol count */
+
+
+
+
+
+    .clean_start * ol,
+    .clean_start * ul {
+      padding:                 var(--clean_start--ul--padding, 0 0 0 0);
+      display:                 var(--clean_start--ul--display, block);
+      margin:                  var(--clean_start--ul--margin, 0 0 0 0);
+
+      line-height:             var(--clean_start--ul--line-height, 0.9rem);
+      font-size:               var(--clean_start--ul--font-size, 0.9rem);
+
+      min-height:              var(--clean_start--ul--min-height, 0);
+      max-height:              var(--clean_start--ul--max-height, unset);
+      height:                  var(--clean_start--ul--height, auto);
+
+      overflow-x:               var(--clean_start--ul--overflow-x, visible);
+      overflow-y:               var(--clean_start--ul--overflow-y, visible);
+    }
+
+    .clean_start ol li,
+    .clean_start ul li {
+      padding:                 var(--clean_start--ul_li--padding, 0 0 0 0);
+      display:                 var(--clean_start--ul_li--display, block);
+      margin:                  var(--clean_start--ul_li--margin, 0 0 0 0);
+
+      line-height:             var(--clean_start--ul_li--line-height, 1.2rem);
+      font-family:             var(--clean_start--ul_li--font-family, "Arial");
+      font-size:               var(--clean_start--ul_li--font-size, 0.9rem);
+
+      min-height:              var(--clean_start--ul_li--min-height, 0);
+      max-height:              var(--clean_start--ul_li--max-height, unset);
+      height:                  var(--clean_start--ul_li--height, auto);
+
+      overflow-x:               var(--clean_start--ul_li--overflow-x, visible);
+      overflow-y:               var(--clean_start--ul_li--overflow-y, visible);
+    }
+
+    .clean_start ol li *,
+    .clean_start ul li * {
+      padding:                 var(--clean_start--ul_li_tags--padding, 0 0 0 0);
+      display:                 var(--clean_start--ul_li_tags--display, inline-block);
+      margin:                  var(--clean_start--ul_li_tags--margin, 0 0 0 0);
+
+      line-height:             var(--clean_start--ul_li_tags--line-height, 0.9rem);
+      font-family:             var(--clean_start--ul_li_tags--font-family, "Arial");
+      font-size:               var(--clean_start--ul_li_tags--font-size, 0.9rem);
+
+      min-height:              var(--clean_start--ul_li_tags--min-height, 0);
+      max-height:              var(--clean_start--ul_li_tags--max-height, unset);
+      height:                  var(--clean_start--ul_li_tags--height, 0.9rem);
+
+      overflow-x:               var(--clean_start--ul_li_tags--overflow-x, visible);
+      overflow-y:               var(--clean_start--ul_li_tags--overflow-y, visible);
+    }
+
+
+
+    /* overrides wildcard styles before */
+    .clean_start ol li ol,
+    .clean_start ul li ol,
+    .clean_start ul li ul,
+    .clean_start ol li ul {
+      padding:                 var(--clean_start--li_ul--padding, 0 0 0 0);
+
+      display:                 var(--clean_start--li_ul--display, block);
+      margin:                  var(--clean_start--li_ul--margin, 0 0 0 0);
+
+      line-height:             var(--clean_start--li_ul--line-height, 0.9rem);
+      font-size:               var(--clean_start--li_ul--font-size, 0.9rem);
+
+      min-height:              var(--clean_start--li_ul--min-height, 0);
+      max-height:              var(--clean_start--li_ul--max-height, unset);
+      height:                  var(--clean_start--li_ul--height, auto);
+
+      overflow-x:               var(--clean_start--li_ul--overflow-x, visible);
+      overflow-y:               var(--clean_start--li_ul--overflow-y, visible);
+    }
+
+    .clean_start li ol li,
+    .clean_start li ul li {
+      padding:                 var(--clean_start--li_ul_li--padding, 0 0 0 0);
+      display:                 var(--clean_start--li_ul_li--display, block);
+      margin:                  var(--clean_start--li_ul_li--margin, 0 0 0 0);
+
+      line-height:             var(--clean_start--li_ul_li--line-height, 1.2rem);
+      font-family:             var(--clean_start--li_ul_li--font-family, "Arial");
+      font-size:               var(--clean_start--li_ul_li--font-size, 0.9rem);
+
+      min-height:              var(--clean_start--li_ul_li--min-height, 0);
+      max-height:              var(--clean_start--li_ul_li--max-height, unset);
+      height:                  var(--clean_start--li_ul_li--height, auto);
+
+      overflow-x:               var(--clean_start--li_ul_li--overflow-x, visible);
+      overflow-y:               var(--clean_start--li_ul_li--overflow-y, visible);
+    }
+
+    .clean_start ol,
+    .clean_start ul {
+      list-style-type:         none;
+    }
+
+
+
+    .clean_start ol li::after {
+      position:                var(--clean_start--ol_li_c--position, absolute);
+      display:                 var(--clean_start--ol_li_c--display, block);
+
+      top:                     var(--clean_start--ol_li_c--top, 0);
+      left:                    var(--clean_start--ol_li_c--left, 0);
+
+      line-height:             var(--clean_start--ol_li_c--line-height, 1.2rem);
+      font-family:             var(--clean_start--ol_li_c--font-family, "Arial");
+      font-size:               var(--clean_start--ol_li_c--font-size, 0.9rem);
+
+      min-height:              var(--clean_start--ol_li_c--min-height, 0);
+      max-height:              var(--clean_start--ol_li_c--max-height, 1.2rem);
+      height:                  var(--clean_start--ol_li_c--height, 1.2rem);
+
+      min-width:               var(--clean_start--ol_li_c--min-width, 0);
+      max-width:               var(--clean_start--ol_li_c--max-width, unset);
+      width:                   var(--clean_start--ol_li_c--width, auto);
+
+      color:                   var(--clean_start--ol_li_c--color, black);
+      background:              var(--clean_start--ol_li_c--background, #fdfdfd);
+      border:                  var(--clean_start--ol_li_c--border, 0 solid #ddd);
+      border-radius:           var(--clean_start--ol_li_c--border-radius, 0);
+
+      overflow-x:               var(--clean_start--ol_li_c--overflow-x, hidden);
+      overflow-y:               var(--clean_start--ol_li_c--overflow-y, hidden);
+    }
+
+
+
+    .clean_start ul li::after {
+      position:                var(--clean_start--ul_li_c--position, absolute);
+      display:                 var(--clean_start--ul_li_c--display, block);
+
+      top:                     var(--clean_start--ul_li_c--top, 0);
+      left:                    var(--clean_start--ul_li_c--left, 0);
+
+      line-height:             var(--clean_start--ul_li_c--line-height, 1.2rem);
+      font-family:             var(--clean_start--ul_li_c--font-family, "Arial");
+      font-size:               var(--clean_start--ul_li_c--font-size, 0.9rem);
+
+      min-height:              var(--clean_start--ul_li_c--min-height, 0);
+      max-height:              var(--clean_start--ul_li_c--max-height, 1.2rem);
+      height:                  var(--clean_start--ul_li_c--height, 1.2rem);
+
+      min-width:               var(--clean_start--ul_li_c--min-width, 0);
+      max-width:               var(--clean_start--ul_li_c--max-width, unset);
+      width:                   var(--clean_start--ul_li_c--width, auto);
+
+      color:                   var(--clean_start--ul_li_c--color, black);
+      background:              var(--clean_start--ul_li_c--background, #fdfdfd);
+      border:                  var(--clean_start--ul_li_c--border, 0 solid #ddd);
+      border-radius:           var(--clean_start--ul_li_c--border-radius, 0);
+
+      overflow-x:               var(--clean_start--ul_li_c--overflow-x, hidden);
+      overflow-y:               var(--clean_start--ul_li_c--overflow-y, hidden);
+    }
+
+
+
+      /* @start ul||ol inline */
+    .clean_start ol.inline li,
+    .clean_start ul.inline li {
+      display:                 var(--clean_start--ul_li_inline--display, inline-block);
+    }
+
+    .clean_start ol.inline li *,
+    .clean_start ul.inline li * {
+      display:                 var(--clean_start--ul_li_tags_inline--display, inline-block);
+    }
+      /* @finish ul||ol inline */
+    /* @finish clean_start html tags ul||ol */
+
+
+
+    /* @start clean_start_tiny html tag dl_dt_dd */
+    .clean_start dl dd::after {
+      content:                 var(--clean_start--dl_dt_dd_c--content, '');
+    }
+
+    .clean_start dl.inline dd::after {
+      content:                 var(--clean_start--dl_dt_dd_c--content, '');
+    }
+
+
+
+    .clean_start dl,
+    .clean_start dl dt,
+    .clean_start dl dd {
+      font-size:               var(--clean_start--dl_dt_dd--font-size, 0.9rem);
+      line-height:             var(--clean_start--dl_dt_dd--line-height, 1.2rem);
+    }
+
+
+
+    .clean_start dl {
+      display:                 var(--clean_start--dl--display, block);
+    }
+
+    .clean_start dl dt {
+      display:                 var(--clean_start--dl_dt--display, block);
+    }
+
+    .clean_start dl dd {
+      display:                 var(--clean_start--dl_dt_dd--display, inline-block);
+    }
+
+
+
+    .clean_start dl {
+      padding:                 var(--clean_start--dl--padding, 0 0 0 0);
+    }
+
+    .clean_start dl dt {
+      padding:                 var(--clean_start--dl_dt--padding, 0 0 0 0);
+    }
+
+    .clean_start dl dd {
+      padding:                 var(--clean_start--dl_dt_dd--padding, 0 0 0 0);
+    }
+
+
+
+    .clean_start dl {
+      margin:                  var(--clean_start--dl--margin, 0 0 0 0);
+    }
+
+    .clean_start dl dt {
+      margin:                  var(--clean_start--dl_dt--margin, 0 0 0 0);
+    }
+
+    .clean_start dl dd {
+      margin:                  var(--clean_start--dl_dt_dd--margin, 0 0 0 0);
+    }
+
+
+
+    .clean_start dl dt {
+      font-weight:             var(--clean_start--dl_dt--font-weight, 600);
+    }
+
+    .clean_start dl dd {
+      font-style:              var(--clean_start--dl_dt_dd--font-style, normal);
+    }
+
+
+
+    .clean_start dl,
+    .clean_start dl dt,
+    .clean_start dl dd {
+      overflow-x:               var(--clean_start--dl_dt_dd--overflow-x, visible);
+      overflow-y:               var(--clean_start--dl_dt_dd--overflow-y, visible);
+    }
+
+    .clean_start dl {
+      list-style-type:         var(--clean_start--dl--list-style-type, none);
+    }
+
+    .clean_start dl dd * {
+      display:                 var(--clean_start--dl_dt_dd_tags--display, inline-block);
+      padding:                 var(--clean_start--dl_dt_dd_tags--padding, 0 0 0 0);
+      margin:                  var(--clean_start--dl_dt_dd_tags--margin, 0 0 0 0);
+      overflow-x:               var(--clean_start--dl_dt_dd_tags--overflow-x, visible);
+      overflow-y:               var(--clean_start--dl_dt_dd_tags--overflow-y, visible);
+
+      font-size:               var(--clean_start--dl_dt_dd_tags--font-size, 0.9rem);
+      line-height:             var(--clean_start--dl_dt_dd_tags--line-height, 0.9rem);
+    }
+
+    .clean_start dl dd::after {
+      position:                var(--clean_start--dl_dt_dd_c--position, absolute);
+      display:                 var(--clean_start--dl_dt_dd_c--display, block);
+
+      top:                     var(--clean_start--dl_dt_dd_c--top, 0);
+      left:                    var(--clean_start--dl_dt_dd_c--left, 0);
+
+      font-size:               var(--clean_start--dl_dt_dd_c--font-size, 0.9rem);
+      line-height:             var(--clean_start--dl_dt_dd_c--line-height, 1.2rem);
+
+      min-height:              var(--clean_start--dl_dt_dd_c--min-height, 0);
+      max-height:              var(--clean_start--dl_dt_dd_c--max-height, unset);
+      height:                  var(--clean_start--dl_dt_dd_c--height, auto);
+
+      color:                   var(--clean_start--dl_dt_dd_c--color, lime);
+
+      overflow-x:               var(--clean_start--dl_dt_dd_c--overflow-x, hidden);
+      overflow-y:               var(--clean_start--dl_dt_dd_c--overflow-y, hidden);
+    }
+
+
+
+    /* overrides wildcard style above */
+    .clean_start dd dl {
+      display:                 var(--clean_start--dl--display, block);
+    }
+
+    .clean_start dd dl dt {
+      display:                 var(--clean_start--dl_dt--display, block);
+    }
+
+    .clean_start dd dl {
+      margin:                  var(--clean_start--dd_dl--margin, 0 0 0 0);
+    }
+
+
+
+    /* inline */
+    .clean_start dl.inline dt {
+      display:                 inline-block;
+    }
+
+    .clean_start dl.inline dd * {
+      display:                 inline-block;
+    }
+    /* @finish clean_start_tiny html tag dl_dt_dd */
+
+
+
+    /* @start clean_start html tag table */
+      /* @start clean_start_tiny sites_tool table */
+    .clean_start * table.sites_tools tr:nth-of-type(2n + 1) td {
+      color:                   var(--clean_start--table_td_odd--color, #553322);
+      background:              var(--clean_start--table_td_odd--background, #fdfdfa);
+    }
+
+    .clean_start * table.sites_tools tr:nth-of-type(2n + 2) td {
+      color:                   var(--clean_start--table_td_even--color, darkgreen);
+      background:              var(--clean_start--table_td_even--background, #fafdf2);
+    }
+
+    .clean_start * table.sites_tools tfoot tr:nth-of-type(2n + 1) td {
+      color:                   var(--clean_start--table_tf--color, #050505);
+      background:              var(--clean_start--table_tf--background, #fdfdfd);
+    }
+      /* @finish clean_start_tiny sites_tool table */
+
+
+
+
+
+    .clean_start * table {
+      display:                 table;
+    }
+
+    .clean_start table caption {
+      display: 	               table-caption;
+    }
+
+    .clean_start table colgroup {
+      display:                 table-column-group;
+    }
+
+    .clean_start table col {
+      display:                 table-column;
+    }
+
+    .clean_start table thead {
+      display:                 table-header-group;
+    }
+
+    .clean_start table th {
+      display:                 table-cell;
+    }
+
+    .clean_start table tbody {
+      display:                 table-row-group;
+    }
+
+    .clean_start table tr {
+      display:                 table-row;
+    }
+
+    .clean_start table td {
+      display:                 table-cell;
+    }
+
+
+
+    .clean_start * table {
+
+      border:                  var(--clean_start--table--border, 0 solid #fdfd40);
+      border-collapse:         var(--clean_start--table--border-collapse, collapse);
+
+      min-width:               var(--clean_start--table--min-width, unset);
+      max-width:               var(--clean_start--table--max-width, 100%);
+      width:                   var(--clean_start--table--width, auto);
+
+      overflow-x:               var(--clean_start--table--overflow-x, hidden);
+      overflow-y:               var(--clean_start--table--overflow-y, hidden);
+    }
+
+
+
+    .clean_start table caption {
+
+      padding:                 var(--clean_start--table_caption--padding, 0 0 0 0);
+      margin:                  var(--clean_start--table_caption--margin, 0 0 0 0);
+
+      text-align:              var(--clean_start--table_caption--text-align, left);
+      line-height:             var(--clean_start--table_caption--line-height, 1.2rem);
+      font-family:             var(--clean_start--table_caption--font-family, "Arial");
+      font-size:               var(--clean_start--table_caption--font-size, 0.9rem);
+      font-weight:             var(--clean_start--table_caption--font-weight, 600);
+
+      min-width:               var(--clean_start--table_caption--min-width, unset);
+      max-width:               var(--clean_start--table_caption--max-width, 100%);
+      width:                   var(--clean_start--table_caption--width, auto);
+
+      border:                  var(--clean_start--table_caption--border, 0 solid lime);
+      color:                   var(--clean_start--table_caption--color, black);
+      background:              var(--clean_start--table_caption--background, #fdfdfd);
+
+      overflow-x:               var(--clean_start--table_caption--overflow-x, hidden);
+      overflow-y:               var(--clean_start--table_caption--overflow-y, hidden);
+
+    }
+
+
+
+    .clean_start table thead,
+    .clean_start table tbody,
+    .clean_start table tr {
+      min-width:               100%;
+      max-width:               100%;
+      width:                   100%;
+    }
+
+
+
+    .clean_start tr th,
+    .clean_start thead tr td,
+    .clean_start tbody th {
+      padding:                 var(--clean_start--table_th--padding, 0 0 0 0);
+      margin:                  var(--clean_start--table_th--margin, 0 0 0 0);
+
+      text-align:              var(--clean_start--table_th--text-align, left);
+      line-height:             var(--clean_start--table_th--line-height, 1.2rem);
+      font-family:             var(--clean_start--table_th--font-family, "Arial");
+      font-size:               var(--clean_start--table_th--font-size, 0.9rem);
+      font-weight:             var(--clean_start--table_th--font-weight, 600);
+
+      border:                  var(--clean_start--table_th--border, 0.2px solid lime);
+      color:                   var(--clean_start--table_th--color, black);
+      background:              var(--clean_start--table_th--background, #fdfdfd);
+    }
+
+
+
+    .clean_start tr td {
+
+      padding:                 var(--clean_start--table_td--padding, 0 0 0 0);
+      margin:                  var(--clean_start--table_td--margin, 0 0 0 0);
+
+      text-align:              var(--clean_start--table_td--text-align, left);
+      line-height:             var(--clean_start--table_td--line-height, 1.2rem);
+      font-family:             var(--clean_start--table_td--font-family, "Arial");
+      font-size:               var(--clean_start--table_td--font-size, 0.9rem);
+      font-weight:             var(--clean_start--table_td--font-weight, 400);
+
+      border:                  var(--clean_start--table_td--border, 0.2px solid lime);
+      color:                   var(--clean_start--table_td--color, black);
+      background:              var(--clean_start--table_td--background, #fdfdfd);
+
+    }
+
+
+
+    .clean_start td * {
+
+      padding:                 var(--clean_start--table_td_tags--padding, 0 0 0 0);
+      margin:                  var(--clean_start--table_td_tags--margin, 0 0 0 0);
+
+      line-height:             var(--clean_start--table_td_tags--line-height, 0.9rem);
+      font-family:             var(--clean_start--table_td_tags--font-family, "Arial");
+      font-size:               var(--clean_start--table_td_tags--font-size, 0.9rem);
+
+      overflow-x:               var(--clean_start--table_td_tags--overflow-x, visible);
+      overflow-y:               var(--clean_start--table_td_tags--overflow-y, visible);
+
+    }
+
+
+
+    .clean_start table tfoot {
+      display:                 table-footer-group;
+    }
+
+    .clean_start table tf {
+      display:                 table-cell;
+    }
+
+    .clean_start table tfoot {
+      min-width:               100%;
+      max-width:               100%;
+      width:                   100%;
+    }
+
+    .clean_start tfoot td,
+    .clean_start tfoot tf {
+
+      padding:                 var(--clean_start--table_tf--padding, 0 0 0 0);
+      margin:                  var(--clean_start--table_tf--margin, 0 0 0 0);
+
+      text-align:              var(--clean_start--table_tf--text-align, left);
+      line-height:             var(--clean_start--table_tf--line-height, 1.2rem);
+      font-family:             var(--clean_start--table_tf--font-family, "Arial");
+      font-size:               var(--clean_start--table_tf--font-size, 0.9rem);
+      font-weight:             var(--clean_start--table_tf--font-weight, 600);
+
+      border:                  var(--clean_start--table_tf--border, 0.2px solid #ddd);
+      color:                   var(--clean_start--table_tf--color, black);
+      background:              var(--clean_start--table_tf--background, #fdfdfd);
+
+    }
+    /* @finish clean_start html tag table */
+
+
+
+    /* @start clean_start_tiny html tag fieldset */
+    .clean_start fieldset {
+      border:                  var(--clean_start--fieldset--border, 0.2px solid #999);
+      padding:                 var(--clean_start--fieldset--padding, 0 0 0 0);
+      margin:                  var(--clean_start--fieldset--margin, 0 0 0 0);
+    }
+
+
+
+    .clean_start fieldset legend {
+
+      line-height:             var(--clean_start--fieldset_legend--line-height, 1.2rem);
+      font-size:               var(--clean_start--fieldset_legend--font-size, 0.9rem);
+
+      border:                  var(--clean_start--fieldset_legend--border, 0.2px solid #ddd);
+
+      padding:                 var(--clean_start--fieldset_legend--padding, 0 0 0 0);
+      margin:                  var(--clean_start--fieldset_legend--margin, 0 0 0 0);
+
+      color:                   var(--clean_start--fieldset_legend--color, black);
+      background:              var(--clean_start--fieldset_legend--background, #fdfdfd);
+
+    }
+    /* @finish clean_start_tiny html tag fieldset */
+
+
+
+    /* @start clean_start_tiny html tag input */
+    .clean_start input {
+
+      font-family:             var(--clean_start--input--font-family, Arial);
+      line-height:             var(--clean_start--input--line-height, 1.2rem);
+      font-size:               var(--clean_start--input--font-size, 0.9rem);
+
+      padding:                 var(--clean_start--input--padding, 0);
+      margin:                  var(--clean_start--input--margin, 0);
+
+      min-width:               var(--clean_start--input--min-width, unset);
+      max-width:               var(--clean_start--input--max-width, 100%);
+      width:                   var(--clean_start--input--width, 10rem);
+
+      border:                  var(--clean_start--input--border, 0.2px solid #ddd);
+      outline:                 var(--clean_start--input--outline, unset);
+
+    }
+    /* @finish clean_start_tiny html tag input */
+
+
+
+    /* @start clean_start_tiny html tag textarea */
+    .clean_start textarea {
+
+      font-family:             var(--clean_start--textarea--font-family, Arial);
+      line-height:             var(--clean_start--textarea--line-height, 1.2rem);
+      font-size:               var(--clean_start--textarea--font-size, 0.9rem);
+
+      padding:                 var(--clean_start--textarea--padding, 0 0 0 0);
+      margin:                  var(--clean_start--textarea--margin, 0 0 0 0);
+
+      min-width:               var(--clean_start--textarea--min-width, unset);
+      max-width:               var(--clean_start--textarea--max-width, 100%);
+      width:                   var(--clean_start--textarea--width, 10rem);
+
+      border:                  var(--clean_start--textarea--border, 0.4px solid #ddd);
+      outline:                 var(--clean_start--textarea--outline, unset);
+
+    }
+    /* @finish clean_start_tiny html tag textarea */
+
+
+
+    /* @start clean_start_tiny html tag select */
+    .clean_start select,
+    .clean_start select * {
+      font-family:             var(--clean_start--select--font-family, Arial);
+    }
+
+    .clean_start select {
+      padding:                 var(--clean_start--select--padding, 0 0 0 0);
+      margin:                  var(--clean_start--select--margin, 0 0 0 0);
+
+      font-size:               var(--clean_start--select--font-size, 0.9rem);
+      line-height:             var(--clean_start--select--line-height, 1.2rem);
+
+      min-width:               var(--clean_start--select--min-width, unset);
+      max-width:               var(--clean_start--select--max-width, 100%);
+      width:                   var(--clean_start--select--width, 10rem);
+
+      background:              var(--clean_start--select--background, #fdfdfd);
+      border:                  var(--clean_start--select--border, 0.2px solid #ddd);
+    }
+
+    .clean_start select * {
+      font-size:               var(--clean_start--select_tags--font-size, 0.9rem);
+      line-height:             var(--clean_start--select_tags--line-height, 1.2rem);
+    }
+
+    .clean_start option {
+      padding:                 var(--clean_start--select_option--padding, 0 0 0 0);
+      margin:                  var(--clean_start--select_option--margin, 0 0 0 0);
+
+      min-width:               var(--clean_start--select_option--min-width, unset);
+      max-width:               var(--clean_start--select_option--max-width, 100%);
+      width:                   var(--clean_start--select_option--width, 10rem);
+
+      background:              var(--clean_start--select_option--background, #fdfdfd);
+    }
+    /* @finish clean_start_tiny html tag select */
+
+
+
+    /* @start clean_start_tiny html tag button */
+    .clean_start button {
+      font-family:             var(--clean_start--button--font-family, Arial);
+      line-height:             var(--clean_start--button--line-height, 1.2rem);
+      font-size:               var(--clean_start--button--font-size, 0.9rem);
+
+      padding:                 var(--clean_start--button--padding, 0);
+      margin:                  var(--clean_start--button--margin, 0);
+
+      min-width:               var(--clean_start--button--min-width, unset);
+      max-width:               var(--clean_start--button--max-width, 100%);
+      width:                   var(--clean_start--button--width, 10rem);
+
+      border:                  var(--clean_start--button--border, 0.4px solid #ddd);
+      outline:                 var(--clean_start--button--outline, unset);
+      background:              var(--clean_start--button--background, #fdfdfd);
+    }
+
+    .clean_start button:hover {
+      color:                   var(--clean_start--button_hover--color, lime);
+      text-decoration:         var(--clean_start--button_hover--text-decoration, underline);
+
+      border:                  var(--clean_start--button_hover--border, 1px solid lime);
+      border-radius:           var(--clean_start--button_hover--border-radius, 0);
+      background:              var(--clean_start--button_hover--background, #fdfdfd);
+    }
+    /* @finish clean_start_tiny html tag button */
+
+
+      /* @start clean_start base theme Label in ol||ul and other text blocks */
+    .clean_start * ol {
+      --clean_start--label--max-height:         var(--clean_start--ol_li_tags--line-height);
+      --clean_start--label--height:             var(--clean_start--ol_li_tags--line-height);
+    }
+
+    .clean_start * ul {
+      --clean_start--label--max-height:         var(--clean_start--ul_li_tags--line-height);
+      --clean_start--label--height:             var(--clean_start--ul_li_tags--line-height);
+    }
+
+    .clean_start * p {
+      --clean_start--label--max-height:         var(--clean_start--p_tags--line-height);
+      --clean_start--label--height:             var(--clean_start--p_tags--line-height);
+    }
+
+
+    .clean_start * ol,
+    .clean_start * ul,
+    .clean_start * p,
+    .clean_start * text-lines-block,
+    .clean_start * text-line {
+
+      --clean_start--label--display:            inline-block;
+
+
+      /** @var padding
+      * max-height, height = line-height of the main tag.
+      * line-height = font-size, the text aligns top vertically.
+      */
+      --clean_start--label--padding:            0.14rem 0.35rem 0 0.35rem;
+
+
+
+      /* margin: left and right allowed. */
+      --clean_start--label--margin:             0 0.24rem 0 0;
+
+      --clean_start--label--overflow-x:          hidden;
+      --clean_start--label--overflow-y:          hidden;
+
+    }
+
+
+
+    .clean_start * ol,
+    .clean_start * ul {
+
+      --clean_start--label--padding:            0.10rem 0.35rem 0 0.35rem;
+
+      --clean_start--label--font-size:          0.70rem;
+      --clean_start--label--line-height:        var(--clean_start--label--font-size);
+
+      --clean_start--label--border-radius:      0.5rem;
+
+    }
+
+    .clean_start * p {
+
+      --clean_start--label--padding:            0.10rem 0.35rem 0 0.35rem;
+
+      --clean_start--label--font-size:          0.70rem;
+      --clean_start--label--line-height:        var(--clean_start--label--font-size);
+
+      --clean_start--label--border-radius:      0.5rem;
+
+    }
+
+
+
+    .clean_start * ol {
+      --clean_start--label--color:              #a0c0fa;
+      --clean_start--label--background-color:   navy;
+      --clean_start--label--border:             0.4px solid #5599fa;
+    }
+
+    .clean_start * ul {
+      --clean_start--label--color:              lime;
+      --clean_start--label--background-color:   green;
+      --clean_start--label--border:             0.4px solid lime;
+    }
+
+    .clean_start * p {
+      --clean_start--label--color:              #f2faf2;
+      --clean_start--label--background-color:   green;
+      --clean_start--label--border:             0.4px solid lime;
+    }
+    /* @finish clean_start base theme Label in ol||ul and other text blocks */
+
+
+    /* @start clean_start Label in ol||ul and other text blocks */
+    .clean_start ol li label,
+    .clean_start ul li label,
+    .clean_start text-lines-block label,
+    .clean_start p label {
+      font-size:               var(--clean_start--label--font-size, 0.72rem);
+      line-height:             var(--clean_start--label--font-size, 0.72rem);
+
+      padding:                 var(--clean_start--label--padding, 0.12rem 0.4rem 0.12rem 0.4rem);
+      margin:                  var(--clean_start--label--margin, 0 0.24rem 0 0);
+
+      color:                   var(--clean_start--label--color, darkgreen);
+      background-color:        var(--clean_start--label--background-color, #eafdfa);
+
+      border:                  var(--clean_start--label--border, 1px solid lime);
+      border-radius:           var(--clean_start--label--border-radius, 0.4rem);
+
+      overflow-x:               var(--clean_start--label--overflow-x, hidden);
+      overflow-y:               var(--clean_start--label--overflow-y, hidden);
+    }
+    /* @finish clean_start Label in ol||ul and other text blocks */
+
+
+
+    /* @start clean_start_tiny sites_tool having scrollbars */
+    .clean_start .scrolls {
+      height:                  var(--clean_start--scrolls--height, 10rem);
+
+      min-width:               unset;
+      max-width:               100%;
+      width:                   var(--clean_start--scrolls--width, 30rem);
+
+      padding:                 var(--clean_start--scrolls--padding, 1rem 1rem 1rem 1rem);
+      border:                  var(--clean_start--scrolls--border, 1px solid green);
+      background-color:        #fdfdfd;
+
+      overflow-x:               scroll;
+      overflow-y:               scroll;
+    }
+
+    .clean_start .scrolls block,
+    .clean_start .scrolls text-lines-block {
+      height:                  auto;
+
+      min-width:               unset;
+      max-width:               unset;
+      width:                   var(--clean_start--scrolls_block--width, 50rem);
+
+      overflow-x:               hidden;
+      overflow-y:               visible;
+    }
+    /* @finish clean_start_tiny sites_tool having scrollbars */
+
+  </style>
+
+
+
+
+  <!-- CleanStart_Tiny Overrides -->
+  <style name="overrides">
+
+    .jaisocx.clean_start table {
+      --clean_start--table_caption--font-family:    var(--clean_start--sans--font-family);
+      --clean_start--table_th--font-family:         var(--clean_start--monospace--font-family);
+      --clean_start--table_td--font-family:         var(--clean_start--sans--font-family);
+      --clean_start--table_td_tags--font-family:    var(--clean_start--sans--font-family);
+      --clean_start--table_tf--font-family:         var(--clean_start--monospace--font-family);
+    }
+
+
+
+    .jaisocx.clean_start block ol,
+    .jaisocx.clean_start block ul {
+      --clean_start--ol_li_c--font-family:          var(--clean_start--sans--font-family);
+      --clean_start--ul_li_c--font-family:          var(--clean_start--sans--font-family);
+
+      --clean_start--ul_li--font-family:            var(--clean_start--sans--font-family);
+      --clean_start--ul_li_tags--font-family:       var(--clean_start--sans--font-family);
+      --clean_start--li_ul_li--font-family:         var(--clean_start--sans--font-family);
+    }
+
+
+
+    .jaisocx.clean_start {
+
+      --clean_start--input--padding: 0.25rem 1rem 0.25rem 1rem;
+      --clean_start--select--padding: 0.25rem 1rem 0.25rem 1rem;
+      --clean_start--textarea--padding: 0.25rem 1rem 0.25rem 1rem;
+
+
+      --clean_start--site--padding: 1rem 3rem 10rem 3rem;
+      --clean_start--site--width: 70%;
+
+      --clean_start--h1--margin: 2rem 0 0.3rem 0;
+      --clean_start--h2--margin: 2rem 0 0.3rem 0;
+      --clean_start--h3--margin: 1.6rem 0 0.3rem 0;
+      --clean_start--h4--margin: 1rem 0 0.3rem 0;
+      --clean_start--h--margin:  1rem 0 0.3rem 0;
+
+      --clean_start--p_first--margin: 0 0 0 0;
+      --clean_start--p--margin: 1rem 0 0 0;
+
 
 
       /* label */
-      --clean_start--label--display:           block;
+      --clean_start--label--display:           inline-block;
 
       --clean_start--label--font-size:         0.79rem;
       --clean_start--label--line-height:       var(--clean_start--label--font-size);
@@ -852,341 +1861,233 @@
       --clean_start--label--overflow-y:        hidden;
 
 
-      /* pre */
-      --clean_start--pre--font-family:    var(--clean_start--monospace--font-family);
-      --clean_start--pre--font-size:      0.9rem;
-      --clean_start--pre--line-height:    1.2rem;
+
+      --clean_start--fieldset--padding: 1rem 1rem 1rem 1rem;
+      --clean_start--fieldset--border: 0.2px solid #555;
+      --clean_start--fieldset_legend--padding: 0.14rem 1rem 0.14rem 1rem;
+      --clean_start--fieldset_legend--margin: 0 0 0 0;
+      --clean_start--fieldset_legend--border: 1px solid lime;
+      --clean_start--fieldset_legend--color: #fdfdfd;
+      --clean_start--fieldset_legend--font-size: 0.7rem;
+      --clean_start--fieldset_legend--line-height: 0.7rem;
+      --clean_start--fieldset_legend--background: green;
 
 
-      /* site */
-      --clean_start--site--padding:              1.4rem 1.9rem 12rem 1.9rem;
-      --clean_start--site--width:                72%;
+      --clean_start--ol_li_c--font-size: 0.9rem;
 
-      --clean_start--site--background:           #fdfdfd;
-      --clean_start--body_tag--background:       #eefefa;
+      --clean_start--ol_li--padding: 0 0 0 0.7rem;
+      --clean_start--li_ol_li--padding: 0 0 0 0.7rem;
+      --clean_start--ol--margin: 0 0 0 0;
+      --clean_start--li_ol--margin: 0 0 0 1rem;
 
 
-      /* table */
+      --clean_start--ul_li_c--content: '🟢';
+      --clean_start--ul_li_c--font-size: 0.25rem;
+
+      --clean_start--ul_li--padding: 0 0 0 0.7rem;
+      --clean_start--li_ul_li--padding: 0 0 0 0.7rem;
+      --clean_start--ul--margin: 0 0 0 0;
+      --clean_start--li_ul--margin: 0 0 0 1rem;
+
+
+      --clean_start--dl_dt_dd_c--content: '🟠';
+      --clean_start--dl_dt_dd_c--font-size: 0.25rem;
+
+      --clean_start--dl--padding:  0 0 0 0.4rem;
+
+      --clean_start--dl_dt_dd--padding:  0 0 0 0.73rem;
+      --clean_start--dl_dt_dd--margin:  0 0 0 0.9rem;
+      --clean_start--dl_dt_dd--display:  block;
+
+
+
+      --clean_start--table_caption--padding:  0.9rem 0 0.55rem 0;
+      --clean_start--table_caption--color:  #3ac020;
+      --clean_start--table_caption--line-height:  0.79rem;
+      --clean_start--table_caption--font-family:  var(--clean_start--sans--font-family);
+      --clean_start--table_caption--font-size:  0.79rem;
+
+      --clean_start--table_th--font-family:  var(--clean_start--sans--font-family);
+      --clean_start--table_td--font-family:  var(--clean_start--sans--font-family);
+      --clean_start--table_td_tags--font-family:  var(--clean_start--sans--font-family);
+      --clean_start--table_tf--font-family:  var(--clean_start--sans--font-family);
+
+      --clean_start--table_th--padding:  0.25rem 1rem 0.25rem 1rem;
+      --clean_start--table_td--padding:  0.25rem 1rem 0.25rem 1rem;
+      --clean_start--table_tf--padding:  0.25rem 1rem 0.25rem 1rem;
+
+      --clean_start--table--border:  1px solid lime;
+
+      --clean_start--table_th--text-align: center;
+      --clean_start--table_th--font-size:  0.8rem;
+      --clean_start--table_th--color:            #3ac020;
+      --clean_start--table_caption--background:  #fefffd;
+      --clean_start--table_th--background:       #fefffd;
+      --clean_start--table_td--background:       #f9fdf2;
+
+      --clean_start--table_tf--background:       #eefdc9;
+
+    }
+
+
+
+    .jaisocx.clean_start * table.sites_tools.tb_green_a {
+
       --clean_start--table--border:                     0.5px solid green;
 
-      --clean_start--table_caption--text-align:         left;
+      --clean_start--table_caption--text-align:         right;
       --clean_start--table_caption--color:              #333;
-      --clean_start--table_caption--background-color:   #fdfdfd;
-      --clean_start--table_caption--border:             0.5px solid green;
+      --clean_start--table_caption--background:         #fefffe;
+      --clean_start--table_caption--border:             0 solid green;
 
       --clean_start--table_th--text-align:              center;
+      --clean_start--table_th--border:                  0.2px solid lime;
       --clean_start--table_th--color:                   black;
-      --clean_start--table_th--background-color:        #eefedd;
-
-      --clean_start--table_td--color:                   green;
-      --clean_start--table_td--background-color:        #fdfdfd;
+      --clean_start--table_th--background:              #eefedd;
 
       --clean_start--table_td_odd--color:               #553322;
-      --clean_start--table_td_odd--background-color:    #fafaf2;
+      --clean_start--table_td_odd--background:          #fdfdfa;
 
       --clean_start--table_td_even--color:              darkgreen;
-      --clean_start--table_td_even--background-color:   #f2faf2;
+      --clean_start--table_td_even--background:         #fafdf2;
 
-      --clean_start--table_tfoot--color:                black;
-      --clean_start--table_tfoot--background-color:     #fdfdfd;
+      --clean_start--table_tf--color:                   black;
+      --clean_start--table_tf--background:              #fdfdfd;
 
-
-      /* scroll */
-      --clean_start--scrollbar-thumb--background-color: lime;
-      --clean_start--scrollbar-track--background-color: #fafefa;
-      --clean_start--scrollbar--size:                   0.3rem;
-
-      /*
-      scrollbar-width: auto;
-      scrollbar-width: thin;
-      scrollbar-width: none;
-      */
-      --clean_start--scrollbar--width: thin;
     }
 
 
-    /* ul inline */
-    .clean_start ul.inline {
-      --clean_start--ul_li_i_c--content: '🔵';
 
-      --clean_start--ul_li_i_c--top:     0;
-      --clean_start--ul_li_i_c--left:   -0.5rem;
+    .jaisocx.clean_start * table.sites_tools.tb_green_b {
 
-      --clean_start--ul--margin:         0.3rem 0 0.4rem 0.5rem;
-      --clean_start--i_ul--margin:       0 0 0 0;
+      --clean_start--table--border:                     0.5px solid green;
 
-      --clean_start--ul_li_i--padding:     0 0.44rem 0 0.44rem;
-      --clean_start--i_ul_li_i--padding:   0 0 0 0;
+      --clean_start--table_caption--text-align:         center;
+      --clean_start--table_caption--color:              green;
+      --clean_start--table_caption--background:         #fdfdfd;
+      --clean_start--table_caption--border:             0 solid green;
 
-      --clean_start--ul_li_i_c--font-size:    0.4rem;
-      --clean_start--ul_li_i_c--line-height:  var(--clean_start--ul_li_i--line-height);
+      --clean_start--table_th--text-align:              center;
+      --clean_start--table_th--border:                  0.2px solid lime;
+      --clean_start--table_th--color:                   #f2f4e0;
+      --clean_start--table_th--background:              green;
 
-      --clean_start--ul_li_i_c--color: #33ab55;
+      --clean_start--table_td--color:                   green;
+      --clean_start--table_td--background:              #fdfdfd;
+
+      --clean_start--table_td_odd--color:               #553322;
+      --clean_start--table_td_odd--background:          #fafaf2;
+
+      --clean_start--table_td_even--color:              darkgreen;
+      --clean_start--table_td_even--background:         #f2faf2;
+
+      --clean_start--table_tf--color:                   black;
+      --clean_start--table_tf--background:              #fdfdfd;
+
     }
 
 
-    /* ul inline slash */
-    .clean_start ul.inline.slash {
-      --clean_start--ul_li_i_c--content: '|';
 
-      --clean_start--ul_li_i_c--top:   0;
-      --clean_start--ul_li_i_c--left: -0.5rem;
+    .jaisocx.clean_start ol.inline {
+      --clean_start--ol_li_c--color: #5599fa;
+      --clean_start--ol_li--padding: 0 0.33rem 0 0.7rem;
+    }
 
-      --clean_start--ul--margin:      0.3rem 0 0.4rem 0.5rem;
-      --clean_start--i_ul--margin:    0 0 0 0;
-
-      --clean_start--ul_li_i--padding:     0 0.44rem 0 0.44rem;
-      --clean_start--i_ul_li_i--padding:   0 0 0 0;
-
-      --clean_start--ul_li_i_c--font-size:    var(--clean_start--ul_li_i--font-size);
-      --clean_start--ul_li_i_c--line-height:  var(--clean_start--ul_li_i--line-height);
-
-      --clean_start--ul_li_i_c--color:    #33ab55;
+    .jaisocx.clean_start ul.inline.slash {
+      --clean_start--ul_li_c--content: '|';
+      --clean_start--ul_li_c--font-size: 0.79rem;
+      --clean_start--ul_li_c--color: black;
     }
 
 
-    /* ul tag_border */
-    .clean_start ul.tag_border {
-      --clean_start--ul_li_i_c--content: '';
-      --clean_start--ul_li_i_o--tag_border--content: '';
 
-      --clean_start--ul_li_i_o--tag_border--display: block;
+    .jaisocx.clean_start ul.tag_border {
 
-      --clean_start--ul_li_i_o--tag_border--top:     0.44rem;
-      --clean_start--ul_li_i_o--tag_border--left:   -0.7rem;
+      --clean_start--ul_li_c--content:        '';
 
-      --clean_start--ul--margin:        0.3rem 0 0.4rem 0.7rem;
-      --clean_start--i_ul--margin:      0.3rem 0 0.4rem 3.0rem;
+      --clean_start--ul_li_c--top:            0.43rem;
+      --clean_start--ul_li_c--left:           0;
 
-      --clean_start--ul_li_i--padding:      0 0 0 0.23rem;
-      --clean_start--i_ul_li_i--padding:    0 0 0 0.2rem;
+      --clean_start--ul_li_c--line-height:    0;
+      --clean_start--ul_li_c--font-size:      0;
 
+      --clean_start--ul_li_c--border:         0.5px solid green;
 
-      --clean_start--ul_li_i_o--tag_border--font-size:    0;
-      --clean_start--ul_li_i_o--tag_border--line-height:  0;
+      --clean_start--ul_li_c--max-height:     0.24rem;
+      --clean_start--ul_li_c--height:         0.24rem;
+      --clean_start--ul_li_c--max-width:      0.24rem;
+      --clean_start--ul_li_c--width:          0.24rem;
 
-      --clean_start--ul_li_i_o--tag_border--border:   0px solid green;
-      --clean_start--ul_li_i_o--tag_border--size:           0.4rem;
-      --clean_start--ul_li_i_o--tag_border--border-radius:  0;
-      --clean_start--ul_li_i_o--tag_border--background:   green; /* #eafdf2; */
+      --clean_start--ul_li_c--border-radius:  0.2rem;
+      --clean_start--ul_li_c--background:     lime;
+
     }
 
-
-    /* ul inline tag_border */
-    .clean_start ul.inline.tag_border {
-
-      --clean_start--ul_li_i_c--content: '';
-      --clean_start--ul_li_i_o--tag_border--content: '';
-
-      --clean_start--ul_li_i_o--tag_border--display: block;
-
-      --clean_start--ul_li_i_o--tag_border--top:   0.385rem;
-      --clean_start--ul_li_i_o--tag_border--left: -0.7rem;
-
-      --clean_start--ul--margin:      0.3rem 0 0.4rem 0.7rem;
-      --clean_start--i_ul--margin:    0 0 0 0;
-
-      --clean_start--ul_li_i--padding:        0 1.9rem 0 0.23rem;
-      --clean_start--i_ul_li_i--padding:      0 0 0 0;
-
-
-      --clean_start--ul_li_i_o--tag_border--font-size:     0;
-      --clean_start--ul_li_i_o--tag_border--line-height:   0;
-
-      --clean_start--ul_li_i_o--tag_border--border:         1px solid green;
-      --clean_start--ul_li_i_o--tag_border--size:           0.4rem;
-      --clean_start--ul_li_i_o--tag_border--border-radius:  0.2rem;
-      --clean_start--ul_li_i_o--tag_border--background:     #eafdf2;
-
-
-      --clean_start--ul_li_i_c--top:           var(--clean_start--ul_li_i_o--tag_border--top);
-      --clean_start--ul_li_i_c--left:          var(--clean_start--ul_li_i_o--tag_border--left);
-
-      --clean_start--ul_li_i_c--font-size:     0;
-      --clean_start--ul_li_i_c--line-height:   0;
-
-      --clean_start--ul_li_i_c--color:         unset;
+    .jaisocx.clean_start * ol {
+      --clean_start--label--font-size: 0.70rem;
+      --clean_start--label--padding: 0.10rem 0.35rem 0 0.35rem;
+      --clean_start--label--color: #70e9fa;
     }
 
-
-    .clean_start li i label,
-    .clean_start p label,
-    .clean_start layout-block p label,
-    .clean_start text-block p label,
-    .clean_start layout-block text-block label,
-    .clean_start layout-block text-line label {
-      --clean_start--label--display:            inline-block;
-
-      --clean_start--label--font-size:          0.72rem;
-      --clean_start--label--line-height:        var(--clean_start--label--font-size);
-
-      --clean_start--label--padding:            0.14rem 0.45rem 0.14rem 0.45rem;
-
-      /* margin: left and right allowed. in styles hardcoded margin-bottom: -2px; */
-      --clean_start--label--margin:             0 0.24rem -2px 0;
-
-      --clean_start--label--color:              green;
-      --clean_start--label--background-color:   #eefef2;
-
-      --clean_start--label--border:             1px solid lime;
-      --clean_start--label--border-radius:      0.5rem;
-
-      --clean_start--label--overflow-x:   hidden;
-      --clean_start--label--overflow-y:   hidden;
+    .jaisocx.clean_start * ul {
+      --clean_start--label--font-size: 0.72rem;
+      --clean_start--label--padding: 0.20rem 0.35rem 0 0.35rem;
     }
+
+      /* @start clean_start base theme scrolls */
+    .jaisocx.clean_start {
+
+      --clean_start--scrolls--height:         10rem;
+      --clean_start--scrolls--width:          25rem;
+      --clean_start--scrolls--padding:        1.4rem 4rem 3rem 2rem;
+      --clean_start--scrolls--border:         1px solid green;
+      --clean_start--scrolls_block--width:    30rem;
+
+    }
+      /* @finish clean_start base theme scrolls */
+
 
   </style>
 
 
-    <style id="scrolls" name="clean_start_preview_page">
-
-    .clean_start .fixed_height_n_scrollbar {
-      height: 10rem;
-
-      min-width: unset;
-      max-width: 100%;
-      width: 30rem;
-
-      padding: 1rem 1rem 1rem 1rem;
-      border: 1px solid lime;
-      background-color: #fdfdfd;
-
-      overflow-x: scroll;
-      overflow-y: scroll;
-    }
-
-    .clean_start .fixed_height_n_scrollbar layout-block {
-      height: auto;
-
-      min-width:  45rem;
-      max-width:  45rem;
-      width:  45rem;
-
-      overflow-x: hidden;
-      overflow-y: visible;
-    }
-
-  </style>
 
 
-    <style id="mobile_friendly" name="clean_start_preview_page_responsive">
 
-    /* portrait, xxxs til mobile xxs */
-    /* filters by widths */
+  <!-- CleanStart_Tiny Mobile friendly -->
+  <style name="mobile_friendly">
+
     @media only screen and (min-width: 5px) and (max-width: 280px) and (min-height: 5px) and (max-height: 1240px) and (orientation: portrait) {
       .jaisocx.clean_start {
-
-        /* @start_block: @jaisocx/responsive_sizes helper library variables */
-        --theme_name: clean_start_tiny__theme_base;
-        --theme_name__clean_start_tiny: theme_base;
-
-        --responsive_size: responsive_size__html__xxxs_til_d05_very_small_xxs_portrait;
-
-        --responsive_size__min-width: 5px;
-        --responsive_size__max-width: 280px;
-
-        --responsive_size__min-height: 5px;
-        --responsive_size__max-height: 1240px;
-        /* @finish_block: @jaisocx/responsive_sizes helper library variables */
-
-
-        /* styles */
-        --clean_start--site--min-width: 100%;
-        --clean_start--site--max-width: 100%;
-        --clean_start--site--width: 100%;
-
         --clean_start--site--padding: 1rem 0.3rem 2rem 0.3rem;
+        --clean_start--site--width: 100%;
       }
     }
 
-
-    /* portrait, mobile xs til mobile md */
-    /* filters both by by widths and heights */
     @media only screen and (min-width: 281px) and (max-width: 480px) and (min-height: 431px) and (max-height: 1240px) and (orientation: portrait) {
       .jaisocx.clean_start {
-
-        /* @start_block: @jaisocx/responsive_sizes helper library variables */
-        --theme_name: clean_start_tiny__theme_base;
-        --theme_name__clean_start_tiny: theme_base;
-
-        --responsive_size: responsive_size__html__d05_e08_very_small_xxs__til__midsize_md_portrait;
-
-        --responsive_size__min-width: 281px;
-        --responsive_size__max-width: 480px;
-
-        --responsive_size__min-height: 431px;
-        --responsive_size__max-height: 1240px;
-        /* @finish_block: @jaisocx/responsive_sizes helper library variables */
-
-
-        --clean_start--site--min-width: 92%;
-        --clean_start--site--max-width: 100%;
-        --clean_start--site--width: 92%;
-
         --clean_start--site--padding: 1.2rem 0.3rem 5rem 0.3rem;
+        --clean_start--site--width: 92%;
       }
     }
 
-
-    /* landscape, xxxs height til mobile md */
-    /* filters both by by widths and heights */
     @media only screen and (min-width: 281px) and (max-width: 1024px) and (min-height: 5px) and (max-height: 480px) and (orientation: landscape) {
       .jaisocx.clean_start {
-
-        /* @start_block: @jaisocx/responsive_sizes helper library variables */
-        --theme_name: clean_start_tiny__theme_base;
-        --theme_name__clean_start_tiny: theme_base;
-
-        --responsive_size: responsive_size__html__d05_e08_very_small_xxs__til__midsize_md_landscape;
-
-        --responsive_size__min-width: 281px;
-        --responsive_size__max-width: 1024px;
-
-        --responsive_size__min-height: 5px;
-        --responsive_size__max-height: 480px;
-        /* @finish_block: @jaisocx/responsive_sizes helper library variables */
-
-
-        --clean_start--site--min-width: 95%;
-        --clean_start--site--max-width: 100%;
-        --clean_start--site--width: 95%;
-
         --clean_start--site--padding: 0.3rem 0.3rem 1rem 0.3rem;
+        --clean_start--site--width: 95%;
       }
     }
 
   </style>
-
-
-    <style name="theme_fonts_sizes_correction">
-
-    .clean_start.theme_fonts_a ul.tag_border {
-      --clean_start--ul_li_i_o--tag_border--top:     0.583rem;
-    }
-
-    .clean_start.theme_fonts_a ul.tag_border.inline {
-      --clean_start--ul_li_i_o--tag_border--top:     0.53rem;
-    }
-
-
-    .clean_start.theme_fonts_c ul.tag_border {
-      --clean_start--ul_li_i_o--tag_border--top:     0.44rem;
-    }
-
-    .clean_start.theme_fonts_c ul.tag_border.inline {
-      --clean_start--ul_li_i_o--tag_border--top:     0.385rem;
-    }
-
-  </style>
-
 
 </head>
 <body>
 <main>
 
-  <h1> all features Jaisocx clean_start_tiny ® </h1>
+  <h1> clean start ® </h1>
 
-  <layout-block>
+
+
+  <block class="contents">
 
     <label> features </label>
 
@@ -1252,459 +2153,133 @@
       </li>
     </ul>
 
-  </layout-block>
+  </block>
+
+
 
 
 
   <h2> text blocks </h2>
 
-  <h3> text font sans-serif </h3>
+  <block class="texts">
 
-  <layout-block class="font_sans">
+    <h3> text font sans-serif </h3>
 
-    <p>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <label> label in sentence line 1. </label>
-      <text> sentence line 1. </text>
-      <text>
-        <label> label in text in sentence line 1. </label>
-      </text>
-      <a href="javascript: void(0);"> link to a site </a>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-    </p>
+    <block class="font_override font_sans">
 
-    <p> sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. </p>
+      <p>
+        <text> Sentence paragraph 1. </text>
+        <marker> marker </marker>
+        <text> Sentence paragraph 1. </text>
+        <label> Label </label>
+        <text> Sentence paragraph 1. </text>
+        <a href="javascript: void(0);"> link to a site </a>
+        <text> Sentence paragraph 1. Sentence paragraph 1. Sentence paragraph 1. </text>
+        <text> Sentence paragraph 1. Sentence paragraph 1. Sentence paragraph 1. Sentence paragraph 1. Sentence paragraph 1. Sentence paragraph 1. </text>
+      </p>
 
-    <p>sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3.</p>
+      <p>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <label> label in sentence line 1. </label>
+        <text> sentence line 1. </text>
+        <text>
+          <label> label in text in sentence line 1. </label>
+        </text>
+        <a href="javascript: void(0);"> link to a site </a>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <label> label in sentence line 1. </label>
+        <text> sentence line 1. </text>
+        <text>
+          <label> label in text in sentence line 1. </label>
+        </text>
+        <a href="javascript: void(0);"> link to a site </a>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <label> label in sentence line 1. </label>
+        <text> sentence line 1. </text>
+        <text>
+          <label> label in text in sentence line 1. </label>
+        </text>
+        <a href="javascript: void(0);"> link to a site </a>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+      </p>
 
-  </layout-block>
+      <p> sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. </p>
+
+      <p>sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3.</p>
+
+    </block>
 
 
 
-  <h3> text font serif </h3>
-
-  <layout-block class="font_serif">
-    <p>sentence line 1. sentence line 1. sentence line 1. sentence line 1. sentence line 1.</p>
-  </layout-block>
 
 
+    <h3> text font serif </h3>
 
-  <h3> text keeps lines and whitespaces </h3>
+    <block class="font_override font_serif">
+      <p>sentence line 1. sentence line 1. sentence line 1. sentence line 1. sentence line 1.</p>
+    </block>
 
-  <h4> font handwrite </h4>
 
-  <layout-block class="preview tag_pre">
-      <pre class="font_handwrite">
-🗒 💲 🍰 Shopping
+
+
+
+    <h3> text keeps lines and whitespaces </h3>
+
+    <h4> font handwrite </h4>
+
+    <block>
+      <pre class="font_override font_handwrite">
+🗒 💲 🍰 Shop
     🍎 Apple
     🍌 Banana
     🍊 Orange
       </pre>
-  </layout-block>
+    </block>
 
 
 
-  <h4> font like in programming </h4>
 
-  <layout-block class="preview tag_pre">
-      <pre class="font_monospace">
+
+    <h4> font like in programming </h4>
+
+    <block>
+      <pre class="font_override font_monospace">
 let func = ( a, b ) => {
   let r = ( a + b );
   return r;
 };
       </pre>
-  </layout-block>
+    </block>
 
+  </block>
 
 
-  <h2> table </h2>
 
-  <layout-block name="tb">
 
-    <table>
-      <!-- Table Caption -->
-      <caption> Table Caption </caption>
 
-      <!-- Define column styles -->
-      <colgroup>
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-      </colgroup>
+  <h2> Scrollbars </h2>
 
-      <!-- Table Header -->
-      <thead>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-      </tr>
-      </thead>
+  <block class="scrollbars">
 
-      <!-- Table Body -->
-      <tbody>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      </tbody>
-
-      <!-- Table Footer -->
-      <tfoot>
-      <tr>
-        <td colspan="3">Sum</td>
-        <td> $15.60 </td>
-      </tr>
-      </tfoot>
-    </table>
-
-  </layout-block>
-
-
-
-  <h2> lists </h2>
-
-  <layout-block name="layout2_c_ul_li">
-
-    <h3> list </h3>
-
-    <layout-block>
-
-      <label> 🗒 💲 🍰 Shopping </label>
-
-      <ul class="shopping">
-        <li><i><text>  🍎  Apple </text></i></li>
-        <li><i><text>  🍌  Banana </text></i></li>
-        <li><i><text>  🍊  Orange </text></i></li>
-      </ul>
-
-    </layout-block>
-
-
-
-    <h3> navigation ul a </h3>
-
-    <layout-block>
-
-      <label> &lt;ul&gt; &lt;li&gt; &lt;i&gt; &lt;a&gt; </label>
-
-      <ul>
-        <li>
-          <i>
-            <a href="javascript: void(0);">link 1</a>
-          </i>
-        </li>
-        <li>
-          <i>
-            <a href="javascript: void(0);">link 2</a>
-          </i>
-        </li>
-        <li>
-          <i>
-            <a href="javascript: void(0);">link 3</a>
-          </i>
-        </li>
-      </ul>
-
-    </layout-block>
-
-
-
-    <h3> navigation links ul.tag_border a </h3>
-
-    <layout-block>
-
-      <label> &lt;ul class="tag_border"&gt; &lt;li&gt; &lt;i&gt; &lt;a&gt; </label>
-
-      <ul class="tag_border">
-        <li>
-          <i>
-            <a href="javascript: void(0);">link 1</a>
-          </i>
-        </li>
-        <li>
-          <i>
-            <a href="javascript: void(0);">link 2</a>
-          </i>
-        </li>
-        <li>
-          <i>
-            <a href="javascript: void(0);">link 3</a>
-          </i>
-        </li>
-      </ul>
-
-    </layout-block>
-
-
-
-    <h3> inline navigation ul.inline a </h3>
-
-    <layout-block>
-
-      <label> &lt;ul class="inline"&gt; &lt;li&gt; &lt;i&gt; &lt;a&gt; </label>
-
-      <ul class="inline">
-        <li>
-          <i>
-            <a href="javascript: void(0);">link 1</a>
-          </i>
-        </li>
-        <li>
-          <i>
-            <a href="javascript: void(0);">link 2</a>
-          </i>
-        </li>
-        <li>
-          <i>
-            <a href="javascript: void(0);">link 3</a>
-          </i>
-        </li>
-      </ul>
-
-    </layout-block>
-
-
-
-    <h3> inline navigation ul.inline.slash a </h3>
-
-    <layout-block>
-
-      <label> &lt;ul class="inline slash"&gt; &lt;li&gt; &lt;i&gt; &lt;a&gt; </label>
-
-      <ul class="inline slash">
-        <li>
-          <i>
-            <a href="javascript: void(0);">link 1</a>
-          </i>
-        </li>
-        <li>
-          <i>
-            <a href="javascript: void(0);">link 2</a>
-          </i>
-        </li>
-        <li>
-          <i>
-            <a href="javascript: void(0);">link 3</a>
-          </i>
-        </li>
-      </ul>
-
-    </layout-block>
-
-
-
-    <h3> inline navigation ul.inline.tag_border a </h3>
-
-    <layout-block>
-
-      <label> &lt;ul class="inline tag_border"&gt; &lt;li&gt; &lt;i&gt; &lt;a&gt; </label>
-
-      <ul class="tag_border inline">
-        <li>
-          <i>
-            <a href="javascript: void(0);">link 1</a>
-          </i>
-        </li>
-        <li>
-          <i>
-            <a href="javascript: void(0);">link 2</a>
-          </i>
-        </li>
-        <li>
-          <i>
-            <a href="javascript: void(0);">link 3</a>
-          </i>
-        </li>
-      </ul>
-
-    </layout-block>
-
-
-
-    <h3> navigation links ul a </h3>
-
-    <layout-block>
-
-      <label> &lt;ul&gt; &lt;li&gt; &lt;i&gt; &lt;a&gt; </label>
-
-      <ul>
-
-        <li>
-          <i>
-            <label> links 1 </label>
-            <ul>
-              <li><i>
-                <a href="javascript: void(0);"> link 1.1 </a>
-              </i></li>
-              <li><i>
-                <a href="javascript: void(0);"> link 1.2 </a>
-              </i></li>
-              <li><i>
-                <a href="javascript: void(0);"> link 1.3 </a>
-              </i></li>
-            </ul>
-          </i>
-        </li>
-
-        <li>
-          <i>
-            <label> links 2 </label>
-            <ul>
-              <li>
-                <i>
-                  <a href="javascript: void(0);"> link 2.1 </a>
-                </i>
-              </li>
-
-              <li>
-                <i>
-                  <label> links 2.2 </label>
-                  <ul>
-                    <li><i>
-                      <text> text a 2.2.1 </text>
-                      <text> text b 2.2.1 </text>
-                      <label> label 2.2.1 </label>
-                      <a href="javascript: void(0);"> link 2.2.1 </a>
-                      <text> text c 2.2.1 </text>
-                    </i></li>
-                    <li><i>
-                      <a href="javascript: void(0);"> link 2.2.2 </a>
-                    </i></li>
-                    <li><i>
-                      <a href="javascript: void(0);"> link 2.2.3 </a>
-                    </i></li>
-                  </ul>
-                </i>
-              </li>
-
-              <li><i>
-                <a href="javascript: void(0);"> link 2.3 </a>
-              </i></li>
-            </ul>
-          </i>
-        </li>
-
-        <li>
-          <i>
-            <a href="javascript: void(0);"> link 3 </a>
-          </i>
-        </li>
-      </ul>
-
-    </layout-block>
-
-
-
-    <h3> navigation links ul.tag_border a </h3>
-
-    <layout-block>
-
-      <label> &lt;ul class="tag_border"&gt; &lt;li&gt; &lt;i&gt; &lt;a&gt; </label>
-
-      <ul class="tag_border">
-
-        <li>
-          <i>
-            <label> links 1 </label>
-            <ul>
-              <li><i>
-                <a href="javascript: void(0);"> link 1.1 </a>
-              </i></li>
-              <li><i>
-                <a href="javascript: void(0);"> link 1.2 </a>
-              </i></li>
-              <li><i>
-                <a href="javascript: void(0);"> link 1.3 </a>
-              </i></li>
-            </ul>
-          </i>
-        </li>
-
-        <li>
-          <i>
-            <label> links 2 </label>
-            <ul>
-              <li>
-                <i>
-                  <a href="javascript: void(0);"> link 2.1 </a>
-                </i>
-              </li>
-
-              <li>
-                <i>
-                  <label> links 2.2 </label>
-                  <ul>
-                    <li><i>
-                      <a href="javascript: void(0);"> link 2.2.1 </a>
-                    </i></li>
-                    <li><i>
-                      <a href="javascript: void(0);"> link 2.2.2 </a>
-                    </i></li>
-                    <li><i>
-                      <a href="javascript: void(0);"> link 2.2.3 </a>
-                    </i></li>
-                  </ul>
-                </i>
-              </li>
-
-              <li><i>
-                <a href="javascript: void(0);"> link 2.3 </a>
-              </i></li>
-            </ul>
-          </i>
-        </li>
-
-        <li>
-          <i>
-            <a href="javascript: void(0);"> link 3 </a>
-          </i>
-        </li>
-      </ul>
-
-    </layout-block>
-
-
-
-    <h2> Scrollbars </h2>
-
-    <layiut-block class="fixed_height_n_scrollbar">
-      <layout-block class="font_sans">
+    <block class="scrolls">
+      <block class="font_override font_sans">
         <p>
           <text> sentence line 1. </text>
           <text> sentence line 1. </text>
@@ -1716,12 +2291,786 @@ let func = ( a, b ) => {
         </p>
         <p>sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2.</p>
         <p>sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3.</p>
-      </layout-block>
-    </layiut-block>
+      </block>
+    </block>
+
+  </block>
 
 
-  </layout-block>
 
+
+
+  <h2> html forms </h2>
+
+  <block class="html_forms">
+
+
+    <h3> input </h3>
+
+    <block name="field">
+      <input value="text" />
+    </block>
+
+
+
+    <h3> textarea </h3>
+
+    <block name="field">
+      <textarea>text</textarea>
+    </block>
+
+
+
+    <h3> button </h3>
+
+    <block name="field">
+      <button>button</button>
+    </block>
+
+
+
+    <h3> Fieldset n Legend </h3>
+
+    <fieldset>
+      <legend> fieldset </legend>
+
+      <h3> input </h3>
+      <block name="field">
+        <input value="text" />
+      </block>
+
+      <h3> select </h3>
+      <block name="field">
+        <select>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </block>
+
+      <h3> textarea </h3>
+      <block name="field">
+        <textarea>text</textarea>
+      </block>
+
+      <h3> button </h3>
+      <block name="field">
+        <button>button</button>
+      </block>
+
+    </fieldset>
+
+
+  </block>
+
+
+
+
+
+  <h2> table </h2>
+
+  <block class="tables">
+
+    <block name="tb">
+
+      <table class="theme_fonts_c">
+        <!-- Table Caption -->
+        <caption>  🗒 💲 🍰 Shop  </caption>
+
+        <!-- Define column styles -->
+        <colgroup>
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+        </colgroup>
+
+        <!-- Table Header -->
+        <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        </tbody>
+
+        <!-- Table Footer -->
+        <tfoot>
+        <tr>
+          <td colspan="3">Sum</td>
+          <td> $31.20 </td>
+        </tr>
+        </tfoot>
+      </table>
+
+    </block>
+
+
+
+
+
+    <block name="tb" class="font_override font_sans">
+
+      <table class="sites_tools theme_fonts_b">
+        <!-- Table Caption -->
+        <caption>  🗒 💲 🍰 Shop  </caption>
+
+        <!-- Define column styles -->
+        <colgroup>
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+        </colgroup>
+
+        <!-- Table Header -->
+        <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        </tbody>
+
+        <!-- Table Footer -->
+        <tfoot>
+        <tr>
+          <td colspan="3">Sum</td>
+          <td> $31.20 </td>
+        </tr>
+        </tfoot>
+      </table>
+
+    </block>
+
+
+
+
+
+    <block name="tb" class="font_override font_sans">
+
+      <table class="sites_tools tb_green_a theme_fonts_c">
+        <!-- Table Caption -->
+        <caption>  🗒 💲 🍰 Shop  </caption>
+
+        <!-- Define column styles -->
+        <colgroup>
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+        </colgroup>
+
+        <!-- Table Header -->
+        <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        </tbody>
+
+        <!-- Table Footer -->
+        <tfoot>
+        <tr>
+          <td colspan="3">Sum</td>
+          <td> $31.20 </td>
+        </tr>
+        </tfoot>
+      </table>
+
+    </block>
+
+
+
+
+
+    <block name="tb" class="font_override font_monospace">
+
+      <table class="sites_tools tb_green_b theme_fonts_c">
+        <!-- Table Caption -->
+        <caption>  🗒 💲 🍰 Shop  </caption>
+
+        <!-- Define column styles -->
+        <colgroup>
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+        </colgroup>
+
+        <!-- Table Header -->
+        <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        </tbody>
+
+        <!-- Table Footer -->
+        <tfoot>
+        <tr>
+          <td colspan="3">Sum</td>
+          <td> $31.20 </td>
+        </tr>
+        </tfoot>
+      </table>
+
+    </block>
+
+  </block>
+
+
+
+
+
+
+  <h2> lists </h2>
+
+  <block class="lists">
+
+    <h3> texts ol li </h3>
+
+    <block class="theme_fonts_old_good_fonts">
+
+      <label> 🗒 💲 🍰 Shop </label>
+
+      <ol>
+        <li><text>  🍎  Apples </text></li>
+        <li><text>  🍌  Bananas </text></li>
+        <li><text>  🍊  Oranges </text></li>
+      </ol>
+
+    </block>
+
+
+
+
+
+    <h3> texts ul li </h3>
+
+    <block class="theme_fonts_a">
+
+      <label> 🗒 💲 🍰 Shop </label>
+
+      <ul>
+        <li><text>  🍎  Apples </text></li>
+        <li><text>  🍌  Bananas </text></li>
+        <li><text>  🍊  Oranges </text></li>
+      </ul>
+
+    </block>
+
+
+
+
+
+    <h3> texts dl dt dd </h3>
+
+    <block>
+
+      <label> 🗒 💲 🍰 Shop </label>
+
+      <dl>
+        <dt>  🍎  Apples </dt>
+        <dd>  text a </dd>
+        <dd>  text b </dd>
+        <dd>  text c </dd>
+      </dl>
+
+      <dl>
+        <dt>  🍌  Bananas </dt>
+        <dd>  text a </dd>
+        <dd>  text b </dd>
+        <dd>  text c </dd>
+      </dl>
+
+      <dl>
+        <dt>  🍊  Oranges </dt>
+        <dd>  text a </dd>
+        <dd>  text b </dd>
+        <dd>  text c </dd>
+      </dl>
+
+    </block>
+
+
+
+
+
+    <h3> inline slash ul li </h3>
+
+    <block class="theme_fonts_a">
+
+      <label> 🗒 💲 🍰 Shop </label>
+
+      <ul class="inline slash" style="display: inline-block;">
+        <li><text> Drinks </text></li>
+        <li><text> Salads </text></li>
+        <li><text> Cakes </text></li>
+      </ul>
+
+    </block>
+
+
+
+
+
+    <h3> inline numbered navigation links ol a </h3>
+
+    <block class="theme_fonts_a">
+
+      <label> &lt;ol&gt; &lt;li&gt; &lt;a&gt; </label>
+
+      <ol class="inline">
+        <li>
+          <label> links </label>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link a</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link b</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link c</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link d</a>
+        </li>
+      </ol>
+
+    </block>
+
+
+
+
+
+    <h3> inline navigation links ul a </h3>
+
+    <block class="theme_fonts_b">
+
+      <label> &lt;ul&gt; &lt;li&gt; &lt;a&gt; </label>
+
+      <ul class="inline">
+        <li>
+          <a href="javascript: void(0);">link a</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link b</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link c</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link d</a>
+        </li>
+      </ul>
+
+    </block>
+
+
+
+
+
+    <h3> inline navigation links ul a </h3>
+
+    <block class="theme_fonts_c">
+
+      <label> &lt;ul&gt; &lt;li&gt; &lt;a&gt; </label>
+
+      <ul class="inline slash">
+        <li>
+          <a href="javascript: void(0);">link a</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link b</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link c</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link d</a>
+        </li>
+      </ul>
+
+    </block>
+
+
+
+
+
+    <h3> numbered navigation links ol a </h3>
+
+    <block class="theme_fonts_c">
+
+      <label> &lt;ol&gt; &lt;li&gt; &lt;a&gt; </label>
+
+      <ol>
+        <li>
+          <a href="javascript: void(0);">link a</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link b</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link c</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link d</a>
+        </li>
+      </ol>
+
+    </block>
+
+
+
+
+
+    <h3> navigation links ul a </h3>
+
+    <block class="theme_fonts_old_good_fonts">
+
+      <label> &lt;ul&gt; &lt;li&gt; &lt;a&gt; </label>
+
+      <ul>
+        <li>
+          <a href="javascript: void(0);">link a</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link b</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link c</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link d</a>
+        </li>
+      </ul>
+
+    </block>
+
+
+
+
+
+    <h3> navigation links ul.tag_border li i a </h3>
+
+    <block class="theme_fonts_a">
+
+      <label> &lt;ul class="tag_border"&gt; &lt;li&gt; &lt;i&gt; &lt;a&gt; </label>
+
+      <ul class="tag_border">
+        <li>
+          <i><a href="javascript: void(0);"> link 1 </a></i>
+        </li>
+        <li>
+          <i><a href="javascript: void(0);"> link 2 </a></i>
+        </li>
+        <li>
+          <i><a href="javascript: void(0);"> link 3 </a></i>
+        </li>
+      </ul>
+
+    </block>
+
+
+
+
+
+    <h3> navigation links ol a </h3>
+
+    <block class="theme_fonts_b">
+
+      <label> &lt;ol&gt; &lt;li&gt; &lt;a&gt; </label>
+
+      <ol>
+
+        <li>
+          <label> links 1 </label>
+          <ol>
+            <li>
+              <a href="javascript: void(0);"> link 1.1 </a>
+            </li>
+            <li>
+              <a href="javascript: void(0);"> link 1.2 </a>
+            </li>
+            <li>
+              <a href="javascript: void(0);"> link 1.3 </a>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <label> links 2 </label>
+          <ol>
+            <li>
+              <a href="javascript: void(0);"> link 2.1 </a>
+            </li>
+
+            <li>
+              <label> links 2.2 </label>
+              <ol>
+                <li>
+                  <text> text a 2.2.1 </text>
+                  <text> text b 2.2.1 </text>
+                  <label> label 2.2.1 </label>
+                  <a href="javascript: void(0);"> link 2.2.1 </a>
+                  <text> text c 2.2.1 </text>
+                </li>
+                <li>
+                  <a href="javascript: void(0);"> link 2.2.2 </a>
+                </li>
+                <li>
+                  <a href="javascript: void(0);"> link 2.2.3 </a>
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              <a href="javascript: void(0);"> link 2.3 </a>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <a href="javascript: void(0);"> link 3 </a>
+        </li>
+      </ol>
+
+    </block>
+
+
+
+
+
+    <h3> navigation links ul a </h3>
+
+    <block class="theme_fonts_c">
+
+      <label> &lt;ul&gt; &lt;li&gt; &lt;i&gt; &lt;a&gt; </label>
+
+      <ul>
+
+        <li>
+          <label> links 1 </label>
+          <ul>
+            <li>
+              <a href="javascript: void(0);"> link 1.1 </a>
+            </li>
+            <li>
+              <a href="javascript: void(0);"> link 1.2 </a>
+            </li>
+            <li>
+              <a href="javascript: void(0);"> link 1.3 </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <label> links 2 </label>
+          <ul>
+            <li>
+              <a href="javascript: void(0);"> link 2.1 </a>
+            </li>
+
+            <li>
+              <label> links 2.2 </label>
+              <ul>
+                <li>
+                  <text> text a 2.2.1 </text>
+                  <text> text b 2.2.1 </text>
+                  <label> label 2.2.1 </label>
+                  <a href="javascript: void(0);"> link 2.2.1 </a>
+                  <text> text c 2.2.1 </text>
+                </li>
+                <li>
+                  <a href="javascript: void(0);"> link 2.2.2 </a>
+                </li>
+                <li>
+                  <a href="javascript: void(0);"> link 2.2.3 </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="javascript: void(0);"> link 2.3 </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="javascript: void(0);"> link 3 </a>
+        </li>
+      </ul>
+
+    </block>
+
+  </block>
 
 </main>
 </body>

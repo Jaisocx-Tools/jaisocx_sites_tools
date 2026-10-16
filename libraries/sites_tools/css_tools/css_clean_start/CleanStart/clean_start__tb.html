@@ -6,14 +6,14 @@
   <link
       rel="icon"
       type="image/x-icon"
-      href="004_sunflower.ico"
+      href="Icon_Jaisocx.ico"
   />
 
-  <title> Jaisocx clean_start_tiny </title>
+  <title> clean_start </title>
 
 
 
-  <base href="./MediaAndStyles/n_builds/clean_start__20261014/" />
+  <base href="./MediaAndStyles/n_builds/clean_start__20261016/" />
 
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -41,13 +41,51 @@
 
 
 
+  <!--# CleanStart_Tiny Sites tools ( ul_li label, .scrolls ) -->
+  <link
+      rel="stylesheet"
+      type="text/css"
+      charset="utf-8"
+      href="clean_start__sites_tools.css"
+  />
+
+
+
+
   <!-- CleanStart_Tiny Overrides -->
   <style name="overrides">
 
+    .jaisocx.clean_start table {
+      --clean_start--table_caption--font-family:    var(--clean_start--sans--font-family);
+      --clean_start--table_th--font-family:         var(--clean_start--monospace--font-family);
+      --clean_start--table_td--font-family:         var(--clean_start--sans--font-family);
+      --clean_start--table_td_tags--font-family:    var(--clean_start--sans--font-family);
+      --clean_start--table_tf--font-family:         var(--clean_start--monospace--font-family);
+    }
+
+
+
+    .jaisocx.clean_start block ol,
+    .jaisocx.clean_start block ul {
+      --clean_start--ol_li_c--font-family:          var(--clean_start--sans--font-family);
+      --clean_start--ul_li_c--font-family:          var(--clean_start--sans--font-family);
+
+      --clean_start--ul_li--font-family:            var(--clean_start--sans--font-family);
+      --clean_start--ul_li_tags--font-family:       var(--clean_start--sans--font-family);
+      --clean_start--li_ul_li--font-family:         var(--clean_start--sans--font-family);
+    }
+
+
+
     .jaisocx.clean_start {
 
+      --clean_start--input--padding: 0.25rem 1rem 0.25rem 1rem;
+      --clean_start--select--padding: 0.25rem 1rem 0.25rem 1rem;
+      --clean_start--textarea--padding: 0.25rem 1rem 0.25rem 1rem;
+
+
       --clean_start--site--padding: 1rem 3rem 10rem 3rem;
-      --clean_start--site--width: 55%;
+      --clean_start--site--width: 70%;
 
       --clean_start--h1--margin: 2rem 0 0.3rem 0;
       --clean_start--h2--margin: 2rem 0 0.3rem 0;
@@ -80,10 +118,55 @@
 
 
 
+      --clean_start--fieldset--padding: 1rem 1rem 1rem 1rem;
+      --clean_start--fieldset--border: 0.2px solid #555;
+      --clean_start--fieldset_legend--padding: 0.14rem 1rem 0.14rem 1rem;
+      --clean_start--fieldset_legend--margin: 0 0 0 0;
+      --clean_start--fieldset_legend--border: 1px solid lime;
+      --clean_start--fieldset_legend--color: #fdfdfd;
+      --clean_start--fieldset_legend--font-size: 0.7rem;
+      --clean_start--fieldset_legend--line-height: 0.7rem;
+      --clean_start--fieldset_legend--background: green;
+
+
+      --clean_start--ol_li_c--font-size: 0.9rem;
+
+      --clean_start--ol_li--padding: 0 0 0 0.7rem;
+      --clean_start--li_ol_li--padding: 0 0 0 0.7rem;
+      --clean_start--ol--margin: 0 0 0 0;
+      --clean_start--li_ol--margin: 0 0 0 1rem;
+
+
+      --clean_start--ul_li_c--content: '🟢';
+      --clean_start--ul_li_c--font-size: 0.25rem;
+
+      --clean_start--ul_li--padding: 0 0 0 0.7rem;
+      --clean_start--li_ul_li--padding: 0 0 0 0.7rem;
+      --clean_start--ul--margin: 0 0 0 0;
+      --clean_start--li_ul--margin: 0 0 0 1rem;
+
+
+      --clean_start--dl_dt_dd_c--content: '🟠';
+      --clean_start--dl_dt_dd_c--font-size: 0.25rem;
+
+      --clean_start--dl--padding:  0 0 0 0.4rem;
+
+      --clean_start--dl_dt_dd--padding:  0 0 0 0.73rem;
+      --clean_start--dl_dt_dd--margin:  0 0 0 0.9rem;
+      --clean_start--dl_dt_dd--display:  block;
+
+
+
       --clean_start--table_caption--padding:  0.9rem 0 0.55rem 0;
       --clean_start--table_caption--color:  #3ac020;
       --clean_start--table_caption--line-height:  0.79rem;
+      --clean_start--table_caption--font-family:  var(--clean_start--sans--font-family);
       --clean_start--table_caption--font-size:  0.79rem;
+
+      --clean_start--table_th--font-family:  var(--clean_start--sans--font-family);
+      --clean_start--table_td--font-family:  var(--clean_start--sans--font-family);
+      --clean_start--table_td_tags--font-family:  var(--clean_start--sans--font-family);
+      --clean_start--table_tf--font-family:  var(--clean_start--sans--font-family);
 
       --clean_start--table_th--padding:  0.25rem 1rem 0.25rem 1rem;
       --clean_start--table_td--padding:  0.25rem 1rem 0.25rem 1rem;
@@ -159,7 +242,70 @@
 
     }
 
+
+
+    .jaisocx.clean_start ol.inline {
+      --clean_start--ol_li_c--color: #5599fa;
+      --clean_start--ol_li--padding: 0 0.33rem 0 0.7rem;
+    }
+
+    .jaisocx.clean_start ul.inline.slash {
+      --clean_start--ul_li_c--content: '|';
+      --clean_start--ul_li_c--font-size: 0.79rem;
+      --clean_start--ul_li_c--color: black;
+    }
+
+
+
+    .jaisocx.clean_start ul.tag_border {
+
+      --clean_start--ul_li_c--content:        '';
+
+      --clean_start--ul_li_c--top:            0.43rem;
+      --clean_start--ul_li_c--left:           0;
+
+      --clean_start--ul_li_c--line-height:    0;
+      --clean_start--ul_li_c--font-size:      0;
+
+      --clean_start--ul_li_c--border:         0.5px solid green;
+
+      --clean_start--ul_li_c--max-height:     0.24rem;
+      --clean_start--ul_li_c--height:         0.24rem;
+      --clean_start--ul_li_c--max-width:      0.24rem;
+      --clean_start--ul_li_c--width:          0.24rem;
+
+      --clean_start--ul_li_c--border-radius:  0.2rem;
+      --clean_start--ul_li_c--background:     lime;
+
+    }
+
+    .jaisocx.clean_start * ol {
+      --clean_start--label--font-size: 0.70rem;
+      --clean_start--label--padding: 0.10rem 0.35rem 0 0.35rem;
+      --clean_start--label--color: #70e9fa;
+    }
+
+    .jaisocx.clean_start * ul {
+      --clean_start--label--font-size: 0.72rem;
+      --clean_start--label--padding: 0.20rem 0.35rem 0 0.35rem;
+    }
+
+      /* @start clean_start base theme scrolls */
+    .jaisocx.clean_start {
+
+      --clean_start--scrolls--height:         10rem;
+      --clean_start--scrolls--width:          25rem;
+      --clean_start--scrolls--padding:        1.4rem 4rem 3rem 2rem;
+      --clean_start--scrolls--border:         1px solid green;
+      --clean_start--scrolls_block--width:    30rem;
+
+    }
+      /* @finish clean_start base theme scrolls */
+
+
   </style>
+
+
 
 
 
@@ -199,315 +345,319 @@
 
   <h2> table </h2>
 
-  <block name="tb">
+  <block class="tables">
 
-    <table>
-      <!-- Table Caption -->
-      <caption>  🗒 💲 🍰 Shop  </caption>
+    <block name="tb">
 
-      <!-- Define column styles -->
-      <colgroup>
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-      </colgroup>
+      <table class="theme_fonts_c">
+        <!-- Table Caption -->
+        <caption>  🗒 💲 🍰 Shop  </caption>
 
-      <!-- Table Header -->
-      <thead>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-      </tr>
-      </thead>
+        <!-- Define column styles -->
+        <colgroup>
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+        </colgroup>
 
-      <!-- Table Body -->
-      <tbody>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      </tbody>
+        <!-- Table Header -->
+        <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        </thead>
 
-      <!-- Table Footer -->
-      <tfoot>
-      <tr>
-        <td colspan="3">Sum</td>
-        <td> $31.20 </td>
-      </tr>
-      </tfoot>
-    </table>
+        <!-- Table Body -->
+        <tbody>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        </tbody>
 
-  </block>
+        <!-- Table Footer -->
+        <tfoot>
+        <tr>
+          <td colspan="3">Sum</td>
+          <td> $31.20 </td>
+        </tr>
+        </tfoot>
+      </table>
 
-
-
-
-
-  <block name="tb">
-
-    <table class="sites_tools">
-      <!-- Table Caption -->
-      <caption>  🗒 💲 🍰 Shop  </caption>
-
-      <!-- Define column styles -->
-      <colgroup>
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-      </colgroup>
-
-      <!-- Table Header -->
-      <thead>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-      </tr>
-      </thead>
-
-      <!-- Table Body -->
-      <tbody>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      </tbody>
-
-      <!-- Table Footer -->
-      <tfoot>
-      <tr>
-        <td colspan="3">Sum</td>
-        <td> $31.20 </td>
-      </tr>
-      </tfoot>
-    </table>
-
-  </block>
+    </block>
 
 
 
 
 
-  <block name="tb">
+    <block name="tb" class="font_override font_sans">
 
-    <table class="sites_tools tb_green_a">
-      <!-- Table Caption -->
-      <caption>  🗒 💲 🍰 Shop  </caption>
+      <table class="sites_tools theme_fonts_b">
+        <!-- Table Caption -->
+        <caption>  🗒 💲 🍰 Shop  </caption>
 
-      <!-- Define column styles -->
-      <colgroup>
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-      </colgroup>
+        <!-- Define column styles -->
+        <colgroup>
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+        </colgroup>
 
-      <!-- Table Header -->
-      <thead>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-      </tr>
-      </thead>
+        <!-- Table Header -->
+        <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        </thead>
 
-      <!-- Table Body -->
-      <tbody>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      </tbody>
+        <!-- Table Body -->
+        <tbody>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        </tbody>
 
-      <!-- Table Footer -->
-      <tfoot>
-      <tr>
-        <td colspan="3">Sum</td>
-        <td> $31.20 </td>
-      </tr>
-      </tfoot>
-    </table>
+        <!-- Table Footer -->
+        <tfoot>
+        <tr>
+          <td colspan="3">Sum</td>
+          <td> $31.20 </td>
+        </tr>
+        </tfoot>
+      </table>
 
-  </block>
-
-
+    </block>
 
 
 
-  <block name="tb">
 
-    <table class="sites_tools tb_green_b">
-      <!-- Table Caption -->
-      <caption>  🗒 💲 🍰 Shop  </caption>
 
-      <!-- Define column styles -->
-      <colgroup>
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-      </colgroup>
+    <block name="tb" class="font_override font_sans">
 
-      <!-- Table Header -->
-      <thead>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-      </tr>
-      </thead>
+      <table class="sites_tools tb_green_a theme_fonts_c">
+        <!-- Table Caption -->
+        <caption>  🗒 💲 🍰 Shop  </caption>
 
-      <!-- Table Body -->
-      <tbody>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      </tbody>
+        <!-- Define column styles -->
+        <colgroup>
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+        </colgroup>
 
-      <!-- Table Footer -->
-      <tfoot>
-      <tr>
-        <td colspan="3">Sum</td>
-        <td> $31.20 </td>
-      </tr>
-      </tfoot>
-    </table>
+        <!-- Table Header -->
+        <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        </tbody>
+
+        <!-- Table Footer -->
+        <tfoot>
+        <tr>
+          <td colspan="3">Sum</td>
+          <td> $31.20 </td>
+        </tr>
+        </tfoot>
+      </table>
+
+    </block>
+
+
+
+
+
+    <block name="tb" class="font_override font_monospace">
+
+      <table class="sites_tools tb_green_b theme_fonts_c">
+        <!-- Table Caption -->
+        <caption>  🗒 💲 🍰 Shop  </caption>
+
+        <!-- Define column styles -->
+        <colgroup>
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+        </colgroup>
+
+        <!-- Table Header -->
+        <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        </tbody>
+
+        <!-- Table Footer -->
+        <tfoot>
+        <tr>
+          <td colspan="3">Sum</td>
+          <td> $31.20 </td>
+        </tr>
+        </tfoot>
+      </table>
+
+    </block>
 
   </block>
 

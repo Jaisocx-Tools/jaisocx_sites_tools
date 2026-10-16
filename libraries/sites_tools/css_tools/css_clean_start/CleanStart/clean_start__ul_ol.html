@@ -6,14 +6,14 @@
   <link
       rel="icon"
       type="image/x-icon"
-      href="004_sunflower.ico"
+      href="Icon_Jaisocx.ico"
   />
 
   <title> Jaisocx clean_start_tiny </title>
 
 
 
-  <base href="./MediaAndStyles/n_builds/clean_start__20261014/" />
+  <base href="./MediaAndStyles/n_builds/clean_start__20261016/" />
 
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -41,13 +41,51 @@
 
 
 
+  <!--# CleanStart_Tiny Sites tools ( ul_li label, .scrolls ) -->
+  <link
+      rel="stylesheet"
+      type="text/css"
+      charset="utf-8"
+      href="clean_start__sites_tools.css"
+  />
+
+
+
+
   <!-- CleanStart_Tiny Overrides -->
   <style name="overrides">
 
+    .jaisocx.clean_start table {
+      --clean_start--table_caption--font-family:    var(--clean_start--sans--font-family);
+      --clean_start--table_th--font-family:         var(--clean_start--monospace--font-family);
+      --clean_start--table_td--font-family:         var(--clean_start--sans--font-family);
+      --clean_start--table_td_tags--font-family:    var(--clean_start--sans--font-family);
+      --clean_start--table_tf--font-family:         var(--clean_start--monospace--font-family);
+    }
+
+
+
+    .jaisocx.clean_start block ol,
+    .jaisocx.clean_start block ul {
+      --clean_start--ol_li_c--font-family:          var(--clean_start--sans--font-family);
+      --clean_start--ul_li_c--font-family:          var(--clean_start--sans--font-family);
+
+      --clean_start--ul_li--font-family:            var(--clean_start--sans--font-family);
+      --clean_start--ul_li_tags--font-family:       var(--clean_start--sans--font-family);
+      --clean_start--li_ul_li--font-family:         var(--clean_start--sans--font-family);
+    }
+
+
+
     .jaisocx.clean_start {
 
+      --clean_start--input--padding: 0.25rem 1rem 0.25rem 1rem;
+      --clean_start--select--padding: 0.25rem 1rem 0.25rem 1rem;
+      --clean_start--textarea--padding: 0.25rem 1rem 0.25rem 1rem;
+
+
       --clean_start--site--padding: 1rem 3rem 10rem 3rem;
-      --clean_start--site--width: 55%;
+      --clean_start--site--width: 70%;
 
       --clean_start--h1--margin: 2rem 0 0.3rem 0;
       --clean_start--h2--margin: 2rem 0 0.3rem 0;
@@ -79,6 +117,18 @@
       --clean_start--label--overflow-y:        hidden;
 
 
+
+      --clean_start--fieldset--padding: 1rem 1rem 1rem 1rem;
+      --clean_start--fieldset--border: 0.2px solid #555;
+      --clean_start--fieldset_legend--padding: 0.14rem 1rem 0.14rem 1rem;
+      --clean_start--fieldset_legend--margin: 0 0 0 0;
+      --clean_start--fieldset_legend--border: 1px solid lime;
+      --clean_start--fieldset_legend--color: #fdfdfd;
+      --clean_start--fieldset_legend--font-size: 0.7rem;
+      --clean_start--fieldset_legend--line-height: 0.7rem;
+      --clean_start--fieldset_legend--background: green;
+
+
       --clean_start--ol_li_c--font-size: 0.9rem;
 
       --clean_start--ol_li--padding: 0 0 0 0.7rem;
@@ -95,13 +145,107 @@
       --clean_start--ul--margin: 0 0 0 0;
       --clean_start--li_ul--margin: 0 0 0 1rem;
 
+
+      --clean_start--dl_dt_dd_c--content: '🟠';
+      --clean_start--dl_dt_dd_c--font-size: 0.25rem;
+
+      --clean_start--dl--padding:  0 0 0 0.4rem;
+
+      --clean_start--dl_dt_dd--padding:  0 0 0 0.73rem;
+      --clean_start--dl_dt_dd--margin:  0 0 0 0.9rem;
+      --clean_start--dl_dt_dd--display:  block;
+
+
+
+      --clean_start--table_caption--padding:  0.9rem 0 0.55rem 0;
+      --clean_start--table_caption--color:  #3ac020;
+      --clean_start--table_caption--line-height:  0.79rem;
+      --clean_start--table_caption--font-family:  var(--clean_start--sans--font-family);
+      --clean_start--table_caption--font-size:  0.79rem;
+
+      --clean_start--table_th--font-family:  var(--clean_start--sans--font-family);
+      --clean_start--table_td--font-family:  var(--clean_start--sans--font-family);
+      --clean_start--table_td_tags--font-family:  var(--clean_start--sans--font-family);
+      --clean_start--table_tf--font-family:  var(--clean_start--sans--font-family);
+
+      --clean_start--table_th--padding:  0.25rem 1rem 0.25rem 1rem;
+      --clean_start--table_td--padding:  0.25rem 1rem 0.25rem 1rem;
+      --clean_start--table_tf--padding:  0.25rem 1rem 0.25rem 1rem;
+
+      --clean_start--table--border:  1px solid lime;
+
+      --clean_start--table_th--text-align: center;
+      --clean_start--table_th--font-size:  0.8rem;
+      --clean_start--table_th--color:            #3ac020;
+      --clean_start--table_caption--background:  #fefffd;
+      --clean_start--table_th--background:       #fefffd;
+      --clean_start--table_td--background:       #f9fdf2;
+
+      --clean_start--table_tf--background:       #eefdc9;
+
     }
 
 
 
+    .jaisocx.clean_start * table.sites_tools.tb_green_a {
+
+      --clean_start--table--border:                     0.5px solid green;
+
+      --clean_start--table_caption--text-align:         right;
+      --clean_start--table_caption--color:              #333;
+      --clean_start--table_caption--background:         #fefffe;
+      --clean_start--table_caption--border:             0 solid green;
+
+      --clean_start--table_th--text-align:              center;
+      --clean_start--table_th--border:                  0.2px solid lime;
+      --clean_start--table_th--color:                   black;
+      --clean_start--table_th--background:              #eefedd;
+
+      --clean_start--table_td_odd--color:               #553322;
+      --clean_start--table_td_odd--background:          #fdfdfa;
+
+      --clean_start--table_td_even--color:              darkgreen;
+      --clean_start--table_td_even--background:         #fafdf2;
+
+      --clean_start--table_tf--color:                   black;
+      --clean_start--table_tf--background:              #fdfdfd;
+
+    }
+
+
+
+    .jaisocx.clean_start * table.sites_tools.tb_green_b {
+
+      --clean_start--table--border:                     0.5px solid green;
+
+      --clean_start--table_caption--text-align:         center;
+      --clean_start--table_caption--color:              green;
+      --clean_start--table_caption--background:         #fdfdfd;
+      --clean_start--table_caption--border:             0 solid green;
+
+      --clean_start--table_th--text-align:              center;
+      --clean_start--table_th--border:                  0.2px solid lime;
+      --clean_start--table_th--color:                   #f2f4e0;
+      --clean_start--table_th--background:              green;
+
+      --clean_start--table_td--color:                   green;
+      --clean_start--table_td--background:              #fdfdfd;
+
+      --clean_start--table_td_odd--color:               #553322;
+      --clean_start--table_td_odd--background:          #fafaf2;
+
+      --clean_start--table_td_even--color:              darkgreen;
+      --clean_start--table_td_even--background:         #f2faf2;
+
+      --clean_start--table_tf--color:                   black;
+      --clean_start--table_tf--background:              #fdfdfd;
+
+    }
+
+
 
     .jaisocx.clean_start ol.inline {
-      --clean_start--ol_li_c--color: lime;
+      --clean_start--ol_li_c--color: #5599fa;
       --clean_start--ol_li--padding: 0 0.33rem 0 0.7rem;
     }
 
@@ -135,7 +279,33 @@
 
     }
 
+    .jaisocx.clean_start * ol {
+      --clean_start--label--font-size: 0.70rem;
+      --clean_start--label--padding: 0.10rem 0.35rem 0 0.35rem;
+      --clean_start--label--color: #70e9fa;
+    }
+
+    .jaisocx.clean_start * ul {
+      --clean_start--label--font-size: 0.72rem;
+      --clean_start--label--padding: 0.20rem 0.35rem 0 0.35rem;
+    }
+
+      /* @start clean_start base theme scrolls */
+    .jaisocx.clean_start {
+
+      --clean_start--scrolls--height:         10rem;
+      --clean_start--scrolls--width:          25rem;
+      --clean_start--scrolls--padding:        1.4rem 4rem 3rem 2rem;
+      --clean_start--scrolls--border:         1px solid green;
+      --clean_start--scrolls_block--width:    30rem;
+
+    }
+      /* @finish clean_start base theme scrolls */
+
+
   </style>
+
+
 
 
 
@@ -175,18 +345,18 @@
 
   <h2> lists </h2>
 
-  <block>
+  <block class="lists">
 
     <h3> texts ol li </h3>
 
-    <block>
+    <block class="theme_fonts_old_good_fonts">
 
       <label> 🗒 💲 🍰 Shop </label>
 
       <ol>
         <li><text>  🍎  Apples </text></li>
         <li><text>  🍌  Bananas </text></li>
-        <li><text>  🍊  Orange </text></li>
+        <li><text>  🍊  Oranges </text></li>
       </ol>
 
     </block>
@@ -197,14 +367,14 @@
 
     <h3> texts ul li </h3>
 
-    <block>
+    <block class="theme_fonts_a">
 
       <label> 🗒 💲 🍰 Shop </label>
 
       <ul>
         <li><text>  🍎  Apples </text></li>
         <li><text>  🍌  Bananas </text></li>
-        <li><text>  🍊  Orange </text></li>
+        <li><text>  🍊  Oranges </text></li>
       </ul>
 
     </block>
@@ -213,10 +383,42 @@
 
 
 
+    <h3> texts dl dt dd </h3>
+
+    <block>
+
+      <label> 🗒 💲 🍰 Shop </label>
+
+      <dl>
+        <dt>  🍎  Apples </dt>
+        <dd>  text a </dd>
+        <dd>  text b </dd>
+        <dd>  text c </dd>
+      </dl>
+
+      <dl>
+        <dt>  🍌  Bananas </dt>
+        <dd>  text a </dd>
+        <dd>  text b </dd>
+        <dd>  text c </dd>
+      </dl>
+
+      <dl>
+        <dt>  🍊  Oranges </dt>
+        <dd>  text a </dd>
+        <dd>  text b </dd>
+        <dd>  text c </dd>
+      </dl>
+
+    </block>
+
+
+
+
 
     <h3> inline slash ul li </h3>
 
-    <block>
+    <block class="theme_fonts_a">
 
       <label> 🗒 💲 🍰 Shop </label>
 
@@ -234,11 +436,14 @@
 
     <h3> inline numbered navigation links ol a </h3>
 
-    <block>
+    <block class="theme_fonts_a">
 
       <label> &lt;ol&gt; &lt;li&gt; &lt;a&gt; </label>
 
       <ol class="inline">
+        <li>
+          <label> links </label>
+        </li>
         <li>
           <a href="javascript: void(0);">link a</a>
         </li>
@@ -261,7 +466,7 @@
 
     <h3> inline navigation links ul a </h3>
 
-    <block>
+    <block class="theme_fonts_b">
 
       <label> &lt;ul&gt; &lt;li&gt; &lt;a&gt; </label>
 
@@ -288,7 +493,7 @@
 
     <h3> inline navigation links ul a </h3>
 
-    <block>
+    <block class="theme_fonts_c">
 
       <label> &lt;ul&gt; &lt;li&gt; &lt;a&gt; </label>
 
@@ -315,7 +520,7 @@
 
     <h3> numbered navigation links ol a </h3>
 
-    <block>
+    <block class="theme_fonts_c">
 
       <label> &lt;ol&gt; &lt;li&gt; &lt;a&gt; </label>
 
@@ -342,7 +547,7 @@
 
     <h3> navigation links ul a </h3>
 
-    <block>
+    <block class="theme_fonts_old_good_fonts">
 
       <label> &lt;ul&gt; &lt;li&gt; &lt;a&gt; </label>
 
@@ -369,7 +574,7 @@
 
     <h3> navigation links ul.tag_border li i a </h3>
 
-    <block>
+    <block class="theme_fonts_a">
 
       <label> &lt;ul class="tag_border"&gt; &lt;li&gt; &lt;i&gt; &lt;a&gt; </label>
 
@@ -393,7 +598,7 @@
 
     <h3> navigation links ol a </h3>
 
-    <block>
+    <block class="theme_fonts_b">
 
       <label> &lt;ol&gt; &lt;li&gt; &lt;a&gt; </label>
 
@@ -459,7 +664,7 @@
 
     <h3> navigation links ul a </h3>
 
-    <block>
+    <block class="theme_fonts_c">
 
       <label> &lt;ul&gt; &lt;li&gt; &lt;i&gt; &lt;a&gt; </label>
 
