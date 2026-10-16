@@ -6,7 +6,7 @@
   <link
       rel="icon"
       type="image/x-icon"
-      href="004_sunflower.ico"
+      href="Icon_Jaisocx.ico"
   />
 
   <title> Jaisocx clean_start_tiny </title>
@@ -127,7 +127,13 @@
       --clean_start--table_caption--padding:  0.9rem 0 0.55rem 0;
       --clean_start--table_caption--color:  #3ac020;
       --clean_start--table_caption--line-height:  0.79rem;
+      --clean_start--table_caption--font-family:  var(--clean_start--sans--font-family);
       --clean_start--table_caption--font-size:  0.79rem;
+
+      --clean_start--table_th--font-family:  var(--clean_start--sans--font-family);
+      --clean_start--table_td--font-family:  var(--clean_start--sans--font-family);
+      --clean_start--table_td_tags--font-family:  var(--clean_start--sans--font-family);
+      --clean_start--table_tf--font-family:  var(--clean_start--sans--font-family);
 
       --clean_start--table_th--padding:  0.25rem 1rem 0.25rem 1rem;
       --clean_start--table_td--padding:  0.25rem 1rem 0.25rem 1rem;
@@ -277,7 +283,8 @@
   <h1> clean start ® </h1>
 
 
-  <block>
+
+  <block class="contents">
 
     <label> features </label>
 
@@ -351,126 +358,139 @@
 
   <h2> text blocks </h2>
 
-  <block>
+  <block class="texts">
 
-  <h3> text font sans-serif </h3>
+    <h3> text font sans-serif </h3>
 
-  <block class="font_override font_sans">
-
-    <p>
-      <text> Sentence paragraph 1. </text>
-      <marker> marker </marker>
-      <text> Sentence paragraph 1. </text>
-      <label> Label </label>
-      <text> Sentence paragraph 1. </text>
-      <a href="javascript: void(0);"> link to a site </a>
-      <text> Sentence paragraph 1. Sentence paragraph 1. Sentence paragraph 1. </text>
-      <text> Sentence paragraph 1. Sentence paragraph 1. Sentence paragraph 1. Sentence paragraph 1. Sentence paragraph 1. Sentence paragraph 1. </text>
-    </p>
-
-    <p>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <label> label in sentence line 1. </label>
-      <text> sentence line 1. </text>
-      <text>
-        <label> label in text in sentence line 1. </label>
-      </text>
-      <a href="javascript: void(0);"> link to a site </a>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <label> label in sentence line 1. </label>
-      <text> sentence line 1. </text>
-      <text>
-        <label> label in text in sentence line 1. </label>
-      </text>
-      <a href="javascript: void(0);"> link to a site </a>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <label> label in sentence line 1. </label>
-      <text> sentence line 1. </text>
-      <text>
-        <label> label in text in sentence line 1. </label>
-      </text>
-      <a href="javascript: void(0);"> link to a site </a>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-      <text> sentence line 1. </text>
-    </p>
-
-    <p> sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. </p>
-
-    <p>sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3.</p>
-
-  </block>
-
-
-
-  <h3> text font serif </h3>
-
-  <block class="font_override font_serif">
-    <p>sentence line 1. sentence line 1. sentence line 1. sentence line 1. sentence line 1.</p>
-  </block>
-
-
-
-  <h3> text keeps lines and whitespaces </h3>
-
-  <h4> font handwrite </h4>
-
-  <block>
-      <pre class="font_override font_handwrite">
-🗒 💲 🍰 Shop
-    🍎 Apple
-    🍌 Banana
-    🍊 Orange
-      </pre>
-  </block>
-
-
-
-  <h4> font like in programming </h4>
-
-  <block>
-      <pre class="font_override font_monospace">
-let func = ( a, b ) => {
-  let r = ( a + b );
-  return r;
-};
-      </pre>
-  </block>
-
-  </block>
-
-
-  <h2> Scrollbars </h2>
-
-  <block class="scrolls">
     <block class="font_override font_sans">
+
+      <p>
+        <text> Sentence paragraph 1. </text>
+        <marker> marker </marker>
+        <text> Sentence paragraph 1. </text>
+        <label> Label </label>
+        <text> Sentence paragraph 1. </text>
+        <a href="javascript: void(0);"> link to a site </a>
+        <text> Sentence paragraph 1. Sentence paragraph 1. Sentence paragraph 1. </text>
+        <text> Sentence paragraph 1. Sentence paragraph 1. Sentence paragraph 1. Sentence paragraph 1. Sentence paragraph 1. Sentence paragraph 1. </text>
+      </p>
+
       <p>
         <text> sentence line 1. </text>
         <text> sentence line 1. </text>
         <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
         <label> label in sentence line 1. </label>
+        <text> sentence line 1. </text>
+        <text>
+          <label> label in text in sentence line 1. </label>
+        </text>
         <a href="javascript: void(0);"> link to a site </a>
         <text> sentence line 1. </text>
         <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <label> label in sentence line 1. </label>
+        <text> sentence line 1. </text>
+        <text>
+          <label> label in text in sentence line 1. </label>
+        </text>
+        <a href="javascript: void(0);"> link to a site </a>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <label> label in sentence line 1. </label>
+        <text> sentence line 1. </text>
+        <text>
+          <label> label in text in sentence line 1. </label>
+        </text>
+        <a href="javascript: void(0);"> link to a site </a>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
+        <text> sentence line 1. </text>
       </p>
-      <p>sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2.</p>
+
+      <p> sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. </p>
+
       <p>sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3.</p>
+
     </block>
+
+
+
+
+
+    <h3> text font serif </h3>
+
+    <block class="font_override font_serif">
+      <p>sentence line 1. sentence line 1. sentence line 1. sentence line 1. sentence line 1.</p>
+    </block>
+
+
+
+
+
+    <h3> text keeps lines and whitespaces </h3>
+
+    <h4> font handwrite </h4>
+
+    <block>
+        <pre class="font_override font_handwrite">
+  🗒 💲 🍰 Shop
+      🍎 Apple
+      🍌 Banana
+      🍊 Orange
+        </pre>
+    </block>
+
+
+
+
+
+    <h4> font like in programming </h4>
+
+    <block>
+        <pre class="font_override font_monospace">
+  let func = ( a, b ) => {
+    let r = ( a + b );
+    return r;
+  };
+        </pre>
+    </block>
+
+  </block>
+
+
+
+
+
+    <h2> Scrollbars </h2>
+
+  <block class="scrollbars">
+
+    <block class="scrolls">
+      <block class="font_override font_sans">
+        <p>
+          <text> sentence line 1. </text>
+          <text> sentence line 1. </text>
+          <text> sentence line 1. </text>
+          <label> label in sentence line 1. </label>
+          <a href="javascript: void(0);"> link to a site </a>
+          <text> sentence line 1. </text>
+          <text> sentence line 1. </text>
+        </p>
+        <p>sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2. sentence line 2.</p>
+        <p>sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3. sentence line 3.</p>
+      </block>
+    </block>
+
   </block>
 
 
@@ -482,59 +502,59 @@ let func = ( a, b ) => {
   <block class="html_forms">
 
 
-    <h3> input </h3>
-
-    <block name="field">
-      <input value="text" />
-    </block>
-
-
-
-    <h3> textare </h3>
-
-    <block name="field">
-      <textarea>text</textarea>
-    </block>
-
-
-
-    <h3> button </h3>
-
-    <block name="field">
-      <button>button</button>
-    </block>
-
-
-
-    <h3> Fieldset n Legend </h3>
-
-    <fieldset>
-      <legend> fieldset </legend>
-
       <h3> input </h3>
+
       <block name="field">
         <input value="text" />
       </block>
 
-      <h3> select </h3>
-      <block name="field">
-        <select>
-          <option value="1">1</option>
-          <option value="2">2</option>
-        </select>
-      </block>
 
-      <h3> textarea </h3>
+
+      <h3> textare </h3>
+
       <block name="field">
         <textarea>text</textarea>
       </block>
 
+
+
       <h3> button </h3>
+
       <block name="field">
         <button>button</button>
       </block>
 
-    </fieldset>
+
+
+      <h3> Fieldset n Legend </h3>
+
+      <fieldset>
+        <legend> fieldset </legend>
+
+        <h3> input </h3>
+        <block name="field">
+          <input value="text" />
+        </block>
+
+        <h3> select </h3>
+        <block name="field">
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </block>
+
+        <h3> textarea </h3>
+        <block name="field">
+          <textarea>text</textarea>
+        </block>
+
+        <h3> button </h3>
+        <block name="field">
+          <button>button</button>
+        </block>
+
+      </fieldset>
 
 
   </block>
@@ -546,318 +566,321 @@ let func = ( a, b ) => {
 
   <h2> table </h2>
 
-  <block name="tb">
+  <block class="tables">
 
-    <table>
-      <!-- Table Caption -->
-      <caption>  🗒 💲 🍰 Shop  </caption>
+    <block name="tb">
 
-      <!-- Define column styles -->
-      <colgroup>
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-      </colgroup>
+      <table>
+        <!-- Table Caption -->
+        <caption>  🗒 💲 🍰 Shop  </caption>
 
-      <!-- Table Header -->
-      <thead>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-      </tr>
-      </thead>
+        <!-- Define column styles -->
+        <colgroup>
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+        </colgroup>
 
-      <!-- Table Body -->
-      <tbody>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      </tbody>
+        <!-- Table Header -->
+        <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        </thead>
 
-      <!-- Table Footer -->
-      <tfoot>
-      <tr>
-        <td colspan="3">Sum</td>
-        <td> $31.20 </td>
-      </tr>
-      </tfoot>
-    </table>
+        <!-- Table Body -->
+        <tbody>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        </tbody>
+
+        <!-- Table Footer -->
+        <tfoot>
+        <tr>
+          <td colspan="3">Sum</td>
+          <td> $31.20 </td>
+        </tr>
+        </tfoot>
+      </table>
+
+    </block>
+
+
+
+
+
+    <block name="tb" class="theme_fonts_c">
+
+      <table class="sites_tools">
+        <!-- Table Caption -->
+        <caption>  🗒 💲 🍰 Shop  </caption>
+
+        <!-- Define column styles -->
+        <colgroup>
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+        </colgroup>
+
+        <!-- Table Header -->
+        <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        </tbody>
+
+        <!-- Table Footer -->
+        <tfoot>
+        <tr>
+          <td colspan="3">Sum</td>
+          <td> $31.20 </td>
+        </tr>
+        </tfoot>
+      </table>
+
+    </block>
+
+
+
+
+
+    <block name="tb" class="theme_fonts_a">
+
+      <table class="sites_tools tb_green_a">
+        <!-- Table Caption -->
+        <caption>  🗒 💲 🍰 Shop  </caption>
+
+        <!-- Define column styles -->
+        <colgroup>
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+        </colgroup>
+
+        <!-- Table Header -->
+        <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        </tbody>
+
+        <!-- Table Footer -->
+        <tfoot>
+        <tr>
+          <td colspan="3">Sum</td>
+          <td> $31.20 </td>
+        </tr>
+        </tfoot>
+      </table>
+
+    </block>
+
+
+
+
+
+    <block name="tb" class="theme_fonts_b">
+
+      <table class="sites_tools tb_green_b">
+        <!-- Table Caption -->
+        <caption>  🗒 💲 🍰 Shop  </caption>
+
+        <!-- Define column styles -->
+        <colgroup>
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+          <col style="width: 8rem;">
+        </colgroup>
+
+        <!-- Table Header -->
+        <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        <tr>
+          <td> 🍎 Apple </td>
+          <td>$1.00</td>
+          <td>5</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍌 Banana </td>
+          <td>$0.50</td>
+          <td>10</td>
+          <td>$5.00</td>
+        </tr>
+        <tr>
+          <td> 🍊 Orange </td>
+          <td>$0.80</td>
+          <td>7</td>
+          <td>$5.60</td>
+        </tr>
+        </tbody>
+
+        <!-- Table Footer -->
+        <tfoot>
+        <tr>
+          <td colspan="3">Sum</td>
+          <td> $31.20 </td>
+        </tr>
+        </tfoot>
+      </table>
+
+    </block>
 
   </block>
-
-
-
-
-
-  <block name="tb">
-
-    <table class="sites_tools">
-      <!-- Table Caption -->
-      <caption>  🗒 💲 🍰 Shop  </caption>
-
-      <!-- Define column styles -->
-      <colgroup>
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-      </colgroup>
-
-      <!-- Table Header -->
-      <thead>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-      </tr>
-      </thead>
-
-      <!-- Table Body -->
-      <tbody>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      </tbody>
-
-      <!-- Table Footer -->
-      <tfoot>
-      <tr>
-        <td colspan="3">Sum</td>
-        <td> $31.20 </td>
-      </tr>
-      </tfoot>
-    </table>
-
-  </block>
-
-
-
-
-
-  <block name="tb">
-
-    <table class="sites_tools tb_green_a">
-      <!-- Table Caption -->
-      <caption>  🗒 💲 🍰 Shop  </caption>
-
-      <!-- Define column styles -->
-      <colgroup>
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-      </colgroup>
-
-      <!-- Table Header -->
-      <thead>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-      </tr>
-      </thead>
-
-      <!-- Table Body -->
-      <tbody>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      </tbody>
-
-      <!-- Table Footer -->
-      <tfoot>
-      <tr>
-        <td colspan="3">Sum</td>
-        <td> $31.20 </td>
-      </tr>
-      </tfoot>
-    </table>
-
-  </block>
-
-
-
-
-
-  <block name="tb">
-
-    <table class="sites_tools tb_green_b">
-      <!-- Table Caption -->
-      <caption>  🗒 💲 🍰 Shop  </caption>
-
-      <!-- Define column styles -->
-      <colgroup>
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-        <col style="width: 8rem;">
-      </colgroup>
-
-      <!-- Table Header -->
-      <thead>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-      </tr>
-      </thead>
-
-      <!-- Table Body -->
-      <tbody>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      <tr>
-        <td> 🍎 Apple </td>
-        <td>$1.00</td>
-        <td>5</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍌 Banana </td>
-        <td>$0.50</td>
-        <td>10</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td> 🍊 Orange </td>
-        <td>$0.80</td>
-        <td>7</td>
-        <td>$5.60</td>
-      </tr>
-      </tbody>
-
-      <!-- Table Footer -->
-      <tfoot>
-      <tr>
-        <td colspan="3">Sum</td>
-        <td> $31.20 </td>
-      </tr>
-      </tfoot>
-    </table>
-
-  </block>
-
 
 
 
@@ -866,40 +889,72 @@ let func = ( a, b ) => {
 
   <h2> lists </h2>
 
-  <block>
+  <block class="lists">
 
-  <h3> texts ol li </h3>
+    <h3> texts ol li </h3>
 
-  <block>
+    <block>
 
-    <label> 🗒 💲 🍰 Shop </label>
+      <label> 🗒 💲 🍰 Shop </label>
 
-    <ol>
-      <li><text>  🍎  Apples </text></li>
-      <li><text>  🍌  Bananas </text></li>
-      <li><text>  🍊  Orange </text></li>
-    </ol>
+      <ol>
+        <li><text>  🍎  Apples </text></li>
+        <li><text>  🍌  Bananas </text></li>
+        <li><text>  🍊  Orange </text></li>
+      </ol>
 
-  </block>
-
-
+    </block>
 
 
 
-  <h3> texts ul li </h3>
 
-  <block>
 
-    <label> 🗒 💲 🍰 Shop </label>
+    <h3> texts ul li </h3>
 
-    <ul>
-      <li><text>  🍎  Apples </text></li>
-      <li><text>  🍌  Bananas </text></li>
-      <li><text>  🍊  Orange </text></li>
-    </ul>
+    <block>
 
-  </block>
+      <label> 🗒 💲 🍰 Shop </label>
 
+      <ul>
+        <li><text>  🍎  Apples </text></li>
+        <li><text>  🍌  Bananas </text></li>
+        <li><text>  🍊  Oranges </text></li>
+      </ul>
+
+    </block>
+
+
+
+
+
+    <h3> texts dl dt dd </h3>
+
+    <block>
+
+      <label> 🗒 💲 🍰 Shop </label>
+
+      <dl>
+        <dt>  🍎  Apples </dt>
+        <dd>  text a </dd>
+        <dd>  text b </dd>
+        <dd>  text c </dd>
+      </dl>
+
+      <dl>
+        <dt>  🍌  Bananas </dt>
+        <dd>  text a </dd>
+        <dd>  text b </dd>
+        <dd>  text c </dd>
+      </dl>
+
+      <dl>
+        <dt>  🍊  Oranges </dt>
+        <dd>  text a </dd>
+        <dd>  text b </dd>
+        <dd>  text c </dd>
+      </dl>
+
+    </block>
 
 
 
@@ -923,28 +978,28 @@ let func = ( a, b ) => {
 
 
 
-  <h3> inline numbered navigation links ol a </h3>
+    <h3> inline numbered navigation links ol a </h3>
 
-  <block>
+    <block>
 
-    <label> &lt;ol&gt; &lt;li&gt; &lt;a&gt; </label>
+      <label> &lt;ol&gt; &lt;li&gt; &lt;a&gt; </label>
 
-    <ol class="inline">
-      <li>
-        <a href="javascript: void(0);">link a</a>
-      </li>
-      <li>
-        <a href="javascript: void(0);">link b</a>
-      </li>
-      <li>
-        <a href="javascript: void(0);">link c</a>
-      </li>
-      <li>
-        <a href="javascript: void(0);">link d</a>
-      </li>
-    </ol>
+      <ol class="inline">
+        <li>
+          <a href="javascript: void(0);">link a</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link b</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link c</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link d</a>
+        </li>
+      </ol>
 
-  </block>
+    </block>
 
 
 
@@ -1006,26 +1061,26 @@ let func = ( a, b ) => {
 
     <h3> numbered navigation links ol a </h3>
 
-  <block>
+    <block>
 
-    <label> &lt;ol&gt; &lt;li&gt; &lt;a&gt; </label>
+      <label> &lt;ol&gt; &lt;li&gt; &lt;a&gt; </label>
 
-    <ol>
-      <li>
-        <a href="javascript: void(0);">link a</a>
-      </li>
-      <li>
-        <a href="javascript: void(0);">link b</a>
-      </li>
-      <li>
-        <a href="javascript: void(0);">link c</a>
-      </li>
-      <li>
-        <a href="javascript: void(0);">link d</a>
-      </li>
-    </ol>
+      <ol>
+        <li>
+          <a href="javascript: void(0);">link a</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link b</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link c</a>
+        </li>
+        <li>
+          <a href="javascript: void(0);">link d</a>
+        </li>
+      </ol>
 
-  </block>
+    </block>
 
 
 

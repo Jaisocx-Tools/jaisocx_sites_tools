@@ -1,27 +1,26 @@
 
 /* @start clean_start_tiny sites_tool having scrollbars */
-.clean_start.sites_tools .scrolls {
-  height:                  10rem;
+.clean_start .scrolls {
+  height:                  var(--clean_start--scrolls--height, 10rem);
 
   min-width:               unset;
   max-width:               100%;
-  width:                   30rem;
+  width:                   var(--clean_start--scrolls--width, 30rem);
 
-  padding:                 0 1rem 1rem 1rem;
-  border:                  var(--clean_start--scrolls--border);
-  background-color:        #fdfdfd;
+  padding:                 var(--clean_start--scrolls--padding, 1rem 1rem 1rem 1rem);
+  border:                  var(--clean_start--scrolls--border, 1px solid green);
 
   overflow-x:               scroll;
   overflow-y:               scroll;
 }
 
-.clean_start.sites_tools .scrolls block,
-.clean_start.sites_tools .scrolls text-lines-block {
+.clean_start .scrolls block,
+.clean_start .scrolls text-lines-block {
   height:                  auto;
 
   min-width:               unset;
   max-width:               unset;
-  width:                   45rem;
+  width:                   var(--clean_start--scrolls_block--width, 50rem);
 
   overflow-x:               hidden;
   overflow-y:               visible;

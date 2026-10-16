@@ -1,7 +1,8 @@
 
-/* @start clean_start_tiny sites_tool for html tag Label */
+/* @start clean_start Label in ol||ul and other text blocks */
+.clean_start ol li label,
 .clean_start ul li label,
-.clean_start ul li i label,
+.clean_start text-lines-block label,
 .clean_start p label {
   font-size:               var(--clean_start--label--font-size, 0.72rem);
   line-height:             var(--clean_start--label--font-size, 0.72rem);
@@ -18,15 +19,6 @@
   overflow-x:               var(--clean_start--label--overflow-x, hidden);
   overflow-y:               var(--clean_start--label--overflow-y, hidden);
 }
-
-.clean_start ul li label,
-.clean_start ul li i label {
-  max-height:              var(--clean_start--ul_li_i--line-height, 1.2rem);
-}
-
-.clean_start p label {
-  max-height:              var(--clean_start--p--line-height, 1.2rem);
-}
-/* @finish clean_start_tiny sites_tool for html tag Label */
+/* @finish clean_start Label in ol||ul and other text blocks */
 
 

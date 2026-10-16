@@ -19,12 +19,14 @@
   /* @start ul mark size */
 .clean_start ol li::after {
   line-height:             var(--clean_start--ol_li_c--line-height, 1.2rem);
+  font-family:             var(--clean_start--ol_li_c--font-family, "Arial");
   font-size:               var(--clean_start--ol_li_c--font-size, 0.9rem);
   color:                   var(--clean_start--ol_li_c--color, black);
 }
 
 .clean_start ul li::after {
   line-height:             var(--clean_start--ul_li_c--line-height, 1.2rem);
+  font-family:             var(--clean_start--ul_li_c--font-family, "Arial");
   font-size:               var(--clean_start--ul_li_c--font-size, 0.9rem);
   color:                   var(--clean_start--ul_li_c--color, black);
 }
@@ -61,16 +63,16 @@
 .clean_start ol {
   counter-reset:           cnt1 0;
 }
-.clean_start ol ol {
+.clean_start ol li ol {
   counter-reset:           cnt2 0;
 }
-.clean_start ol ol ol {
+.clean_start ol li ol li ol {
   counter-reset:           cnt3 0;
 }
-.clean_start ol ol ol ol {
+.clean_start ol li ol li ol li ol {
   counter-reset:           cnt4 0;
 }
-.clean_start ol ol ol ol ol {
+.clean_start ol li ol li ol li ol li ol {
   counter-reset:           cnt5 0;
 }
 
@@ -79,16 +81,16 @@
 .clean_start ol li {
   counter-increment:       cnt1 1;
 }
-.clean_start ol ol li {
+.clean_start ol li ol li {
   counter-increment:       cnt2 1;
 }
-.clean_start ol ol ol li {
+.clean_start ol li ol li ol li {
   counter-increment:       cnt3 1;
 }
-.clean_start ol ol ol ol li {
+.clean_start ol li ol li ol li ol li {
   counter-increment:       cnt4 1;
 }
-.clean_start ol ol ol ol ol li {
+.clean_start ol li ol li ol li ol li ol li {
   counter-increment:       cnt5 1;
 }
 
@@ -139,6 +141,7 @@
   margin:                  var(--clean_start--ul_li--margin, 0 0 0 0);
 
   line-height:             var(--clean_start--ul_li--line-height, 1.2rem);
+  font-family:             var(--clean_start--ul_li--font-family, "Arial");
   font-size:               var(--clean_start--ul_li--font-size, 0.9rem);
 
   min-height:              var(--clean_start--ul_li--min-height, 0);
@@ -156,6 +159,7 @@
   margin:                  var(--clean_start--ul_li_tags--margin, 0 0 0 0);
 
   line-height:             var(--clean_start--ul_li_tags--line-height, 0.9rem);
+  font-family:             var(--clean_start--ul_li_tags--font-family, "Arial");
   font-size:               var(--clean_start--ul_li_tags--font-size, 0.9rem);
 
   min-height:              var(--clean_start--ul_li_tags--min-height, 0);
@@ -196,6 +200,7 @@
   margin:                  var(--clean_start--li_ul_li--margin, 0 0 0 0);
 
   line-height:             var(--clean_start--li_ul_li--line-height, 1.2rem);
+  font-family:             var(--clean_start--li_ul_li--font-family, "Arial");
   font-size:               var(--clean_start--li_ul_li--font-size, 0.9rem);
 
   min-height:              var(--clean_start--li_ul_li--min-height, 0);
@@ -221,6 +226,7 @@
   left:                    var(--clean_start--ol_li_c--left, 0);
 
   line-height:             var(--clean_start--ol_li_c--line-height, 1.2rem);
+  font-family:             var(--clean_start--ol_li_c--font-family, "Arial");
   font-size:               var(--clean_start--ol_li_c--font-size, 0.9rem);
 
   min-height:              var(--clean_start--ol_li_c--min-height, 0);
@@ -250,6 +256,7 @@
   left:                    var(--clean_start--ul_li_c--left, 0);
 
   line-height:             var(--clean_start--ul_li_c--line-height, 1.2rem);
+  font-family:             var(--clean_start--ul_li_c--font-family, "Arial");
   font-size:               var(--clean_start--ul_li_c--font-size, 0.9rem);
 
   min-height:              var(--clean_start--ul_li_c--min-height, 0);

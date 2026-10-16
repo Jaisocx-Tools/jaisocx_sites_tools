@@ -1,0 +1,14 @@
+
+  /* @start clean_start base theme scrolls */
+.clean_start {
+
+  --clean_start--scrolls--height:         10rem;
+  --clean_start--scrolls--width:          30rem;
+  --clean_start--scrolls--padding:        1rem 1rem 1rem 1rem;
+  --clean_start--scrolls--border:         1px solid green;
+  --clean_start--scrolls_block--width:    50rem;
+
+}
+/* @finish clean_start base theme scrolls */
+
+

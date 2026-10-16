@@ -1,19 +1,28 @@
 
+`Jaisocx Sites Tools`
+
+
 # clean_start_tiny
 
-  I appologize, the library is in enginering. 
+  I appologize, the library is in enginering. ❌  ul li ol li, ol li ul li examples weren't bugfixed.
 
   > 💡 Aligning styles of a site, the single file `clean_start_tiny__all_features.css` of 740 ( seven hundred fourty ) css code lines.
 
 
   | 🗂  **Library**  | `@jaisocx/clean_start_tiny` | 🏷  **ver.**: `1.0.1` |
 
-  | 🗓  **Updated**  | 🌾 Autumn 2026 | `AD 2026 Oct 14 21:50.500 GMT 24h` |
+  | 🗓  **Updated**  | 🌾 Autumn 2026 | `AD 2026 Oct 16 14:50.500 GMT 24h` |
 
-  | 📐  **Size**     | 🗂 Folder: 300 kb | 📦 Tarball: 7.6 KB | 📄 .css: 20 kb | 📄 .html: 4 kb, 55 kb | 
+  | 📐  **Size**     | 🗂 Folder: 1_000 kb | 📦 Tarball: 10 KB | 📄 .css: 50 kb | 📄 .html: 20 kb | 
 
 
 ---
+
+
+## News
+
+  ✅  🗓  🌾 Autumn 2026 `MediaAndStyles/clean_start__20261016/clean_start__all_tags.html`
+
 
 
 

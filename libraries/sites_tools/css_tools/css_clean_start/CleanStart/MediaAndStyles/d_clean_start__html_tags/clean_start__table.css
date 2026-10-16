@@ -81,6 +81,7 @@
 
   text-align:              var(--clean_start--table_caption--text-align, left);
   line-height:             var(--clean_start--table_caption--line-height, 1.2rem);
+  font-family:             var(--clean_start--table_caption--font-family, "Arial");
   font-size:               var(--clean_start--table_caption--font-size, 0.9rem);
   font-weight:             var(--clean_start--table_caption--font-weight, 600);
 
@@ -117,6 +118,7 @@
 
   text-align:              var(--clean_start--table_th--text-align, left);
   line-height:             var(--clean_start--table_th--line-height, 1.2rem);
+  font-family:             var(--clean_start--table_th--font-family, "Arial");
   font-size:               var(--clean_start--table_th--font-size, 0.9rem);
   font-weight:             var(--clean_start--table_th--font-weight, 600);
 
@@ -134,6 +136,7 @@
 
   text-align:              var(--clean_start--table_td--text-align, left);
   line-height:             var(--clean_start--table_td--line-height, 1.2rem);
+  font-family:             var(--clean_start--table_td--font-family, "Arial");
   font-size:               var(--clean_start--table_td--font-size, 0.9rem);
   font-weight:             var(--clean_start--table_td--font-weight, 400);
 
@@ -151,6 +154,7 @@
   margin:                  var(--clean_start--table_td_tags--margin, 0 0 0 0);
 
   line-height:             var(--clean_start--table_td_tags--line-height, 0.9rem);
+  font-family:             var(--clean_start--table_td_tags--font-family, "Arial");
   font-size:               var(--clean_start--table_td_tags--font-size, 0.9rem);
 
   overflow-x:               var(--clean_start--table_td_tags--overflow-x, visible);
@@ -182,6 +186,7 @@
 
   text-align:              var(--clean_start--table_tf--text-align, left);
   line-height:             var(--clean_start--table_tf--line-height, 1.2rem);
+  font-family:             var(--clean_start--table_tf--font-family, "Arial");
   font-size:               var(--clean_start--table_tf--font-size, 0.9rem);
   font-weight:             var(--clean_start--table_tf--font-weight, 600);
 

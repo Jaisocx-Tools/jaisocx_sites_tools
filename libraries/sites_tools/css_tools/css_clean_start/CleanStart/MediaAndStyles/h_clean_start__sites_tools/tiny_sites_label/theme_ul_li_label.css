@@ -1,0 +1,88 @@
+  /* @start clean_start base theme Label in ol||ul and other text blocks */
+.clean_start * ol {
+  --clean_start--label--max-height:         var(--clean_start--ol_li_tags--line-height);
+  --clean_start--label--height:             var(--clean_start--ol_li_tags--line-height);
+}
+
+.clean_start * ul {
+  --clean_start--label--max-height:         var(--clean_start--ul_li_tags--line-height);
+  --clean_start--label--height:             var(--clean_start--ul_li_tags--line-height);
+}
+
+.clean_start * p {
+  --clean_start--label--max-height:         var(--clean_start--p_tags--line-height);
+  --clean_start--label--height:             var(--clean_start--p_tags--line-height);
+}
+
+
+.clean_start * ol,
+.clean_start * ul,
+.clean_start * p,
+.clean_start * text-lines-block,
+.clean_start * text-line {
+
+  --clean_start--label--display:            inline-block;
+
+
+  /** @var padding
+  * max-height, height = line-height of the main tag.
+  * line-height = font-size, the text aligns top vertically.
+  */
+  --clean_start--label--padding:            0.14rem 0.35rem 0 0.35rem;
+
+
+
+  /* margin: left and right allowed. */
+  --clean_start--label--margin:             0 0.24rem 0 0;
+
+  --clean_start--label--overflow-x:          hidden;
+  --clean_start--label--overflow-y:          hidden;
+
+}
+
+
+
+.clean_start * ol,
+.clean_start * ul {
+
+  --clean_start--label--padding:            0.10rem 0.35rem 0 0.35rem;
+
+  --clean_start--label--font-size:          0.70rem;
+  --clean_start--label--line-height:        var(--clean_start--label--font-size);
+
+  --clean_start--label--border-radius:      0.5rem;
+
+}
+
+.clean_start * p {
+
+  --clean_start--label--padding:            0.10rem 0.35rem 0 0.35rem;
+
+  --clean_start--label--font-size:          0.70rem;
+  --clean_start--label--line-height:        var(--clean_start--label--font-size);
+
+  --clean_start--label--border-radius:      0.5rem;
+
+}
+
+
+
+.clean_start * ol {
+  --clean_start--label--color:              #a0c0fa;
+  --clean_start--label--background-color:   navy;
+  --clean_start--label--border:             0.4px solid #5599fa;
+}
+
+.clean_start * ul {
+  --clean_start--label--color:              lime;
+  --clean_start--label--background-color:   green;
+  --clean_start--label--border:             0.4px solid lime;
+}
+
+.clean_start * p {
+  --clean_start--label--color:              #f2faf2;
+  --clean_start--label--background-color:   green;
+  --clean_start--label--border:             0.4px solid lime;
+}
+/* @finish clean_start base theme Label in ol||ul and other text blocks */
+
