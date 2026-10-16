@@ -1,0 +1,143 @@
+  /* @start clean_start base theme Label in ol||ul and other text blocks */
+.clean_start * ol {
+  --clean_start--label--max-height:         var(--clean_start--ol_li_tags--line-height);
+  --clean_start--label--height:             var(--clean_start--ol_li_tags--line-height);
+}
+
+.clean_start * ul {
+  --clean_start--label--max-height:         var(--clean_start--ul_li_tags--line-height);
+  --clean_start--label--height:             var(--clean_start--ul_li_tags--line-height);
+}
+
+.clean_start * p {
+  --clean_start--label--max-height:         var(--clean_start--p_tags--line-height);
+  --clean_start--label--height:             var(--clean_start--p_tags--line-height);
+}
+
+
+.clean_start * ol,
+.clean_start * ul,
+.clean_start * p,
+.clean_start * text-lines-block,
+.clean_start * text-line {
+
+  --clean_start--label--display:            inline-block;
+
+
+  /** @var padding
+  * max-height, height = line-height of the main tag.
+  * line-height = font-size, the text aligns top vertically.
+  */
+  --clean_start--label--padding:            0.14rem 0.35rem 0 0.35rem;
+
+
+
+  /* margin: left and right allowed. */
+  --clean_start--label--margin:             0 0.24rem 0 0;
+
+  --clean_start--label--overflow-x:          hidden;
+  --clean_start--label--overflow-y:          hidden;
+
+}
+
+
+
+.clean_start * ol,
+.clean_start * ul {
+
+  --clean_start--label--padding:            0.10rem 0.35rem 0 0.35rem;
+
+  --clean_start--label--font-size:          0.70rem;
+  --clean_start--label--line-height:        var(--clean_start--label--font-size);
+
+  --clean_start--label--border-radius:      0.5rem;
+
+}
+
+.clean_start * p {
+
+  --clean_start--label--padding:            0.10rem 0.35rem 0 0.35rem;
+
+  --clean_start--label--font-size:          0.70rem;
+  --clean_start--label--line-height:        var(--clean_start--label--font-size);
+
+  --clean_start--label--border-radius:      0.5rem;
+
+}
+
+
+
+.clean_start * ol {
+  --clean_start--label--color:              #a0c0fa;
+  --clean_start--label--background-color:   navy;
+  --clean_start--label--border:             0.4px solid #5599fa;
+}
+
+.clean_start * ul {
+  --clean_start--label--color:              lime;
+  --clean_start--label--background-color:   green;
+  --clean_start--label--border:             0.4px solid lime;
+}
+
+.clean_start * p {
+  --clean_start--label--color:              #f2faf2;
+  --clean_start--label--background-color:   green;
+  --clean_start--label--border:             0.4px solid lime;
+}
+/* @finish clean_start base theme Label in ol||ul and other text blocks */
+
+
+/* @start clean_start Label in ol||ul and other text blocks */
+.clean_start ol li label,
+.clean_start ul li label,
+.clean_start text-lines-block label,
+.clean_start p label {
+  font-size:               var(--clean_start--label--font-size, 0.72rem);
+  line-height:             var(--clean_start--label--font-size, 0.72rem);
+
+  padding:                 var(--clean_start--label--padding, 0.12rem 0.4rem 0.12rem 0.4rem);
+  margin:                  var(--clean_start--label--margin, 0 0.24rem 0 0);
+
+  color:                   var(--clean_start--label--color, darkgreen);
+  background-color:        var(--clean_start--label--background-color, #eafdfa);
+
+  border:                  var(--clean_start--label--border, 1px solid lime);
+  border-radius:           var(--clean_start--label--border-radius, 0.4rem);
+
+  overflow-x:               var(--clean_start--label--overflow-x, hidden);
+  overflow-y:               var(--clean_start--label--overflow-y, hidden);
+}
+/* @finish clean_start Label in ol||ul and other text blocks */
+
+
+
+/* @start clean_start_tiny sites_tool having scrollbars */
+.clean_start .scrolls {
+  height:                  var(--clean_start--scrolls--height, 10rem);
+
+  min-width:               unset;
+  max-width:               100%;
+  width:                   var(--clean_start--scrolls--width, 30rem);
+
+  padding:                 var(--clean_start--scrolls--padding, 1rem 1rem 1rem 1rem);
+  border:                  var(--clean_start--scrolls--border, 1px solid green);
+  background-color:        #fdfdfd;
+
+  overflow-x:               scroll;
+  overflow-y:               scroll;
+}
+
+.clean_start .scrolls block,
+.clean_start .scrolls text-lines-block {
+  height:                  auto;
+
+  min-width:               unset;
+  max-width:               unset;
+  width:                   var(--clean_start--scrolls_block--width, 50rem);
+
+  overflow-x:               hidden;
+  overflow-y:               visible;
+}
+/* @finish clean_start_tiny sites_tool having scrollbars */
+
+
