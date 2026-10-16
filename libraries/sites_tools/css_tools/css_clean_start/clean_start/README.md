@@ -11,7 +11,7 @@
 
   | 🗂  **Library**  | `@jaisocx/clean_start` | 🏷  **ver.**: `1.0.1` |
 
-  | 🗓  **Updated**  | 🌾 Autumn 2026 | `AD 2026 Oct 16 17:40:10.500 GMT_24h` |
+  | 🗓  **Updated**  | 🌾 Autumn 2026 | `AD 2026 Oct 16 19:20:10.500 GMT_24h` |
 
   | 📐  **Size**     | 🗂 Folder: 316 K | 📦 Tarball: 19 KB | 📄 .css: 70 kb | 📄 .html: 30 kb | 
 
@@ -76,52 +76,6 @@ in the folder MediaAndStyles/clean_start_tiny__styles/styles_display/
 . aligning of existing other html pages.
 1_200 bytes   clean_start_tiny__standard_block_tags__display.css
 
-. 
-
-
-
-
-
-## Links
-
-### clean_start_tiny examples
-
-  🗓  🌾 Autumn 2026 | `09. Sep AD 2026 10:45 UTC 24h` |
-
-
-
-  ✅  **all html tags, variables set in html**
-https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/clean_start__html_tags.html
-
-
-
-  ❌  **all html tags, all variables set null**
-[https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/template_clean_start_linked__all_features.html](https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/template_clean_start_linked__all_features.html)
-
-
-
-  ✅  **symbols**
-https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/template_clean_start__icons.html
-
-
-
-  ✅  **table** 
-[https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/clean_start_tiny__table.html](https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/clean_start_tiny__table.html)
-
-
-
-  ✅  **ul li** 
-[https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/clean_start_tiny__ul_li.html](https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/clean_start_tiny__ul_li.html)
-
-
-
-  ✅  **all features in one html file 46.33kb**
-[https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/template_clean_start_one__all_features.html](https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/template_clean_start_one__all_features.html)
-
-
-
-  ✅  **readme**
-https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_tools/CleanStart_Tiny/readme__clean_start_tiny.html
 
 
 
@@ -135,7 +89,7 @@ https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_to
   ```
 
   ```html
-    <html language="en" class="<Namespace> clean_start">
+    <html language="en" class="<Your Namespace> clean_start">
   ```
 
   ```html
@@ -148,19 +102,23 @@ https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_to
 
 
 
+
+
 ### css example
 
   ```css
     .clean_start {
-    
+      --clean_start--anchor--color:           navy;
     }
   ```
 
   ```css
-    .clean_start.<Your Namespace> {
-      --clean_start--all_tags--font-size: 0.94rem;
+    .<Your Namespace>.clean_start {
+      --clean_start--all_tags--font-size:     0.94rem;
     }
   ```
+
+
 
 
 
@@ -169,10 +127,34 @@ https://jaisocx-tools.github.io/jaisocx_sites_tools/libraries/sites_tools/css_to
 
 ### Four fonts themes
 
-    💡  Texts look well, saving SIM mobile traffic.
+  >  💡  Texts look well, saving SIM mobile traffic.
 
 
-  Multiplatform tested font styles, set by styles variables for 4 font familie groups:
+  >  ❌  Multiplatform fallback fonts are just for the roaming mobile save up mode (nice with the cdn caches fine-tuning), 
+  >         don't look the same on other OS' browsers, 
+  >         however, still, sans remains the sans and the monospace remains monospace.
+
+  ✅  **Linux** ( just one Linux OS )
+
+  ✅  **Android**: just one font-family for on font-family group, all 4 themes look the same.
+
+  ✅  **iOS** ( iPad )
+
+  ✅  **MacOS** ( MacBook )
+
+
+
+
+
+
+
+  **Multiplatform** font styles, set by styles variables for 4 font familie groups:
+
+  >  ❌  Didn't have real comps with OS', weren't tested: 
+  > Microsoft Windows, 
+  > Chrome OS, 
+  > Free BSD.
+
 
   . sans
 
@@ -240,8 +222,9 @@ _________________________________________________________________
 
 ## Theme Base
 
-  > I appologize, the review of the base theme in README.md was in Summer 2026.
+  >  ❌  I appologize, the review of the base theme in 📒 `README.md` was in Summer 2026.
 
+  **styles.css**
 
 ```css
 
