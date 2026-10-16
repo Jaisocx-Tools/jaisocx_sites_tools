@@ -32,32 +32,18 @@ echo -e "    ✅  Created styles file: \"${bundle_dest_folder}/${bundle_dest_fna
 
 
 
-#; 1_065 b   |  theme_li_i_label.css
-cat "${bundle_src_folder}/tiny_sites_label/theme_li_i_label.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
+#; 2_503 b   |  theme_ul_li_label.css
+cat "${bundle_src_folder}/tiny_sites_label/theme_ul_li_label.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
 
-#; 1_216 b   |  tiny_sites_tools__li_i_label.css
-cat "${bundle_src_folder}/tiny_sites_label/tiny_sites_tools__li_i_label.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
+#; 1_025 b   |  tiny_sites_tools_ul_li_label.css
+cat "${bundle_src_folder}/tiny_sites_label/tiny_sites_tools_ul_li_label.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
+
+
 
 
 
 #;   786 b   |  tiny_sites_tools__scrolls.css
 cat "${bundle_src_folder}/tiny_sites_scrolls/tiny_sites_tools__scrolls.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
-
-
-
-#; 1_136 b   |  theme__tiny_sites_tools__table.css
-cat "${bundle_src_folder}/tiny_sites_table/theme__tiny_sites_tools__table.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
-
-#; 2_405 b   |  tiny_sites_tools__table.css
-cat "${bundle_src_folder}/tiny_sites_table/tiny_sites_tools__table.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
-
-
-
-#; 3_503 b   |  theme__tiny_sites_tools__ul_li.css
-cat "${bundle_src_folder}/tiny_sites_ul_li/theme__tiny_sites_tools__ul_li.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
-
-#; 1_330 b   |  tiny_sites_tools__ul_li.css
-cat "${bundle_src_folder}/tiny_sites_ul_li/tiny_sites_tools__ul_li.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
 
 
 

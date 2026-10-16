@@ -1,6 +1,6 @@
 #!/bin/bash
 
-env_dest_bundle_name="20261013"
+env_dest_bundle_name="20261016"
 add_tiny_keyword="no"
 
 
@@ -45,6 +45,8 @@ env_dest__html_tags__filename="d_clean_start${env_tiny_keyword}_html_tags.css"
 env_dest__responsive__filename="e_clean_start${env_tiny_keyword}_responsive.css"
 env_dest__sites_tools__filename="clean_start${env_tiny_keyword}_sites_tools.css"
 env_dest__themes__filename="i_clean_start${env_tiny_keyword}_themes.css"
+
+env_dest_tarball__styles_base_filename="clean_start${env_tiny_keyword}_base.css"
 
 
 
