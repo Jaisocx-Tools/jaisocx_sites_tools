@@ -48,11 +48,8 @@ cat "${bundle_dest_folder}/${env_dest__sites_tools__filename}" >> "./${tarball_d
 
 
 
-# cp "${bundle_dest_folder}/${env_dest__themes__filename}"  "./${tarball_dest_folder}/clean_start_tiny__theme_base.css"
-# cp "${bundle_dest_folder}/${env_dest__responsive__filename}"  "./${tarball_dest_folder}/clean_start_tiny__responsive.css"
-
-# cp "${bundle_dest_folder}/template_clean_start__zero.html"  "./${tarball_dest_folder}/clean_start__zero.html"
-cp "${bundle_dest_folder}/clean_start__all_tags.html"  "./${tarball_dest_folder}/clean_start__all_tags.html"
+# cat "${bundle_dest_folder}/${env_dest__themes__filename}" >> "./${tarball_dest_folder}/clean_start_tiny__theme_base.css"
+# cat "${bundle_dest_folder}/${env_dest__responsive__filename}" >> "./${tarball_dest_folder}/clean_start_tiny__responsive.css"
 
 
 

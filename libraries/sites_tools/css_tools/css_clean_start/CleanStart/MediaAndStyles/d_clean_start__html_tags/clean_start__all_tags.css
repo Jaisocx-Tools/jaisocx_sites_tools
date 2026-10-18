@@ -10,7 +10,11 @@ html.clean_start {
 
 .clean_start * {
   position:                var(--clean_start--all_tags--position, relative);
-  display:                 var(--clean_start--all_tags--display, inline-block);
+
+  /** display: var(--clean_start--all_tags--display, inline-block);
+   *    @moved_to: --clean_start--custom_tags--display in styles_display/clean_start__display.css
+  */
+
   box-sizing:              var(--clean_start--all_tags--box-sizing, border-box);
 
   padding:                 var(--clean_start--all_tags--padding, 0 0 0 0);

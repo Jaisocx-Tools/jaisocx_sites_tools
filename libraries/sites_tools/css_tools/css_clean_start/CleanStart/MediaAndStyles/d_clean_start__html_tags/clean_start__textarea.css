@@ -13,9 +13,20 @@
   max-width:               var(--clean_start--textarea--max-width, 100%);
   width:                   var(--clean_start--textarea--width, 10rem);
 
-  border:                  var(--clean_start--textarea--border, 0.4px solid #ddd);
-  outline:                 var(--clean_start--textarea--outline, unset);
+  color:                   var(--clean_start--textarea--color, #303030);
+  background:              var(--clean_start--textarea--background, #fdfdfd);
 
+  border:                  var(--clean_start--textarea--border, 0.4px solid #ddd);
+  outline:                 var(--clean_start--textarea--outline, 0 solid lime);
+
+}
+
+.clean_start textarea:hover {
+  color:                   var(--clean_start--textarea_hover--color, #050505);
+  background:              var(--clean_start--textarea_hover--background, #fefefe);
+
+  border:                  var(--clean_start--textarea_hover--border, 0.4px solid lime);
+  outline:                 var(--clean_start--textarea_hover--outline, 0 solid lime);
 }
 /* @finish clean_start_tiny html tag textarea */
 

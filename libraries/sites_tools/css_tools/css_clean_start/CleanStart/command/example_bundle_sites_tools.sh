@@ -32,6 +32,16 @@ echo -e "    ✅  Created styles file: \"${bundle_dest_folder}/${bundle_dest_fna
 
 
 
+#; 7_106 b   |  theme_tiny_sites_tools__html_forms.css
+cat "${bundle_src_folder}/tiny_html_forms/theme_tiny_sites_tools__html_forms.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
+
+#; 7_733 b   |  tiny_sites_tools__html_forms.css
+cat "${bundle_src_folder}/tiny_html_forms/tiny_sites_tools__html_forms.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
+
+
+
+
+
 #; 2_503 b   |  theme_ul_li_label.css
 cat "${bundle_src_folder}/tiny_sites_label/theme_ul_li_label.css" >> "${bundle_dest_folder}/${bundle_dest_fname}"
 

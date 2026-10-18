@@ -13,10 +13,23 @@
   max-width:               var(--clean_start--input--max-width, 100%);
   width:                   var(--clean_start--input--width, 10rem);
 
-  border:                  var(--clean_start--input--border, 0.2px solid #ddd);
+  color:                   var(--clean_start--input--color, #303030);
+  background:              var(--clean_start--input--background, #fdfdfd);
+
+  border:                  var(--clean_start--input--border, 0.4px solid #ddd);
   outline:                 var(--clean_start--input--outline, unset);
 
 }
+
+.clean_start input:hover {
+  color:                   var(--clean_start--input_hover--color, #050505);
+  background:              var(--clean_start--input_hover--background, #fefefe);
+
+  border:                  var(--clean_start--input_hover--border, 0.4px solid lime);
+  outline:                 var(--clean_start--input_hover--outline, unset);
+}
 /* @finish clean_start_tiny html tag input */
+
+
 
 
