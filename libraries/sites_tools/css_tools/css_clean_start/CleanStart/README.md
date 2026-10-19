@@ -320,263 +320,804 @@ _________________________________________________________________
 
 ## Theme Base
 
+**in review ...**
+
+
 ```css
 
-    .clean_start {
+.clean_start {
 
-      --clean_start--rem:  16px;
+  --clean_start--rem:   16px;
 
-      --clean_start--all_tags--font-family:   var(--clean_start--sans--font-family);
-      --clean_start--all_tags--font-size:     0.95rem;
-      --clean_start--all_tags--line-height:   1.49rem;
-      --clean_start--all_tags--color:         black;
-      --clean_start--all_tags--border-width:  0;
+  --clean_start--all_tags--position:     relative;
+  --clean_start--all_tags--box-sizing:   border-box;
+  --clean_start--all_tags--padding:      0;
+  --clean_start--all_tags--margin:       0;
 
-      --clean_start--anchor--color:           navy;
-      --clean_start--anchor_hover--color:     #2292e5;
+  --clean_start--all_tags--font-family:   Arial;
+  --clean_start--all_tags--font-size:     0.9rem;
+  --clean_start--all_tags--line-height:   1.2rem;
+  --clean_start--all_tags--letter-spacing:   0;
+  --clean_start--all_tags--line-break:   strict;
+  --clean_start--all_tags--word-wrap:   normal;
+  --clean_start--all_tags--word-break:   normal;
+  --clean_start--all_tags--color:   black;
 
-      --clean_start--h1--font-size:           1.25rem;
-      --clean_start--h1--line-height:         1.7rem;
+  --clean_start--all_tags--border-color:   lime;
+  --clean_start--all_tags--border-style:   solid;
+  --clean_start--all_tags--border-width:   0;
 
-      --clean_start--h--font-size:            0.9rem;
-      --clean_start--h--line-height:          1.4rem;
-      --clean_start--h--margin:               1.4rem 0 0.4rem 0;
-      --clean_start--h--color:                black;
+  --clean_start--all_tags--min-height:   0;
+  --clean_start--all_tags--max-height:   unset;
+  --clean_start--all_tags--height:   auto;
 
-      --clean_start--p--margin:               1.4rem 0 0 0;
-      --clean_start--p--font-size:            var(--clean_start--all_tags--font-size);
-      --clean_start--p--line-height:          var(--clean_start--all_tags--line-height);
+  --clean_start--all_tags--min-width:   0;
+  --clean_start--all_tags--max-width:   100%;
+  --clean_start--all_tags--width:   auto;
 
-      /* ul li i */
-      --clean_start--ul--margin:              0.3rem 0 0.4rem 0.5rem;
-      --clean_start--i_ul--margin:            0.3rem 0 0.4rem 3.0rem;
+  --clean_start--all_tags--overflow-x:   visible;
+  --clean_start--all_tags--overflow-y:   visible;
 
-      --clean_start--ul_li_i--padding:        0 0 0 0.5rem;
-      --clean_start--i_ul_li_i--padding:      0 0 0 0.2rem;
 
-      --clean_start--ul_li_i--font-size:      var(--clean_start--all_tags--font-size);
-      --clean_start--ul_li_i--line-height:    var(--clean_start--all_tags--line-height);
+  --clean_start--custom_tags--display:   inline-block;
+  --clean_start--site--display:          block;
+  --clean_start--inline_tags--display:   inline-block;
+  --clean_start--block_tags--display:    block;
 
-      /* .tag_content */
-      --clean_start--ul_li_i_c--content: '-';
-      --clean_start--ul_li_i_c--top:          0;
-      --clean_start--ul_li_i_c--left:         -0.5rem;
-      --clean_start--ul_li_i_c--font-size:    var(--clean_start--ul_li_i--font-size);
-      /* --clean_start--ul_li_i_c--line-height: var(--clean_start--ul_li_i--line-height); */
-      --clean_start--ul_li_i_c--color:        #33ab55;
 
-      /* ul.tag_border */
-      --clean_start--ul_li_i_o--tag_border--content: '';
-      --clean_start--ul_li_i_o--tag_border--top:            0.44rem;
-      --clean_start--ul_li_i_o--tag_border--left:           0;
-      --clean_start--ul_li_i_o--tag_border--font-size:      0;
-      --clean_start--ul_li_i_o--tag_border--size:           0.32rem;
-      --clean_start--ul_li_i_o--tag_border--border-radius:  0;
-      --clean_start--ul_li_i_o--tag_border--border:         1px solid yellow;
-      --clean_start--ul_li_i_o--tag_border--background:     #fdfda0;
+  --clean_start--html_tag--position:     static;
+  --clean_start--html_tag--top:          0;
+  --clean_start--html_tag--padding:      0 0 0 0;
+  --clean_start--html_tag--margin:       0 0 0 0;
+  --clean_start--html_tag--box-sizing:   border-box;
 
+  --clean_start--html_tag--min-height:   100vh;
+  --clean_start--html_tag--max-height:   unset;
+  --clean_start--html_tag--height:       auto;
 
-      /* label */
-      --clean_start--label--display:           block;
+  --clean_start--html_tag--min-width:    100%;
+  --clean_start--html_tag--max-width:    100%;
+  --clean_start--html_tag--width:        100%;
+  --clean_start--html_tag--overflow-x:    hidden;
 
-      --clean_start--label--font-size:         0.79rem;
-      --clean_start--label--line-height:       var(--clean_start--label--font-size);
 
-      --clean_start--label--padding:           0.12rem 0.5rem 0.16rem 0.5rem;
-      --clean_start--label--margin:            0 0 0 0;
+  --clean_start--body_tag--position:     relative;
+  --clean_start--body_tag--top:          0;
+  --clean_start--body_tag--padding:      0 0 0 0;
+  --clean_start--body_tag--margin:       0 0 0 0;
+  --clean_start--body_tag--display:      block;
+  --clean_start--body_tag--box-sizing:   border-box;
 
-      --clean_start--label--color:             green;
-      --clean_start--label--background-color:  #eefafd;
+  --clean_start--body_tag--min-height:   100vh;
+  --clean_start--body_tag--max-height:   unset;
+  --clean_start--body_tag--height:       auto;
 
-      --clean_start--label--border:            1px solid green;
-      --clean_start--label--border-radius:     0.8rem;
+  --clean_start--body_tag--min-width:    100%;
+  --clean_start--body_tag--max-width:    100%;
+  --clean_start--body_tag--width:        100%;
 
-      --clean_start--label--overflow-x:        hidden;
-      --clean_start--label--overflow-y:        hidden;
+  --clean_start--body_tag--background:   #eefdf4;
 
+  --clean_start--body_tag--overflow-x:    hidden;
+  --clean_start--body_tag--overflow-y:    auto;
 
-      /* pre */
-      --clean_start--pre--font-family:    var(--clean_start--monospace--font-family);
-      --clean_start--pre--font-size:      0.9rem;
-      --clean_start--pre--line-height:    1.2rem;
 
+  --clean_start--site--padding:          0 0 0 0;
+  --clean_start--site--margin:           0 0 0 0;
 
-      /* site */
-      --clean_start--site--padding:              1.4rem 1.9rem 12rem 1.9rem;
-      --clean_start--site--width:                72%;
+  --clean_start--site--min-height:       100vh;
+  --clean_start--site--max-height:       unset;
+  --clean_start--site--height:           auto;
 
-      --clean_start--site--background:           #fdfdfd;
-      --clean_start--body_tag--background:       #eefefa;
+  --clean_start--site--min-width:        unset;
+  --clean_start--site--max-width:        100%;
+  --clean_start--site--width:   auto;
 
+  --clean_start--site--background:       #fdfdfd;
 
-      /* table */
-      --clean_start--table--border:                     0.5px solid green;
+  --clean_start--site--overflow-x:        hidden;
+  --clean_start--site--overflow-y:        visible;
 
-      --clean_start--table_caption--text-align:         left;
-      --clean_start--table_caption--color:              #333;
-      --clean_start--table_caption--background-color:   #fdfdfd;
-      --clean_start--table_caption--border:             0.5px solid green;
 
-      --clean_start--table_th--text-align:              center;
-      --clean_start--table_th--color:                   black;
-      --clean_start--table_th--background-color:        #eefedd;
 
-      --clean_start--table_td--color:                   green;
-      --clean_start--table_td--background-color:        #fdfdfd;
+  --clean_start--scrollbar--size:                     0.3rem;
+  --clean_start--scrollbar-thumb--background-color:   lime;
+  --clean_start--scrollbar-track--background-color:   #eafdfa;
+  --clean_start--scrollbar--width:                    thin;
+  --clean_start--scrollbar--color:                    lime, #eafdfa;
 
-      --clean_start--table_td_odd--color:               #553322;
-      --clean_start--table_td_odd--background-color:    #fafaf2;
 
-      --clean_start--table_td_even--color:              darkgreen;
-      --clean_start--table_td_even--background-color:   #f2faf2;
 
-      --clean_start--table_tfoot--color:                black;
-      --clean_start--table_tfoot--background-color:     #fdfdfd;
+  --clean_start--h--text-align:        left;
+
+  --clean_start--h--line-height:       1.24rem;
+  --clean_start--h--font-size:         0.92rem;
+  --clean_start--h--font-weight:       900;
+  --clean_start--h--font-style:        normal;
+  --clean_start--h--font-variant:      normal;
+  --clean_start--h--letter-spacing:    0.005rem;
+  --clean_start--h--line-break:        strict;
+  --clean_start--h--word-wrap:         normal;
+  --clean_start--h--word-break:        normal;
+
+  --clean_start--h--display:           block;
+  --clean_start--h--padding:           0 0 0 0;
+  --clean_start--h--margin:            0 0 0 0;
+
+  --clean_start--h--color:             black;
+  --clean_start--h--background:        #fdfdfd;
+
+
+  --clean_start--h1--text-align:       center;
+  --clean_start--h1--padding:          0 0 0 0;
+  --clean_start--h1--margin:           0 0 0 0;
+
+  --clean_start--h1--font-family:      "Arial";
+  --clean_start--h1--line-height:      2.5rem;
+  --clean_start--h1--font-size:        1.9rem;
+  --clean_start--h1--font-weight:      600;
+  --clean_start--h1--font-style:       normal;
+  --clean_start--h1--font-variant:     normal;
+  --clean_start--h1--letter-spacing:   0.005rem;
+  --clean_start--h1--line-break:       strict;
+  --clean_start--h1--word-wrap:        normal;
+  --clean_start--h1--word-break:       normal;
+
+  --clean_start--h1--color:            black;
+  --clean_start--h1--background:       #fdfdfd;
+
+
+  --clean_start--h2--text-align:       left;
+  --clean_start--h2--padding:          0 0 0 0;
+  --clean_start--h2--margin:           0 0 0 0;
+
+  --clean_start--h2--font-family:      "Arial";
+  --clean_start--h2--line-height:      2.0rem;
+  --clean_start--h2--font-size:        1.282rem;
+  --clean_start--h2--font-weight:      600;
+  --clean_start--h2--font-style:       normal;
+  --clean_start--h2--font-variant:     normal;
+  --clean_start--h2--letter-spacing:   0.005rem;
+  --clean_start--h2--line-break:       strict;
+  --clean_start--h2--word-wrap:        normal;
+  --clean_start--h2--word-break:       normal;
+
+  --clean_start--h2--color:            black;
+  --clean_start--h2--background:       #fdfdfd;
+
+
+  --clean_start--h3--text-align:       left;
+  --clean_start--h3--padding:          0 0 0 0;
+  --clean_start--h3--margin:           0 0 0 0;
 
+  --clean_start--h3--font-family:      "Arial";
+  --clean_start--h3--line-height:      1.49rem;
+  --clean_start--h3--font-size:        1.18rem;
+  --clean_start--h3--font-weight:      500;
+  --clean_start--h3--font-style:       normal;
+  --clean_start--h3--font-variant:     normal;
+  --clean_start--h3--letter-spacing:   0.005rem;
+  --clean_start--h3--line-break:       strict;
+  --clean_start--h3--word-wrap:        normal;
+  --clean_start--h3--word-break:       normal;
 
-      /* scroll */
-      --clean_start--scrollbar-thumb--background-color: lime;
-      --clean_start--scrollbar-track--background-color: #fafefa;
-      --clean_start--scrollbar--size:                   0.3rem;
+  --clean_start--h3--color:            #054505;
+  --clean_start--h3--background:       #fdfdfd;
 
-      /*
-      scrollbar-width: auto;
-      scrollbar-width: thin;
-      scrollbar-width: none;
-      */
-      --clean_start--scrollbar--width: thin;
-    }
 
+  --clean_start--h4--text-align:       left;
+  --clean_start--h4--padding:          0 0 0 0;
+  --clean_start--h4--margin:           0 0 0 0;
 
-    /* ul inline */
-    .clean_start ul.inline {
-      --clean_start--ul_li_i_c--content: '🔵';
+  --clean_start--h4--font-family:      "Arial";
+  --clean_start--h4--line-height:      1.49rem;
+  --clean_start--h4--font-size:        1.09rem;
+  --clean_start--h4--font-weight:      600;
+  --clean_start--h4--font-style:       normal;
+  --clean_start--h4--font-variant:     normal;
+  --clean_start--h4--letter-spacing:   0.005rem;
+  --clean_start--h4--line-break:       strict;
+  --clean_start--h4--word-wrap:        normal;
+  --clean_start--h4--word-break:       normal;
 
-      --clean_start--ul_li_i_c--top:     0;
-      --clean_start--ul_li_i_c--left:   -0.5rem;
+  --clean_start--h4--color:            black;
+  --clean_start--h4--background:       #fdfdfd;
 
-      --clean_start--ul--margin:         0.3rem 0 0.4rem 0.5rem;
-      --clean_start--i_ul--margin:       0 0 0 0;
 
-      --clean_start--ul_li_i--padding:     0 0.44rem 0 0.44rem;
-      --clean_start--i_ul_li_i--padding:   0 0 0 0;
 
-      --clean_start--ul_li_i_c--font-size:    0.4rem;
-      --clean_start--ul_li_i_c--line-height:  var(--clean_start--ul_li_i--line-height);
+  --clean_start--text--position:        relative;
+  --clean_start--text--display:         inline-block;
+  --clean_start--text--box-sizing:      border-box;
+  --clean_start--text--padding:         0 0 0 0;
+  --clean_start--text--margin:          0 0 0 0;
 
-      --clean_start--ul_li_i_c--color: #33ab55;
-    }
+  --clean_start--text--font-family:     Arial;
+  --clean_start--text--line-height:     1.2rem;
+  --clean_start--text--font-size:       0.9rem;
+  --clean_start--text--font-style:      normal;
+  --clean_start--text--font-variant:    normal;
+  --clean_start--text--letter-spacing:  0.005rem;
+  --clean_start--text--line-break:      strict;
+  --clean_start--text--word-wrap:       normal;
+  --clean_start--text--word-break:      normal;
 
+  --clean_start--text--border-color:    lime;
+  --clean_start--text--border-style:    solid;
+  --clean_start--text--border-width:    0;
 
-    /* ul inline slash */
-    .clean_start ul.inline.slash {
-      --clean_start--ul_li_i_c--content: '|';
+  --clean_start--text--color:           black;
+  --clean_start--text--background:      #fdfdfd;
 
-      --clean_start--ul_li_i_c--top:   0;
-      --clean_start--ul_li_i_c--left: -0.5rem;
+  --clean_start--text--min-height:      0;
+  --clean_start--text--max-height:      unset;
+  --clean_start--text--height:          auto;
 
-      --clean_start--ul--margin:      0.3rem 0 0.4rem 0.5rem;
-      --clean_start--i_ul--margin:    0 0 0 0;
+  --clean_start--text--min-width:       0;
+  --clean_start--text--max-width:       100%;
+  --clean_start--text--width:           auto;
 
-      --clean_start--ul_li_i--padding:     0 0.44rem 0 0.44rem;
-      --clean_start--i_ul_li_i--padding:   0 0 0 0;
+  --clean_start--text--overflow-x:       visible;
+  --clean_start--text--overflow-y:       visible;
 
-      --clean_start--ul_li_i_c--font-size:    var(--clean_start--ul_li_i--font-size);
-      --clean_start--ul_li_i_c--line-height:  var(--clean_start--ul_li_i--line-height);
 
-      --clean_start--ul_li_i_c--color:    #33ab55;
-    }
 
+  --clean_start--marker--position:      relative;
+  --clean_start--marker--display:       inline-block;
+  --clean_start--marker--padding:       0 0 0 0;
+  --clean_start--marker--margin:        0 0 0 0;
 
-    /* ul tag_border */
-    .clean_start ul.tag_border {
-      --clean_start--ul_li_i_c--content: '';
-      --clean_start--ul_li_i_o--tag_border--content: '';
+  --clean_start--marker--font-family:   Arial;
+  --clean_start--marker--line-height:   0.9rem;
+  --clean_start--marker--font-size:     0.9rem;
+  --clean_start--marker--letter-spacing:   0;
 
-      --clean_start--ul_li_i_o--tag_border--display: block;
+  --clean_start--marker--color:          green;
+  --clean_start--marker--border-color:   #99fd55;
+  --clean_start--marker--border-style:   solid;
+  --clean_start--marker--border-width:   0.2px;
+  --clean_start--marker--background:     #effdea;
 
-      --clean_start--ul_li_i_o--tag_border--top:     0.44rem;
-      --clean_start--ul_li_i_o--tag_border--left:   -0.7rem;
+  --clean_start--marker--min-height:     0.9rem;
+  --clean_start--marker--max-height:     0.9rem;
+  --clean_start--marker--height:         0.9rem;
 
-      --clean_start--ul--margin:        0.3rem 0 0.4rem 0.7rem;
-      --clean_start--i_ul--margin:      0.3rem 0 0.4rem 3.0rem;
-
-      --clean_start--ul_li_i--padding:      0 0 0 0.23rem;
-      --clean_start--i_ul_li_i--padding:    0 0 0 0.2rem;
-
-
-      --clean_start--ul_li_i_o--tag_border--font-size:    0;
-      --clean_start--ul_li_i_o--tag_border--line-height:  0;
-
-      --clean_start--ul_li_i_o--tag_border--border:   0px solid green;
-      --clean_start--ul_li_i_o--tag_border--size:           0.4rem;
-      --clean_start--ul_li_i_o--tag_border--border-radius:  0;
-      --clean_start--ul_li_i_o--tag_border--background:   green; /* #eafdf2; */
-    }
-
-
-    /* ul inline tag_border */
-    .clean_start ul.inline.tag_border {
-
-      --clean_start--ul_li_i_c--content: '';
-      --clean_start--ul_li_i_o--tag_border--content: '';
-
-      --clean_start--ul_li_i_o--tag_border--display: block;
-
-      --clean_start--ul_li_i_o--tag_border--top:   0.385rem;
-      --clean_start--ul_li_i_o--tag_border--left: -0.7rem;
-
-      --clean_start--ul--margin:      0.3rem 0 0.4rem 0.7rem;
-      --clean_start--i_ul--margin:    0 0 0 0;
-
-      --clean_start--ul_li_i--padding:        0 1.9rem 0 0.23rem;
-      --clean_start--i_ul_li_i--padding:      0 0 0 0;
-
-
-      --clean_start--ul_li_i_o--tag_border--font-size:     0;
-      --clean_start--ul_li_i_o--tag_border--line-height:   0;
-
-      --clean_start--ul_li_i_o--tag_border--border:         1px solid green;
-      --clean_start--ul_li_i_o--tag_border--size:           0.4rem;
-      --clean_start--ul_li_i_o--tag_border--border-radius:  0.2rem;
-      --clean_start--ul_li_i_o--tag_border--background:     #eafdf2;
-
-
-      --clean_start--ul_li_i_c--top:           var(--clean_start--ul_li_i_o--tag_border--top);
-      --clean_start--ul_li_i_c--left:          var(--clean_start--ul_li_i_o--tag_border--left);
-
-      --clean_start--ul_li_i_c--font-size:     0;
-      --clean_start--ul_li_i_c--line-height:   0;
-
-      --clean_start--ul_li_i_c--color:         unset;
-    }
-
-
-    .clean_start li i label,
-    .clean_start p label,
-    .clean_start layout-block p label,
-    .clean_start text-block p label,
-    .clean_start layout-block text-block label,
-    .clean_start layout-block text-line label {
-      --clean_start--label--display:            inline-block;
-
-      --clean_start--label--font-size:          0.72rem;
-      --clean_start--label--line-height:        var(--clean_start--label--font-size);
-
-      --clean_start--label--padding:            0.14rem 0.45rem 0.14rem 0.45rem;
-
-      /* margin: left and right allowed. in styles hardcoded margin-bottom: -2px; */
-      --clean_start--label--margin:             0 0.24rem -2px 0;
-
-      --clean_start--label--color:              green;
-      --clean_start--label--background-color:   #eefef2;
-
-      --clean_start--label--border:             1px solid lime;
-      --clean_start--label--border-radius:      0.5rem;
-
-      --clean_start--label--overflow-x:   hidden;
-      --clean_start--label--overflow-y:   hidden;
-    }
+  --clean_start--marker--min-width:      0;
+  --clean_start--marker--max-width:      100%;
+  --clean_start--marker--width:          auto;
+
+  --clean_start--marker--overflow-x:      visible;
+  --clean_start--marker--overflow-y:      visible;
+
+
+
+  --clean_start--label--display:         inline-block;
+
+  --clean_start--label--min-height:      unset;
+  --clean_start--label--max-height:      100%;
+  --clean_start--label--height:          auto;
+
+  --clean_start--label--min-width:       unset;
+  --clean_start--label--max-width:       100%;
+  --clean_start--label--width:           auto;
+
+  --clean_start--label--line-height:     1.2rem;
+  --clean_start--label--font-size:       0.9rem;
+
+  --clean_start--label--padding:         0 0 0 0;
+  --clean_start--label--margin:          0 0 0 0;
+
+  --clean_start--label--border:          0 solid magenta;
+  --clean_start--label--border-radius:   0;
+  --clean_start--label--color:           black;
+  --clean_start--label--background:      #fdfdfd;
+
+  --clean_start--label--overflow-x:       hidden;
+  --clean_start--label--overflow-y:       hidden;
+
+
+
+  --clean_start--anchor--color:          navy;
+  --clean_start--anchor--text-decoration:   none;
+  --clean_start--anchor_hover--color:    #2255ab;
+  --clean_start--anchor_hover--text-decoration:   underline;
+
+
+
+  --clean_start--p--line-height:         1.2rem;
+  --clean_start--p--font-size:           0.9rem;
+  --clean_start--p--margin:              0 0 0 0;
+
+  --clean_start--p_first--margin:         0 0 0 0;
+  --clean_start--p_tags--padding:        0 0 0 0;
+  --clean_start--p_tags--margin:         0 0 0 0;
+  --clean_start--p_tags--font-size:      0.9rem;
+  --clean_start--p_tags--line-height:    0.9rem;
+  --clean_start--p_tags--min-height:     0;
+  --clean_start--p_tags--max-height:     0.9rem;
+  --clean_start--p_tags--height:         0.9rem;
+  --clean_start--p_tags--overflow-x:      visible;
+  --clean_start--p_tags--overflow-y:      hidden;
+
+
+
+  --clean_start--pre--font-family:       Courier;
+  --clean_start--pre--font-size:         0.9rem;
+  --clean_start--pre--line-height:       1.2rem;
+
+  --clean_start--pre_tags--font-size:    0.9rem;
+  --clean_start--pre_tags--line-height:  0.9rem;
+
+
+
+  --clean_start--ol_li_c--line-height:   1.2rem;
+  --clean_start--ol_li_c--font-family:   "Arial";
+  --clean_start--ol_li_c--font-size:     0.9rem;
+  --clean_start--ol_li_c--color:         black;
+
+  --clean_start--ul_li_c--line-height:   1.2rem;
+  --clean_start--ul_li_c--font-family:   "Arial";
+  --clean_start--ul_li_c--font-size:     0.9rem;
+  --clean_start--ul_li_c--color:         black;
+
+  --clean_start--ul_li_c--content:       '';
+  --clean_start--ul_li_c--top:           0.4rem;
+  --clean_start--ul_li_c--left:          0;
+  --clean_start--ul_li_c--line-height:   0;
+  --clean_start--ul_li_c--font-size:     0;
+  --clean_start--ul_li_c--max-height:    0.3rem;
+  --clean_start--ul_li_c--height:        0.3rem;
+  --clean_start--ul_li_c--max-width:     0.3rem;
+  --clean_start--ul_li_c--width:         0.3rem;
+  --clean_start--ul_li_c--background:    green;
+  --clean_start--ul_li_c--border:        1px solid green; /* review */
+  --clean_start--ul_li_c--border-radius: 0;
+  --clean_start--ul--padding:            0 0 0 0;
+  --clean_start--ul--display:            block;
+  --clean_start--ul--margin:             0 0 0 0;
+  --clean_start--ul--line-height:        0.9rem;
+  --clean_start--ul--font-size:          0.9rem;
+  --clean_start--ul--min-height:         0;
+  --clean_start--ul--max-height:         unset;
+  --clean_start--ul--height:             auto;
+  --clean_start--ul--overflow-x:          visible;
+  --clean_start--ul--overflow-y:          visible;
+  --clean_start--ul_li--padding:         0 0 0 0;
+  --clean_start--ul_li--display:         block;
+  --clean_start--ul_li--margin:          0 0 0 0;
+  --clean_start--ul_li--line-height:     1.2rem;
+  --clean_start--ul_li--font-family:     "Arial";
+  --clean_start--ul_li--font-size:       0.9rem;
+  --clean_start--ul_li--min-height:      0;
+  --clean_start--ul_li--max-height:      unset;
+  --clean_start--ul_li--height:          auto;
+  --clean_start--ul_li--overflow-x:       visible;
+  --clean_start--ul_li--overflow-y:       visible;
+  --clean_start--ul_li_tags--padding:    0 0 0 0;
+  --clean_start--ul_li_tags--display:    inline-block;
+  --clean_start--ul_li_tags--margin:     0 0 0 0;
+  --clean_start--ul_li_tags--line-height:   0.9rem;
+  --clean_start--ul_li_tags--font-family:   "Arial";
+  --clean_start--ul_li_tags--font-size:     0.9rem;
+  --clean_start--ul_li_tags--min-height:    0;
+  --clean_start--ul_li_tags--max-height:    unset;
+  --clean_start--ul_li_tags--height:        0.9rem;
+  --clean_start--ul_li_tags--overflow-x:     visible;
+  --clean_start--ul_li_tags--overflow-y:     visible;
+  --clean_start--li_ul--padding:            0 0 0 0;
+  --clean_start--li_ul--display:            block;
+  --clean_start--li_ul--margin:             0 0 0 0;
+  --clean_start--li_ul--line-height:        0.9rem;
+  --clean_start--li_ul--font-size:          0.9rem;
+  --clean_start--li_ul--min-height:         0;
+  --clean_start--li_ul--max-height:         unset;
+  --clean_start--li_ul--height:             auto;
+  --clean_start--li_ul--overflow-x:          visible;
+  --clean_start--li_ul--overflow-y:          visible;
+  --clean_start--li_ul_li--padding:         0 0 0 0;
+  --clean_start--li_ul_li--display:         block;
+  --clean_start--li_ul_li--margin:          0 0 0 0;
+  --clean_start--li_ul_li--line-height:     1.2rem;
+  --clean_start--li_ul_li--font-family:     "Arial";
+  --clean_start--li_ul_li--font-size:       0.9rem;
+  --clean_start--li_ul_li--min-height:      0;
+  --clean_start--li_ul_li--max-height:      unset;
+  --clean_start--li_ul_li--height:          auto;
+  --clean_start--li_ul_li--overflow-x:       visible;
+  --clean_start--li_ul_li--overflow-y:       visible;
+
+
+  --clean_start--ol_li_c--position:         absolute;
+  --clean_start--ol_li_c--display:          block;
+  --clean_start--ol_li_c--top:              0;
+  --clean_start--ol_li_c--left:             0;
+  --clean_start--ol_li_c--line-height:      1.2rem;
+  --clean_start--ol_li_c--font-family:      "Arial";
+  --clean_start--ol_li_c--font-size:        0.9rem;
+  --clean_start--ol_li_c--min-height:       0;
+  --clean_start--ol_li_c--max-height:       1.2rem;
+  --clean_start--ol_li_c--height:           1.2rem;
+  --clean_start--ol_li_c--min-width:        0;
+  --clean_start--ol_li_c--max-width:        unset;
+  --clean_start--ol_li_c--width:            auto;
+  --clean_start--ol_li_c--color:            black;
+  --clean_start--ol_li_c--background:       #fdfdfd;
+  --clean_start--ol_li_c--border:           0 solid lime;
+  --clean_start--ol_li_c--border-radius:    0;
+  --clean_start--ol_li_c--overflow-x:        hidden;
+  --clean_start--ol_li_c--overflow-y:        hidden;
+
+
+  --clean_start--ul_li_c--position:         absolute;
+  --clean_start--ul_li_c--display:          block;
+  --clean_start--ul_li_c--top:              0;
+  --clean_start--ul_li_c--left:             0;
+  --clean_start--ul_li_c--line-height:      1.2rem;
+  --clean_start--ul_li_c--font-family:      "Arial";
+  --clean_start--ul_li_c--font-size:        0.9rem;
+  --clean_start--ul_li_c--min-height:       0;
+  --clean_start--ul_li_c--max-height:       1.2rem;
+  --clean_start--ul_li_c--height:           1.2rem;
+  --clean_start--ul_li_c--min-width:        0;
+  --clean_start--ul_li_c--max-width:        unset;
+  --clean_start--ul_li_c--width:            auto;
+  --clean_start--ul_li_c--color:            black;
+  --clean_start--ul_li_c--background:       #fdfdfd;
+  --clean_start--ul_li_c--border:           0 solid lime;
+  --clean_start--ul_li_c--border-radius:    0;
+  --clean_start--ul_li_c--overflow-x:        hidden;
+  --clean_start--ul_li_c--overflow-y:        hidden;
+  --clean_start--ul_li_inline--display:     inline-block;
+  --clean_start--ul_li_tags_inline--display:   inline-block;
+
+
+
+  --clean_start--dl_dt_dd_c--content:       '';
+  --clean_start--dl_dt_dd_c--content:       '';
+  --clean_start--dl_dt_dd--font-size:       0.9rem;
+  --clean_start--dl_dt_dd--line-height:     1.2rem;
+  --clean_start--dl--display:               block;
+  --clean_start--dl_dt--display:            block;
+  --clean_start--dl_dt_dd--display:         inline-block;
+  --clean_start--dl--padding:               0 0 0 0;
+  --clean_start--dl_dt--padding:            0 0 0 0;
+  --clean_start--dl_dt_dd--padding:         0 0 0 0;
+  --clean_start--dl--margin:                0 0 0 0;
+  --clean_start--dl_dt--margin:             0 0 0 0;
+  --clean_start--dl_dt_dd--margin:          0 0 0 0;
+  --clean_start--dl_dt--font-weight:        600;
+  --clean_start--dl_dt_dd--font-style:      normal;
+  --clean_start--dl_dt_dd--overflow-x:       visible;
+  --clean_start--dl_dt_dd--overflow-y:       visible;
+  --clean_start--dl--list-style-type:       none;
+  --clean_start--dl_dt_dd_tags--display:    inline-block;
+  --clean_start--dl_dt_dd_tags--padding:    0 0 0 0;
+  --clean_start--dl_dt_dd_tags--margin:     0 0 0 0;
+  --clean_start--dl_dt_dd_tags--overflow-x:   visible;
+  --clean_start--dl_dt_dd_tags--overflow-y:   visible;
+  --clean_start--dl_dt_dd_tags--font-size:   0.9rem;
+  --clean_start--dl_dt_dd_tags--line-height: 0.9rem;
+  --clean_start--dl_dt_dd_c--position:       absolute;
+  --clean_start--dl_dt_dd_c--display:        block;
+  --clean_start--dl_dt_dd_c--top:            0;
+  --clean_start--dl_dt_dd_c--left:           0;
+  --clean_start--dl_dt_dd_c--font-size:      0.9rem;
+  --clean_start--dl_dt_dd_c--line-height:    1.2rem;
+  --clean_start--dl_dt_dd_c--min-height:     0;
+  --clean_start--dl_dt_dd_c--max-height:     unset;
+  --clean_start--dl_dt_dd_c--height:         auto;
+  --clean_start--dl_dt_dd_c--color:          lime;
+  --clean_start--dl_dt_dd_c--overflow-x:      hidden;
+  --clean_start--dl_dt_dd_c--overflow-y:      hidden;
+  --clean_start--dl--display:                block;
+  --clean_start--dl_dt--display:             block;
+  --clean_start--dd_dl--margin:              0 0 0 0;
+
+
+
+  --clean_start--table_td_odd--color:        #553322;
+  --clean_start--table_td_odd--background:   #fdfdfa;
+
+  --clean_start--table_td_even--color:       darkgreen;
+  --clean_start--table_td_even--background:  #fafdf2;
+
+  --clean_start--table_tf--color:            #050505;
+  --clean_start--table_tf--background:       #fdfdfd;
+
+
+  --clean_start--table--border:              0 solid #ddd;
+  --clean_start--table--border-collapse:     collapse;
+
+  --clean_start--table--min-width:           unset;
+  --clean_start--table--max-width:           100%;
+  --clean_start--table--width:               auto;
+
+  --clean_start--table--overflow-x:           hidden;
+  --clean_start--table--overflow-y:           hidden;
+
+
+  --clean_start--table_caption--padding:     0 0 0 0;
+  --clean_start--table_caption--margin:      0 0 0 0;
+
+  --clean_start--table_caption--text-align:  left;
+  --clean_start--table_caption--line-height: 1.2rem;
+  --clean_start--table_caption--font-family: "Arial";
+  --clean_start--table_caption--font-size:   0.9rem;
+  --clean_start--table_caption--font-weight: 600;
+
+  --clean_start--table_caption--min-width:   unset;
+  --clean_start--table_caption--max-width:   100%;
+  --clean_start--table_caption--width:       auto;
+
+  --clean_start--table_caption--border:      0 solid #ddd;
+
+  --clean_start--table_caption--color:       black;
+  --clean_start--table_caption--background:  #fdfdfd;
+
+  --clean_start--table_caption--overflow-x:   hidden;
+  --clean_start--table_caption--overflow-y:   hidden;
+
+
+  --clean_start--table_th--padding:          0 0 0 0;
+  --clean_start--table_th--margin:           0 0 0 0;
+
+  --clean_start--table_th--text-align:       left;
+  --clean_start--table_th--line-height:      1.2rem;
+  --clean_start--table_th--font-family:      "Arial";
+  --clean_start--table_th--font-size:        0.9rem;
+  --clean_start--table_th--font-weight:      600;
+
+  --clean_start--table_th--border:           0.2px solid lime;
+
+  --clean_start--table_th--color:            black;
+  --clean_start--table_th--background:       #fdfdfd;
+
+
+  --clean_start--table_td--padding:          0 0 0 0;
+  --clean_start--table_td--margin:           0 0 0 0;
+
+  --clean_start--table_td--text-align:       left;
+  --clean_start--table_td--line-height:      1.2rem;
+  --clean_start--table_td--font-family:      "Arial";
+  --clean_start--table_td--font-size:        0.9rem;
+  --clean_start--table_td--font-weight:      400;
+
+  --clean_start--table_td--border:           0.2px solid green;
+
+  --clean_start--table_td--color:            black;
+  --clean_start--table_td--background:       #fdfdfd;
+
+
+  --clean_start--table_td_tags--padding:     0 0 0 0;
+  --clean_start--table_td_tags--margin:      0 0 0 0;
+
+  --clean_start--table_td_tags--line-height: 0.9rem;
+  --clean_start--table_td_tags--font-family: "Arial";
+  --clean_start--table_td_tags--font-size:   0.9rem;
+
+  --clean_start--table_td_tags--overflow-x:   visible;
+  --clean_start--table_td_tags--overflow-y:   visible;
+
+
+  --clean_start--table_tf--padding:          0 0 0 0;
+  --clean_start--table_tf--margin:           0 0 0 0;
+
+  --clean_start--table_tf--text-align:       left;
+  --clean_start--table_tf--line-height:      1.2rem;
+  --clean_start--table_tf--font-family:      "Arial";
+  --clean_start--table_tf--font-size:        0.9rem;
+  --clean_start--table_tf--font-weight:      600;
+
+  --clean_start--table_tf--border:           0.2px sold #ddd;
+  --clean_start--table_tf--color:            black;
+  --clean_start--table_tf--background:       #fdfdfd;
+
+
+
+  --clean_start--fieldset--border:            0.2px solid #999;
+
+  --clean_start--fieldset--padding:           0 0 0 0;
+  --clean_start--fieldset--margin:            0 0 0 0;
+
+  --clean_start--fieldset_legend--line-height:   1.2rem;
+  --clean_start--fieldset_legend--font-size:     0.9rem;
+
+  --clean_start--fieldset_legend--border:        0.2px solid lime;
+
+  --clean_start--fieldset_legend--padding:       0 0 0 0;
+  --clean_start--fieldset_legend--margin:        0 0 0 0;
+
+  --clean_start--fieldset_legend--color:        black;
+  --clean_start--fieldset_legend--background:   #fdfdfd;
+
+
+
+  --clean_start--input--font-family:   Arial;
+  --clean_start--input--line-height:   1.2rem;
+  --clean_start--input--font-size:   0.9rem;
+
+  --clean_start--input--padding:   0;
+  --clean_start--input--margin:   0;
+
+  --clean_start--input--min-width:   unset;
+  --clean_start--input--max-width:   100%;
+  --clean_start--input--width:   10rem;
+
+  --clean_start--input--color:   #303030;
+  --clean_start--input--background:   #fdfdfd;
+
+  --clean_start--input--border:   0.4px
+  --clean_start--input--outline:   unset;
+
+
+  --clean_start--input_hover--color:   #050505;
+  --clean_start--input_hover--background:   #fefefe;
+  --clean_start--input_hover--border:   0.4px
+  --clean_start--input_hover--outline:   unset;
+
+
+
+  --clean_start--textarea--font-family:   Arial;
+  --clean_start--textarea--line-height:   1.2rem;
+  --clean_start--textarea--font-size:   0.9rem;
+
+  --clean_start--textarea--padding: 0 0 0 0;
+  --clean_start--textarea--margin: 0 0 0 0;
+
+  --clean_start--textarea--min-width:   unset;
+  --clean_start--textarea--max-width:   100%;
+  --clean_start--textarea--width:   10rem;
+
+  --clean_start--textarea--color:   #303030;
+  --clean_start--textarea--background:   #fdfdfd;
+
+  --clean_start--textarea--border:   0.4px
+  --clean_start--textarea--outline:   0
+
+
+  --clean_start--textarea_hover--color:   #050505;
+  --clean_start--textarea_hover--background:   #fefefe;
+  --clean_start--textarea_hover--border:   0.4px
+  --clean_start--textarea_hover--outline:   0 solid lime;
+
+
+
+  --clean_start--select--font-family:   Arial;
+  --clean_start--select--padding: 0 0 0 0;
+  --clean_start--select--margin: 0 0 0 0;
+  --clean_start--select--font-size:   0.9rem;
+  --clean_start--select--line-height:   1.2rem;
+  --clean_start--select--min-width:   unset;
+  --clean_start--select--max-width:   100%;
+  --clean_start--select--width:   10rem;
+  --clean_start--select--background:   #fdfdfd;
+  --clean_start--select--border:   0.2px
+  --clean_start--select_tags--font-size:   0.9rem;
+  --clean_start--select_tags--line-height:   1.2rem;
+  --clean_start--select_option--padding: 0 0 0 0;
+  --clean_start--select_option--margin: 0 0 0 0;
+  --clean_start--select_option--min-width:   unset;
+  --clean_start--select_option--max-width:   100%;
+  --clean_start--select_option--width:   10rem;
+  --clean_start--select_option--background:   #fdfdfd;
+
+
+
+  --clean_start--button--font-family:   Arial;
+  --clean_start--button--line-height:   1.2rem;
+  --clean_start--button--font-size:   0.9rem;
+  --clean_start--button--padding:   0;
+  --clean_start--button--margin:   0;
+  --clean_start--button--min-width:   unset;
+  --clean_start--button--max-width:   100%;
+  --clean_start--button--width:   10rem;
+  --clean_start--button--border:   0.4px
+  --clean_start--button--outline:   unset;
+  --clean_start--button--background:   #fdfdfd;
+  --clean_start--button_hover--color:   lime;
+  --clean_start--button_hover--text-decoration:   underline;
+  --clean_start--button_hover--border:   1px
+  --clean_start--button_hover--border-radius:   0;
+  --clean_start--button_hover--background:   #fdfdfd;
+
+
+
+  --clean_start--field--line-height;
+  --clean_start--field--line-height;
+  --clean_start--field--line-height;
+  --clean_start--field--line-height;
+  --clean_start--field--line-height;
+  --clean_start--field--line-height;
+  --clean_start--field--line-height;
+  --clean_start--field--line-height;
+  --clean_start--field--line-height;
+  --clean_start--field--line-height;
+  --clean_start--field--padding;
+  --clean_start--field--margin;
+  --clean_start--field--line-height;
+  --clean_start--field--line-height;
+  --clean_start--field--line-height;
+
+
+
+  --clean_start--input_checkbox--display:   inline-block;
+  --clean_start--input_checkbox--min-height:   0;
+  --clean_start--input_checkbox--max-height:   unset;
+  --clean_start--input_checkbox--height:   1.2rem;
+  --clean_start--input_checkbox--line-height:   1.2rem;
+  --clean_start--input_checkbox--font-size:   1.2rem;
+  --clean_start--input_checkbox--position:   absolute;
+  --clean_start--input_checkbox--top:   0;
+  --clean_start--input_checkbox--left:   0;
+  --clean_start--input_checkbox--min-width:   0;
+  --clean_start--input_checkbox--max-width:   unset;
+  --clean_start--input_checkbox--width:   1rem;
+  --clean_start--input_checkbox--border:   0
+  --clean_start--input_checkbox--overflow-x:   visible;
+  --clean_start--input_checkbox--overflow-y:   visible;
+
+
+
+  --clean_start--input_radiobutton--display:   inline-block;
+  --clean_start--input_radiobutton--min-height:   0;
+  --clean_start--input_radiobutton--max-height:   unset;
+  --clean_start--input_radiobutton--height:   1.2rem;
+  --clean_start--input_radiobutton--line-height:   1.2rem;
+  --clean_start--input_radiobutton--font-size:   1.2rem;
+  --clean_start--input_radiobutton--position:   absolute;
+  --clean_start--input_radiobutton--top:   0;
+  --clean_start--input_radiobutton--left:   0;
+  --clean_start--input_radiobutton--min-width:   0;
+  --clean_start--input_radiobutton--max-width:   unset;
+  --clean_start--input_radiobutton--width:   1rem;
+  --clean_start--input_radiobutton--border:   0
+  --clean_start--input_radiobutton--overflow-x:   visible;
+  --clean_start--input_radiobutton--overflow-y:   visible;
+
+  --clean_start--input_checkbox__checked_c--content:   '✅';
+  --clean_start--input_checkbox_c--content:   '❌';
+  --clean_start--input_radiobutton_checked_c--content:   '🟢';
+  --clean_start--input_radiobutton_c--content:   '';
+
+  --clean_start--input_checkbox_c--display:   block;
+  --clean_start--input_checkbox_c--min-height:   0;
+  --clean_start--input_checkbox_c--max-height:   unset;
+  --clean_start--input_checkbox_c--height:   1.2rem;
+  --clean_start--input_checkbox_c--line-height:   1.2rem;
+  --clean_start--input_checkbox_c--font-size:   0.70rem;
+  --clean_start--input_checkbox_c--position:   absolute;
+  --clean_start--input_checkbox_c--top:   0;
+  --clean_start--input_checkbox_c--left:   0;
+  --clean_start--input_checkbox_c--min-width:   0;
+  --clean_start--input_checkbox_c--max-width:   unset;
+  --clean_start--input_checkbox_c--width:   0.9rem;
+  --clean_start--input_checkbox_c--border:   0
+  --clean_start--input_checkbox_c--overflow-x:   visible;
+  --clean_start--input_checkbox_c--overflow-y:   visible;
+
+  --clean_start--input_radiobutton_c--display:   block;
+  --clean_start--input_radiobutton_c--min-height:   0;
+  --clean_start--input_radiobutton_c--max-height:   unset;
+  --clean_start--input_radiobutton_c--height:   1.2rem;
+  --clean_start--input_radiobutton_c--line-height:   1.2rem;
+  --clean_start--input_radiobutton_c--font-size:   0.70rem;
+  --clean_start--input_radiobutton_c--position:   absolute;
+  --clean_start--input_radiobutton_c--top:   0;
+  --clean_start--input_radiobutton_c--left:   0;
+  --clean_start--input_radiobutton_c--min-width:   0;
+  --clean_start--input_radiobutton_c--max-width:   unset;
+  --clean_start--input_radiobutton_c--width:   0.9rem;
+  --clean_start--input_radiobutton_c--border:   0
+  --clean_start--input_radiobutton_c--overflow-x:   visible;
+  --clean_start--input_radiobutton_c--overflow-y:   visible;
+
+
+
+  --clean_start--scrolls--height:   10rem;
+  --clean_start--scrolls--width:   30rem;
+  --clean_start--scrolls--padding:   1rem
+  --clean_start--scrolls--border:   1px
+  --clean_start--scrolls_block--width:   50rem;
+}
 
 ```
 
