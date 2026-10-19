@@ -10,7 +10,11 @@ html.clean_start {
 
 .clean_start * {
   position:                var(--clean_start--all_tags--position, relative);
-  display:                 var(--clean_start--all_tags--display, inline-block);
+
+  /** display: var(--clean_start--all_tags--display, inline-block);
+   *    @moved_to: --clean_start--custom_tags--display in styles_display/clean_start__display.css
+  */
+
   box-sizing:              var(--clean_start--all_tags--box-sizing, border-box);
 
   padding:                 var(--clean_start--all_tags--padding, 0 0 0 0);
@@ -129,6 +133,10 @@ html.clean_start {
   /* @start just pair of block tags reset, the tags normally in html */
 .clean_start canvas,
 .clean_start fieldset,
+.clean_start select,
+.clean_start input,
+.clean_start textarea,
+.clean_start button,
 .clean_start nav,
 .clean_start ol,
 .clean_start ul,
@@ -188,6 +196,10 @@ html.clean_start {
 .clean_start dl,
 .clean_start dt,
 .clean_start fieldset,
+.clean_start select,
+.clean_start input,
+.clean_start textarea,
+.clean_start button,
 .clean_start figcaption,
 .clean_start figure,
 .clean_start footer,
@@ -1354,11 +1366,24 @@ html.clean_start {
   max-width:               var(--clean_start--input--max-width, 100%);
   width:                   var(--clean_start--input--width, 10rem);
 
-  border:                  var(--clean_start--input--border, 0.2px solid #ddd);
+  color:                   var(--clean_start--input--color, #303030);
+  background:              var(--clean_start--input--background, #fdfdfd);
+
+  border:                  var(--clean_start--input--border, 0.4px solid #ddd);
   outline:                 var(--clean_start--input--outline, unset);
 
 }
+
+.clean_start input:hover {
+  color:                   var(--clean_start--input_hover--color, #050505);
+  background:              var(--clean_start--input_hover--background, #fefefe);
+
+  border:                  var(--clean_start--input_hover--border, 0.4px solid lime);
+  outline:                 var(--clean_start--input_hover--outline, unset);
+}
 /* @finish clean_start_tiny html tag input */
+
+
 
 
 
@@ -1376,9 +1401,20 @@ html.clean_start {
   max-width:               var(--clean_start--textarea--max-width, 100%);
   width:                   var(--clean_start--textarea--width, 10rem);
 
-  border:                  var(--clean_start--textarea--border, 0.4px solid #ddd);
-  outline:                 var(--clean_start--textarea--outline, unset);
+  color:                   var(--clean_start--textarea--color, #303030);
+  background:              var(--clean_start--textarea--background, #fdfdfd);
 
+  border:                  var(--clean_start--textarea--border, 0.4px solid #ddd);
+  outline:                 var(--clean_start--textarea--outline, 0 solid lime);
+
+}
+
+.clean_start textarea:hover {
+  color:                   var(--clean_start--textarea_hover--color, #050505);
+  background:              var(--clean_start--textarea_hover--background, #fefefe);
+
+  border:                  var(--clean_start--textarea_hover--border, 0.4px solid lime);
+  outline:                 var(--clean_start--textarea_hover--outline, 0 solid lime);
 }
 /* @finish clean_start_tiny html tag textarea */
 
