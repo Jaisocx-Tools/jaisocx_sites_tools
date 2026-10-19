@@ -19,12 +19,14 @@
   /* @start ul mark size */
 .clean_start ol li::after {
   line-height:             var(--clean_start--ol_li_c--line-height, 1.2rem);
+  font-family:             var(--clean_start--ol_li_c--font-family, "Arial");
   font-size:               var(--clean_start--ol_li_c--font-size, 0.9rem);
   color:                   var(--clean_start--ol_li_c--color, black);
 }
 
 .clean_start ul li::after {
   line-height:             var(--clean_start--ul_li_c--line-height, 1.2rem);
+  font-family:             var(--clean_start--ul_li_c--font-family, "Arial");
   font-size:               var(--clean_start--ul_li_c--font-size, 0.9rem);
   color:                   var(--clean_start--ul_li_c--color, black);
 }
@@ -32,20 +34,45 @@
 
 
 
+  /* @start ul tag_border */
+.clean_start ul.tag_border li::after {
+
+  content:                 var(--clean_start--ul_li_c--content, '');
+
+  top:                     var(--clean_start--ul_li_c--top, 0.4rem);
+  left:                    var(--clean_start--ul_li_c--left, 0);
+
+  line-height:             var(--clean_start--ul_li_c--line-height, 0);
+  font-size:               var(--clean_start--ul_li_c--font-size, 0);
+
+  max-height:              var(--clean_start--ul_li_c--max-height, 0.3rem);
+  height:                  var(--clean_start--ul_li_c--height, 0.3rem);
+  max-width:               var(--clean_start--ul_li_c--max-width, 0.3rem);
+  width:                   var(--clean_start--ul_li_c--width, 0.3rem);
+
+  background:              var(--clean_start--ul_li_c--background, green);
+  border:                  var(--clean_start--ul_li_c--border, 1px solid lime);
+  border-radius:           var(--clean_start--ul_li_c--border-radius, 0);
+
+}
+  /* @finish ul tag_border */
+
+
+
   /* @start ol count */
 .clean_start ol {
   counter-reset:           cnt1 0;
 }
-.clean_start ol ol {
+.clean_start ol li ol {
   counter-reset:           cnt2 0;
 }
-.clean_start ol ol ol {
+.clean_start ol li ol li ol {
   counter-reset:           cnt3 0;
 }
-.clean_start ol ol ol ol {
+.clean_start ol li ol li ol li ol {
   counter-reset:           cnt4 0;
 }
-.clean_start ol ol ol ol ol {
+.clean_start ol li ol li ol li ol li ol {
   counter-reset:           cnt5 0;
 }
 
@@ -54,16 +81,16 @@
 .clean_start ol li {
   counter-increment:       cnt1 1;
 }
-.clean_start ol ol li {
+.clean_start ol li ol li {
   counter-increment:       cnt2 1;
 }
-.clean_start ol ol ol li {
+.clean_start ol li ol li ol li {
   counter-increment:       cnt3 1;
 }
-.clean_start ol ol ol ol li {
+.clean_start ol li ol li ol li ol li {
   counter-increment:       cnt4 1;
 }
-.clean_start ol ol ol ol ol li {
+.clean_start ol li ol li ol li ol li ol li {
   counter-increment:       cnt5 1;
 }
 
@@ -85,7 +112,6 @@
   content:                 counter(cnt5, decimal);
 }
   /* @finish ol count */
-
 
 
 
