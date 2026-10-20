@@ -9,7 +9,7 @@
   > 💡 Aligning styles of a site, the single file `d_clean_start__html_tags.css` of few hundred code lines.
 
 
-  | 🗂  **Library**  | `@jaisocx/clean_start` | 🏷  **ver.**: `1.0.1` |
+  | 🗂  **Library**  | `@jaisocx/clean_start_tiny` | 🏷  **ver.**: `1.0.1` |
 
   | 🗓  **Updated**  | 🌾 Autumn 2026 | `AD 2026 Oct 19 14:20:10.500 GMT_24h` |
 
